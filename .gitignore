@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Prerequisites
 *.d
 
@@ -30,3 +31,23 @@
 *.exe
 *.out
 *.app
+=======
+# Ignore debug folder
+debug/
+
+# Ignore workspace files
+*.code-workspace
+
+# Ignore Qt Creator cache files
+.qtc_clangd/
+
+# Ignore all cached and temporary files
+*.idx
+*.ilk
+*.pdb
+*.exe
+
+openssl/Win64OpenSSL-3_1_4.msi
+
+Phoenix.pro.user
+>>>>>>> ee8ed1f (initial commit: added project files)

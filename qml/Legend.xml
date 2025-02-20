@@ -1,0 +1,1513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ QML legend.
+
+ Copyright (C) Sapura Secured Technologies, 2024. All Rights Reserved.
+
+ @file
+ @version $Id: Legend.xml 1838 2024-04-03 01:11:56Z rosnin $
+-->
+<legend>
+ <category>
+  <name>sys_Incident</name>
+  <item>
+   <name>Accident-Opened</name>
+   <source>:/Qml/qml/incident/accident0.png</source>
+  </item>
+  <item>
+   <name>Accident-Dispatched</name>
+   <source>:/Qml/qml/incident/accident1.png</source>
+  </item>
+  <item>
+   <name>Accident-On-Scene</name>
+   <source>:/Qml/qml/incident/accident2.png</source>
+  </item>
+  <item>
+   <name>Default-Opened</name>
+   <source>:/Qml/qml/incident/default0.png</source>
+  </item>
+  <item>
+   <name>Default-Dispatched</name>
+   <source>:/Qml/qml/incident/default1.png</source>
+  </item>
+  <item>
+   <name>Default-On-Scene</name>
+   <source>:/Qml/qml/incident/default2.png</source>
+  </item>
+  <item>
+   <name>Fire-Opened</name>
+   <source>:/Qml/qml/incident/fire0.png</source>
+  </item>
+  <item>
+   <name>Fire-Dispatched</name>
+   <source>:/Qml/qml/incident/fire1.png</source>
+  </item>
+  <item>
+   <name>Fire-On-Scene</name>
+   <source>:/Qml/qml/incident/fire2.png</source>
+  </item>
+  <item>
+   <name>Rescue-Opened</name>
+   <source>:/Qml/qml/incident/rescue0.png</source>
+  </item>
+  <item>
+   <name>Rescue-Dispatched</name>
+   <source>:/Qml/qml/incident/rescue1.png</source>
+  </item>
+  <item>
+   <name>Rescue-On-Scene</name>
+   <source>:/Qml/qml/incident/rescue2.png</source>
+  </item>
+  <item>
+   <name>Robbery-Opened</name>
+   <source>:/Qml/qml/incident/robbery0.png</source>
+  </item>
+  <item>
+   <name>Robbery-Dispatched</name>
+   <source>:/Qml/qml/incident/robbery1.png</source>
+  </item>
+  <item>
+   <name>Robbery-On-Scene</name>
+   <source>:/Qml/qml/incident/robbery2.png</source>
+  </item>
+ </category>
+ <category>
+  <name>sys_ReportIncident</name>
+  <item>
+   <name>Accident-Opened</name>
+   <source>:/Qml/qml/incident_report/accident0.png</source>
+  </item>
+  <item>
+   <name>Accident-Dispatched</name>
+   <source>:/Qml/qml/incident_report/accident1.png</source>
+  </item>
+  <item>
+   <name>Accident-On-Scene</name>
+   <source>:/Qml/qml/incident_report/accident2.png</source>
+  </item>
+  <item>
+   <name>Default-Opened</name>
+   <source>:/Qml/qml/incident_report/default0.png</source>
+  </item>
+  <item>
+   <name>Default-Dispatched</name>
+   <source>:/Qml/qml/incident_report/default1.png</source>
+  </item>
+  <item>
+   <name>Default-On-Scene</name>
+   <source>:/Qml/qml/incident_report/default2.png</source>
+  </item>
+  <item>
+   <name>Fire-Opened</name>
+   <source>:/Qml/qml/incident_report/fire0.png</source>
+  </item>
+  <item>
+   <name>Fire-Dispatched</name>
+   <source>:/Qml/qml/incident_report/fire1.png</source>
+  </item>
+  <item>
+   <name>Fire-On-Scene</name>
+   <source>:/Qml/qml/incident_report/fire2.png</source>
+  </item>
+  <item>
+   <name>Rescue-Opened</name>
+   <source>:/Qml/qml/incident_report/rescue0.png</source>
+  </item>
+  <item>
+   <name>Rescue-Dispatched</name>
+   <source>:/Qml/qml/incident_report/rescue1.png</source>
+  </item>
+  <item>
+   <name>Rescue-On-Scene</name>
+   <source>:/Qml/qml/incident_report/rescue2.png</source>
+  </item>
+  <item>
+   <name>Robbery-Opened</name>
+   <source>:/Qml/qml/incident_report/robbery0.png</source>
+  </item>
+  <item>
+   <name>Robbery-Dispatched</name>
+   <source>:/Qml/qml/incident_report/robbery1.png</source>
+  </item>
+  <item>
+   <name>Robbery-On-Scene</name>
+   <source>:/Qml/qml/incident_report/robbery2.png</source>
+  </item>
+ </category>
+ <category>
+  <name>sys_Route</name>
+  <item>
+   <name>Source</name>
+   <source>:/Qml/qml/route/route_start.png</source>
+  </item>
+  <item>
+   <name>Destination</name>
+   <source>:/Qml/qml/route/route_end.png</source>
+  </item>
+ </category>
+ <category>
+  <name>sys_Terminal</name>
+  <item>
+   <name>Briefcase-valid</name>
+   <source>:/Qml/qml/terminal/rs.png</source>
+  </item>
+  <item>
+   <name>Briefcase-stale</name>
+   <source>:/Qml/qml/terminal/rs_stale1.png</source>
+  </item>
+  <item>
+   <name>Briefcase-invalid</name>
+   <source>:/Qml/qml/terminal/rs_invalid.png</source>
+  </item>
+  <item>
+   <name>Desktop-valid</name>
+   <source>:/Qml/qml/terminal/dt.png</source>
+  </item>
+  <item>
+   <name>Desktop-stale</name>
+   <source>:/Qml/qml/terminal/dt_stale1.png</source>
+  </item>
+  <item>
+   <name>Desktop-invalid</name>
+   <source>:/Qml/qml/terminal/dt_invalid.png</source>
+  </item>
+  <item>
+   <name>Handheld-valid</name>
+   <source>:/Qml/qml/terminal/hh.png</source>
+  </item>
+  <item>
+   <name>Handheld-stale</name>
+   <source>:/Qml/qml/terminal/hh_stale1.png</source>
+  </item>
+  <item>
+   <name>Handheld-invalid</name>
+   <source>:/Qml/qml/terminal/hh_invalid.png</source>
+  </item>
+  <item>
+   <name>Marinekit-valid</name>
+   <source>:/Qml/qml/terminal/mk.png</source>
+  </item>
+  <item>
+   <name>Marinekit-stale</name>
+   <source>:/Qml/qml/terminal/mk_stale1.png</source>
+  </item>
+  <item>
+   <name>Marinekit-invalid</name>
+   <source>:/Qml/qml/terminal/mk_invalid.png</source>
+  </item>
+  <item>
+   <name>Phone-valid</name>
+   <source>:/Qml/qml/terminal/ph.png</source>
+  </item>
+  <item>
+   <name>Phone-stale</name>
+   <source>:/Qml/qml/terminal/ph_stale1.png</source>
+  </item>
+  <item>
+   <name>Phone-invalid</name>
+   <source>:/Qml/qml/terminal/ph_invalid.png</source>
+  </item>
+  <item>
+   <name>Radiodispatcher-valid</name>
+   <source>:/Qml/qml/terminal/dt.png</source>
+  </item>
+  <item>
+   <name>Radiodispatcher-stale</name>
+   <source>:/Qml/qml/terminal/dt_stale1.png</source>
+  </item>
+  <item>
+   <name>Radiodispatcher-invalid</name>
+   <source>:/Qml/qml/terminal/dt_invalid.png</source>
+  </item>
+  <item>
+   <name>RIM-valid</name>
+   <source>:/Qml/qml/terminal/hh.png</source>
+  </item>
+  <item>
+   <name>RIM-stale</name>
+   <source>:/Qml/qml/terminal/hh_stale1.png</source>
+  </item>
+  <item>
+   <name>RIM-invalid</name>
+   <source>:/Qml/qml/terminal/hh_invalid.png</source>
+  </item>
+  <item>
+   <name>Rucksack-valid</name>
+   <source>:/Qml/qml/terminal/rs.png</source>
+  </item>
+  <item>
+   <name>Rucksack-stale</name>
+   <source>:/Qml/qml/terminal/rs_stale1.png</source>
+  </item>
+  <item>
+   <name>Rucksack-invalid</name>
+   <source>:/Qml/qml/terminal/rs_invalid.png</source>
+  </item>
+  <item>
+   <name>Vehicular-valid</name>
+   <source>:/Qml/qml/terminal/vh.png</source>
+  </item>
+  <item>
+   <name>Vehicular-stale</name>
+   <source>:/Qml/qml/terminal/vh_stale1.png</source>
+  </item>
+  <item>
+   <name>Vehicular-invalid</name>
+   <source>:/Qml/qml/terminal/vh_invalid.png</source>
+  </item>
+ </category>
+ <category>
+  <name>sys_UserPoi</name>
+  <item>
+   <name>Default</name>
+   <source>:/Qml/qml/userPoi/user.png</source>
+  </item>
+  <item>
+   <name>Commercial</name>
+   <source>:/Qml/qml/userPoi/commercial.png</source>
+  </item>
+  <item>
+   <name>Educational</name>
+   <source>:/Qml/qml/userPoi/educational.png</source>
+  </item>
+  <item>
+   <name>Industrial</name>
+   <source>:/Qml/qml/userPoi/industrial.png</source>
+  </item>
+  <item>
+   <name>Institutional</name>
+   <source>:/Qml/qml/userPoi/institutional.png</source>
+  </item>
+  <item>
+   <name>Others</name>
+   <source>:/Qml/qml/userPoi/others.png</source>
+  </item>
+  <item>
+   <name>Recreational</name>
+   <source>:/Qml/qml/userPoi/recreational.png</source>
+  </item>
+  <item>
+   <name>Religious</name>
+   <source>:/Qml/qml/userPoi/religious.png</source>
+  </item>
+  <item>
+   <name>Residential</name>
+   <source>:/Qml/qml/userPoi/residential.png</source>
+  </item>
+  <item>
+   <name>Transportation</name>
+   <source>:/Qml/qml/userPoi/transportation.png</source>
+  </item>
+ </category>
+ <category>
+  <name>Administrative facilities</name>
+  <item>
+   <name>Consulate</name>
+   <source>:/Qml/qml/administrative/consulate.png</source>
+  </item>
+  <item>
+   <name>Court house</name>
+   <source>:/Qml/qml/administrative/courthouse.png</source>
+  </item>
+  <item>
+   <name>Embassy</name>
+   <source>:/Qml/qml/administrative/diplomatic.png</source>
+  </item>
+  <item>
+   <name>Fire station</name>
+   <source>:/Qml/qml/administrative/firestation.png</source>
+  </item>
+  <item>
+   <name>Police station</name>
+   <source>:/Qml/qml/administrative/police.png</source>
+  </item>
+  <item>
+   <name>Prison</name>
+   <source>:/Qml/qml/administrative/prison.png</source>
+  </item>
+  <item>
+   <name>Social facility</name>
+   <source>:/Qml/qml/administrative/facility.png</source>
+  </item>
+  <item>
+   <name>Townhall</name>
+   <source>:/Qml/qml/administrative/townhall.png</source>
+  </item>
+ </category>
+ <category>
+  <name>Communication</name>
+  <item>
+   <name>Emergency phone</name>
+   <source>:/Qml/qml/communication/emergencyphone.png</source>
+  </item>
+  <item>
+   <name>Machine for picking up and sending parcels</name>
+   <source>:/Qml/qml/communication/parcellocker.png</source>
+  </item>
+  <item>
+   <name>Post box</name>
+   <source>:/Qml/qml/communication/postbox.png</source>
+  </item>
+  <item>
+   <name>Post office</name>
+   <source>:/Qml/qml/communication/postoffice.png</source>
+  </item>
+  <item>
+   <name>Public telephone</name>
+   <source>:/Qml/qml/communication/telephone.png</source>
+  </item>
+ </category>
+ <category>
+  <name>Culture, entertainment and arts</name>
+  <item>
+   <name>Arts centre</name>
+   <source>:/Qml/qml/entertainment/artscentre.png</source>
+  </item>
+  <item>
+   <name>Art gallery</name>
+   <source>:/Qml/qml/entertainment/gallery.png</source>
+  </item>
+  <item>
+   <name>Artwork</name>
+   <source>:/Qml/qml/entertainment/artwork.png</source>
+  </item>
+  <item>
+   <name>Casino</name>
+   <source>:/Qml/qml/entertainment/casino.png</source>
+  </item>
+  <item>
+   <name>Cinema</name>
+   <source>:/Qml/qml/entertainment/cinema.png</source>
+  </item>
+  <item>
+   <name>Community centre</name>
+   <source>:/Qml/qml/entertainment/communitycentre.png</source>
+  </item>
+  <item>
+   <name>Internet cafe</name>
+   <source>:/Qml/qml/entertainment/internetcafe.png</source>
+  </item>
+  <item>
+   <name>Library</name>
+   <source>:/Qml/qml/entertainment/library.png</source>
+  </item>
+  <item>
+   <name>Museum</name>
+   <source>:/Qml/qml/entertainment/museum.png</source>
+  </item>
+  <item>
+   <name>Nightclub</name>
+   <source>:/Qml/qml/entertainment/nightclub.png</source>
+  </item>
+  <item>
+   <name>Pay-to-play games centre</name>
+   <source>:/Qml/qml/entertainment/amusementarcade.png</source>
+  </item>
+  <item>
+   <name>Public bookcase</name>
+   <source>:/Qml/qml/entertainment/publicbookcase.png</source>
+  </item>
+  <item>
+   <name>Theatre</name>
+   <source>:/Qml/qml/entertainment/theatre.png</source>
+  </item>
+ </category>
+ <category>
+  <name>Electricity</name>
+  <item>
+   <name>Big electricity pylon</name>
+   <source>:/Qml/qml/electricity/powertower.png</source>
+  </item>
+  <item>
+   <name>Major power line</name>
+   <source>:/Qml/qml/electricity/powerline.png</source>
+  </item>
+  <item>
+   <name>Minor power line</name>
+   <source>:/Qml/qml/electricity/powerminorline.png</source>
+  </item>
+  <item>
+   <name>Small electricity pole</name>
+   <source>:/Qml/qml/electricity/powerpole.png</source>
+  </item>
+ </category>
+ <category>
+  <name>Finance</name>
+  <item>
+   <name>ATM</name>
+   <source>:/Qml/qml/finance/atm.png</source>
+  </item>
+  <item>
+   <name>Bank</name>
+   <source>:/Qml/qml/finance/bank.png</source>
+  </item>
+  <item>
+   <name>Bureau de change</name>
+   <source>:/Qml/qml/finance/moneychanger.png</source>
+  </item>
+ </category>
+ <category>
+  <name>Gastronomy</name>
+  <item>
+   <name>Bar</name>
+   <source>:/Qml/qml/gastronomy/bar.png</source>
+  </item>
+  <item>
+   <name>Cafe</name>
+   <source>:/Qml/qml/gastronomy/cafe.png</source>
+  </item>
+  <item>
+   <name>Fast food restaurant</name>
+   <source>:/Qml/qml/gastronomy/fastfood.png</source>
+  </item>
+  <item>
+   <name>Ice cream shop</name>
+   <source>:/Qml/qml/gastronomy/icecream.png</source>
+  </item>
+  <item>
+   <name>Pub</name>
+   <source>:/Qml/qml/gastronomy/pub.png</source>
+  </item>
+  <item>
+   <name>Restaurant</name>
+   <source>:/Qml/qml/gastronomy/restaurant.png</source>
+  </item>
+ </category>
+ <category>
+  <name>Healthcare</name>
+  <item>
+   <name>Clinic</name>
+   <source>:/Qml/qml/healthcare/clinic.png</source>
+  </item>
+  <item>
+   <name>Dentist</name>
+   <source>:/Qml/qml/healthcare/dentist.png</source>
+  </item>
+  <item>
+   <name>Hospital</name>
+   <source>:/Qml/qml/healthcare/hospital.png</source>
+  </item>
+  <item>
+   <name>Pharmacy</name>
+   <source>:/Qml/qml/healthcare/pharmacy.png</source>
+  </item>
+  <item>
+   <name>Veterinary</name>
+   <source>:/Qml/qml/healthcare/veterinary.png</source>
+  </item>
+ </category>
+ <category>
+  <name>Historical</name>
+  <item>
+   <name>Bust</name>
+   <source>:/Qml/qml/historical/bust.png</source>
+  </item>
+  <item>
+   <name>Castle</name>
+   <source>:/Qml/qml/historical/castle.png</source>
+  </item>
+  <item>
+   <name>City gate</name>
+   <source>:/Qml/qml/historical/citygate.png</source>
+  </item>
+  <item>
+   <name>Fortress</name>
+   <source>:/Qml/qml/historical/fortress.png</source>
+  </item>
+  <item>
+   <name>Historical object</name>
+   <source>:/Qml/qml/historical/archaeologicalsite.png</source>
+  </item>
+  <item>
+   <name>Historical shrine</name>
+   <source>:/Qml/qml/historical/cartoshrine.png</source>
+  </item>
+  <item>
+   <name>Manor house</name>
+   <source>:/Qml/qml/historical/manor.png</source>
+  </item>
+  <item>
+   <name>Memorial</name>
+   <source>:/Qml/qml/historical/memorial.png</source>
+  </item>
+  <item>
+   <name>Memorial plaque</name>
+   <source>:/Qml/qml/historical/plaque.png</source>
+  </item>
+  <item>
+   <name>Military historic fort</name>
+   <source>:/Qml/qml/historical/historicfort.png</source>
+  </item>
+  <item>
+   <name>Monument</name>
+   <source>:/Qml/qml/historical/monument.png</source>
+  </item>
+  <item>
+   <name>Obelisk</name>
+   <source>:/Qml/qml/historical/obelisk.png</source>
+  </item>
+  <item>
+   <name>Palace</name>
+   <source>:/Qml/qml/historical/palace.png</source>
+  </item>
+  <item>
+   <name>Statue</name>
+   <source>:/Qml/qml/historical/statue.png</source>
+  </item>
+  <item>
+   <name>Stone memorial</name>
+   <source>:/Qml/qml/historical/stone.png</source>
+  </item>
+ </category>
+ <category>
+  <name>Landmarks</name>
+  <item>
+   <name>Bell tower</name>
+   <source>:/Qml/qml/landmarks/belltower.png</source>
+  </item>
+  <item>
+   <name>Communication tower</name>
+   <source>:/Qml/qml/landmarks/towercantilevercomm.png</source>
+  </item>
+  <item>
+   <name>Cooling tower</name>
+   <source>:/Qml/qml/landmarks/towercooling.png</source>
+  </item>
+  <item>
+   <name>Dish communication tower</name>
+   <source>:/Qml/qml/landmarks/towerdish.png</source>
+  </item>
+  <item>
+   <name>Dome communication tower</name>
+   <source>:/Qml/qml/landmarks/towerdome.png</source>
+  </item>
+  <item>
+   <name>Fortified defensive tower</name>
+   <source>:/Qml/qml/landmarks/towerdefensive.png</source>
+  </item>
+  <item>
+   <name>Huge tower for transmitting radio applications</name>
+   <source>:/Qml/qml/landmarks/commtower.png</source>
+  </item>
+  <item>
+   <name>Lattice communication tower</name>
+   <source>:/Qml/qml/landmarks/towerlatticecomm.png</source>
+  </item>
+  <item>
+   <name>Lighthouse</name>
+   <source>:/Qml/qml/landmarks/lighthouse.png</source>
+  </item>
+  <item>
+   <name>Mast with transmitters</name>
+   <source>:/Qml/qml/landmarks/mastcomm.png</source>
+  </item>
+  <item>
+   <name>Optical telescope</name>
+   <source>:/Qml/qml/landmarks/telescopedome.png</source>
+  </item>
+  <item>
+   <name>Poles for lighting</name>
+   <source>:/Qml/qml/landmarks/mastlighting.png</source>
+  </item>
+  <item>
+   <name>Radio telescope</name>
+   <source>:/Qml/qml/landmarks/telescopedish.png</source>
+  </item>
+  <item>
+   <name>Storage tanks</name>
+   <source>:/Qml/qml/landmarks/silo.png</source>
+  </item>
+  <item>
+   <name>Tower</name>
+   <source>:/Qml/qml/landmarks/towerfreestanding.png</source>
+  </item>
+  <item>
+   <name>Towers for lighting</name>
+   <source>:/Qml/qml/landmarks/towerlighting.png</source>
+  </item>
+  <item>
+   <name>Water tower</name>
+   <source>:/Qml/qml/landmarks/watertower.png</source>
+  </item>
+ </category>
+ <category>
+  <name>Leisure, recreation and sports</name>
+  <item>
+   <name>Bowling centre</name>
+   <source>:/Qml/qml/leisure/bowlingalley.png</source>
+  </item>
+  <item>
+   <name>Dog park</name>
+   <source>:/Qml/qml/leisure/dogpark.png</source>
+  </item>
+  <item>
+   <name>Fitness centre</name>
+   <source>:/Qml/qml/leisure/fitness.png</source>
+  </item>
+  <item>
+   <name>Golf course</name>
+   <source>:/Qml/qml/leisure/golf.png</source>
+  </item>
+  <item>
+   <name>Golf course hole</name>
+   <source>:/Qml/qml/leisure/golfpin.png</source>
+  </item>
+  <item>
+   <name>Managed beach</name>
+   <source>:/Qml/qml/leisure/beachresort.png</source>
+  </item>
+  <item>
+   <name>Massage shop</name>
+   <source>:/Qml/qml/leisure/massage.png</source>
+  </item>
+  <item>
+   <name>Miniature golf course</name>
+   <source>:/Qml/qml/leisure/miniaturegolf.png</source>
+  </item>
+  <item>
+   <name>Playground</name>
+   <source>:/Qml/qml/leisure/playground.png</source>
+  </item>
+  <item>
+   <name>Public fishing</name>
+   <source>:/Qml/qml/leisure/fishing.png</source>
+  </item>
+  <item>
+   <name>Sauna</name>
+   <source>:/Qml/qml/leisure/sauna.png</source>
+  </item>
+  <item>
+   <name>Water park</name>
+   <source>:/Qml/qml/leisure/swimming.png</source>
+  </item>
+ </category>
+ <category>
+  <name>Nature</name>
+  <item>
+   <name>Cave entrance</name>
+   <source>:/Qml/qml/nature/cave.png</source>
+  </item>
+  <item>
+   <name>Cliff</name>
+   <source>:/Qml/qml/nature/cliff.png</source>
+  </item>
+  <item>
+   <name>Peak</name>
+   <source>:/Qml/qml/nature/peak.png</source>
+  </item>
+  <item>
+   <name>Spring</name>
+   <source>:/Qml/qml/nature/spring.png</source>
+  </item>
+  <item>
+   <name>Topographic saddle</name>
+   <source>:/Qml/qml/nature/saddle.png</source>
+  </item>
+  <item>
+   <name>Tree</name>
+   <source>:/Qml/qml/nature/tree.png</source>
+  </item>
+  <item>
+   <name>Volcano</name>
+   <source>:/Qml/qml/nature/volcano.png</source>
+  </item>
+  <item>
+   <name>Waterfall</name>
+   <source>:/Qml/qml/nature/waterfall.png</source>
+  </item>
+ </category>
+ <category>
+  <name>Outdoor</name>
+  <item>
+   <name>Bench</name>
+   <source>:/Qml/qml/outdoor/bench.png</source>
+  </item>
+  <item>
+   <name>Campsite</name>
+   <source>:/Qml/qml/outdoor/camping.png</source>
+  </item>
+  <item>
+   <name>Fountain</name>
+   <source>:/Qml/qml/outdoor/fountain.png</source>
+  </item>
+  <item>
+   <name>Picnic site</name>
+   <source>:/Qml/qml/outdoor/picnicsite.png</source>
+  </item>
+  <item>
+   <name>Picnic table</name>
+   <source>:/Qml/qml/outdoor/table.png</source>
+  </item>
+  <item>
+   <name>Shelter</name>
+   <source>:/Qml/qml/outdoor/shelter.png</source>
+  </item>
+  <item>
+   <name>Shower</name>
+   <source>:/Qml/qml/outdoor/shower.png</source>
+  </item>
+  <item>
+   <name>Water dispenser</name>
+   <source>:/Qml/qml/outdoor/drinkingwater.png</source>
+  </item>
+ </category>
+ <category>
+  <name>Religious place</name>
+  <item>
+   <name>Buddhist</name>
+   <source>:/Qml/qml/religious/buddhist.png</source>
+  </item>
+  <item>
+   <name>Christian</name>
+   <source>:/Qml/qml/religious/christian.png</source>
+  </item>
+  <item>
+   <name>Hindu</name>
+   <source>:/Qml/qml/religious/hinduist.png</source>
+  </item>
+  <item>
+   <name>Jewish</name>
+   <source>:/Qml/qml/religious/jewish.png</source>
+  </item>
+  <item>
+   <name>Muslim</name>
+   <source>:/Qml/qml/religious/muslim.png</source>
+  </item>
+  <item>
+   <name>Other religion</name>
+   <source>:/Qml/qml/religious/placeofworship.png</source>
+  </item>
+  <item>
+   <name>Shinto</name>
+   <source>:/Qml/qml/religious/shintoist.png</source>
+  </item>
+  <item>
+   <name>Sikh</name>
+   <source>:/Qml/qml/religious/sikhist.png</source>
+  </item>
+  <item>
+   <name>Taoist</name>
+   <source>:/Qml/qml/religious/taoist.png</source>
+  </item>
+ </category>
+ <category>
+  <name>Road features</name>
+  <item>
+   <name>Barriers</name>
+   <source>:/Qml/qml/roadFeatures/barrier.png</source>
+  </item>
+  <item>
+   <name>Barriers to bicycle traffic</name>
+   <source>:/Qml/qml/roadFeatures/cyclebarrier.png</source>
+  </item>
+  <item>
+   <name>Boom barrier</name>
+   <source>:/Qml/qml/roadFeatures/liftgate.png</source>
+  </item>
+  <item>
+   <name>Gate</name>
+   <source>:/Qml/qml/roadFeatures/barriergate.png</source>
+  </item>
+  <item>
+   <name>Mini roundabout</name>
+   <source>:/Qml/qml/roadFeatures/highwayminiroundabout.png</source>
+  </item>
+  <item>
+   <name>One-way</name>
+   <source>:/Qml/qml/roadFeatures/oneway.png</source>
+  </item>
+  <item>
+   <name>Railroad crossing</name>
+   <source>:/Qml/qml/roadFeatures/crossing.png</source>
+  </item>
+  <item>
+   <name>Stile</name>
+   <source>:/Qml/qml/roadFeatures/barrierstile.png</source>
+  </item>
+  <item>
+   <name>Tollbooth</name>
+   <source>:/Qml/qml/roadFeatures/tollbooth.png</source>
+  </item>
+  <item>
+   <name>Traffic lights</name>
+   <source>:/Qml/qml/roadFeatures/trafficlight.png</source>
+  </item>
+ </category>
+ <category>
+  <name>Roads</name>
+  <item>
+   <name>Access road</name>
+   <source>:/Qml/qml/roads/service.png</source>
+  </item>
+  <item>
+   <name>Access road under construction</name>
+   <source>:/Qml/qml/roads/constructionservice.png</source>
+  </item>
+  <item>
+   <name>Bridleway</name>
+   <source>:/Qml/qml/roads/bridleway.png</source>
+  </item>
+  <item>
+   <name>Cycleway</name>
+   <source>:/Qml/qml/roads/cycleway.png</source>
+  </item>
+  <item>
+   <name>Footway</name>
+   <source>:/Qml/qml/roads/footway.png</source>
+  </item>
+  <item>
+   <name>Steps</name>
+   <source>:/Qml/qml/roads/steps.png</source>
+  </item>
+  <item>
+   <name>Bridleway/Cycleway/Footway/Steps under construction</name>
+   <source>:/Qml/qml/roads/constructionmiscways.png</source>
+  </item>
+  <item>
+   <name>Motorway</name>
+   <source>:/Qml/qml/roads/motorway.png</source>
+  </item>
+  <item>
+   <name>Motorway under construction</name>
+   <source>:/Qml/qml/roads/constructionmotorway.png</source>
+  </item>
+  <item>
+   <name>Pedestrian street</name>
+   <source>:/Qml/qml/roads/pedestrian.png</source>
+  </item>
+  <item>
+   <name>Pedestrian street under construction</name>
+   <source>:/Qml/qml/roads/constructionpedestrian.png</source>
+  </item>
+  <item>
+   <name>Primary road</name>
+   <source>:/Qml/qml/roads/primary.png</source>
+  </item>
+  <item>
+   <name>Primary road under construction</name>
+   <source>:/Qml/qml/roads/constructionprimary.png</source>
+  </item>
+  <item>
+   <name>Private road</name>
+   <source>:/Qml/qml/roads/privat.png</source>
+  </item>
+  <item>
+   <name>Racetrack (Motorised)</name>
+   <source>:/Qml/qml/roads/raceway.png</source>
+  </item>
+  <item>
+   <name>Residential road</name>
+   <source>:/Qml/qml/roads/destination.png</source>
+  </item>
+  <item>
+   <name>Road with unknown classification under construction</name>
+   <source>:/Qml/qml/roads/constructionroadraceway.png</source>
+  </item>
+  <item>
+   <name>Runway</name>
+   <source>:/Qml/qml/roads/aerowayrunwayline.png</source>
+  </item>
+  <item>
+   <name>Secondary road</name>
+   <source>:/Qml/qml/roads/secondary.png</source>
+  </item>
+  <item>
+   <name>Secondary road under construction</name>
+   <source>:/Qml/qml/roads/constructionsecondary.png</source>
+  </item>
+  <item>
+   <name>Taxiway</name>
+   <source>:/Qml/qml/roads/aerowaytaxiwayline.png</source>
+  </item>
+  <item>
+   <name>Tertiary road</name>
+   <source>:/Qml/qml/roads/tertiary.png</source>
+  </item>
+  <item>
+   <name>Tertiary road under construction</name>
+   <source>:/Qml/qml/roads/constructiontertiary.png</source>
+  </item>
+  <item>
+   <name>Track (Non-motorised)</name>
+   <source>:/Qml/qml/roads/leisuretrackline.png</source>
+  </item>
+  <item>
+   <name>Track (Solid surface)</name>
+   <source>:/Qml/qml/roads/tracktypegrade1.png</source>
+  </item>
+  <item>
+   <name>Track (Mostly solid surface)</name>
+   <source>:/Qml/qml/roads/tracktypegrade2.png</source>
+  </item>
+  <item>
+   <name>Track (Even amount of solid and soft materials)</name>
+   <source>:/Qml/qml/roads/tracktypegrade3.png</source>
+  </item>
+  <item>
+   <name>Track (Mostly soft surface)</name>
+   <source>:/Qml/qml/roads/tracktypegrade4.png</source>
+  </item>
+  <item>
+   <name>Track (Soft surface)</name>
+   <source>:/Qml/qml/roads/tracktypegrade5.png</source>
+  </item>
+  <item>
+   <name>Track (Unknown surface type)</name>
+   <source>:/Qml/qml/roads/tracktypenotset.png</source>
+  </item>
+  <item>
+   <name>Trunk road</name>
+   <source>:/Qml/qml/roads/trunk.png</source>
+  </item>
+  <item>
+   <name>Trunk road under construction</name>
+   <source>:/Qml/qml/roads/constructiontrunk.png</source>
+  </item>
+  <item>
+   <name>Unknown road type</name>
+   <source>:/Qml/qml/roads/highwayroad.png</source>
+  </item>
+  <item>
+   <name>Way for guided buses</name>
+   <source>:/Qml/qml/roads/busguideway.png</source>
+  </item>
+ </category>
+ <category>
+  <name>Railways</name>
+  <item>
+   <name>Disused railway</name>
+   <source>:/Qml/qml/railways/railwaydisused.png</source>
+  </item>
+  <item>
+   <name>Miniature railway</name>
+   <source>:/Qml/qml/railways/railwaymini.png</source>
+  </item>
+  <item>
+   <name>Monorail railway</name>
+   <source>:/Qml/qml/railways/railwaymonorail.png</source>
+  </item>
+  <item>
+   <name>Narrow gauge railway</name>
+   <source>:/Qml/qml/railways/lightrailnarrowgauge.png</source>
+  </item>
+  <item>
+   <name>Preserved railway</name>
+   <source>:/Qml/qml/railways/railwaypreserved.png</source>
+  </item>
+  <item>
+   <name>Railway for full-sized passenger trains</name>
+   <source>:/Qml/qml/railways/railwayrail.png</source>
+  </item>
+  <item>
+   <name>Railway full-sized passenger trains service segments</name>
+   <source>:/Qml/qml/railways/railwayrailservice.png</source>
+  </item>
+  <item>
+   <name>Railway turntable</name>
+   <source>:/Qml/qml/railways/railwayturntable.png</source>
+  </item>
+  <item>
+   <name>Railway under construction</name>
+   <source>:/Qml/qml/railways/railwayconstruction.png</source>
+  </item>
+  <item>
+   <name>Roller coaster track</name>
+   <source>:/Qml/qml/railways/rollercoastertrack.png</source>
+  </item>
+  <item>
+   <name>Subway railway</name>
+   <source>:/Qml/qml/railways/railwaysubway.png</source>
+  </item>
+  <item>
+   <name>Tram railway</name>
+   <source>:/Qml/qml/railways/railwaytram.png</source>
+  </item>
+ </category>
+ <category>
+  <name>Shops and services</name>
+  <item>
+   <name>Art shop</name>
+   <source>:/Qml/qml/shops/art.png</source>
+  </item>
+  <item>
+   <name>Bag shop</name>
+   <source>:/Qml/qml/shops/bag.png</source>
+  </item>
+  <item>
+   <name>Bakery</name>
+   <source>:/Qml/qml/shops/bakery.png</source>
+  </item>
+  <item>
+   <name>Barber</name>
+   <source>:/Qml/qml/shops/hairdresser.png</source>
+  </item>
+  <item>
+   <name>Beauty services</name>
+   <source>:/Qml/qml/shops/beauty.png</source>
+  </item>
+  <item>
+   <name>Beverage shop</name>
+   <source>:/Qml/qml/shops/beverages.png</source>
+  </item>
+  <item>
+   <name>Bicycle shop</name>
+   <source>:/Qml/qml/shops/bicycle.png</source>
+  </item>
+  <item>
+   <name>Book store</name>
+   <source>:/Qml/qml/shops/books.png</source>
+  </item>
+  <item>
+   <name>Butcher</name>
+   <source>:/Qml/qml/shops/butcher.png</source>
+  </item>
+  <item>
+   <name>Car parts shop</name>
+   <source>:/Qml/qml/shops/carparts.png</source>
+  </item>
+  <item>
+   <name>Car repair service</name>
+   <source>:/Qml/qml/shops/carrepair.png</source>
+  </item>
+  <item>
+   <name>Car store</name>
+   <source>:/Qml/qml/shops/carstore.png</source>
+  </item>
+  <item>
+   <name>Car wash</name>
+   <source>:/Qml/qml/shops/carwash.png</source>
+  </item>
+  <item>
+   <name>Carpets shop</name>
+   <source>:/Qml/qml/shops/carpet.png</source>
+  </item>
+  <item>
+   <name>Charity store</name>
+   <source>:/Qml/qml/shops/charity.png</source>
+  </item>
+  <item>
+   <name>Chemist</name>
+   <source>:/Qml/qml/shops/chemist.png</source>
+  </item>
+  <item>
+   <name>Coffee shop</name>
+   <source>:/Qml/qml/shops/coffee.png</source>
+  </item>
+  <item>
+   <name>Computer store</name>
+   <source>:/Qml/qml/shops/computer.png</source>
+  </item>
+  <item>
+   <name>Confectionery</name>
+   <source>:/Qml/qml/shops/confectionery.png</source>
+  </item>
+  <item>
+   <name>Convenience store</name>
+   <source>:/Qml/qml/shops/convenience.png</source>
+  </item>
+  <item>
+   <name>Copy shop</name>
+   <source>:/Qml/qml/shops/copyshop.png</source>
+  </item>
+  <item>
+   <name>Cosmetics shop</name>
+   <source>:/Qml/qml/shops/perfumery.png</source>
+  </item>
+  <item>
+   <name>Dairy shop</name>
+   <source>:/Qml/qml/shops/dairy.png</source>
+  </item>
+  <item>
+   <name>Department store</name>
+   <source>:/Qml/qml/shops/departmentstore.png</source>
+  </item>
+  <item>
+   <name>DIY store</name>
+   <source>:/Qml/qml/shops/doityourself.png</source>
+  </item>
+  <item>
+   <name>Electronics shop</name>
+   <source>:/Qml/qml/shops/electronics.png</source>
+  </item>
+  <item>
+   <name>Fabric shop</name>
+   <source>:/Qml/qml/shops/fabric.png</source>
+  </item>
+  <item>
+   <name>Fashion shop</name>
+   <source>:/Qml/qml/shops/clothes.png</source>
+  </item>
+  <item>
+   <name>Fish shop</name>
+   <source>:/Qml/qml/shops/seafood.png</source>
+  </item>
+  <item>
+   <name>Florist</name>
+   <source>:/Qml/qml/shops/florist.png</source>
+  </item>
+  <item>
+   <name>Furniture store</name>
+   <source>:/Qml/qml/shops/furniture.png</source>
+  </item>
+  <item>
+   <name>Garden centre</name>
+   <source>:/Qml/qml/shops/gardencentre.png</source>
+  </item>
+  <item>
+   <name>Gift shop</name>
+   <source>:/Qml/qml/shops/gift.png</source>
+  </item>
+  <item>
+   <name>Gourmet foods</name>
+   <source>:/Qml/qml/shops/deli.png</source>
+  </item>
+  <item>
+   <name>Government vehicle inspection</name>
+   <source>:/Qml/qml/shops/vehicleinspection.png</source>
+  </item>
+  <item>
+   <name>Greengrocer</name>
+   <source>:/Qml/qml/shops/greengrocer.png</source>
+  </item>
+  <item>
+   <name>Hi-fi store</name>
+   <source>:/Qml/qml/shops/hifi.png</source>
+  </item>
+  <item>
+   <name>Houseware shop</name>
+   <source>:/Qml/qml/shops/houseware.png</source>
+  </item>
+  <item>
+   <name>Interior decorations shop</name>
+   <source>:/Qml/qml/shops/interiordecor.png</source>
+  </item>
+  <item>
+   <name>Jewellery</name>
+   <source>:/Qml/qml/shops/jewellery.png</source>
+  </item>
+  <item>
+   <name>Laundry shop</name>
+   <source>:/Qml/qml/shops/laundry.png</source>
+  </item>
+  <item>
+   <name>Marketplace</name>
+   <source>:/Qml/qml/shops/marketplace.png</source>
+  </item>
+  <item>
+   <name>Mattress shop</name>
+   <source>:/Qml/qml/shops/bed.png</source>
+  </item>
+  <item>
+   <name>Medical equipment store</name>
+   <source>:/Qml/qml/shops/medicalsupply.png</source>
+  </item>
+  <item>
+   <name>Mobile phones shop</name>
+   <source>:/Qml/qml/shops/mobilephone.png</source>
+  </item>
+  <item>
+   <name>Motorcycle shop</name>
+   <source>:/Qml/qml/shops/shopmotorcycle.png</source>
+  </item>
+  <item>
+   <name>Music shop</name>
+   <source>:/Qml/qml/shops/musicalinstrument.png</source>
+  </item>
+  <item>
+   <name>Newsstand</name>
+   <source>:/Qml/qml/shops/newsagent.png</source>
+  </item>
+  <item>
+   <name>Optician</name>
+   <source>:/Qml/qml/shops/optician.png</source>
+  </item>
+  <item>
+   <name>Outdoor equipment shop</name>
+   <source>:/Qml/qml/shops/outdoor.png</source>
+  </item>
+  <item>
+   <name>Paint shop</name>
+   <source>:/Qml/qml/shops/paint.png</source>
+  </item>
+  <item>
+   <name>Pet shop</name>
+   <source>:/Qml/qml/shops/pet.png</source>
+  </item>
+  <item>
+   <name>Photo studio</name>
+   <source>:/Qml/qml/shops/photo.png</source>
+  </item>
+  <item>
+   <name>Record shop</name>
+   <source>:/Qml/qml/shops/shopmusic.png</source>
+  </item>
+  <item>
+   <name>Second hand goods shop</name>
+   <source>:/Qml/qml/shops/secondhand.png</source>
+  </item>
+  <item>
+   <name>Shoe store</name>
+   <source>:/Qml/qml/shops/shoes.png</source>
+  </item>
+  <item>
+   <name>Sports equipment shop</name>
+   <source>:/Qml/qml/shops/sports.png</source>
+  </item>
+  <item>
+   <name>Stationery shop</name>
+   <source>:/Qml/qml/shops/stationery.png</source>
+  </item>
+  <item>
+   <name>Supermarket</name>
+   <source>:/Qml/qml/shops/supermarket.png</source>
+  </item>
+  <item>
+   <name>Tea shop</name>
+   <source>:/Qml/qml/shops/tea.png</source>
+  </item>
+  <item>
+   <name>Tickets shop</name>
+   <source>:/Qml/qml/shops/ticket.png</source>
+  </item>
+  <item>
+   <name>Tobacco shop</name>
+   <source>:/Qml/qml/shops/tobacco.png</source>
+  </item>
+  <item>
+   <name>Toy shop</name>
+   <source>:/Qml/qml/shops/toys.png</source>
+  </item>
+  <item>
+   <name>Travel agency</name>
+   <source>:/Qml/qml/shops/travelagency.png</source>
+  </item>
+  <item>
+   <name>Tyres shop</name>
+   <source>:/Qml/qml/shops/tyres.png</source>
+  </item>
+  <item>
+   <name>Variety store</name>
+   <source>:/Qml/qml/shops/varietystore.png</source>
+  </item>
+  <item>
+   <name>Video games shop</name>
+   <source>:/Qml/qml/shops/videogames.png</source>
+  </item>
+  <item>
+   <name>Videos/DVDs shop</name>
+   <source>:/Qml/qml/shops/video.png</source>
+  </item>
+  <item>
+   <name>Wholesale store</name>
+   <source>:/Qml/qml/shops/trade.png</source>
+  </item>
+  <item>
+   <name>Shop</name>
+   <source>:/Qml/qml/shops/shopother.png</source>
+  </item>
+  <item>
+   <name>Office</name>
+   <source>:/Qml/qml/shops/office.png</source>
+  </item>
+  <item>
+   <name>Home care</name>
+   <source>:/Qml/qml/shops/socialamenitydarken.png</source>
+  </item>
+ </category>
+ <category>
+  <name>Tourism and accommodation</name>
+  <item>
+   <name>Alpine hut</name>
+   <source>:/Qml/qml/accommodation/alphine.png</source>
+  </item>
+  <item>
+   <name>Apartment</name>
+   <source>:/Qml/qml/accommodation/apartment.png</source>
+  </item>
+  <item>
+   <name>Chalet</name>
+   <source>:/Qml/qml/accommodation/chalet.png</source>
+  </item>
+  <item>
+   <name>Guest house</name>
+   <source>:/Qml/qml/accommodation/guesthouse.png</source>
+  </item>
+  <item>
+   <name>Guidepost</name>
+   <source>:/Qml/qml/accommodation/guidepost.png</source>
+  </item>
+  <item>
+   <name>Hostel</name>
+   <source>:/Qml/qml/accommodation/hostel.png</source>
+  </item>
+  <item>
+   <name>Hotel</name>
+   <source>:/Qml/qml/accommodation/hotel.png</source>
+  </item>
+  <item>
+   <name>Information board</name>
+   <source>:/Qml/qml/accommodation/board.png</source>
+  </item>
+  <item>
+   <name>Information terminal</name>
+   <source>:/Qml/qml/accommodation/terminal.png</source>
+  </item>
+  <item>
+   <name>Motel</name>
+   <source>:/Qml/qml/accommodation/motel.png</source>
+  </item>
+  <item>
+   <name>Tourism-Information</name>
+   <source>:/Qml/qml/accommodation/office.png</source>
+  </item>
+  <item>
+   <name>Viewpoint</name>
+   <source>:/Qml/qml/accommodation/viewpoint.png</source>
+  </item>
+  <item>
+   <name>Wilderness hut</name>
+   <source>:/Qml/qml/accommodation/wilderness.png</source>
+  </item>
+ </category>
+ <category>
+  <name>Transportation</name>
+  <item>
+   <name>Airport</name>
+   <source>:/Qml/qml/transportation/aerodrome.png</source>
+  </item>
+  <item>
+   <name>Bicycle parking</name>
+   <source>:/Qml/qml/transportation/parkingbicycle.png</source>
+  </item>
+  <item>
+   <name>Bicycle repair station</name>
+   <source>:/Qml/qml/transportation/bicyclerepairstation.png</source>
+  </item>
+  <item>
+   <name>Bicycle-rental station</name>
+   <source>:/Qml/qml/transportation/rentalbicycle.png</source>
+  </item>
+  <item>
+   <name>Boat rental</name>
+   <source>:/Qml/qml/transportation/rentalboat.png</source>
+  </item>
+  <item>
+   <name>Bus station</name>
+   <source>:/Qml/qml/transportation/busstation.png</source>
+  </item>
+  <item>
+   <name>Bus stop</name>
+   <source>:/Qml/qml/transportation/busstop.png</source>
+  </item>
+  <item>
+   <name>Car parking</name>
+   <source>:/Qml/qml/transportation/parking.png</source>
+  </item>
+  <item>
+   <name>Charging station</name>
+   <source>:/Qml/qml/transportation/chargingstation.png</source>
+  </item>
+  <item>
+   <name>Elevator</name>
+   <source>:/Qml/qml/transportation/elevator.png</source>
+  </item>
+  <item>
+   <name>Ferry terminal</name>
+   <source>:/Qml/qml/transportation/ferry.png</source>
+  </item>
+  <item>
+   <name>Gas station</name>
+   <source>:/Qml/qml/transportation/fuel.png</source>
+  </item>
+  <item>
+   <name>Helipad</name>
+   <source>:/Qml/qml/transportation/helipad.png</source>
+  </item>
+  <item>
+   <name>Motorcycle parking</name>
+   <source>:/Qml/qml/transportation/parkingmotorcycle.png</source>
+  </item>
+  <item>
+   <name>Multi-storey parking entrance</name>
+   <source>:/Qml/qml/transportation/parkingentrancemultistorey.png</source>
+  </item>
+  <item>
+   <name>Parking tickets machine</name>
+   <source>:/Qml/qml/transportation/parkingtickets.png</source>
+  </item>
+  <item>
+   <name>Railway station</name>
+   <source>:/Qml/qml/transportation/renderingrailwaytramstomapnik.png</source>
+  </item>
+  <item>
+   <name>Rent a car</name>
+   <source>:/Qml/qml/transportation/rentalcar.png</source>
+  </item>
+  <item>
+   <name>Slipway for boats</name>
+   <source>:/Qml/qml/transportation/transportslipway.png</source>
+  </item>
+  <item>
+   <name>Subway entrance</name>
+   <source>:/Qml/qml/transportation/subwayentrance.png</source>
+  </item>
+  <item>
+   <name>Taxi</name>
+   <source>:/Qml/qml/transportation/taxi.png</source>
+  </item>
+  <item>
+   <name>Train tickets machine</name>
+   <source>:/Qml/qml/transportation/publictransporttickets.png</source>
+  </item>
+  <item>
+   <name>Underground parking entrance</name>
+   <source>:/Qml/qml/transportation/parkingentrance.png</source>
+  </item>
+ </category>
+ <category>
+  <name>Waste management</name>
+  <item>
+   <name>Disposal bin</name>
+   <source>:/Qml/qml/wasteManagement/disposal.png</source>
+  </item>
+  <item>
+   <name>Public toilets</name>
+   <source>:/Qml/qml/wasteManagement/toilets.png</source>
+  </item>
+  <item>
+   <name>Recycling centre</name>
+   <source>:/Qml/qml/wasteManagement/recycling.png</source>
+  </item>
+ </category>
+ <category>
+  <name>Waterways</name>
+  <item>
+   <name>Ferry route</name>
+   <source>:/Qml/qml/waterways/routeferry.png</source>
+  </item>
+  <item>
+   <name>Pier</name>
+   <source>:/Qml/qml/waterways/pier.png</source>
+  </item>
+  <item>
+   <name>River/Canal</name>
+   <source>:/Qml/qml/waterways/river.png</source>
+  </item>
+  <item>
+   <name>River/Canal intermittent</name>
+   <source>:/Qml/qml/waterways/riverintermittent.png</source>
+  </item>
+  <item>
+   <name>River/Canal in tunnel</name>
+   <source>:/Qml/qml/waterways/rivertunnel.png</source>
+  </item>
+  <item>
+   <name>Stream/Ditch/Drain</name>
+   <source>:/Qml/qml/waterways/stream.png</source>
+  </item>
+  <item>
+   <name>Water slide</name>
+   <source>:/Qml/qml/waterways/waterslide.png</source>
+  </item>
+ </category>
+</legend>
