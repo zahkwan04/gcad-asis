@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Prerequisites
 *.d
 
@@ -32,6 +33,8 @@
 *.out
 *.app
 =======
+=======
+>>>>>>> ee8ed1feee0b3dc756b5afc21bc868b603eb9882
 # Ignore debug folder
 debug/
 
@@ -49,5 +52,9 @@ debug/
 
 openssl/Win64OpenSSL-3_1_4.msi
 
+<<<<<<< HEAD
 Phoenix.pro.user
 >>>>>>> ee8ed1f (initial commit: added project files)
+=======
+Phoenix.pro.user
+>>>>>>> ee8ed1feee0b3dc756b5afc21bc868b603eb9882
