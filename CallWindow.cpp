@@ -2513,13 +2513,16 @@ void CallWindow::startVideo(int lclPort, const string &lclKey)
         item = static_cast<QGraphicsPixmapItem *>(scene->items().at(0));
         item->setPixmap(img);
     }
+
+    // TODO: modify to display webrtc
     ui->videoView->show();
     ui->videoView->setMinimumSize(640, 480);
     ui->videoButtonFrame->show();
     if (mVideoStream == 0)
-        mVideoStream = new VideoStream(lclPort, mRemoteVidRtpPort, lclKey,
-                                       mRemoteVidRtpKey, this, decodeCb,
-                                       vidStatCb);
+//        mVideoStream = new VideoStream(lclPort, mRemoteVidRtpPort, lclKey,
+//                                       mRemoteVidRtpKey, this, decodeCb,
+//                                       vidStatCb);
+        qDebug() << "display webrtc here";
 }
 
 void CallWindow::setVideoOut(bool doStart)
