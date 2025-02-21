@@ -2519,9 +2519,9 @@ void CallWindow::startVideo(int lclPort, const string &lclKey)
     ui->videoView->setMinimumSize(640, 480);
     ui->videoButtonFrame->show();
     if (mVideoStream == 0)
-//        mVideoStream = new VideoStream(lclPort, mRemoteVidRtpPort, lclKey,
-//                                       mRemoteVidRtpKey, this, decodeCb,
-//                                       vidStatCb);
+        mVideoStream = new VideoStream(lclPort, mRemoteVidRtpPort, lclKey,
+                                       mRemoteVidRtpKey, this, decodeCb,
+                                       vidStatCb);
         qDebug() << "display webrtc here";
 }
 
