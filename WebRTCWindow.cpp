@@ -13,9 +13,20 @@ WebRTCWindow::WebRTCWindow(QWidget *parent)
     webRtcView->settings()->setAttribute(QWebEngineSettings::PluginsEnabled, true);
     webRtcView->settings()->setAttribute(QWebEngineSettings::JavascriptEnabled, true);
     webRtcView->settings()->setAttribute(QWebEngineSettings::AutoLoadImages, true);
+    // enable insecure contents
+    webRtcView->settings()->setAttribute(QWebEngineSettings::LocalContentCanAccessRemoteUrls, true);
+    webRtcView->settings()->setAttribute(QWebEngineSettings::LocalContentCanAccessFileUrls, true);
+    //enable WebRTC explicitly
+    webRtcView->settings()->setAttribute(QWebEngineSettings::WebRTCPublicInterfacesOnly, false);
+    // javascript execution enabled
+    webRtcView->settings()->setAttribute(QWebEngineSettings::JavascriptCanOpenWindows, true);
+    webRtcView->settings()->setAttribute(QWebEngineSettings::JavascriptCanAccessClipboard, true);
+
+
+
 
     // Load WebRTC stream URL
-    webRtcView->setUrl(QUrl("https://www.youtube.com/watch?v=gTJLjDQ9jhs"));
+    webRtcView->setUrl(QUrl("http://10.12.49.100/showStream?workflowId=OfficeStairs"));
 
     // Set as the main widget
     setCentralWidget(webRtcView);
