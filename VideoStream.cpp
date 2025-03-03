@@ -161,7 +161,6 @@ void VideoStream::encodeCb(void *obj, uchar *data, int len, bool marker)
 void VideoStream::rtpReceived(RtpSession *rtp, char *data, int len)
 {
 #ifdef FFMPEG
-    //TODO: send RTP to ASIS for BWC AI instead of just GCAD Client
     mDec->decode(data, len);
 #endif
 }

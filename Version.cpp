@@ -4,7 +4,7 @@
  * Copyright (C) Sapura Secured Technologies, 2019-2025. All Rights Reserved.
  *
  * @file
- * @version $Id: Version.cpp 1900 2025-01-23 08:38:48Z zulzaidi $
+ * @version $Id: Version.cpp 1905 2025-02-21 02:55:53Z rosnin $
  * @author Zulzaidi Atan
  */
 #include <QObject>
@@ -15,7 +15,7 @@ const QString Version::APP_TITLE("SCAD");
 const QString Version::APP_NAME("GIRN Dispatcher");
 const QString Version::NWK_NAME(
                        "Government Integrated Radio Network (GIRN) Dispatcher");
-const QString Version::APP_VERSION("02.05.00");
+const QString Version::APP_VERSION("02.05.02");
 const QString Version::APP_NAME_VERSION(APP_NAME + " v" + APP_VERSION);
 const QString Version::COPYRIGHT("Sapura Secured Technologies, 2013-2025");
 

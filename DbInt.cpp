@@ -4,7 +4,7 @@
  * Copyright (C) Sapura Secured Technologies, 2013-2025. All Rights Reserved.
  *
  * @file
- * @version $Id: DbInt.cpp 1902 2025-02-04 03:45:40Z zulzaidi $
+ * @version $Id: DbInt.cpp 1904 2025-02-19 06:59:58Z zulzaidi $
  * @author Muhd Hashim Wahab
  */
 #include <assert.h>
@@ -982,8 +982,8 @@ void DbInt::connectThread()
         {
 #if defined(SNMP) && defined(SERVERAPP)
             if (!alertSent)
-                alertSent = SnmpAgent::sendTrap(SnmpAgent::TRAP_DB_STAT,
-                                                SnmpAgent::VAL_DISC);
+                alertSent = SNMP_TRAP(SnmpAgent::TRAP_DB_STAT,
+                                      SnmpAgent::VAL_DISC);
 #endif
             if (!mStopped)
                 PalThread::sleep(5);
@@ -991,8 +991,7 @@ void DbInt::connectThread()
         }
 #if defined(SNMP) && defined(SERVERAPP)
         if (alertSent)
-            alertSent = !SnmpAgent::sendTrap(SnmpAgent::TRAP_DB_STAT,
-                                             SnmpAgent::VAL_CONN);
+            alertSent = !SNMP_TRAP(SnmpAgent::TRAP_DB_STAT, SnmpAgent::VAL_CONN);
 #endif
         //30 seconds sleep - quantize to 5 seconds to allow faster exit
         for (i=6; i>0 && !mStopped; --i)

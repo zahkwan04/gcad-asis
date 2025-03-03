@@ -1,10 +1,10 @@
 /**
  * Video device implementation.
  *
- * Copyright (C) Sapura Secured Technologies, 2021. All Rights Reserved.
+ * Copyright (C) Sapura Secured Technologies, 2021-2025. All Rights Reserved.
  *
  * @file
- * @version $Id: VideoDevice.cpp 1552 2021-09-22 04:51:57Z zulzaidi $
+ * @version $Id: VideoDevice.cpp 1903 2025-02-12 00:33:57Z zulzaidi $
  * @author Zulzaidi Atan
  */
 #include <QCameraInfo>
@@ -128,12 +128,17 @@ void VideoDevice::setResolution(const QString &res)
 
 void VideoDevice::setCamera(void *obj, bool doStart)
 {
+    static QPixmap imgNoCamera(QPixmap(":/Images/images/icon_no_video.png"));
     if (!mIsValid)
         return;
     if (doStart)
     {
         if (sCamOwner == 0)
+        {
+            if (mCbObj != 0)
+                mCbFn(mCbObj, imgNoCamera);
             mCamera->start();
+        }
         sCamOwner = obj;
     }
     else if (sCamOwner == obj)

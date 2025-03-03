@@ -1,10 +1,10 @@
 /**
  * A custom QDialog module.
  *
- * Copyright (C) Sapura Secured Technologies, 2016-2024. All Rights Reserved.
+ * Copyright (C) Sapura Secured Technologies, 2016-2025. All Rights Reserved.
  *
  * @file
- * @version $Id: MessageDialog.h 1826 2024-03-18 01:17:01Z rosnin $
+ * @version $Id: MessageDialog.h 1905 2025-02-21 02:55:53Z rosnin $
  * @author Mohd Rozaimi
  * @author Mohd Rashid
  */
@@ -40,6 +40,19 @@ public:
      */
     MessageDialog(const QString &title,
                   const QString &header,
+                  const QIcon   &icon,
+                  bool           deleteOnClose,
+                  QWidget       *parent = 0);
+
+    /**
+     * Constructor with no data and no header.
+     *
+     * @param[in] title         The message title.
+     * @param[in] icon          The window icon.
+     * @param[in] deleteOnClose true to delete on close.
+     * @param[in] parent        The parent widget, if any.
+     */
+    MessageDialog(const QString &title,
                   const QIcon   &icon,
                   bool           deleteOnClose,
                   QWidget       *parent = 0);

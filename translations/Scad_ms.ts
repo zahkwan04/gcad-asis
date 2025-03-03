@@ -5,7 +5,7 @@
  Copyright (C) Sapura Secured Technologies, 2019-2025. All Rights Reserved.
 
  @file
- @version $Id: Scad_ms.ts 1900 2025-01-23 08:38:48Z zulzaidi $
+ @version $Id: Scad_ms.ts 1905 2025-02-21 02:55:53Z rosnin $
 -->
 <!DOCTYPE TS>
 <TS version="2.1" language="ms_MY" sourcelanguage="en_US">
@@ -310,8 +310,8 @@ Perlu fail bernama %2, di mana %3 adalah salah satu daripada
     <message>
         <location filename="../CallWindow.cpp" line="204"/>
         <location filename="../CallWindow.cpp" line="545"/>
-        <location filename="../CallWindow.cpp" line="1703"/>
-        <location filename="../CallWindow.cpp" line="1816"/>
+        <location filename="../CallWindow.cpp" line="1704"/>
+        <location filename="../CallWindow.cpp" line="1817"/>
         <source>Duplex</source>
         <translation>Dupleks</translation>
     </message>
@@ -330,7 +330,7 @@ Perlu fail bernama %2, di mana %3 adalah salah satu daripada
     </message>
     <message>
         <location filename="../CallWindow.cpp" line="537"/>
-        <location filename="../CallWindow.cpp" line="1643"/>
+        <location filename="../CallWindow.cpp" line="1644"/>
         <source>Video</source>
         <translation></translation>
     </message>
@@ -385,46 +385,46 @@ Perlu fail bernama %2, di mana %3 adalah salah satu daripada
         <translation>Panggilan </translation>
     </message>
     <message>
-        <location filename="../CallWindow.cpp" line="1443"/>
+        <location filename="../CallWindow.cpp" line="1444"/>
         <source>VOIP Error</source>
         <translation>Masalah VOIP</translation>
     </message>
     <message>
-        <location filename="../CallWindow.cpp" line="1444"/>
+        <location filename="../CallWindow.cpp" line="1445"/>
         <source>VOIP Server not available.</source>
         <translation>Server VOIP tidak tersedia.</translation>
     </message>
     <message>
-        <location filename="../CallWindow.cpp" line="1572"/>
-        <location filename="../CallWindow.cpp" line="2375"/>
+        <location filename="../CallWindow.cpp" line="1573"/>
+        <location filename="../CallWindow.cpp" line="2376"/>
         <source>Call Not Allowed</source>
         <translation>Panggilan Tidak Dibenarkan</translation>
     </message>
     <message>
-        <location filename="../CallWindow.cpp" line="1573"/>
-        <location filename="../CallWindow.cpp" line="2376"/>
+        <location filename="../CallWindow.cpp" line="1574"/>
+        <location filename="../CallWindow.cpp" line="2377"/>
         <source>You already have the maximum %1 concurrent sessions. End one before starting another.</source>
         <translation>Sudah maksimum %1 sesi serentak. Sila hentikan satu sebelum mulakan yang baru.</translation>
     </message>
     <message>
-        <location filename="../CallWindow.cpp" line="1908"/>
+        <location filename="../CallWindow.cpp" line="1909"/>
         <source>Exit full screen</source>
         <translation>Tutup skrin penuh</translation>
     </message>
     <message>
         <location filename="../CallWindow.ui" line="1009"/>
-        <location filename="../CallWindow.cpp" line="1917"/>
+        <location filename="../CallWindow.cpp" line="1918"/>
         <source>Full screen</source>
         <translation>Skrin penuh</translation>
     </message>
     <message>
-        <location filename="../CallWindow.cpp" line="1931"/>
+        <location filename="../CallWindow.cpp" line="1932"/>
         <source>Show preview</source>
         <translation>Tunjuk previu</translation>
     </message>
     <message>
         <location filename="../CallWindow.ui" line="972"/>
-        <location filename="../CallWindow.cpp" line="1936"/>
+        <location filename="../CallWindow.cpp" line="1937"/>
         <source>Hide preview</source>
         <translation>Sembunyikan previu</translation>
     </message>
@@ -449,7 +449,7 @@ Perlu fail bernama %2, di mana %3 adalah salah satu daripada
         <translation>Preemptive</translation>
     </message>
     <message>
-        <location filename="../CallWindow.cpp" line="2307"/>
+        <location filename="../CallWindow.cpp" line="2308"/>
         <source>Missed call</source>
         <translation>Tidak dijawab</translation>
     </message>
@@ -4839,8 +4839,8 @@ Ubah atau gabungkan?</translation>
         <translation>Kumpulan</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="2092"/>
-        <location filename="../MainWindow.cpp" line="2093"/>
+        <location filename="../MainWindow.cpp" line="2101"/>
+        <location filename="../MainWindow.cpp" line="2102"/>
         <source>Maximum %1</source>
         <translation>Maksimum %1</translation>
     </message>
@@ -4852,8 +4852,8 @@ Ubah atau gabungkan?</translation>
     </message>
     <message>
         <location filename="../MainWindow.cpp" line="592"/>
-        <location filename="../MainWindow.cpp" line="1786"/>
-        <location filename="../MainWindow.cpp" line="1800"/>
+        <location filename="../MainWindow.cpp" line="1787"/>
+        <location filename="../MainWindow.cpp" line="1801"/>
         <source>Call Party Busy</source>
         <translation>Nombor Sedang Sibuk</translation>
     </message>
@@ -4875,17 +4875,17 @@ Are you sure to exit?</source>
 Pasti untuk berhenti?</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="3127"/>
+        <location filename="../MainWindow.cpp" line="3141"/>
         <source>User ID: </source>
         <translation>ID Pengguna: </translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="3141"/>
+        <location filename="../MainWindow.cpp" line="3155"/>
         <source>Server settings</source>
         <translation>Tetapan server</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="3142"/>
+        <location filename="../MainWindow.cpp" line="3156"/>
         <source>Missing input.</source>
         <translation>Maklumat tidak lengkap.</translation>
     </message>
@@ -4913,8 +4913,8 @@ Pasti untuk berhenti?</translation>
     </message>
     <message>
         <location filename="../MainWindow.cpp" line="1432"/>
-        <location filename="../MainWindow.cpp" line="1937"/>
-        <location filename="../MainWindow.cpp" line="1977"/>
+        <location filename="../MainWindow.cpp" line="1938"/>
+        <location filename="../MainWindow.cpp" line="1978"/>
         <source>GPS Monitoring Error</source>
         <translation>Masalah Pantauan GPS</translation>
     </message>
@@ -4935,8 +4935,8 @@ Pasti untuk berhenti?</translation>
         <translation>Server gagal memproses kerana masalah hubungan pangkalan data.</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="1787"/>
-        <location filename="../MainWindow.cpp" line="1801"/>
+        <location filename="../MainWindow.cpp" line="1788"/>
+        <location filename="../MainWindow.cpp" line="1802"/>
         <source>%1
 %2 is now in another call.
 Previous Call Window discarded.</source>
@@ -4945,44 +4945,44 @@ Previous Call Window discarded.</source>
 Paparan panggilan sebelum ini sudah dihapuskan.</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="2224"/>
+        <location filename="../MainWindow.cpp" line="2233"/>
         <source> [getting subscriber data...]</source>
         <translation> [sedang muat turun maklumat pengguna...]</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="2214"/>
+        <location filename="../MainWindow.cpp" line="2223"/>
         <source>Subscriber Data Error</source>
         <translation>Masalah Maklumat Pengguna</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="2215"/>
+        <location filename="../MainWindow.cpp" line="2224"/>
         <source>User %1 not authorized.
 Please contact Help Desk.</source>
         <translation>Pengguna %1 tiada kebenaran.
 Sila hubungi talian Bantuan.</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="2576"/>
+        <location filename="../MainWindow.cpp" line="2585"/>
         <source>%1 since %2</source>
         <translation>%1 sejak %2</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="2614"/>
+        <location filename="../MainWindow.cpp" line="2623"/>
         <source>User %1 already logged in</source>
         <translation>Pengguna %1 sudah log masuk</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="2634"/>
+        <location filename="../MainWindow.cpp" line="2643"/>
         <source>License has expired</source>
         <translation>Lesen sudah luput</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="2637"/>
+        <location filename="../MainWindow.cpp" line="2646"/>
         <source>Unauthorized device</source>
         <translation>Peranti/komputer ini tiada kebenaran</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="2640"/>
+        <location filename="../MainWindow.cpp" line="2649"/>
         <source>Maximum number of users reached</source>
         <translation>Bilangan pengguna sudah maksimum</translation>
     </message>
@@ -5022,85 +5022,85 @@ Sila hubungi talian Bantuan.</translation>
         <translation>Log Keluar Sekarang</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="2134"/>
+        <location filename="../MainWindow.cpp" line="2143"/>
         <source>Offline since %1 [trying to reconnect...]</source>
         <translation>Terputus sejak %1 [cubaan sambungan semula...]</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="2630"/>
+        <location filename="../MainWindow.cpp" line="2639"/>
         <source>Incorrect ID or Password</source>
         <translation>ID atau Kata Laluan salah</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="2720"/>
+        <location filename="../MainWindow.cpp" line="2729"/>
         <source>Function disabled while offline.</source>
         <translation>Fungsi tidak aktif ketika di luar talian.</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="2957"/>
+        <location filename="../MainWindow.cpp" line="2966"/>
         <source>ID no longer available: </source>
         <translation>ID tidak lagi wujud: </translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="2959"/>
+        <location filename="../MainWindow.cpp" line="2968"/>
         <source>Please refresh the Resources list.</source>
         <translation>Sila kemaskini senarai Sumber.</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="1949"/>
+        <location filename="../MainWindow.cpp" line="1950"/>
         <source>Monitoring Error</source>
         <translation>Masalah Pantauan</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="2719"/>
-        <location filename="../MainWindow.cpp" line="2729"/>
+        <location filename="../MainWindow.cpp" line="2728"/>
+        <location filename="../MainWindow.cpp" line="2738"/>
         <source>GPS Monitoring</source>
         <translation>Pantauan GPS</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="2730"/>
+        <location filename="../MainWindow.cpp" line="2739"/>
         <source>Subscriber data not yet ready.</source>
         <translation>Maklumat pengguna belum sedia.</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="2595"/>
+        <location filename="../MainWindow.cpp" line="2604"/>
         <source>Database Error</source>
         <translation>Masalah Pangkalan Data</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="2596"/>
+        <location filename="../MainWindow.cpp" line="2605"/>
         <source>Connection failed.
 Some functions may not work.</source>
         <translation>Sambungan gagal.
 Fungsi tertentu tidak boleh beroperasi.</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="2650"/>
+        <location filename="../MainWindow.cpp" line="2659"/>
         <source>Login Failure</source>
         <translation>Log Masuk Gagal</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="1950"/>
+        <location filename="../MainWindow.cpp" line="1951"/>
         <source>Failed to start monitoring </source>
         <translation>Gagal mulakan pantauan untuk </translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="2960"/>
+        <location filename="../MainWindow.cpp" line="2969"/>
         <source>Resource Error</source>
         <translation>Masalah Sumber</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="3023"/>
+        <location filename="../MainWindow.cpp" line="3037"/>
         <source>Are you sure to exit?</source>
         <translation>Pasti untuk hentikan?</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="3177"/>
+        <location filename="../MainWindow.cpp" line="3191"/>
         <source>Invalid Client</source>
         <translation>Aplikasi Tidak Sah</translation>
     </message>
     <message>
-        <location filename="../MainWindow.cpp" line="3178"/>
+        <location filename="../MainWindow.cpp" line="3192"/>
         <source>This client version %1 is no longer compatible with  the server.
 You must upgrade to version %2 to continue.
 Upgrade now?</source>
@@ -6221,7 +6221,18 @@ Sila ubah parameter carian untuk hadkan kepada %2.</translation>
         <translation>Papar Semua</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="271"/>
+        <location filename="../Resources.ui" line="362"/>
+        <source>During this session only</source>
+        <translation>Untuk sesi ini sahaja</translation>
+    </message>
+    <message>
+        <location filename="../Resources.ui" line="365"/>
+        <location filename="../Resources.cpp" line="159"/>
+        <source>Group Attach History</source>
+        <translation>Senarai Aktiviti Keluar/Masuk Ahli Kumpulan</translation>
+    </message>
+    <message>
+        <location filename="../Resources.cpp" line="310"/>
         <source>Clear Unconfirmed Group Attachments</source>
         <translation>Padam Ahli Kumpulan Tidak Pasti</translation>
     </message>
@@ -6231,86 +6242,111 @@ Sila ubah parameter carian untuk hadkan kepada %2.</translation>
         <translation>Hasil Carian untuk:</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="351"/>
+        <location filename="../Resources.cpp" line="391"/>
         <source>Phonebook Error</source>
         <translation>Masalah Phonebook</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="352"/>
+        <location filename="../Resources.cpp" line="392"/>
         <source>Failed to load user phonebook because of database link error.</source>
         <translation>Gagal muatkan phonebook kerana masalah hubungan pangkalan data.</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="281"/>
+        <location filename="../Resources.cpp" line="320"/>
         <source>Clear Phonebook Content</source>
         <translation>Padam Semua</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="282"/>
+        <location filename="../Resources.cpp" line="321"/>
         <source>Are you sure to delete all Phonebook entries?</source>
         <translation>Pasti untuk kosongkan Phonebook?</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="83"/>
+        <location filename="../Resources.cpp" line="85"/>
         <source>Search Error</source>
         <translation>Carian Gagal</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="84"/>
+        <location filename="../Resources.cpp" line="86"/>
         <source>Invalid search string.</source>
         <translation>Teks carian tidak sah.</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="590"/>
+        <location filename="../Resources.cpp" line="630"/>
         <source>
 Attached members:</source>
         <translation>
 Ahli aktif (&apos;attached&apos;):</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="272"/>
+        <location filename="../Resources.cpp" line="311"/>
         <source>Are you sure to proceed?</source>
         <translation>Pasti untuk teruskan?</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="588"/>
+        <location filename="../Resources.cpp" line="146"/>
+        <source>Action</source>
+        <translation>Aktiviti</translation>
+    </message>
+    <message>
+        <location filename="../Resources.cpp" line="146"/>
+        <source>Time</source>
+        <translation>Waktu</translation>
+    </message>
+    <message>
+        <location filename="../Resources.cpp" line="176"/>
+        <source>Clear Data</source>
+        <translation>Kosongkan Data</translation>
+    </message>
+    <message>
+        <location filename="../Resources.cpp" line="628"/>
         <source>
 No attached members.</source>
         <translation>
 Tiada ahli aktif.</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="597"/>
+        <location filename="../Resources.cpp" line="637"/>
         <source>Unconfirmed:</source>
         <translation>Tidak pasti:</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="600"/>
+        <location filename="../Resources.cpp" line="640"/>
         <source>Group Attachments</source>
         <translation>Ahli Aktif Kumpulan (&apos;Attachments&apos;)</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="1073"/>
+        <location filename="../Resources.cpp" line="659"/>
+        <source>Attach</source>
+        <translation>Masuk</translation>
+    </message>
+    <message>
+        <location filename="../Resources.cpp" line="659"/>
+        <source>Detach</source>
+        <translation>Keluar</translation>
+    </message>
+    <message>
+        <location filename="../Resources.cpp" line="1133"/>
         <source>Call %1</source>
         <translation>Panggil %1</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="1100"/>
+        <location filename="../Resources.cpp" line="1160"/>
         <source>Last online </source>
         <translation>Terakhir di talian </translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="1174"/>
+        <location filename="../Resources.cpp" line="1234"/>
         <source>Delete Phonebook Entry</source>
         <translation>Padam Kandungan Phonebook</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="1175"/>
+        <location filename="../Resources.cpp" line="1235"/>
         <source>Are you sure to delete %1?</source>
         <translation>Pasti untuk padam %1?</translation>
     </message>
     <message>
-        <location filename="../Resources.ui" line="548"/>
+        <location filename="../Resources.ui" line="578"/>
         <source>Phonebook</source>
         <translation></translation>
     </message>

@@ -1,13 +1,14 @@
 /**
  * UI Resources implementation.
  *
- * Copyright (C) Sapura Secured Technologies, 2013-2024. All Rights Reserved.
+ * Copyright (C) Sapura Secured Technologies, 2013-2025. All Rights Reserved.
  *
  * @file
- * @version $Id: Resources.cpp 1885 2024-11-28 08:32:01Z hazim.rujhan $
+ * @version $Id: Resources.cpp 1905 2025-02-21 02:55:53Z rosnin $
  * @author Mazdiana Makmor
  * @author Nurfaizatul Ain Othman
  */
+#include <QHeaderView>
 #include <QLineEdit>
 #include <QMenu>
 #include <QMessageBox>
@@ -21,6 +22,7 @@
 #include "MessageDialog.h"
 #include "QtUtils.h"
 #include "Style.h"
+#include "SubsData.h"
 #include "ui_Resources.h"
 #include "Resources.h"
 
@@ -137,6 +139,43 @@ QWidget(parent), ui(new Ui::Resources), mLogger(logger), mDgnaMembersModel(0)
                     showList(type, false);
                 else
                     showButtons(type, false);
+            });
+    mGrpAttTbl = new QTableWidget(0, 4, this);
+    mGrpAttTbl->hide(); //show only after put inside dialog
+    mGrpAttTbl->setHorizontalHeaderLabels(QStringList() << "GSSI" << "ISSI"
+                                          << tr("Action") << tr("Time"));
+    mGrpAttTbl->setSortingEnabled(true);
+    mGrpAttTbl->sortItems(3, Qt::DescendingOrder); //default sort
+    mGrpAttTbl->setAlternatingRowColors(true);
+    mGrpAttTbl->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    mGrpAttTbl->horizontalHeader()->setStretchLastSection(true);
+    mGrpAttTbl->horizontalHeader()->setSortIndicatorShown(true);
+    connect(ui->grpAttButton, &QPushButton::clicked, this,
+            [this]
+            {
+                static MessageDialog *md = 0;
+                if (md == 0)
+                {
+                    md = new MessageDialog(tr("Group Attach History"),
+                           QtUtils::getActionIcon(CmnTypes::ACTIONTYPE_GRP_ATT),
+                           false, this);
+                    md->addWidget(mGrpAttTbl);
+                    mGrpAttTbl->show();
+                }
+                md->show();
+            });
+    //context menu to clear mGrpAttTbl
+    connect(ui->grpAttButton, &QPushButton::customContextMenuRequested, this,
+            [this](const QPoint &pos)
+            {
+                if (QApplication::keyboardModifiers() != Qt::ControlModifier)
+                    return; //accept only Ctrl-right-click
+                QMenu menu(this);
+                menu.addAction(QtUtils::getActionIcon(
+                                                    CmnTypes::ACTIONTYPE_CLEAR),
+                               tr("Clear Data"));
+                if (menu.exec(ui->grpAttButton->mapToGlobal(pos)) != 0)
+                    mGrpAttTbl->setRowCount(0);
             });
     connect(ui->tabWidget, &QTabWidget::currentChanged, this,
             [this]
@@ -292,6 +331,7 @@ void Resources::init(bool full)
 void Resources::setTheme()
 {
     setStyleSheet(Style::getStyle(Style::OBJ_COMMON));
+    ui->grpAttButton->setMinimumWidth(220); //width in UI overridden above
     ui->searchButton->setStyleSheet(Style::getStyle(Style::OBJ_TOOLBUTTON));
     //ensure clear QToolButton text
     QString s(Style::getStyle(Style::OBJ_RESOURCEBUTTON));
@@ -600,6 +640,26 @@ void Resources::showGrpAttachedMembers(int gssi, QWidget *parent)
     MessageDialog::showMessage(tr("Group Attachments"), msg, s,
                                QtUtils::getRscIcon(type),
                                (parent == 0)? this: parent);
+}
+
+void Resources::addGrpAttachData(bool detach, int issi, const set<int> &gssis)
+{
+    QString i(QString::number(issi));
+    QString t(QtUtils::getTimestamp());
+    mGrpAttTbl->setSortingEnabled(false);
+    for (auto g : gssis)
+    {
+        mGrpAttTbl->insertRow(0);
+        mGrpAttTbl->setItem(0, 0, new QTableWidgetItem(QString::number(g)));
+        mGrpAttTbl->setItem(0, 1, new QTableWidgetItem(i));
+        mGrpAttTbl->setItem(0, 2,
+                            new QTableWidgetItem(
+                                (!detach &&
+                                 SubsData::isGrpAttachedMember(issi, g))?
+                                    tr("Attach"): tr("Detach")));
+        mGrpAttTbl->setItem(0, 3, new QTableWidgetItem(t));
+    }
+    mGrpAttTbl->setSortingEnabled(true);
 }
 
 void Resources::showEvent(QShowEvent *)

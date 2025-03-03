@@ -1,10 +1,10 @@
 /**
  * SCAD/STM protocol message implementation.
  *
- * Copyright (C) Sapura Secured Technologies, 2013-2024. All Rights Reserved.
+ * Copyright (C) Sapura Secured Technologies, 2013-2025. All Rights Reserved.
  *
  * @file
- * @version $Id: MsgSp.cpp 1876 2024-09-05 06:59:23Z zulzaidi $
+ * @version $Id: MsgSp.cpp 1907 2025-02-27 08:51:25Z zulzaidi $
  * @author Mohd Rashid
  * @author Mohd Rozaimi
  */
@@ -2018,25 +2018,36 @@ MsgSp *MsgSp::parse(const string &str, const string &key)
     return newMsg;
 }
 
-string MsgSp::hexScramble(const string &str, const string &key)
+string MsgSp::hexScramble(const string &str, const string &key, char delta)
 {
     if (str.empty())
         return str;
     if (key.empty())
         return Utils::toHexString(str);
-    string opStr;
     auto rit = key.rbegin();
+    if (delta != 0)
+    {
+        do
+        {
+            delta = rand() + time(NULL);
+        }
+        while (delta == 0);
+        rit += delta % key.size();
+    }
+    string opStr;
     for (const auto &c : str)
     {
         if (rit == key.rend())
             rit = key.rbegin();
-        opStr += (c ^ *rit);
+        opStr += (c ^ *rit) + delta;
         ++rit;
     }
+    if (delta != 0)
+        opStr.insert(opStr.size() - 1, &delta, 1); //insert delta
     return Utils::toHexString(opStr);
 }
 
-string MsgSp::hexUnscramble(const string &str, const string &key)
+string MsgSp::hexUnscramble(const string &str, const string &key, char delta)
 {
     if (str.empty())
         return str;
@@ -2044,11 +2055,18 @@ string MsgSp::hexUnscramble(const string &str, const string &key)
     if (!key.empty())
     {
         auto rit = key.rbegin();
+        if (delta != 0)
+        {
+            size_t n = output.size();
+            delta = output[n - 2];
+            output.erase(n - 2, 1); //remove delta
+            rit += delta % key.size();
+        }
         for (auto &c : output)
         {
             if (rit == key.rend())
                 rit = key.rbegin();
-            c ^= *rit;
+            c = (c - delta) ^ *rit;
             ++rit;
         }
     }

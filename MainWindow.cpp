@@ -4,7 +4,7 @@
  * Copyright (C) Sapura Secured Technologies, 2013-2025. All Rights Reserved.
  *
  * @file
- * @version $Id: MainWindow.cpp 1899 2025-01-22 05:42:07Z rosnin $
+ * @version $Id: MainWindow.cpp 1905 2025-02-21 02:55:53Z rosnin $
  * @author Mazdiana Makmor
  * @author Nurfaizatul Ain Othman
  */
@@ -1630,12 +1630,13 @@ void MainWindow::onServerMsg(MsgSp *msg)
                 if (mGisWindow != 0)
                     mGisWindow->terminalsFilterUpdate(gssis);
                 Contact::setGrpActive(gssis);
+                callerId = msg->getFieldInt(MsgSp::Field::ISSI);
+                mResources->addGrpAttachData(false, callerId, gssis);
                 if (GpsMonitor::isMonGrps())
                 {
                     gssis.clear(); //get monitored grps
                     ResourceData::model(ui->monGrpList)->getIds(gssis);
-                    GpsMonitor::monGrpsAttDet(
-                                   msg->getFieldInt(MsgSp::Field::ISSI), gssis);
+                    GpsMonitor::monGrpsAttDet(callerId, gssis);
                 }
             }
             break;
@@ -2049,6 +2050,14 @@ void MainWindow::onServerMsg(MsgSp *msg)
                 //deactivate contact except for non-logout mobile deletion
                 if (val != ResourceData::TYPE_MOBILE)
                     Contact::activate(callerId, false);
+            }
+            if (msg->hasField(MsgSp::Field::GRP_LIST))
+            {
+                //GRP_LIST added by SubsData to show grp detachments
+                set<int> gssis;
+                if (Utils::fromStringWithRange(
+                        msg->getFieldString(MsgSp::Field::GRP_LIST), gssis) > 0)
+                    mResources->addGrpAttachData(true, callerId, gssis);
             }
             break;
         }
@@ -2964,11 +2973,16 @@ bool MainWindow::validate(int type, ResourceData::IdsT &ids)
 
 void MainWindow::grpUncAttach(int issi, int gssi)
 {
-    if (SubsData::grpUncAttach(issi, gssi) && GpsMonitor::isMonGrps())
+    if (SubsData::grpUncAttach(issi, gssi))
     {
-        set<int> gssis; //get monitored grps
-        ResourceData::model(ui->monGrpList)->getIds(gssis);
-        GpsMonitor::monGrpsAttDet(issi, gssis);
+        set<int> gssis({gssi});
+        mResources->addGrpAttachData(false, issi, gssis);
+        if (GpsMonitor::isMonGrps())
+        {
+            gssis.clear(); //now get monitored grps
+            ResourceData::model(ui->monGrpList)->getIds(gssis);
+            GpsMonitor::monGrpsAttDet(issi, gssis);
+        }
     }
 }
 

@@ -4,7 +4,7 @@
  * Copyright (C) Sapura Secured Technologies, 2013-2025. All Rights Reserved.
  *
  * @file
- * @version $Id: VoipSessionBase.cpp 1902 2025-02-04 03:45:40Z zulzaidi $
+ * @version $Id: VoipSessionBase.cpp 1904 2025-02-19 06:59:58Z zulzaidi $
  * @author Ahmad Syukri
  */
 #include <assert.h>
@@ -172,21 +172,21 @@ VoipSessionBase::~VoipSessionBase()
 }
 
 #if defined(SNMP) && defined(SERVERAPP)
-#define SEND_SNMP_DISC()                                               \
-    do                                                                 \
-    {                                                                  \
-        if (!alertSent)                                                \
-            alertSent = SnmpAgent::sendTrap(SnmpAgent::TRAP_VOIP_STAT, \
-                                            SnmpAgent::VAL_DISC);      \
-    }                                                                  \
+#define SEND_SNMP_DISC()                                     \
+    do                                                       \
+    {                                                        \
+        if (!alertSent)                                      \
+            alertSent = SNMP_TRAP(SnmpAgent::TRAP_VOIP_STAT, \
+                                  SnmpAgent::VAL_DISC);      \
+    }                                                        \
     while (0)
-#define SEND_SNMP_CONN()                                                \
-    do                                                                  \
-    {                                                                   \
-        if (alertSent)                                                  \
-            alertSent = !SnmpAgent::sendTrap(SnmpAgent::TRAP_VOIP_STAT, \
-                                             SnmpAgent::VAL_CONN);      \
-    }                                                                   \
+#define SEND_SNMP_CONN()                                      \
+    do                                                        \
+    {                                                         \
+        if (alertSent)                                        \
+            alertSent = !SNMP_TRAP(SnmpAgent::TRAP_VOIP_STAT, \
+                                   SnmpAgent::VAL_CONN);      \
+    }                                                         \
     while (0)
 #else
 #define SEND_SNMP_DISC()

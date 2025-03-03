@@ -14,10 +14,10 @@
  * Other custom data shall be added through addWidget() either directly or via
  * an appropriate setData() that creates the widget.
  *
- * Copyright (C) Sapura Secured Technologies, 2016-2024. All Rights Reserved.
+ * Copyright (C) Sapura Secured Technologies, 2016-2025. All Rights Reserved.
  *
  * @file
- * @version $Id: MessageDialog.cpp 1826 2024-03-18 01:17:01Z rosnin $
+ * @version $Id: MessageDialog.cpp 1905 2025-02-21 02:55:53Z rosnin $
  * @author Mohd Rozaimi
  * @author Mohd Rashid
  */
@@ -38,6 +38,16 @@ MessageDialog::MessageDialog(const QString &title,
 QDialog(parent), ui(new Ui::MessageDialog), mLcdNum(0), mTime(0), mTimer(0)
 {
     init(title, header, icon, deleteOnClose);
+}
+
+MessageDialog::MessageDialog(const QString &title,
+                             const QIcon   &icon,
+                             bool           deleteOnClose,
+                             QWidget       *parent) :
+QDialog(parent), ui(new Ui::MessageDialog), mLcdNum(0), mTime(0), mTimer(0)
+{
+    init(title, "", icon, deleteOnClose);
+    ui->textLabel->hide();
 }
 
 MessageDialog::MessageDialog(const QString &title,

@@ -1,10 +1,10 @@
 /**
  * UI Resources module.
  *
- * Copyright (C) Sapura Secured Technologies, 2013-2024. All Rights Reserved.
+ * Copyright (C) Sapura Secured Technologies, 2013-2025. All Rights Reserved.
  *
  * @file
- * @version $Id: Resources.h 1813 2024-02-15 06:01:16Z rosnin $
+ * @version $Id: Resources.h 1905 2025-02-21 02:55:53Z rosnin $
  * @author Mazdiana Makmor
  * @author Nurfaizatul Ain Othman
  */
@@ -12,12 +12,14 @@
 #define RESOURCES_H
 
 #include <map>
+#include <set>
 #include <QMap>
 #include <QMouseEvent>
 #include <QPushButton>
 #include <QRegularExpression>
 #include <QStringList>
 #include <QStringListModel>
+#include <QTableWidget>
 
 #include "DraggableListView.h"
 #include "Logger.h"
@@ -117,6 +119,17 @@ public:
      */
     void showGrpAttachedMembers(int gssi, QWidget *parent = 0);
 
+    /**
+     * Adds to group attachments history.
+     *
+     * @param[in] detach true for detachment of all GSSIs, false if need to
+     *                   determine attachment/detachment of each GSSI from
+     *                   SubsData.
+     * @param[in] issi   The ISSI.
+     * @param[in] gssis  The affected GSSIs.
+     */
+    void addGrpAttachData(bool detach, int issi, const std::set<int> &gssis);
+
 signals:
     void dgnaSelected(int gssi, int type, ResourceData::ListModel *rscModel);
     void locateResource(int issi);
@@ -137,6 +150,7 @@ private:
     std::map<int, ResourceData::ListModel *> mSearchResultMap;
 
     QString                  mUsername;
+    QTableWidget            *mGrpAttTbl;        //grp attachments history
     ResourceData::ListModel *mDgnaMembersModel; //potential DGNA members
     QList<ResourceButton *>  mPhonebookButtons;
 

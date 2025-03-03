@@ -13,7 +13,6 @@
 #include <QTranslator>
 
 #include "MainWindow.h"
-#include "webrtc_test.h"
 
 int main(int argc, char *argv[])
 {
@@ -34,8 +33,5 @@ int main(int argc, char *argv[])
     QLocale::setDefault(QLocale(QLocale::English, QLocale::Malaysia));
     MainWindow mainWindow;
     mainWindow.hide();
-    // Create and show webrtc_test window
-//    webrtc_test webrtcDialog;
-//    webrtcDialog.show();  // Show as a modal dialog
     return app.exec();
 }

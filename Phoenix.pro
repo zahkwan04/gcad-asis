@@ -54,7 +54,7 @@ defined(DBPATH, var) {
 #-------------------------------------------------
 
 QT += core gui widgets multimedia multimediawidgets printsupport qml quick \
-      quickwidgets positioning location xml webenginewidgets
+      quickwidgets positioning location xml
 
 TARGET = scad
 TEMPLATE = app
@@ -135,9 +135,7 @@ SOURCES += \
     GisTracking.cpp \
     GisTrackingReplay.cpp \
     GisTrailingSelector.cpp \
-    GisWindow.cpp \
-    WebRTCWindow.cpp \
-    webrtc_test.cpp
+    GisWindow.cpp
 
 !contains(DEFINES, NO_VOIP) {
     SOURCES += RtpSession.cpp
@@ -227,12 +225,10 @@ HEADERS += \
     GisTrackingReplay.h \
     GisTrailingSelector.h \
     GisWindow.h \
-    WebRTCWindow.h \
     rapidxml.hpp \
     rapidxml_utils.hpp \
     config_win32.h \
-    rtp.h \
-    webrtc_test.h
+    rtp.h
 
 FORMS += \
     AudioPlayer.ui \
@@ -264,9 +260,7 @@ FORMS += \
     GisTracking.ui \
     GisTrackingReplay.ui \
     GisTrailingSelector.ui \
-    GisWindow.ui \
-    WebRTCWindow.ui \
-    webrtc_test.ui
+    GisWindow.ui
 
 contains(DEFINES, MSG_AES) {
     SOURCES += Aes.cpp

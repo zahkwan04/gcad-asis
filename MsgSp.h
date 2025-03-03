@@ -4,10 +4,10 @@
  *                   Field - update createFieldNameMap().
  *                   Value - update getFieldValueString().
  *
- * Copyright (C) Sapura Secured Technologies, 2013-2024. All Rights Reserved.
+ * Copyright (C) Sapura Secured Technologies, 2013-2025. All Rights Reserved.
  *
  * @file
- * @version $Id: MsgSp.h 1888 2024-11-29 08:43:02Z rosnin $
+ * @version $Id: MsgSp.h 1907 2025-02-27 08:51:25Z zulzaidi $
  * @author Mohd Rashid
  * @author Mohd Rozaimi
  */
@@ -1017,22 +1017,26 @@ public:
     /**
      * Scrambles a string into a hexadecimal string using a key.
      *
-     * @param[in] str The string.
-     * @param[in] key The key.
+     * @param[in] str   The string.
+     * @param[in] key   The key.
+     * @param[in] delta Non-zero to add randomness for unique results.
      * @return The scrambled hexadecimal string. Empty string if str is empty.
      */
     static std::string hexScramble(const std::string &str,
-                                   const std::string &key);
+                                   const std::string &key,
+                                   char               delta = 0);
 
     /**
      * Unscrambles a hexadecimal string using a key.
      *
-     * @param[in] str The hexadecimal string.
-     * @param[in] key The key used when scrambling the original string.
+     * @param[in] str   The hexadecimal string.
+     * @param[in] key   The key used when scrambling the original string.
+     * @param[in] delta Non-zero if scrambling used randomness.
      * @return The unscrambled string. Empty string if str is empty.
      */
     static std::string hexUnscramble(const std::string &str,
-                                     const std::string &key);
+                                     const std::string &key,
+                                     char               delta = 0);
 
     /**
      * Scrambles or unscrambles a string.

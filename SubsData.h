@@ -1,10 +1,10 @@
 /**
  * Subscriber data manager.
  *
- * Copyright (C) Sapura Secured Technologies, 2013-2024. All Rights Reserved.
+ * Copyright (C) Sapura Secured Technologies, 2013-2025. All Rights Reserved.
  *
  * @file
- * @version $Id: SubsData.h 1871 2024-08-13 08:02:27Z rosnin $
+ * @version $Id: SubsData.h 1905 2025-02-21 02:55:53Z rosnin $
  * @author Zahari Hadzir
  */
 #ifndef SUBSDATA_H
@@ -1074,6 +1074,15 @@ public:
     static std::string getGrpAttachedMembers(int  gssi,
                                              bool header,
                                              bool multiline = false);
+
+    /**
+     * Checks whether an ISSI is attached to a group.
+     *
+     * @param[in] issi The ISSI.
+     * @param[in] gssi The group GSSI.
+     * @return true if attached.
+     */
+    static bool isGrpAttachedMember(int issi, int gssi);
 
     /**
      * Checks whether an ISSI is attached to any of the given groups.

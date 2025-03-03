@@ -1,10 +1,10 @@
 /**
  * Subscriber data manager implementation.
  *
- * Copyright (C) Sapura Secured Technologies, 2013-2024. All Rights Reserved.
+ * Copyright (C) Sapura Secured Technologies, 2013-2025. All Rights Reserved.
  *
  * @file
- * @version $Id: SubsData.cpp 1872 2024-08-26 06:54:00Z rosnin $
+ * @version $Id: SubsData.cpp 1905 2025-02-21 02:55:53Z rosnin $
  * @author Zahari Hadzir
  */
 #include <assert.h>
@@ -1876,23 +1876,24 @@ int SubsData::getIssiType(int issi)
 
 int SubsData::grpActive(int gssi)
 {
-    if (!isReady())
-        return GRP_STAT_NONE;
-    Locker lock(&sDataLock);
-    if ((sData[SUBS_GSSI_ATTACH_LIST].count(gssi) != 0 &&
-         !sData[SUBS_GSSI_ATTACH_LIST][gssi].empty()) ||
-        (sData[SUBS_GSSI_ATTACH_LIST_UNC].count(gssi) != 0 &&
-         !sData[SUBS_GSSI_ATTACH_LIST_UNC][gssi].empty()))
-        return GRP_STAT_ATTACH;
-    if (sData[SUBS_GSSI_SSI_LIST].count(gssi) != 0 &&
-        !sData[SUBS_GSSI_SSI_LIST][gssi].empty())
-        return GRP_STAT_ASSIGN;
+    if (isReady())
+    {
+        Locker lock(&sDataLock);
+        if ((sData[SUBS_GSSI_ATTACH_LIST].count(gssi) != 0 &&
+             !sData[SUBS_GSSI_ATTACH_LIST][gssi].empty()) ||
+            (sData[SUBS_GSSI_ATTACH_LIST_UNC].count(gssi) != 0 &&
+             !sData[SUBS_GSSI_ATTACH_LIST_UNC][gssi].empty()))
+            return GRP_STAT_ATTACH;
+        if (sData[SUBS_GSSI_SSI_LIST].count(gssi) != 0 &&
+            !sData[SUBS_GSSI_SSI_LIST][gssi].empty())
+            return GRP_STAT_ASSIGN;
+    }
     return GRP_STAT_NONE;
 }
 
 bool SubsData::grpUncAttach(int issi, int gssi)
 {
-    if (issi <= 0 || gssi <= 0 || isGrpAttachedMember(issi, IdSetT({gssi})))
+    if (issi <= 0 || gssi <= 0 || isGrpAttachedMember(issi, gssi))
         return false;
     Locker lock(&sDataLock);
     grpUncDetach(issi, 0, true); //detach from all first
@@ -2558,23 +2559,41 @@ string SubsData::getGrpAttachedMembers(int gssi, bool header, bool multiline)
     return oss.str();
 }
 
+bool SubsData::isGrpAttachedMember(int issi, int gssi)
+{
+    if (isReady())
+    {
+        Locker lock(&sDataLock);
+        const auto &d(sData[SUBS_GSSI_ATTACH_LIST]);
+        if (d.count(gssi) != 0 && d.at(gssi).count(issi) != 0)
+            return true;
+#ifndef SERVERAPP
+        const auto &d2(sData[SUBS_GSSI_ATTACH_LIST_UNC]);
+        if (d2.count(gssi) != 0 && d2.at(gssi).count(issi) != 0)
+            return true;
+#endif
+    }
+    return false;
+}
+
 bool SubsData::isGrpAttachedMember(int issi, const IdSetT &gssis)
 {
-    if (!isReady())
-        return false;
-    Locker lock(&sDataLock);
-    const auto &d(sData[SUBS_GSSI_ATTACH_LIST]);
-#ifndef SERVERAPP
-    const auto &d2(sData[SUBS_GSSI_ATTACH_LIST_UNC]);
-#endif
-    for (auto i : gssis)
+    if (isReady())
     {
-        if (d.count(i) != 0 && d.at(i).count(issi) != 0)
-            return true;
+        Locker lock(&sDataLock);
+        const auto &d(sData[SUBS_GSSI_ATTACH_LIST]);
 #ifndef SERVERAPP
-        if (d2.count(i) != 0 && d2.at(i).count(issi) != 0)
-            return true;
+        const auto &d2(sData[SUBS_GSSI_ATTACH_LIST_UNC]);
 #endif
+        for (auto i : gssis)
+        {
+            if (d.count(i) != 0 && d.at(i).count(issi) != 0)
+                return true;
+#ifndef SERVERAPP
+            if (d2.count(i) != 0 && d2.at(i).count(issi) != 0)
+                return true;
+#endif
+        }
     }
     return false;
 }
@@ -3154,6 +3173,26 @@ void SubsData::processMonMsg(MsgSp *msg)
                     }
                     else
                     {
+#ifndef SERVERAPP
+                        //get all grp attachments including unconfirmed - for
+                        //simplicity, do this here instead of inside
+                        //removeResource()
+                        IdSetT gssis;
+                        for (const auto &it : sData[SUBS_GSSI_ATTACH_LIST])
+                        {
+                            if (it.second.count(content) != 0)
+                                gssis.insert(it.first);
+                        }
+                        for (const auto &it : sData[SUBS_GSSI_ATTACH_LIST_UNC])
+                        {
+                            if (it.second.count(content) != 0)
+                                gssis.insert(it.first);
+                        }
+                        if (!gssis.empty())
+                            msg->addField(MsgSp::Field::GRP_LIST,
+                                          Utils::toString(gssis,
+                                                 MsgSp::Value::LIST_DELIMITER));
+#endif
                         removeResource(content, false, true);
 #ifdef SERVERAPP
                         if (CfgManager::stmNwk())
