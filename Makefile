@@ -293,15 +293,18 @@ Makefile: Phoenix.pro ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\win32-m
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\lex.prf \
 		Phoenix.pro \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5MultimediaWidgets.prl \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5WebEngineWidgets.prl \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5PrintSupport.prl \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5QuickWidgets.prl \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Widgets.prl \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Multimedia.prl \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Location.prl \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5PositioningQuick.prl \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5WebEngineCore.prl \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Quick.prl \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Gui.prl \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5QmlModels.prl \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5WebChannel.prl \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Qml.prl \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Network.prl \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Positioning.prl \
@@ -311,15 +314,18 @@ Makefile: Phoenix.pro ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\win32-m
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\build_pass.prf \
 		Resources.qrc \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5MultimediaWidgetsd.prl \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5WebEngineWidgetsd.prl \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5PrintSupportd.prl \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5QuickWidgetsd.prl \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Widgetsd.prl \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Multimediad.prl \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Locationd.prl \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5PositioningQuickd.prl \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5WebEngineCored.prl \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Quickd.prl \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Guid.prl \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5QmlModelsd.prl \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5WebChanneld.prl \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Qmld.prl \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Networkd.prl \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Positioningd.prl \
@@ -536,15 +542,18 @@ Makefile: Phoenix.pro ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\win32-m
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\lex.prf:
 Phoenix.pro:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5MultimediaWidgets.prl:
+..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5WebEngineWidgets.prl:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5PrintSupport.prl:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5QuickWidgets.prl:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Widgets.prl:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Multimedia.prl:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Location.prl:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5PositioningQuick.prl:
+..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5WebEngineCore.prl:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Quick.prl:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Gui.prl:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5QmlModels.prl:
+..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5WebChannel.prl:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Qml.prl:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Network.prl:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Positioning.prl:
@@ -554,15 +563,18 @@ Phoenix.pro:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\build_pass.prf:
 Resources.qrc:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5MultimediaWidgetsd.prl:
+..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5WebEngineWidgetsd.prl:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5PrintSupportd.prl:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5QuickWidgetsd.prl:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Widgetsd.prl:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Multimediad.prl:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Locationd.prl:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5PositioningQuickd.prl:
+..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5WebEngineCored.prl:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Quickd.prl:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Guid.prl:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5QmlModelsd.prl:
+..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5WebChanneld.prl:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Qmld.prl:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Networkd.prl:
 ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Positioningd.prl:

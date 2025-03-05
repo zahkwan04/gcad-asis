@@ -68,6 +68,7 @@ public:
     QRadioButton *ambience;
     QHBoxLayout *buttonHLayout;
     QToolButton *listenButton;
+    QToolButton *videoAiButton;
     QToolButton *videoButton;
     QToolButton *callButton;
     QToolButton *pttButton;
@@ -315,6 +316,20 @@ public:
 
         buttonHLayout->addWidget(listenButton);
 
+        videoAiButton = new QToolButton(callFrame);
+        videoAiButton->setObjectName(QString::fromUtf8("videoAiButton"));
+        videoAiButton->setEnabled(true);
+        videoAiButton->setVisible(false);
+        sizePolicy.setHeightForWidth(videoAiButton->sizePolicy().hasHeightForWidth());
+        videoAiButton->setSizePolicy(sizePolicy);
+        videoAiButton->setMinimumSize(QSize(62, 61));
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8("images/icon_video_ai.png"), QSize(), QIcon::Normal, QIcon::Off);
+        videoAiButton->setIcon(icon2);
+        videoAiButton->setIconSize(QSize(55, 55));
+
+        buttonHLayout->addWidget(videoAiButton);
+
         videoButton = new QToolButton(callFrame);
         videoButton->setObjectName(QString::fromUtf8("videoButton"));
         videoButton->setEnabled(true);
@@ -322,9 +337,9 @@ public:
         videoButton->setSizePolicy(sizePolicy);
         videoButton->setMinimumSize(QSize(62, 61));
         videoButton->setVisible(false);
-        QIcon icon2;
-        icon2.addFile(QString::fromUtf8(":/Images/images/icon_video.png"), QSize(), QIcon::Normal, QIcon::Off);
-        videoButton->setIcon(icon2);
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8(":/Images/images/icon_video.png"), QSize(), QIcon::Normal, QIcon::Off);
+        videoButton->setIcon(icon3);
         videoButton->setIconSize(QSize(55, 55));
 
         buttonHLayout->addWidget(videoButton);
@@ -335,9 +350,9 @@ public:
         sizePolicy.setHeightForWidth(callButton->sizePolicy().hasHeightForWidth());
         callButton->setSizePolicy(sizePolicy);
         callButton->setMinimumSize(QSize(62, 61));
-        QIcon icon3;
-        icon3.addFile(QString::fromUtf8(":/Images/images/icon_joinCall.png"), QSize(), QIcon::Normal, QIcon::Off);
-        callButton->setIcon(icon3);
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8(":/Images/images/icon_joinCall.png"), QSize(), QIcon::Normal, QIcon::Off);
+        callButton->setIcon(icon4);
         callButton->setIconSize(QSize(55, 55));
 
         buttonHLayout->addWidget(callButton);
@@ -349,9 +364,9 @@ public:
         pttButton->setSizePolicy(sizePolicy);
         pttButton->setMinimumSize(QSize(62, 61));
         pttButton->setAutoFillBackground(false);
-        QIcon icon4;
-        icon4.addFile(QString::fromUtf8(":/Images/images/icon_ptt.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pttButton->setIcon(icon4);
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8(":/Images/images/icon_ptt.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pttButton->setIcon(icon5);
         pttButton->setIconSize(QSize(55, 55));
         pttButton->setToolButtonStyle(Qt::ToolButtonIconOnly);
 
@@ -363,10 +378,10 @@ public:
         sizePolicy.setHeightForWidth(micButton->sizePolicy().hasHeightForWidth());
         micButton->setSizePolicy(sizePolicy);
         micButton->setMinimumSize(QSize(62, 61));
-        QIcon icon5;
-        icon5.addFile(QString::fromUtf8(":/Images/images/icon_microphone_mute.png"), QSize(), QIcon::Normal, QIcon::Off);
-        icon5.addFile(QString::fromUtf8(":/Images/images/icon_microphone.png"), QSize(), QIcon::Normal, QIcon::On);
-        micButton->setIcon(icon5);
+        QIcon icon6;
+        icon6.addFile(QString::fromUtf8(":/Images/images/icon_microphone_mute.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon6.addFile(QString::fromUtf8(":/Images/images/icon_microphone.png"), QSize(), QIcon::Normal, QIcon::On);
+        micButton->setIcon(icon6);
         micButton->setIconSize(QSize(45, 45));
         micButton->setCheckable(true);
         micButton->setAutoDefault(false);
@@ -379,10 +394,10 @@ public:
         sizePolicy.setHeightForWidth(speakerButton->sizePolicy().hasHeightForWidth());
         speakerButton->setSizePolicy(sizePolicy);
         speakerButton->setMinimumSize(QSize(62, 61));
-        QIcon icon6;
-        icon6.addFile(QString::fromUtf8(":/Images/images/icon_speaker_mute.png"), QSize(), QIcon::Normal, QIcon::Off);
-        icon6.addFile(QString::fromUtf8(":/Images/images/icon_speaker.png"), QSize(), QIcon::Normal, QIcon::On);
-        speakerButton->setIcon(icon6);
+        QIcon icon7;
+        icon7.addFile(QString::fromUtf8(":/Images/images/icon_speaker_mute.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon7.addFile(QString::fromUtf8(":/Images/images/icon_speaker.png"), QSize(), QIcon::Normal, QIcon::On);
+        speakerButton->setIcon(icon7);
         speakerButton->setIconSize(QSize(45, 45));
         speakerButton->setCheckable(true);
         speakerButton->setAutoDefault(false);
@@ -394,9 +409,9 @@ public:
         sizePolicy.setHeightForWidth(speakerSingleButton->sizePolicy().hasHeightForWidth());
         speakerSingleButton->setSizePolicy(sizePolicy);
         speakerSingleButton->setMinimumSize(QSize(62, 61));
-        QIcon icon7;
-        icon7.addFile(QString::fromUtf8(":/Images/images/icon_speaker_single.png"), QSize(), QIcon::Normal, QIcon::Off);
-        speakerSingleButton->setIcon(icon7);
+        QIcon icon8;
+        icon8.addFile(QString::fromUtf8(":/Images/images/icon_speaker_single.png"), QSize(), QIcon::Normal, QIcon::Off);
+        speakerSingleButton->setIcon(icon8);
         speakerSingleButton->setIconSize(QSize(45, 45));
 
         buttonHLayout->addWidget(speakerSingleButton);
@@ -407,10 +422,10 @@ public:
         sizePolicy.setHeightForWidth(endButton->sizePolicy().hasHeightForWidth());
         endButton->setSizePolicy(sizePolicy);
         endButton->setMinimumSize(QSize(62, 61));
-        QIcon icon8;
-        icon8.addFile(QString::fromUtf8(":/Images/images/icon_endCall.png"), QSize(), QIcon::Disabled, QIcon::On);
-        icon8.addFile(QString::fromUtf8(":/Images/images/icon_endCall2.png"), QSize(), QIcon::Active, QIcon::On);
-        endButton->setIcon(icon8);
+        QIcon icon9;
+        icon9.addFile(QString::fromUtf8(":/Images/images/icon_endCall.png"), QSize(), QIcon::Disabled, QIcon::On);
+        icon9.addFile(QString::fromUtf8(":/Images/images/icon_endCall2.png"), QSize(), QIcon::Active, QIcon::On);
+        endButton->setIcon(icon9);
         endButton->setIconSize(QSize(55, 55));
 
         buttonHLayout->addWidget(endButton);
@@ -501,10 +516,10 @@ public:
         sizePolicy.setHeightForWidth(hidePreviewButton->sizePolicy().hasHeightForWidth());
         hidePreviewButton->setSizePolicy(sizePolicy);
         hidePreviewButton->setMinimumSize(QSize(32, 32));
-        QIcon icon9;
-        icon9.addFile(QString::fromUtf8(":/Images/images/icon_preview_hide.png"), QSize(), QIcon::Normal, QIcon::Off);
-        icon9.addFile(QString::fromUtf8(":/Images/images/icon_preview.png"), QSize(), QIcon::Normal, QIcon::On);
-        hidePreviewButton->setIcon(icon9);
+        QIcon icon10;
+        icon10.addFile(QString::fromUtf8(":/Images/images/icon_preview_hide.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon10.addFile(QString::fromUtf8(":/Images/images/icon_preview.png"), QSize(), QIcon::Normal, QIcon::On);
+        hidePreviewButton->setIcon(icon10);
         hidePreviewButton->setIconSize(QSize(32, 32));
         hidePreviewButton->setCheckable(true);
 
@@ -516,10 +531,10 @@ public:
         sizePolicy.setHeightForWidth(fullscreenButton->sizePolicy().hasHeightForWidth());
         fullscreenButton->setSizePolicy(sizePolicy);
         fullscreenButton->setMinimumSize(QSize(32, 32));
-        QIcon icon10;
-        icon10.addFile(QString::fromUtf8(":/Images/images/icon_fullscreen.png"), QSize(), QIcon::Normal, QIcon::Off);
-        icon10.addFile(QString::fromUtf8(":/Images/images/icon_fullscreen_exit.png"), QSize(), QIcon::Normal, QIcon::On);
-        fullscreenButton->setIcon(icon10);
+        QIcon icon11;
+        icon11.addFile(QString::fromUtf8(":/Images/images/icon_fullscreen.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon11.addFile(QString::fromUtf8(":/Images/images/icon_fullscreen_exit.png"), QSize(), QIcon::Normal, QIcon::On);
+        fullscreenButton->setIcon(icon11);
         fullscreenButton->setIconSize(QSize(32, 32));
         fullscreenButton->setCheckable(true);
 
@@ -579,6 +594,7 @@ public:
 #if QT_CONFIG(tooltip)
         listenButton->setToolTip(QCoreApplication::translate("CallWindow", "Listen", nullptr));
 #endif // QT_CONFIG(tooltip)
+        videoAiButton->setText(QString());
 #if QT_CONFIG(tooltip)
         videoButton->setToolTip(QCoreApplication::translate("CallWindow", "Video Call", nullptr));
 #endif // QT_CONFIG(tooltip)
