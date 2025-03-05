@@ -52,6 +52,7 @@ public:
     QRadioButton *listView;
     QRadioButton *buttonsView;
     QPushButton *viewAllButton;
+    QPushButton *grpAttButton;
     QSpacerItem *vewSpacer2;
     QTabWidget *tabWidget;
     QWidget *subsTab;
@@ -220,6 +221,17 @@ public:
 
         viewHLayout->addWidget(viewAllButton);
 
+        grpAttButton = new QPushButton(viewFrame);
+        grpAttButton->setObjectName(QString::fromUtf8("grpAttButton"));
+        grpAttButton->setMinimumSize(QSize(220, 40));
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/Images/images/icon_group_attach.png"), QSize(), QIcon::Normal, QIcon::On);
+        grpAttButton->setIcon(icon1);
+        grpAttButton->setIconSize(QSize(30, 30));
+        grpAttButton->setContextMenuPolicy(Qt::CustomContextMenu);
+
+        viewHLayout->addWidget(grpAttButton);
+
         vewSpacer2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         viewHLayout->addItem(vewSpacer2);
@@ -355,6 +367,10 @@ public:
         listView->setText(QCoreApplication::translate("Resources", "List", nullptr));
         buttonsView->setText(QCoreApplication::translate("Resources", "Buttons", nullptr));
         viewAllButton->setText(QCoreApplication::translate("Resources", "View All", nullptr));
+#if QT_CONFIG(tooltip)
+        grpAttButton->setToolTip(QCoreApplication::translate("Resources", "During this session only", nullptr));
+#endif // QT_CONFIG(tooltip)
+        grpAttButton->setText(QCoreApplication::translate("Resources", "Group Attach History", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(subsTab), QCoreApplication::translate("Resources", "Page", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(talkgroupTab), QCoreApplication::translate("Resources", "Page", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(dgnaIndTab), QCoreApplication::translate("Resources", "Page", nullptr));
