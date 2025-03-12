@@ -22,11 +22,8 @@ WebRTCWindow::WebRTCWindow(QWidget *parent)
     webRtcView->settings()->setAttribute(QWebEngineSettings::JavascriptCanOpenWindows, true);
     webRtcView->settings()->setAttribute(QWebEngineSettings::JavascriptCanAccessClipboard, true);
 
-
-
-
     // Load WebRTC stream URL
-    webRtcView->setUrl(QUrl("http://10.12.49.100/showStream?workflowId=OfficeStairs"));
+    webRtcView->setUrl(QUrl("http://10.12.49.100/showStream?workflowId=CarsCrossingDecathlon"));
 
     // Set as the main widget
     setCentralWidget(webRtcView);
