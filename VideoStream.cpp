@@ -7,9 +7,11 @@
  * @version $Id: VideoStream.cpp 1900 2025-01-23 08:38:48Z zulzaidi $
  * @author Zulzaidi Atan
  */
+#include <QTimer>
 #include <assert.h>
 
 #include "VideoStream.h"
+#include "streamer.h"
 
 using namespace std;
 
@@ -162,6 +164,15 @@ void VideoStream::rtpReceived(RtpSession *rtp, char *data, int len)
 {
 #ifdef FFMPEG
     mDec->decode(data, len);
+    Streamer streamer;
+    // video paths to display and RTSP URL
+    QString videoFile =
+        "C:/Users/Administrator/Downloads/middleware_update_21_2.mp4";
+    QString rtspUrl = "rtsp://localhost:8554/mystream";
+
+    // start streaming after a short delay to ensure proper initialization
+    QTimer::singleShot(1000, [&]()
+                       { streamer.startStreaming(videoFile, rtspUrl); });
 #endif
 }
 
