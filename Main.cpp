@@ -11,7 +11,7 @@
 #include <QApplication>
 #include <QLocale>
 #include <QTranslator>
-
+#include <QWebEngineProfile>
 #include "MainWindow.h"
 
 int main(int argc, char *argv[])
@@ -33,5 +33,8 @@ int main(int argc, char *argv[])
     QLocale::setDefault(QLocale(QLocale::English, QLocale::Malaysia));
     MainWindow mainWindow;
     mainWindow.hide();
+    qDebug() << "Qt version:" << QT_VERSION_STR;
+    qDebug() << "Qt build version:" << qVersion();
+    qDebug() << "WebEngine version:" << QWebEngineProfile::defaultProfile()->httpUserAgent();
     return app.exec();
 }

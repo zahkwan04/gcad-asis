@@ -21,6 +21,7 @@
 #include "VideoDevice.h"
 #include "ui_CallWindow.h"
 #include "CallWindow.h"
+#include "WebRTCWindow.h"
 
 using namespace std;
 
@@ -150,6 +151,7 @@ mVideoStream(0)
             }
 #ifndef NO_VIDEO
             ui->videoButton->show();
+            ui->videoAiButton->show();
 #endif
             ui->listenButton->hide();
             ui->pttButton->hide();
@@ -186,6 +188,7 @@ mVideoStream(0)
                 ui->pttButton->hide();
 #ifndef NO_VIDEO
                 ui->videoButton->show();
+                ui->videoAiButton->show();
 #endif
             }
             else
@@ -534,11 +537,14 @@ void CallWindow::setIncoming(bool isHook,
         if (mRemoteVidRtpPort > 0)
         {
             ui->videoButton->show();
-            ui->txPartyLabel->setText(tr("Video"));
+            ui->videoAiButton->show();
+//            ui->txPartyLabel->setText(tr("Video"));
         }
         else
         {
             ui->videoButton->hide();
+            ui->videoAiButton->hide();
+            ui->txPartyLabel->clear();
 #else
         {
 #endif
@@ -552,6 +558,7 @@ void CallWindow::setIncoming(bool isHook,
         setPttIcon(CmnTypes::ACTIONTYPE_PTT);
         ui->pttButton->show();
         ui->videoButton->hide();
+        ui->videoAiButton->hide();
         ui->txPartyLabel->hide();
     }
     ui->calledIcon
@@ -628,6 +635,7 @@ void CallWindow::setIncomingGrp(bool isHook,
     ui->callButton->show();
     ui->pttButton->hide();
     ui->videoButton->hide();
+    ui->videoAiButton->hide();
 }
 
 bool CallWindow::setConnected(const QString &txParty, int priority)
@@ -1177,8 +1185,10 @@ void CallWindow::reset(bool onDelete)
                                           ResourceData::getType(mCalledParty)));
             onHookClicked();
 #ifndef NO_VIDEO
-            if (ResourceData::getType(mCalledParty) == ResourceData::TYPE_MOBILE)
+            if (ResourceData::getType(mCalledParty) == ResourceData::TYPE_MOBILE){
                 ui->videoButton->show();
+                ui->videoAiButton->show();
+            }
 #endif
             //fallthrough
         case CmnTypes::CALLTYPE_IND_AMBIENCE:
@@ -1646,6 +1656,7 @@ void CallWindow::init()
                     ui->txPartyLabel->show();
                     ui->callButton->hide();
                     ui->videoButton->hide();
+                    ui->videoAiButton->hide();
                     ui->pttButton->hide();
                     ui->endButton->setEnabled(true);
                     ui->startTimeLabel->setText(QtUtils::getTimestamp());
@@ -1658,6 +1669,55 @@ void CallWindow::init()
                     if (res == ServerSession::VOIPSESSION_ERROR)
                         showFailureMsg(this);
                 }
+            });
+    connect(ui->videoAiButton, &QToolButton::clicked, this,
+            [this]
+            {
+                //                //start or answer video call
+                //                if (mType == CmnTypes::CALLTYPE_IND_OUT &&
+                //                    !ResourceData::hasMobileStat())
+                //                    mType = CmnTypes::CALLTYPE_MOBILE;
+                //                if (mCallId != 0)
+                //                {
+                //                    //answering incoming call
+                //                    if (mType != CmnTypes::CALLTYPE_MOBILE &&
+                //                        ResourceData::getType(mCallingParty) ==
+                //                            ResourceData::TYPE_MOBILE)
+                //                        mType = CmnTypes::CALLTYPE_MOBILE;
+                //                    ui->callButton->click();
+                setWebRTCOut(true);
+                //                    mRemoteVidRtpPort = -mRemoteVidRtpPort; //-ve is video out
+                //                    return;
+                //                }
+                //                //new outgoing video call
+                //                if (!incrCount())
+                //                    return;
+                //                int res = sSession->callSetupVideo(mCalledParty, mVoipId1,
+                //                                                   mCalledDomain);
+                //                if (res > 0)
+                //                {
+                //                    ui->txPartyLabel->setText(tr("+AI Video"));
+                //                    ui->txPartyLabel->setStyleSheet(STYLE_BGCOLOR_PENDING);
+                //                    ui->txPartyLabel->show();
+                //                    ui->callButton->hide();
+                //                    ui->videoButton->hide();
+                //                    ui->videoAiButton->hide();
+                //                    ui->pttButton->hide();
+                //                    ui->endButton->setEnabled(true);
+                //                    ui->startTimeLabel->setText(QtUtils::getTimestamp());
+                //                    if (isVisible())
+                //                        ui->closeButton->setEnabled(false);
+
+                ////                    // Now open the WebRTC window
+                ////                    webrtc_test *webRtcWindow = new webrtc_test(this);
+                ////                    webRtcWindow->show();
+                //                }
+                //                else
+                //                {
+                //                    decrCount();
+                //                    if (res == ServerSession::VOIPSESSION_ERROR)
+                //                        showFailureMsg(this);
+                //                }
             });
     connect(ui->callButton, &QToolButton::clicked, this,
             [this]
@@ -1707,6 +1767,7 @@ void CallWindow::init()
                                 ui->txPartyLabel->show();
                                 ui->callButton->hide();
                                 ui->videoButton->hide();
+                                ui->videoAiButton->hide();
                                 ui->endButton->setEnabled(true);
                                 if (isVisible())
                                     ui->closeButton->setEnabled(false);
@@ -1733,6 +1794,7 @@ void CallWindow::init()
                                 ui->txPartyLabel->show();
                                 ui->callButton->hide();
                                 ui->videoButton->hide();
+                                ui->videoAiButton->hide();
                                 ui->endButton->setEnabled(true);
                                 ui->closeButton->setEnabled(false);
                                 emit incomingConnected(mCallingParty, 0);
@@ -1820,6 +1882,7 @@ void CallWindow::init()
                             ui->txPartyLabel->show();
                             ui->callButton->hide();
                             ui->videoButton->hide();
+                            ui->videoAiButton->hide();
                             ui->pttButton->hide();
                             ui->endButton->setEnabled(true);
                             if (isVisible())
@@ -2482,4 +2545,39 @@ void CallWindow::setVideoOut(bool doStart)
         ui->previewLabel->hide();
     }
     dev.setCamera(this, doStart);
+}
+
+void CallWindow::setWebRTCOut(bool doStart)
+{
+    //    assert(mVideoStream != 0);
+    //    VideoDevice &dev(VideoDevice::instance());
+    //    if (!dev.isValid())
+    //        return;
+    //    if (doStart)
+    //    {
+    // Now open the WebRTC window
+    //        webrtc_test *webRtcWindow = new webrtc_test(this);
+    //        webRtcWindow->show();
+
+    WebRTCWindow *WebRtc = new WebRTCWindow(this);
+    WebRtc->show();
+
+    //        QSize sz(dev.getResolution());
+    //        if (sz.isEmpty())
+    //            return;
+    //        mVideoStream->setOutgoing(true, sz.width(), sz.height());
+    //        dev.setCallback(this, previewCb);
+    //        //connect only once - Qt::UniqueConnection does not work for non-member
+    //        //functions
+    //        if (!dev.isDevSignalConnected())
+    //            connect(&dev, &VideoDevice::newFrame, VideoStream::send);
+    //    }
+    //    else
+    //    {
+    //        mVideoStream->setOutgoing(false);
+    //        dev.removeCallback(this);
+    //        ui->previewLabel->hide();
+    //    }
+    //    qDebug() << "display video here";
+    //    dev.setCamera(this, doStart);
 }

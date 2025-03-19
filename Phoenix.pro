@@ -54,7 +54,7 @@ defined(DBPATH, var) {
 #-------------------------------------------------
 
 QT += core gui widgets multimedia multimediawidgets printsupport qml quick \
-      quickwidgets positioning location xml
+      quickwidgets positioning location xml webenginewidgets
 
 TARGET = scad
 TEMPLATE = app
@@ -135,7 +135,8 @@ SOURCES += \
     GisTracking.cpp \
     GisTrackingReplay.cpp \
     GisTrailingSelector.cpp \
-    GisWindow.cpp
+    GisWindow.cpp \
+    WebRTCWindow.cpp
 
 !contains(DEFINES, NO_VOIP) {
     SOURCES += RtpSession.cpp
@@ -228,7 +229,8 @@ HEADERS += \
     rapidxml.hpp \
     rapidxml_utils.hpp \
     config_win32.h \
-    rtp.h
+    rtp.h \
+    WebRTCWindow.h
 
 FORMS += \
     AudioPlayer.ui \
@@ -260,7 +262,8 @@ FORMS += \
     GisTracking.ui \
     GisTrackingReplay.ui \
     GisTrailingSelector.ui \
-    GisWindow.ui
+    GisWindow.ui \
+    WebRTCWindow.ui
 
 contains(DEFINES, MSG_AES) {
     SOURCES += Aes.cpp
@@ -330,9 +333,9 @@ win32 {
         -lgstnet-1.0 \
         -lgstbase-1.0 \
         -lgstapp-1.0 \
-        -lgstvideo-1.0 \
-        -lgstrtspserver-1.0
+        -lgstvideo-1.0
 
     # Make sure GStreamer DLLs are in the PATH at runtime
     QMAKE_POST_LINK += $$quote(echo "Remember to add $${GSTREAMER_DIR}/bin to your PATH")
 }
+
