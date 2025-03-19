@@ -54,7 +54,7 @@ defined(DBPATH, var) {
 #-------------------------------------------------
 
 QT += core gui widgets multimedia multimediawidgets printsupport qml quick \
-      quickwidgets positioning location xml
+      quickwidgets positioning location xml network
 
 TARGET = scad
 TEMPLATE = app
@@ -72,6 +72,7 @@ SOURCES += \
     MsgSp.cpp \
     Props.cpp \
     ResourceData.cpp \
+    RestApiClient.cpp \
     ServerSession.cpp \
     Socket.cpp \
     StatusCodes.cpp \
@@ -160,6 +161,7 @@ HEADERS += \
     PalTime.h \
     Props.h \
     ResourceData.h \
+    RestApiClient.h \
     RtpSession.h \
     ServerSession.h \
     Socket.h \

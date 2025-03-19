@@ -50,7 +50,8 @@ OBJECTS_DIR   = release
 
 ####### Files
 
-SOURCES       = CmnTypes.cpp \
+SOURCES       = ApiClient.cpp \
+		CmnTypes.cpp \
 		DbInt.cpp \
 		Logger.cpp \
 		MD5.c \
@@ -132,6 +133,7 @@ SOURCES       = CmnTypes.cpp \
 		IncidentData.cpp \
 		VideoDecoder.cpp \
 		VideoEncoder.cpp release\qrc_Resources.cpp \
+		release\moc_ApiClient.cpp \
 		release\moc_AudioDevice.cpp \
 		release\moc_AudioManager.cpp \
 		release\moc_AudioPlayer.cpp \
@@ -180,7 +182,8 @@ SOURCES       = CmnTypes.cpp \
 		release\moc_ActiveIncidents.cpp \
 		release\moc_Incident.cpp \
 		release\moc_IncidentButton.cpp
-OBJECTS       = release\CmnTypes.obj \
+OBJECTS       = release\ApiClient.obj \
+		release\CmnTypes.obj \
 		release\DbInt.obj \
 		release\Logger.obj \
 		release\MD5.obj \
@@ -263,6 +266,7 @@ OBJECTS       = release\CmnTypes.obj \
 		release\VideoDecoder.obj \
 		release\VideoEncoder.obj \
 		release\qrc_Resources.obj \
+		release\moc_ApiClient.obj \
 		release\moc_AudioDevice.obj \
 		release\moc_AudioManager.obj \
 		release\moc_AudioPlayer.obj \
@@ -312,7 +316,8 @@ OBJECTS       = release\CmnTypes.obj \
 		release\moc_Incident.obj \
 		release\moc_IncidentButton.obj
 
-DIST          =  CmnTypes.h \
+DIST          =  ApiClient.h \
+		CmnTypes.h \
 		DbInt.h \
 		Locker.h \
 		Logger.h \
@@ -405,7 +410,8 @@ DIST          =  CmnTypes.h \
 		IncidentButton.h \
 		IncidentData.h \
 		VideoDecoder.h \
-		VideoEncoder.h CmnTypes.cpp \
+		VideoEncoder.h ApiClient.cpp \
+		CmnTypes.cpp \
 		DbInt.cpp \
 		Logger.cpp \
 		MD5.c \
@@ -543,10 +549,10 @@ all: Makefile.Release  release\scad.exe
 
 release\scad.exe: C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5MultimediaWidgets.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5PrintSupport.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5QuickWidgets.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Widgets.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Multimedia.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Location.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5PositioningQuick.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Quick.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Gui.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5QmlModels.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Qml.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Network.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Positioning.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Xml.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Core.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\qtmain.lib ui_AudioPlayer.h ui_Call.h ui_CallButton.h ui_CallWindow.h ui_CommsRegister.h ui_Contact.h ui_Dgna.h ui_GpsMonitor.h ui_Login.h ui_MainWindow.h ui_MessageDialog.h ui_Report.h ui_Resources.h ui_ResourceSelector.h ui_RscCollector.h ui_Sds.h ui_SettingsUi.h ui_Updater.h ui_GisBookmarks.h ui_GisDgnaList.h ui_GisLayerList.h ui_GisLegend.h ui_GisMapOverview.h ui_GisMenuTerminal.h ui_GisMenuUserPoi.h ui_GisRouting.h ui_GisTracking.h ui_GisTrackingReplay.h ui_GisTrailingSelector.h ui_GisWindow.h ui_ActiveIncidents.h ui_Incident.h ui_IncidentButton.h $(OBJECTS) 
 	$(LINKER) $(LFLAGS) /MANIFEST:embed /OUT:$(DESTDIR_TARGET) @<<
-release\CmnTypes.obj release\DbInt.obj release\Logger.obj release\MD5.obj release\Md5Digest.obj release\MmsClient.obj release\MsgSip.obj release\MsgSp.obj release\Props.obj release\ResourceData.obj release\ServerSession.obj release\Socket.obj release\StatusCodes.obj release\SubsData.obj release\TcpSocket.obj release\UdpSocket.obj release\Utils.obj release\VideoStream.obj release\VoipSessionClient.obj release\VoipSessionBase.obj release\AudioDevice.obj release\AudioManager.obj release\AudioPlayer.obj release\Call.obj release\CallButton.obj release\CallWindow.obj release\CommsRegister.obj release\Contact.obj release\DateTimeDelegate.obj release\Dgna.obj release\Document.obj release\Draggable.obj release\DraggableListView.obj release\DraggableListWidget.obj release\FlowLayout.obj release\GpsMonitor.obj release\InputDialog.obj release\Login.obj release\Main.obj release\MainWindow.obj release\MessageDialog.obj release\Mms.obj release\Poi.obj release\QtTableUtils.obj release\QtUtils.obj
-release\Report.obj release\ResourceButton.obj release\Resources.obj release\ResourceSelector.obj release\RscCollector.obj release\Sds.obj release\Settings.obj release\SettingsUi.obj release\Style.obj release\Updater.obj release\Version.obj release\VideoDevice.obj release\GisLocation.obj release\GisBookmarks.obj release\GisCanvas.obj release\GisDgnaList.obj release\GisHistory.obj release\GisLayerList.obj release\GisLegend.obj release\GisMapOverview.obj release\GisMenuTerminal.obj release\GisMenuUserPoi.obj release\GisPoint.obj release\GisQmlInt.obj release\GisRouting.obj release\GisTracking.obj release\GisTrackingReplay.obj release\GisTrailingSelector.obj release\GisWindow.obj release\RtpSession.obj release\Aes.obj release\ActiveIncidents.obj release\Incident.obj release\IncidentButton.obj release\IncidentData.obj release\VideoDecoder.obj release\VideoEncoder.obj release\qrc_Resources.obj release\moc_AudioDevice.obj release\moc_AudioManager.obj release\moc_AudioPlayer.obj
-release\moc_Call.obj release\moc_CallButton.obj release\moc_CallWindow.obj release\moc_CommsRegister.obj release\moc_Contact.obj release\moc_DateTimeDelegate.obj release\moc_Dgna.obj release\moc_Document.obj release\moc_DraggableListView.obj release\moc_DraggableListWidget.obj release\moc_FlowLayout.obj release\moc_GpsMonitor.obj release\moc_InputDialog.obj release\moc_Login.obj release\moc_MainWindow.obj release\moc_MessageDialog.obj release\moc_Mms.obj release\moc_QThreadWorker.obj release\moc_Report.obj release\moc_ResourceButton.obj release\moc_Resources.obj release\moc_ResourceSelector.obj release\moc_RscCollector.obj release\moc_Sds.obj release\moc_SettingsUi.obj release\moc_Updater.obj release\moc_VideoDevice.obj release\moc_GisBookmarks.obj release\moc_GisCanvas.obj release\moc_GisDgnaList.obj release\moc_GisHistory.obj release\moc_GisLayerList.obj release\moc_GisLegend.obj release\moc_GisMapOverview.obj release\moc_GisMenuTerminal.obj release\moc_GisMenuUserPoi.obj
-release\moc_GisQmlInt.obj release\moc_GisRouting.obj release\moc_GisTracking.obj release\moc_GisTrackingReplay.obj release\moc_GisTrailingSelector.obj release\moc_GisWindow.obj release\moc_ActiveIncidents.obj release\moc_Incident.obj release\moc_IncidentButton.obj
+release\ApiClient.obj release\CmnTypes.obj release\DbInt.obj release\Logger.obj release\MD5.obj release\Md5Digest.obj release\MmsClient.obj release\MsgSip.obj release\MsgSp.obj release\Props.obj release\ResourceData.obj release\ServerSession.obj release\Socket.obj release\StatusCodes.obj release\SubsData.obj release\TcpSocket.obj release\UdpSocket.obj release\Utils.obj release\VideoStream.obj release\VoipSessionClient.obj release\VoipSessionBase.obj release\AudioDevice.obj release\AudioManager.obj release\AudioPlayer.obj release\Call.obj release\CallButton.obj release\CallWindow.obj release\CommsRegister.obj release\Contact.obj release\DateTimeDelegate.obj release\Dgna.obj release\Document.obj release\Draggable.obj release\DraggableListView.obj release\DraggableListWidget.obj release\FlowLayout.obj release\GpsMonitor.obj release\InputDialog.obj release\Login.obj release\Main.obj release\MainWindow.obj release\MessageDialog.obj release\Mms.obj release\Poi.obj release\QtTableUtils.obj
+release\QtUtils.obj release\Report.obj release\ResourceButton.obj release\Resources.obj release\ResourceSelector.obj release\RscCollector.obj release\Sds.obj release\Settings.obj release\SettingsUi.obj release\Style.obj release\Updater.obj release\Version.obj release\VideoDevice.obj release\GisLocation.obj release\GisBookmarks.obj release\GisCanvas.obj release\GisDgnaList.obj release\GisHistory.obj release\GisLayerList.obj release\GisLegend.obj release\GisMapOverview.obj release\GisMenuTerminal.obj release\GisMenuUserPoi.obj release\GisPoint.obj release\GisQmlInt.obj release\GisRouting.obj release\GisTracking.obj release\GisTrackingReplay.obj release\GisTrailingSelector.obj release\GisWindow.obj release\RtpSession.obj release\Aes.obj release\ActiveIncidents.obj release\Incident.obj release\IncidentButton.obj release\IncidentData.obj release\VideoDecoder.obj release\VideoEncoder.obj release\qrc_Resources.obj release\moc_ApiClient.obj release\moc_AudioDevice.obj
+release\moc_AudioManager.obj release\moc_AudioPlayer.obj release\moc_Call.obj release\moc_CallButton.obj release\moc_CallWindow.obj release\moc_CommsRegister.obj release\moc_Contact.obj release\moc_DateTimeDelegate.obj release\moc_Dgna.obj release\moc_Document.obj release\moc_DraggableListView.obj release\moc_DraggableListWidget.obj release\moc_FlowLayout.obj release\moc_GpsMonitor.obj release\moc_InputDialog.obj release\moc_Login.obj release\moc_MainWindow.obj release\moc_MessageDialog.obj release\moc_Mms.obj release\moc_QThreadWorker.obj release\moc_Report.obj release\moc_ResourceButton.obj release\moc_Resources.obj release\moc_ResourceSelector.obj release\moc_RscCollector.obj release\moc_Sds.obj release\moc_SettingsUi.obj release\moc_Updater.obj release\moc_VideoDevice.obj release\moc_GisBookmarks.obj release\moc_GisCanvas.obj release\moc_GisDgnaList.obj release\moc_GisHistory.obj release\moc_GisLayerList.obj release\moc_GisLegend.obj release\moc_GisMapOverview.obj
+release\moc_GisMenuTerminal.obj release\moc_GisMenuUserPoi.obj release\moc_GisQmlInt.obj release\moc_GisRouting.obj release\moc_GisTracking.obj release\moc_GisTrackingReplay.obj release\moc_GisTrailingSelector.obj release\moc_GisWindow.obj release\moc_ActiveIncidents.obj release\moc_Incident.obj release\moc_IncidentButton.obj
 $(LIBS)
 <<
 
@@ -556,11 +562,11 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) scad.zip $(SOURCES) $(DIST) Phoenix.pro ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\spec_pre.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\common\angle.conf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\common\windows-desktop.conf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\win32\windows_vulkan_sdk.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\common\windows-vulkan.conf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\common\msvc-desktop.conf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\qconfig.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3danimation.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3danimation_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dcore.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dcore_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dextras.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dextras_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dinput.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dinput_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dlogic.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dlogic_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquick.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquick_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickanimation.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickextras.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickextras_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickinput.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickinput_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickrender.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickrender_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickscene2d.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3drender.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3drender_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_accessibility_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_axbase.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_axbase_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_axcontainer.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_axcontainer_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_axserver.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_axserver_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_bluetooth.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_bluetooth_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_bodymovin_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_bootstrap_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_charts.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_charts_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_concurrent.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_concurrent_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_core.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_core_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_datavisualization.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_datavisualization_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_dbus.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_dbus_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_designer.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_designer_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_designercomponents_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_edid_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_egl_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_fb_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_gamepad.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_gamepad_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_gui.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_gui_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_help.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_help_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_location.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_location_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_multimedia.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_multimedia_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_multimediawidgets.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_network.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_network_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_networkauth.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_networkauth_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_nfc.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_nfc_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_opengl.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_opengl_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_openglextensions.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_openglextensions_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_packetprotocol_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_positioning.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_positioning_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_positioningquick.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_positioningquick_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_printsupport.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_printsupport_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_purchasing.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_purchasing_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qml.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qml_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmldebug_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmldevtools_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmlmodels.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmlmodels_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmltest.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmltest_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmlworkerscript.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3d.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3d_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3dassetimport.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3dassetimport_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3drender.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3drender_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3druntimerender.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3druntimerender_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3dutils.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3dutils_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickcontrols2.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickparticles_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickshapes_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quicktemplates2.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickwidgets.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickwidgets_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_remoteobjects.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_remoteobjects_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_repparser.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_repparser_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_script.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_script_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_scripttools.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_scripttools_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_scxml.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_scxml_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_sensors.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_sensors_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_serialbus.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_serialbus_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_serialport.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_serialport_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_sql.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_sql_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_svg.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_svg_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_testlib.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_testlib_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_texttospeech.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_texttospeech_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_theme_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_uiplugin.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_uitools.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_uitools_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_virtualkeyboard.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_virtualkeyboard_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_vulkan_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webchannel.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webchannel_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webengine.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webengine_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webenginecore.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webenginecore_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webenginecoreheaders_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webenginewidgets.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webenginewidgets_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_websockets.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_websockets_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webview.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webview_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_widgets.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_widgets_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_windowsuiautomation_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_winextras.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_winextras_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_xml.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_xml_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_xmlpatterns.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_zlib_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\qt_functions.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\qt_config.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\win32-msvc\qmake.conf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\spec_post.prf .qmake.stash ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\exclusive_builds.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\common\msvc-version.conf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\toolchain.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\default_pre.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\win32\default_pre.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\resolve_config.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\exclusive_builds_post.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\default_post.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\build_pass.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\qml_debug.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\precompile_header.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\warn_on.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\qt.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\resources_functions.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\resources.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\moc.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\win32\opengl.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\uic.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\qmake_use.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\file_copies.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\win32\windows.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\testcase_targets.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\exceptions.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\yacc.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\lex.prf Phoenix.pro Resources.qrc ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5MultimediaWidgets.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5PrintSupport.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5QuickWidgets.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Widgets.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Multimedia.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Location.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5PositioningQuick.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Quick.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Gui.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5QmlModels.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Qml.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Network.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Positioning.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Xml.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Core.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\qtmain.prl translations\Scad_ms.ts translations\Scad_ms.ts  Resources.qrc ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\data\dummy.cpp CmnTypes.h DbInt.h Locker.h Logger.h MD5.h Md5Digest.h MmsClient.h MsgSip.h MsgSp.h MsgValueBase.h PalFiles.h PalLock.h PalSem.h PalSocket.h PalThread.h PalTime.h Props.h ResourceData.h RtpSession.h ServerSession.h Socket.h StatusCodes.h SubsData.h TcpSocket.h UdpSocket.h Utils.h VideoStream.h VoipSessionClient.h VoipSessionBase.h AudioDevice.h AudioManager.h AudioPlayer.h Call.h CallButton.h CallWindow.h CommsRegister.h Contact.h DateTimeDelegate.h Dgna.h Document.h Draggable.h DraggableListView.h DraggableListWidget.h FlowLayout.h GpsMonitor.h InputDialog.h Login.h MainWindow.h MessageDialog.h Mms.h Poi.h QThreadWorker.h QtTableUtils.h QtUtils.h Report.h ResourceButton.h Resources.h ResourceSelector.h RscCollector.h Sds.h Settings.h SettingsUi.h Style.h Updater.h Version.h VideoDevice.h GisLocation.h GisBookmarks.h GisCanvas.h GisDgnaList.h GisHistory.h GisLayerList.h GisLegend.h GisMapOverview.h GisMenuTerminal.h GisMenuUserPoi.h GisPoint.h GisQmlInt.h GisRouting.h GisTracking.h GisTrackingReplay.h GisTrailingSelector.h GisWindow.h rapidxml.hpp rapidxml_utils.hpp config_win32.h rtp.h Aes.h ActiveIncidents.h Incident.h IncidentButton.h IncidentData.h VideoDecoder.h VideoEncoder.h  CmnTypes.cpp DbInt.cpp Logger.cpp MD5.c Md5Digest.cpp MmsClient.cpp MsgSip.cpp MsgSp.cpp Props.cpp ResourceData.cpp ServerSession.cpp Socket.cpp StatusCodes.cpp SubsData.cpp TcpSocket.cpp UdpSocket.cpp Utils.cpp VideoStream.cpp VoipSessionClient.cpp VoipSessionBase.cpp AudioDevice.cpp AudioManager.cpp AudioPlayer.cpp Call.cpp CallButton.cpp CallWindow.cpp CommsRegister.cpp Contact.cpp DateTimeDelegate.cpp Dgna.cpp Document.cpp Draggable.cpp DraggableListView.cpp DraggableListWidget.cpp FlowLayout.cpp GpsMonitor.cpp InputDialog.cpp Login.cpp Main.cpp MainWindow.cpp MessageDialog.cpp Mms.cpp Poi.cpp QtTableUtils.cpp QtUtils.cpp Report.cpp ResourceButton.cpp Resources.cpp ResourceSelector.cpp RscCollector.cpp Sds.cpp Settings.cpp SettingsUi.cpp Style.cpp Updater.cpp Version.cpp VideoDevice.cpp GisLocation.cpp GisBookmarks.cpp GisCanvas.cpp GisDgnaList.cpp GisHistory.cpp GisLayerList.cpp GisLegend.cpp GisMapOverview.cpp GisMenuTerminal.cpp GisMenuUserPoi.cpp GisPoint.cpp GisQmlInt.cpp GisRouting.cpp GisTracking.cpp GisTrackingReplay.cpp GisTrailingSelector.cpp GisWindow.cpp RtpSession.cpp Aes.cpp ActiveIncidents.cpp Incident.cpp IncidentButton.cpp IncidentData.cpp VideoDecoder.cpp VideoEncoder.cpp AudioPlayer.ui Call.ui CallButton.ui CallWindow.ui CommsRegister.ui Contact.ui Dgna.ui GpsMonitor.ui Login.ui MainWindow.ui MessageDialog.ui Report.ui Resources.ui ResourceSelector.ui RscCollector.ui Sds.ui SettingsUi.ui Updater.ui GisBookmarks.ui GisDgnaList.ui GisLayerList.ui GisLegend.ui GisMapOverview.ui GisMenuTerminal.ui GisMenuUserPoi.ui GisRouting.ui GisTracking.ui GisTrackingReplay.ui GisTrailingSelector.ui GisWindow.ui ActiveIncidents.ui Incident.ui IncidentButton.ui    
+	$(ZIP) scad.zip $(SOURCES) $(DIST) Phoenix.pro ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\spec_pre.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\common\angle.conf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\common\windows-desktop.conf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\win32\windows_vulkan_sdk.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\common\windows-vulkan.conf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\common\msvc-desktop.conf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\qconfig.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3danimation.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3danimation_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dcore.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dcore_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dextras.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dextras_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dinput.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dinput_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dlogic.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dlogic_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquick.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquick_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickanimation.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickextras.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickextras_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickinput.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickinput_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickrender.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickrender_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickscene2d.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3drender.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3drender_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_accessibility_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_axbase.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_axbase_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_axcontainer.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_axcontainer_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_axserver.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_axserver_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_bluetooth.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_bluetooth_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_bodymovin_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_bootstrap_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_charts.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_charts_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_concurrent.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_concurrent_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_core.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_core_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_datavisualization.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_datavisualization_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_dbus.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_dbus_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_designer.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_designer_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_designercomponents_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_edid_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_egl_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_fb_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_gamepad.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_gamepad_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_gui.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_gui_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_help.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_help_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_location.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_location_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_multimedia.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_multimedia_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_multimediawidgets.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_network.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_network_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_networkauth.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_networkauth_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_nfc.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_nfc_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_opengl.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_opengl_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_openglextensions.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_openglextensions_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_packetprotocol_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_positioning.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_positioning_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_positioningquick.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_positioningquick_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_printsupport.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_printsupport_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_purchasing.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_purchasing_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qml.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qml_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmldebug_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmldevtools_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmlmodels.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmlmodels_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmltest.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmltest_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmlworkerscript.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3d.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3d_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3dassetimport.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3dassetimport_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3drender.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3drender_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3druntimerender.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3druntimerender_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3dutils.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3dutils_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickcontrols2.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickparticles_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickshapes_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quicktemplates2.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickwidgets.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickwidgets_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_remoteobjects.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_remoteobjects_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_repparser.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_repparser_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_script.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_script_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_scripttools.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_scripttools_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_scxml.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_scxml_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_sensors.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_sensors_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_serialbus.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_serialbus_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_serialport.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_serialport_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_sql.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_sql_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_svg.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_svg_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_testlib.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_testlib_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_texttospeech.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_texttospeech_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_theme_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_uiplugin.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_uitools.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_uitools_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_virtualkeyboard.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_virtualkeyboard_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_vulkan_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webchannel.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webchannel_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webengine.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webengine_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webenginecore.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webenginecore_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webenginecoreheaders_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webenginewidgets.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webenginewidgets_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_websockets.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_websockets_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webview.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webview_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_widgets.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_widgets_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_windowsuiautomation_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_winextras.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_winextras_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_xml.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_xml_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_xmlpatterns.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_zlib_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\qt_functions.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\qt_config.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\win32-msvc\qmake.conf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\spec_post.prf .qmake.stash ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\exclusive_builds.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\common\msvc-version.conf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\toolchain.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\default_pre.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\win32\default_pre.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\resolve_config.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\exclusive_builds_post.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\default_post.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\build_pass.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\qml_debug.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\precompile_header.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\warn_on.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\qt.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\resources_functions.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\resources.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\moc.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\win32\opengl.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\uic.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\qmake_use.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\file_copies.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\win32\windows.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\testcase_targets.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\exceptions.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\yacc.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\lex.prf Phoenix.pro Resources.qrc ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5MultimediaWidgets.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5PrintSupport.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5QuickWidgets.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Widgets.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Multimedia.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Location.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5PositioningQuick.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Quick.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Gui.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5QmlModels.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Qml.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Network.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Positioning.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Xml.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Core.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\qtmain.prl translations\Scad_ms.ts translations\Scad_ms.ts  Resources.qrc ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\data\dummy.cpp ApiClient.h CmnTypes.h DbInt.h Locker.h Logger.h MD5.h Md5Digest.h MmsClient.h MsgSip.h MsgSp.h MsgValueBase.h PalFiles.h PalLock.h PalSem.h PalSocket.h PalThread.h PalTime.h Props.h ResourceData.h RtpSession.h ServerSession.h Socket.h StatusCodes.h SubsData.h TcpSocket.h UdpSocket.h Utils.h VideoStream.h VoipSessionClient.h VoipSessionBase.h AudioDevice.h AudioManager.h AudioPlayer.h Call.h CallButton.h CallWindow.h CommsRegister.h Contact.h DateTimeDelegate.h Dgna.h Document.h Draggable.h DraggableListView.h DraggableListWidget.h FlowLayout.h GpsMonitor.h InputDialog.h Login.h MainWindow.h MessageDialog.h Mms.h Poi.h QThreadWorker.h QtTableUtils.h QtUtils.h Report.h ResourceButton.h Resources.h ResourceSelector.h RscCollector.h Sds.h Settings.h SettingsUi.h Style.h Updater.h Version.h VideoDevice.h GisLocation.h GisBookmarks.h GisCanvas.h GisDgnaList.h GisHistory.h GisLayerList.h GisLegend.h GisMapOverview.h GisMenuTerminal.h GisMenuUserPoi.h GisPoint.h GisQmlInt.h GisRouting.h GisTracking.h GisTrackingReplay.h GisTrailingSelector.h GisWindow.h rapidxml.hpp rapidxml_utils.hpp config_win32.h rtp.h Aes.h ActiveIncidents.h Incident.h IncidentButton.h IncidentData.h VideoDecoder.h VideoEncoder.h  ApiClient.cpp CmnTypes.cpp DbInt.cpp Logger.cpp MD5.c Md5Digest.cpp MmsClient.cpp MsgSip.cpp MsgSp.cpp Props.cpp ResourceData.cpp ServerSession.cpp Socket.cpp StatusCodes.cpp SubsData.cpp TcpSocket.cpp UdpSocket.cpp Utils.cpp VideoStream.cpp VoipSessionClient.cpp VoipSessionBase.cpp AudioDevice.cpp AudioManager.cpp AudioPlayer.cpp Call.cpp CallButton.cpp CallWindow.cpp CommsRegister.cpp Contact.cpp DateTimeDelegate.cpp Dgna.cpp Document.cpp Draggable.cpp DraggableListView.cpp DraggableListWidget.cpp FlowLayout.cpp GpsMonitor.cpp InputDialog.cpp Login.cpp Main.cpp MainWindow.cpp MessageDialog.cpp Mms.cpp Poi.cpp QtTableUtils.cpp QtUtils.cpp Report.cpp ResourceButton.cpp Resources.cpp ResourceSelector.cpp RscCollector.cpp Sds.cpp Settings.cpp SettingsUi.cpp Style.cpp Updater.cpp Version.cpp VideoDevice.cpp GisLocation.cpp GisBookmarks.cpp GisCanvas.cpp GisDgnaList.cpp GisHistory.cpp GisLayerList.cpp GisLegend.cpp GisMapOverview.cpp GisMenuTerminal.cpp GisMenuUserPoi.cpp GisPoint.cpp GisQmlInt.cpp GisRouting.cpp GisTracking.cpp GisTrackingReplay.cpp GisTrailingSelector.cpp GisWindow.cpp RtpSession.cpp Aes.cpp ActiveIncidents.cpp Incident.cpp IncidentButton.cpp IncidentData.cpp VideoDecoder.cpp VideoEncoder.cpp AudioPlayer.ui Call.ui CallButton.ui CallWindow.ui CommsRegister.ui Contact.ui Dgna.ui GpsMonitor.ui Login.ui MainWindow.ui MessageDialog.ui Report.ui Resources.ui ResourceSelector.ui RscCollector.ui Sds.ui SettingsUi.ui Updater.ui GisBookmarks.ui GisDgnaList.ui GisLayerList.ui GisLegend.ui GisMapOverview.ui GisMenuTerminal.ui GisMenuUserPoi.ui GisRouting.ui GisTracking.ui GisTrackingReplay.ui GisTrailingSelector.ui GisWindow.ui ActiveIncidents.ui Incident.ui IncidentButton.ui    
 
 clean: compiler_clean 
-	-$(DEL_FILE) release\CmnTypes.obj release\DbInt.obj release\Logger.obj release\MD5.obj release\Md5Digest.obj release\MmsClient.obj release\MsgSip.obj release\MsgSp.obj release\Props.obj release\ResourceData.obj release\ServerSession.obj release\Socket.obj release\StatusCodes.obj release\SubsData.obj release\TcpSocket.obj release\UdpSocket.obj release\Utils.obj release\VideoStream.obj release\VoipSessionClient.obj release\VoipSessionBase.obj release\AudioDevice.obj release\AudioManager.obj release\AudioPlayer.obj release\Call.obj release\CallButton.obj release\CallWindow.obj release\CommsRegister.obj release\Contact.obj release\DateTimeDelegate.obj release\Dgna.obj release\Document.obj release\Draggable.obj release\DraggableListView.obj release\DraggableListWidget.obj release\FlowLayout.obj release\GpsMonitor.obj release\InputDialog.obj release\Login.obj release\Main.obj release\MainWindow.obj release\MessageDialog.obj release\Mms.obj release\Poi.obj release\QtTableUtils.obj release\QtUtils.obj release\Report.obj release\ResourceButton.obj release\Resources.obj release\ResourceSelector.obj release\RscCollector.obj release\Sds.obj release\Settings.obj release\SettingsUi.obj release\Style.obj release\Updater.obj release\Version.obj release\VideoDevice.obj release\GisLocation.obj release\GisBookmarks.obj release\GisCanvas.obj release\GisDgnaList.obj release\GisHistory.obj release\GisLayerList.obj release\GisLegend.obj release\GisMapOverview.obj release\GisMenuTerminal.obj release\GisMenuUserPoi.obj release\GisPoint.obj release\GisQmlInt.obj release\GisRouting.obj release\GisTracking.obj release\GisTrackingReplay.obj release\GisTrailingSelector.obj release\GisWindow.obj release\RtpSession.obj release\Aes.obj release\ActiveIncidents.obj release\Incident.obj release\IncidentButton.obj release\IncidentData.obj release\VideoDecoder.obj release\VideoEncoder.obj release\qrc_Resources.obj release\moc_AudioDevice.obj release\moc_AudioManager.obj release\moc_AudioPlayer.obj release\moc_Call.obj release\moc_CallButton.obj
-	-$(DEL_FILE) release\moc_CallWindow.obj release\moc_CommsRegister.obj release\moc_Contact.obj release\moc_DateTimeDelegate.obj release\moc_Dgna.obj release\moc_Document.obj release\moc_DraggableListView.obj release\moc_DraggableListWidget.obj release\moc_FlowLayout.obj release\moc_GpsMonitor.obj release\moc_InputDialog.obj release\moc_Login.obj release\moc_MainWindow.obj release\moc_MessageDialog.obj release\moc_Mms.obj release\moc_QThreadWorker.obj release\moc_Report.obj release\moc_ResourceButton.obj release\moc_Resources.obj release\moc_ResourceSelector.obj release\moc_RscCollector.obj release\moc_Sds.obj release\moc_SettingsUi.obj release\moc_Updater.obj release\moc_VideoDevice.obj release\moc_GisBookmarks.obj release\moc_GisCanvas.obj release\moc_GisDgnaList.obj release\moc_GisHistory.obj release\moc_GisLayerList.obj release\moc_GisLegend.obj release\moc_GisMapOverview.obj release\moc_GisMenuTerminal.obj release\moc_GisMenuUserPoi.obj release\moc_GisQmlInt.obj release\moc_GisRouting.obj release\moc_GisTracking.obj release\moc_GisTrackingReplay.obj release\moc_GisTrailingSelector.obj release\moc_GisWindow.obj release\moc_ActiveIncidents.obj release\moc_Incident.obj release\moc_IncidentButton.obj
+	-$(DEL_FILE) release\ApiClient.obj release\CmnTypes.obj release\DbInt.obj release\Logger.obj release\MD5.obj release\Md5Digest.obj release\MmsClient.obj release\MsgSip.obj release\MsgSp.obj release\Props.obj release\ResourceData.obj release\ServerSession.obj release\Socket.obj release\StatusCodes.obj release\SubsData.obj release\TcpSocket.obj release\UdpSocket.obj release\Utils.obj release\VideoStream.obj release\VoipSessionClient.obj release\VoipSessionBase.obj release\AudioDevice.obj release\AudioManager.obj release\AudioPlayer.obj release\Call.obj release\CallButton.obj release\CallWindow.obj release\CommsRegister.obj release\Contact.obj release\DateTimeDelegate.obj release\Dgna.obj release\Document.obj release\Draggable.obj release\DraggableListView.obj release\DraggableListWidget.obj release\FlowLayout.obj release\GpsMonitor.obj release\InputDialog.obj release\Login.obj release\Main.obj release\MainWindow.obj release\MessageDialog.obj release\Mms.obj release\Poi.obj release\QtTableUtils.obj release\QtUtils.obj release\Report.obj release\ResourceButton.obj release\Resources.obj release\ResourceSelector.obj release\RscCollector.obj release\Sds.obj release\Settings.obj release\SettingsUi.obj release\Style.obj release\Updater.obj release\Version.obj release\VideoDevice.obj release\GisLocation.obj release\GisBookmarks.obj release\GisCanvas.obj release\GisDgnaList.obj release\GisHistory.obj release\GisLayerList.obj release\GisLegend.obj release\GisMapOverview.obj release\GisMenuTerminal.obj release\GisMenuUserPoi.obj release\GisPoint.obj release\GisQmlInt.obj release\GisRouting.obj release\GisTracking.obj release\GisTrackingReplay.obj release\GisTrailingSelector.obj release\GisWindow.obj release\RtpSession.obj release\Aes.obj release\ActiveIncidents.obj release\Incident.obj release\IncidentButton.obj release\IncidentData.obj release\VideoDecoder.obj release\VideoEncoder.obj release\qrc_Resources.obj release\moc_ApiClient.obj release\moc_AudioDevice.obj release\moc_AudioManager.obj release\moc_AudioPlayer.obj
+	-$(DEL_FILE) release\moc_Call.obj release\moc_CallButton.obj release\moc_CallWindow.obj release\moc_CommsRegister.obj release\moc_Contact.obj release\moc_DateTimeDelegate.obj release\moc_Dgna.obj release\moc_Document.obj release\moc_DraggableListView.obj release\moc_DraggableListWidget.obj release\moc_FlowLayout.obj release\moc_GpsMonitor.obj release\moc_InputDialog.obj release\moc_Login.obj release\moc_MainWindow.obj release\moc_MessageDialog.obj release\moc_Mms.obj release\moc_QThreadWorker.obj release\moc_Report.obj release\moc_ResourceButton.obj release\moc_Resources.obj release\moc_ResourceSelector.obj release\moc_RscCollector.obj release\moc_Sds.obj release\moc_SettingsUi.obj release\moc_Updater.obj release\moc_VideoDevice.obj release\moc_GisBookmarks.obj release\moc_GisCanvas.obj release\moc_GisDgnaList.obj release\moc_GisHistory.obj release\moc_GisLayerList.obj release\moc_GisLegend.obj release\moc_GisMapOverview.obj release\moc_GisMenuTerminal.obj release\moc_GisMenuUserPoi.obj release\moc_GisQmlInt.obj release\moc_GisRouting.obj release\moc_GisTracking.obj release\moc_GisTrackingReplay.obj release\moc_GisTrailingSelector.obj release\moc_GisWindow.obj release\moc_ActiveIncidents.obj release\moc_Incident.obj release\moc_IncidentButton.obj
 
 distclean: clean 
 	-$(DEL_FILE) .qmake.stash
@@ -1167,9 +1173,109 @@ compiler_moc_predefs_clean:
 release\moc_predefs.h: ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\data\dummy.cpp
 	cl -BxC:\Qt\Qt5.14.2\5.14.2\msvc2017_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\data\dummy.cpp 2>NUL >release\moc_predefs.h
 
-compiler_moc_header_make_all: release\moc_AudioDevice.cpp release\moc_AudioManager.cpp release\moc_AudioPlayer.cpp release\moc_Call.cpp release\moc_CallButton.cpp release\moc_CallWindow.cpp release\moc_CommsRegister.cpp release\moc_Contact.cpp release\moc_DateTimeDelegate.cpp release\moc_Dgna.cpp release\moc_Document.cpp release\moc_DraggableListView.cpp release\moc_DraggableListWidget.cpp release\moc_FlowLayout.cpp release\moc_GpsMonitor.cpp release\moc_InputDialog.cpp release\moc_Login.cpp release\moc_MainWindow.cpp release\moc_MessageDialog.cpp release\moc_Mms.cpp release\moc_QThreadWorker.cpp release\moc_Report.cpp release\moc_ResourceButton.cpp release\moc_Resources.cpp release\moc_ResourceSelector.cpp release\moc_RscCollector.cpp release\moc_Sds.cpp release\moc_SettingsUi.cpp release\moc_Updater.cpp release\moc_VideoDevice.cpp release\moc_GisBookmarks.cpp release\moc_GisCanvas.cpp release\moc_GisDgnaList.cpp release\moc_GisHistory.cpp release\moc_GisLayerList.cpp release\moc_GisLegend.cpp release\moc_GisMapOverview.cpp release\moc_GisMenuTerminal.cpp release\moc_GisMenuUserPoi.cpp release\moc_GisQmlInt.cpp release\moc_GisRouting.cpp release\moc_GisTracking.cpp release\moc_GisTrackingReplay.cpp release\moc_GisTrailingSelector.cpp release\moc_GisWindow.cpp release\moc_ActiveIncidents.cpp release\moc_Incident.cpp release\moc_IncidentButton.cpp
+compiler_moc_header_make_all: release\moc_ApiClient.cpp release\moc_AudioDevice.cpp release\moc_AudioManager.cpp release\moc_AudioPlayer.cpp release\moc_Call.cpp release\moc_CallButton.cpp release\moc_CallWindow.cpp release\moc_CommsRegister.cpp release\moc_Contact.cpp release\moc_DateTimeDelegate.cpp release\moc_Dgna.cpp release\moc_Document.cpp release\moc_DraggableListView.cpp release\moc_DraggableListWidget.cpp release\moc_FlowLayout.cpp release\moc_GpsMonitor.cpp release\moc_InputDialog.cpp release\moc_Login.cpp release\moc_MainWindow.cpp release\moc_MessageDialog.cpp release\moc_Mms.cpp release\moc_QThreadWorker.cpp release\moc_Report.cpp release\moc_ResourceButton.cpp release\moc_Resources.cpp release\moc_ResourceSelector.cpp release\moc_RscCollector.cpp release\moc_Sds.cpp release\moc_SettingsUi.cpp release\moc_Updater.cpp release\moc_VideoDevice.cpp release\moc_GisBookmarks.cpp release\moc_GisCanvas.cpp release\moc_GisDgnaList.cpp release\moc_GisHistory.cpp release\moc_GisLayerList.cpp release\moc_GisLegend.cpp release\moc_GisMapOverview.cpp release\moc_GisMenuTerminal.cpp release\moc_GisMenuUserPoi.cpp release\moc_GisQmlInt.cpp release\moc_GisRouting.cpp release\moc_GisTracking.cpp release\moc_GisTrackingReplay.cpp release\moc_GisTrailingSelector.cpp release\moc_GisWindow.cpp release\moc_ActiveIncidents.cpp release\moc_Incident.cpp release\moc_IncidentButton.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) release\moc_AudioDevice.cpp release\moc_AudioManager.cpp release\moc_AudioPlayer.cpp release\moc_Call.cpp release\moc_CallButton.cpp release\moc_CallWindow.cpp release\moc_CommsRegister.cpp release\moc_Contact.cpp release\moc_DateTimeDelegate.cpp release\moc_Dgna.cpp release\moc_Document.cpp release\moc_DraggableListView.cpp release\moc_DraggableListWidget.cpp release\moc_FlowLayout.cpp release\moc_GpsMonitor.cpp release\moc_InputDialog.cpp release\moc_Login.cpp release\moc_MainWindow.cpp release\moc_MessageDialog.cpp release\moc_Mms.cpp release\moc_QThreadWorker.cpp release\moc_Report.cpp release\moc_ResourceButton.cpp release\moc_Resources.cpp release\moc_ResourceSelector.cpp release\moc_RscCollector.cpp release\moc_Sds.cpp release\moc_SettingsUi.cpp release\moc_Updater.cpp release\moc_VideoDevice.cpp release\moc_GisBookmarks.cpp release\moc_GisCanvas.cpp release\moc_GisDgnaList.cpp release\moc_GisHistory.cpp release\moc_GisLayerList.cpp release\moc_GisLegend.cpp release\moc_GisMapOverview.cpp release\moc_GisMenuTerminal.cpp release\moc_GisMenuUserPoi.cpp release\moc_GisQmlInt.cpp release\moc_GisRouting.cpp release\moc_GisTracking.cpp release\moc_GisTrackingReplay.cpp release\moc_GisTrailingSelector.cpp release\moc_GisWindow.cpp release\moc_ActiveIncidents.cpp release\moc_Incident.cpp release\moc_IncidentButton.cpp
+	-$(DEL_FILE) release\moc_ApiClient.cpp release\moc_AudioDevice.cpp release\moc_AudioManager.cpp release\moc_AudioPlayer.cpp release\moc_Call.cpp release\moc_CallButton.cpp release\moc_CallWindow.cpp release\moc_CommsRegister.cpp release\moc_Contact.cpp release\moc_DateTimeDelegate.cpp release\moc_Dgna.cpp release\moc_Document.cpp release\moc_DraggableListView.cpp release\moc_DraggableListWidget.cpp release\moc_FlowLayout.cpp release\moc_GpsMonitor.cpp release\moc_InputDialog.cpp release\moc_Login.cpp release\moc_MainWindow.cpp release\moc_MessageDialog.cpp release\moc_Mms.cpp release\moc_QThreadWorker.cpp release\moc_Report.cpp release\moc_ResourceButton.cpp release\moc_Resources.cpp release\moc_ResourceSelector.cpp release\moc_RscCollector.cpp release\moc_Sds.cpp release\moc_SettingsUi.cpp release\moc_Updater.cpp release\moc_VideoDevice.cpp release\moc_GisBookmarks.cpp release\moc_GisCanvas.cpp release\moc_GisDgnaList.cpp release\moc_GisHistory.cpp release\moc_GisLayerList.cpp release\moc_GisLegend.cpp release\moc_GisMapOverview.cpp release\moc_GisMenuTerminal.cpp release\moc_GisMenuUserPoi.cpp release\moc_GisQmlInt.cpp release\moc_GisRouting.cpp release\moc_GisTracking.cpp release\moc_GisTrackingReplay.cpp release\moc_GisTrailingSelector.cpp release\moc_GisWindow.cpp release\moc_ActiveIncidents.cpp release\moc_Incident.cpp release\moc_IncidentButton.cpp
+release\moc_ApiClient.cpp: ApiClient.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobject.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobjectdefs.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qnamespace.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qconfig.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qtcore-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsystemdetection.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qprocessordetection.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcompilerdetection.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qtypeinfo.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsysinfo.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qlogging.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qflags.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qatomic.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qbasicatomic.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qgenericatomic.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qatomic_cxx11.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qatomic_msvc.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qglobalstatic.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmutex.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qnumeric.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qversiontagging.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstring.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qchar.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qbytearray.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qrefcount.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qarraydata.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringliteral.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringalgorithms.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringview.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringbuilder.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qlist.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qalgorithms.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qiterator.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qhashfunctions.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qpair.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qvector.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcontainertools_impl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qpoint.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qbytearraylist.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringlist.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qregexp.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringmatcher.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreevent.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qscopedpointer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmetatype.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qvarlengtharray.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcontainerfwd.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobject_impl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkAccessManager \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkaccessmanager.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetworkglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetwork-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkrequest.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSharedDataPointer \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qshareddata.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qhash.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QUrl \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qurl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qurlquery.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qvariant.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmap.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdebug.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qtextstream.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qiodevice.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qlocale.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qset.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcontiguouscache.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsharedpointer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVector \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslConfiguration \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslconfiguration.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtcpsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qabstractsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslerror.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslcertificate.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcryptographichash.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdatetime.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qssl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFlags \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslPreSharedKeyAuthenticator \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslpresharedkeyauthenticator.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMetaType \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkReply \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkreply.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QIODevice \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkRequest \
+		release\moc_predefs.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\bin\moc.exe
+	C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Administrator/Documents/scad-biomai-git/release/moc_predefs.h -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/Administrator/Documents/scad-biomai-git -I"C:/Program Files/PostgreSQL/9.6/include" -IC:/Users/Administrator/Documents/scad-biomai-git/ffmpeg -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtMultimediaWidgets -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtPrintSupport -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuickWidgets -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtWidgets -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtMultimedia -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtLocation -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtPositioningQuick -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuick -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtGui -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtANGLE -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQmlModels -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQml -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtNetwork -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtPositioning -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtXml -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\cppwinrt" ApiClient.h -o release\moc_ApiClient.cpp
+
 release\moc_AudioDevice.cpp: AudioDevice.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\QAudioDeviceInfo \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qaudiodeviceinfo.h \
@@ -1889,6 +1995,35 @@ release\moc_CallButton.cpp: CallButton.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QTimer \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qtimer.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qbasictimer.h \
+		ApiClient.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkAccessManager \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkaccessmanager.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetworkglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetwork-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkrequest.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSharedDataPointer \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QUrl \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVector \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslConfiguration \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslconfiguration.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtcpsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qabstractsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslerror.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslcertificate.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcryptographichash.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qssl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFlags \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslPreSharedKeyAuthenticator \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslpresharedkeyauthenticator.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMetaType \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkReply \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkreply.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QIODevice \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkRequest \
 		AudioManager.h \
 		AudioDevice.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\QAudioDeviceInfo \
@@ -1901,7 +2036,6 @@ release\moc_CallButton.cpp: CallButton.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qaudioinput.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\QAudioOutput \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qaudiooutput.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QIODevice \
 		Logger.h \
 		PalLock.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMutex \
@@ -2164,6 +2298,35 @@ release\moc_CallWindow.cpp: CallWindow.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QTimer \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qtimer.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qbasictimer.h \
+		ApiClient.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkAccessManager \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkaccessmanager.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetworkglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetwork-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkrequest.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSharedDataPointer \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QUrl \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVector \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslConfiguration \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslconfiguration.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtcpsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qabstractsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslerror.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslcertificate.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcryptographichash.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qssl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFlags \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslPreSharedKeyAuthenticator \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslpresharedkeyauthenticator.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMetaType \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkReply \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkreply.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QIODevice \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkRequest \
 		AudioManager.h \
 		AudioDevice.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\QAudioDeviceInfo \
@@ -2176,7 +2339,6 @@ release\moc_CallWindow.cpp: CallWindow.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qaudioinput.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\QAudioOutput \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qaudiooutput.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QIODevice \
 		Logger.h \
 		PalLock.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMutex \
@@ -2633,6 +2795,35 @@ release\moc_Contact.cpp: Contact.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qsound.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qtmultimediaglobal.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qtmultimedia-config.h \
+		ApiClient.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkAccessManager \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkaccessmanager.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetworkglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetwork-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkrequest.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSharedDataPointer \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QUrl \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVector \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslConfiguration \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslconfiguration.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtcpsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qabstractsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslerror.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslcertificate.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcryptographichash.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qssl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFlags \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslPreSharedKeyAuthenticator \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslpresharedkeyauthenticator.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMetaType \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkReply \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkreply.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QIODevice \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkRequest \
 		AudioManager.h \
 		AudioDevice.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\QAudioDeviceInfo \
@@ -2645,7 +2836,6 @@ release\moc_Contact.cpp: Contact.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qaudioinput.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\QAudioOutput \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qaudiooutput.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QIODevice \
 		Logger.h \
 		PalLock.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMutex \
@@ -4624,6 +4814,32 @@ release\moc_MainWindow.cpp: MainWindow.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QKeyEvent \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\QSound \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qsound.h \
+		ApiClient.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkAccessManager \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkaccessmanager.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetworkglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetwork-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkrequest.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSharedDataPointer \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QUrl \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVector \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslConfiguration \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslconfiguration.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtcpsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qabstractsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslerror.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslcertificate.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcryptographichash.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qssl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFlags \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslPreSharedKeyAuthenticator \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslpresharedkeyauthenticator.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMetaType \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkReply \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkreply.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkRequest \
 		ServerSession.h \
 		TcpSocket.h \
 		Socket.h \
@@ -4766,8 +4982,6 @@ release\moc_MainWindow.cpp: MainWindow.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuick\qtquickglobal.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQml\qtqmlglobal.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQml\qtqml-config.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetworkglobal.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetwork-config.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuick\qtquick-config.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuick\qsgrendererinterface.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuick\qsgnode.h \
@@ -4830,29 +5044,6 @@ release\moc_MainWindow.cpp: MainWindow.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuickWidgets\QQuickWidget \
 		GisQmlInt.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFile \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkAccessManager \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkaccessmanager.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkrequest.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSharedDataPointer \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QUrl \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVector \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslConfiguration \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslconfiguration.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslsocket.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtcpsocket.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qabstractsocket.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslerror.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslcertificate.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcryptographichash.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qssl.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFlags \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslPreSharedKeyAuthenticator \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslpresharedkeyauthenticator.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMetaType \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkReply \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkreply.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkRequest \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtPositioning\QtPositioning \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtPositioning\QtPositioningDepends \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QtCore \
@@ -13599,6 +13790,109 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 
 ####### Compile
 
+release\ApiClient.obj: ApiClient.cpp ApiClient.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobject.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobjectdefs.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qnamespace.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qconfig.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qtcore-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsystemdetection.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qprocessordetection.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcompilerdetection.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qtypeinfo.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsysinfo.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qlogging.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qflags.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qatomic.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qbasicatomic.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qgenericatomic.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qatomic_cxx11.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qatomic_msvc.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qglobalstatic.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmutex.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qnumeric.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qversiontagging.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstring.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qchar.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qbytearray.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qrefcount.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qarraydata.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringliteral.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringalgorithms.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringview.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringbuilder.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qlist.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qalgorithms.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qiterator.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qhashfunctions.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qpair.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qvector.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcontainertools_impl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qpoint.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qbytearraylist.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringlist.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qregexp.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringmatcher.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreevent.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qscopedpointer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmetatype.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qvarlengtharray.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcontainerfwd.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobject_impl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkAccessManager \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkaccessmanager.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetworkglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetwork-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkrequest.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSharedDataPointer \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qshareddata.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qhash.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QUrl \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qurl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qurlquery.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qvariant.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmap.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdebug.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qtextstream.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qiodevice.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qlocale.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qset.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcontiguouscache.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsharedpointer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVector \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslConfiguration \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslconfiguration.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtcpsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qabstractsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslerror.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslcertificate.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcryptographichash.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdatetime.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qssl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFlags \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslPreSharedKeyAuthenticator \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslpresharedkeyauthenticator.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMetaType \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkReply \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkreply.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QIODevice \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkRequest \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QJsonDocument \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qjsondocument.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qjsonvalue.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QJsonObject \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qjsonobject.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDebug
+
 release\CmnTypes.obj: CmnTypes.cpp MsgSp.h \
 		Utils.h \
 		MsgValueBase.h \
@@ -15818,6 +16112,34 @@ release\CallButton.obj: CallButton.cpp Style.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QTimer \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qtimer.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qbasictimer.h \
+		ApiClient.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkAccessManager \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkaccessmanager.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetworkglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetwork-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkrequest.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSharedDataPointer \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QUrl \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVector \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslConfiguration \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslconfiguration.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtcpsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qabstractsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslerror.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslcertificate.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcryptographichash.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qssl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFlags \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslPreSharedKeyAuthenticator \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslpresharedkeyauthenticator.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMetaType \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkReply \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkreply.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QIODevice \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkRequest \
 		AudioManager.h \
 		AudioDevice.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\QAudioDeviceInfo \
@@ -15830,7 +16152,6 @@ release\CallButton.obj: CallButton.cpp Style.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qaudioinput.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\QAudioOutput \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qaudiooutput.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QIODevice \
 		Logger.h \
 		PalLock.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMutex \
@@ -16316,6 +16637,32 @@ release\CallWindow.obj: CallWindow.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_6
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qsound.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QTime \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QTimer \
+		ApiClient.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkAccessManager \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkaccessmanager.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetworkglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetwork-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkrequest.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSharedDataPointer \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QUrl \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVector \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslConfiguration \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslconfiguration.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtcpsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qabstractsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslerror.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslcertificate.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qssl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFlags \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslPreSharedKeyAuthenticator \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslpresharedkeyauthenticator.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMetaType \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkReply \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkreply.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QIODevice \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkRequest \
 		AudioManager.h \
 		AudioDevice.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\QAudioDeviceInfo \
@@ -16327,7 +16674,6 @@ release\CallWindow.obj: CallWindow.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_6
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qaudioinput.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\QAudioOutput \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qaudiooutput.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QIODevice \
 		RtpSession.h \
 		config_win32.h \
 		config_unix.h \
@@ -16938,6 +17284,34 @@ release\Contact.obj: Contact.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\incl
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qsound.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qtmultimediaglobal.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qtmultimedia-config.h \
+		ApiClient.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkAccessManager \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkaccessmanager.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetworkglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetwork-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkrequest.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSharedDataPointer \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QUrl \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVector \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslConfiguration \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslconfiguration.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtcpsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qabstractsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslerror.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslcertificate.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcryptographichash.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qssl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFlags \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslPreSharedKeyAuthenticator \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslpresharedkeyauthenticator.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMetaType \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkReply \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkreply.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QIODevice \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkRequest \
 		AudioManager.h \
 		AudioDevice.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\QAudioDeviceInfo \
@@ -16950,7 +17324,6 @@ release\Contact.obj: Contact.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\incl
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qaudioinput.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\QAudioOutput \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qaudiooutput.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QIODevice \
 		RtpSession.h \
 		config_win32.h \
 		config_unix.h \
@@ -19202,6 +19575,32 @@ release\Main.obj: Main.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\Qt
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QKeyEvent \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\QSound \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qsound.h \
+		ApiClient.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkAccessManager \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkaccessmanager.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetworkglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetwork-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkrequest.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSharedDataPointer \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QUrl \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVector \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslConfiguration \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslconfiguration.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtcpsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qabstractsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslerror.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslcertificate.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcryptographichash.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qssl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFlags \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslPreSharedKeyAuthenticator \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslpresharedkeyauthenticator.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMetaType \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkReply \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkreply.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkRequest \
 		ServerSession.h \
 		TcpSocket.h \
 		Socket.h \
@@ -19344,8 +19743,6 @@ release\Main.obj: Main.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\Qt
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuick\qtquickglobal.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQml\qtqmlglobal.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQml\qtqml-config.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetworkglobal.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetwork-config.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuick\qtquick-config.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuick\qsgrendererinterface.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuick\qsgnode.h \
@@ -19406,29 +19803,6 @@ release\Main.obj: Main.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\Qt
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuickWidgets\QQuickWidget \
 		GisQmlInt.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFile \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkAccessManager \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkaccessmanager.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkrequest.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSharedDataPointer \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QUrl \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVector \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslConfiguration \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslconfiguration.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslsocket.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtcpsocket.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qabstractsocket.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslerror.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslcertificate.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcryptographichash.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qssl.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFlags \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslPreSharedKeyAuthenticator \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslpresharedkeyauthenticator.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMetaType \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkReply \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkreply.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkRequest \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtPositioning\QtPositioning \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtPositioning\QtPositioningDepends \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QtCore \
@@ -20020,6 +20394,7 @@ release\MainWindow.obj: MainWindow.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_6
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QKeyEvent \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\QSound \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qsound.h \
+		ApiClient.h \
 		VideoStream.h \
 		VideoDecoder.h \
 		ffmpeg\libavcodec\avcodec.h \
@@ -21940,6 +22315,35 @@ release\Resources.obj: Resources.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qsound.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qtmultimediaglobal.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qtmultimedia-config.h \
+		ApiClient.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkAccessManager \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkaccessmanager.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetworkglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetwork-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkrequest.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSharedDataPointer \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QUrl \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVector \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslConfiguration \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslconfiguration.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtcpsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qabstractsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslerror.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslcertificate.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcryptographichash.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qssl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFlags \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslPreSharedKeyAuthenticator \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslpresharedkeyauthenticator.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMetaType \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkReply \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkreply.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QIODevice \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkRequest \
 		AudioManager.h \
 		AudioDevice.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\QAudioDeviceInfo \
@@ -21952,7 +22356,6 @@ release\Resources.obj: Resources.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qaudioinput.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\QAudioOutput \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qaudiooutput.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QIODevice \
 		Logger.h \
 		PalLock.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMutex \
@@ -22135,7 +22538,6 @@ release\Resources.obj: Resources.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QComboBox \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qcombobox.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDateTime \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString \
 		Style.h \
 		ui_Resources.h
 
@@ -30141,6 +30543,35 @@ release\Incident.obj: Incident.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\in
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qsound.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qtmultimediaglobal.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qtmultimedia-config.h \
+		ApiClient.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkAccessManager \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkaccessmanager.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetworkglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetwork-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkrequest.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSharedDataPointer \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QUrl \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVector \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslConfiguration \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslconfiguration.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtcpsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qabstractsocket.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslerror.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslcertificate.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcryptographichash.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qssl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFlags \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslPreSharedKeyAuthenticator \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslpresharedkeyauthenticator.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMetaType \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkReply \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkreply.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QIODevice \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkRequest \
 		AudioManager.h \
 		AudioDevice.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\QAudioDeviceInfo \
@@ -30153,7 +30584,6 @@ release\Incident.obj: Incident.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\in
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qaudioinput.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\QAudioOutput \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qaudiooutput.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QIODevice \
 		Logger.h \
 		PalLock.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMutex \
@@ -30334,7 +30764,6 @@ release\Incident.obj: Incident.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\in
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QStyledItemDelegate \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qstyleditemdelegate.h \
 		Document.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtPrintSupport\QPrinter \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtPrintSupport\qprinter.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtPrintSupport\qtprintsupportglobal.h \
@@ -30345,10 +30774,8 @@ release\Incident.obj: Incident.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\in
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTableView \
 		QXlsx\xlsxdocument.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QtGlobal \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QImage \
 		QXlsx\xlsxglobal.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSharedPointer \
 		QXlsx\xlsxformat.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QFont \
@@ -30357,7 +30784,6 @@ release\Incident.obj: Incident.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\in
 		QXlsx\xlsxworksheet.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QPointF \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDateTime \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QUrl \
 		QXlsx\xlsxabstractsheet.h \
 		QXlsx\xlsxabstractooxmlfile.h \
 		QXlsx\xlsxcell.h \
@@ -30365,8 +30791,6 @@ release\Incident.obj: Incident.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\in
 		QXlsx\xlsxcellrange.h \
 		QXlsx\xlsxcellreference.h \
 		QXlsx\xlsxcelllocation.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVector \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMetaType \
 		GisPoint.h \
 		GisLocation.h \
 		IncidentButton.h \
@@ -30412,10 +30836,6 @@ release\Incident.obj: Incident.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\in
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qmediaobject.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qmediacontent.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qmediaresource.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkrequest.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetworkglobal.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetwork-config.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSharedDataPointer \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qmediaenumdebug.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmetaobject.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkconfiguration.h \
@@ -30496,23 +30916,6 @@ release\Incident.obj: Incident.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\in
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuickWidgets\QQuickWidget \
 		GisQmlInt.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFile \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkAccessManager \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkaccessmanager.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslConfiguration \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslconfiguration.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslsocket.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtcpsocket.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qabstractsocket.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslerror.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslcertificate.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcryptographichash.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qssl.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFlags \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslPreSharedKeyAuthenticator \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslpresharedkeyauthenticator.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkReply \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkreply.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkRequest \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtPositioning\QtPositioning \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtPositioning\QtPositioningDepends \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QtCore \
@@ -31194,6 +31597,8 @@ release\VideoEncoder.obj: VideoEncoder.cpp Locker.h \
 		ffmpeg\libavutil\opt.h
 
 release\qrc_Resources.obj: release\qrc_Resources.cpp 
+
+release\moc_ApiClient.obj: release\moc_ApiClient.cpp 
 
 release\moc_AudioDevice.obj: release\moc_AudioDevice.cpp 
 

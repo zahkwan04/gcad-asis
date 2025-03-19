@@ -17,6 +17,7 @@
 #include <QSound>
 #include <QTime>
 #include <QTimer>
+#include <RestApiClient.h>
 
 #include "AudioManager.h"
 #include "MessageDialog.h"

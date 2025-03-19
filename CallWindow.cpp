@@ -1618,6 +1618,8 @@ void CallWindow::init()
     connect(ui->videoButton, &QToolButton::clicked, this,
             [this]
             {
+                ApiClient apiClient;
+                apiClient.sendRequest();
                 //start or answer video call
                 if (mType == CmnTypes::CALLTYPE_IND_OUT &&
                     !ResourceData::hasMobileStat())
