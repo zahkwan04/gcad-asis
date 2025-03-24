@@ -4,7 +4,7 @@
  * Copyright (C) Sapura Secured Technologies, 2013-2025. All Rights Reserved.
  *
  * @file
- * @version $Id: DbInt.cpp 1904 2025-02-19 06:59:58Z zulzaidi $
+ * @version $Id: DbInt.cpp 1910 2025-03-11 01:47:37Z zulzaidi $
  * @author Muhd Hashim Wahab
  */
 #include <assert.h>
@@ -12,6 +12,10 @@
 #include "Locker.h"
 #if defined(SNMP) && defined(SERVERAPP)
 #include "SnmpAgent.h"
+#else
+#define SNMP_TRAP(stat, val)
+#define SNMP_SEND_DISC(sentFlag, stat)
+#define SNMP_SEND_CONN(sentFlag, stat)
 #endif
 #include "Utils.h"
 #include "DbInt.h"
@@ -72,12 +76,12 @@ static void *startConnectThread(void *arg)
 }
 #endif
 
-bool DbInt::isValid()
+bool DbInt::isValid(bool chkOnly)
 {
 #ifdef NO_DB
     return true;
 #else
-    return connect(false);
+    return connect(false, chkOnly);
 #endif
 }
 
@@ -973,26 +977,20 @@ void DbInt::connectThread()
     LOGGER_DEBUG(sLogger, "DbInt::connectThread started.");
 #ifndef NO_DB
 #if defined(SNMP) && defined(SERVERAPP)
-    bool alertSent = false;
+    bool snmpSent = false;
 #endif
     int i;
+    SNMP_SEND_DISC(snmpSent, SnmpAgent::TRAP_DB_STAT);
     while (!mStopped)
     {
         if (!connect(false))
         {
-#if defined(SNMP) && defined(SERVERAPP)
-            if (!alertSent)
-                alertSent = SNMP_TRAP(SnmpAgent::TRAP_DB_STAT,
-                                      SnmpAgent::VAL_DISC);
-#endif
+            SNMP_SEND_DISC(snmpSent, SnmpAgent::TRAP_DB_STAT);
             if (!mStopped)
                 PalThread::sleep(5);
             continue;
         }
-#if defined(SNMP) && defined(SERVERAPP)
-        if (alertSent)
-            alertSent = !SNMP_TRAP(SnmpAgent::TRAP_DB_STAT, SnmpAgent::VAL_CONN);
-#endif
+        SNMP_SEND_CONN(snmpSent, SnmpAgent::TRAP_DB_STAT);
         //30 seconds sleep - quantize to 5 seconds to allow faster exit
         for (i=6; i>0 && !mStopped; --i)
         {
@@ -1057,7 +1055,8 @@ bool DbInt::init(Logger       *logger,
     string newConnStr("user=");
     newConnStr.append(username).append(" password=").append(pw)
               .append(" port=").append(Utils::toString(port))
-              .append(" dbname=").append(dbName);
+              .append(" dbname=").append(dbName)
+              .append(" connect_timeout=3");
     if (!remoteIp.empty())
         newConnStr.append(" hostaddr=").append(remoteIp);
     if (newConnStr == sConnStr)
@@ -1094,6 +1093,8 @@ void DbInt::destroy()
     sInstance = 0;
     sConnStr.clear();
     PalLock::release(&sSingletonLock);
+    SNMP_TRAP(SnmpAgent::TRAP_DB_STAT, SnmpAgent::VAL_DISC);
+    LOGGER_INFO(sLogger, "DbInt::Destroyed.");
 }
 
 void DbInt::chkConnStr(string &str, const string &ip)
@@ -1126,7 +1127,7 @@ DbInt::~DbInt()
 #endif
 }
 
-bool DbInt::connect(bool forceReconnect)
+bool DbInt::connect(bool forceReconnect, bool chkOnly)
 {
 #ifdef NO_DB
     return false;
@@ -1135,8 +1136,25 @@ bool DbInt::connect(bool forceReconnect)
     if (mConn != 0)
     {
         if (!forceReconnect && PQstatus(mConn) == CONNECTION_OK)
-            return true;
+        {
+            //despite CONNECTION_OK, still need to verify with a quick query
+            //because PQstatus(mConn) may not return real time status
+            auto *res = PQexec(mConn,
+                               "BEGIN; SET LOCAL statement_timeout=200;"
+                               "SELECT 1; COMMIT;");
+            if (PQresultStatus(res) == PGRES_COMMAND_OK)
+            {
+                PQclear(res);
+                return true;
+            }
+            PQclear(res);
+        }
         PQfinish(mConn);
+    }
+    if (chkOnly && !forceReconnect)
+    {
+        mConn = 0;
+        return false;
     }
     LOGGER_VERBOSE(sLogger, "Connecting to database...");
     mConn = PQconnectdb(sConnStr.c_str());

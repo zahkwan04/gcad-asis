@@ -4,7 +4,7 @@
  * Copyright (C) Sapura Secured Technologies, 2013-2025. All Rights Reserved.
  *
  * @file
- * @version $Id: VoipSessionBase.cpp 1904 2025-02-19 06:59:58Z zulzaidi $
+ * @version $Id: VoipSessionBase.cpp 1910 2025-03-11 01:47:37Z zulzaidi $
  * @author Ahmad Syukri
  */
 #include <assert.h>
@@ -13,6 +13,10 @@
 #include "Md5Digest.h"
 #if defined(SNMP) && defined(SERVERAPP)
 #include "SnmpAgent.h"
+#else
+#define SNMP_TRAP(stat, val)
+#define SNMP_SEND_DISC(sentFlag, stat)
+#define SNMP_SEND_CONN(sentFlag, stat)
 #endif
 #include "TcpSocket.h"
 #include "Utils.h"
@@ -168,30 +172,9 @@ VoipSessionBase::~VoipSessionBase()
         delete mSendMsgQueue.front();
         mSendMsgQueue.pop();
     }
+    SNMP_TRAP(SnmpAgent::TRAP_VOIP_STAT, SnmpAgent::VAL_DISC);
     LOGGER_INFO(mLogger, LOGPREFIX << "Destroyed.");
 }
-
-#if defined(SNMP) && defined(SERVERAPP)
-#define SEND_SNMP_DISC()                                     \
-    do                                                       \
-    {                                                        \
-        if (!alertSent)                                      \
-            alertSent = SNMP_TRAP(SnmpAgent::TRAP_VOIP_STAT, \
-                                  SnmpAgent::VAL_DISC);      \
-    }                                                        \
-    while (0)
-#define SEND_SNMP_CONN()                                      \
-    do                                                        \
-    {                                                         \
-        if (alertSent)                                        \
-            alertSent = !SNMP_TRAP(SnmpAgent::TRAP_VOIP_STAT, \
-                                   SnmpAgent::VAL_CONN);      \
-    }                                                         \
-    while (0)
-#else
-#define SEND_SNMP_DISC()
-#define SEND_SNMP_CONN()
-#endif
 
 void VoipSessionBase::recvThread()
 {
@@ -217,7 +200,7 @@ void VoipSessionBase::recvThread()
 
     static const int TIMEOUT_DEF = 300; //seconds
 #if defined(SNMP) && defined(SERVERAPP)
-    bool    alertSent = false;
+    bool    snmpSent = false;
 #endif
     int     type;
     int     id;
@@ -240,6 +223,7 @@ void VoipSessionBase::recvThread()
     MsgSip *msg = 0;
     MsgSip *resp = 0;
     MsgSp  *msgSp = 0;
+    SNMP_SEND_DISC(snmpSent, SnmpAgent::TRAP_VOIP_STAT);
     while (mState != STATE_STOPPED)
     {
         memset(buf, 0, BUFFER_SIZE_BYTES);
@@ -260,7 +244,7 @@ void VoipSessionBase::recvThread()
                 LOGX(ERROR, "Rx\nDisconnected, error " << bytesRcvd
                      << Socket::getErrorStr(-bytesRcvd));
                 MSGCB(new MsgSp(MsgSp::Type::VOIP_SERVER_UNREGISTERED));
-                SEND_SNMP_DISC();
+                SNMP_SEND_DISC(snmpSent, SnmpAgent::TRAP_VOIP_STAT);
                 //if too soon after last connect, wait a bit to avoid rapid
                 //disconnect-reconnect cycles
                 if (now - connTime < 3)
@@ -279,14 +263,14 @@ void VoipSessionBase::recvThread()
                 LOGX(WARNING, "Rx\nServer timeout after " << timeoutSecs
                      << " seconds");
                 MSGCB(new MsgSp(MsgSp::Type::VOIP_SERVER_UNREGISTERED));
-                SEND_SNMP_DISC();
+                SNMP_SEND_DISC(snmpSent, SnmpAgent::TRAP_VOIP_STAT);
             }
             mSsiCallMap.clear();
             mRegMap.clear();
             dataStr.clear();
             if (!connectToServer())
                 break;
-            SEND_SNMP_CONN();
+            SNMP_SEND_CONN(snmpSent, SnmpAgent::TRAP_VOIP_STAT);
             connTime = time(0);
             len = 0;
             timeoutSecs = TIMEOUT_DEF;
@@ -333,7 +317,7 @@ void VoipSessionBase::recvThread()
                 {
                     LOGX(ERROR, "recvThread: Socket error " << bytesRcvd
                          << Socket::getErrorStr(-bytesRcvd));
-                    SEND_SNMP_DISC();
+                    SNMP_SEND_DISC(snmpSent, SnmpAgent::TRAP_VOIP_STAT);
                 }
                 else if (now - lastRcvTime >= timeoutSecs)
                 {
@@ -345,11 +329,11 @@ void VoipSessionBase::recvThread()
                     sendMsg(createRegisterMsg(0));
                     timeoutSecs = TIMEOUT_DEF;
                     lastRcvTime = now;
-                    SEND_SNMP_DISC();
+                    SNMP_SEND_DISC(snmpSent, SnmpAgent::TRAP_VOIP_STAT);
                 }
                 continue;
             }
-            SEND_SNMP_CONN();
+            SNMP_SEND_CONN(snmpSent, SnmpAgent::TRAP_VOIP_STAT);
             str.assign(buf, bytesRcvd);
             msg = MsgSip::parse(str);
             if (msg == 0)

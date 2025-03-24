@@ -4,14 +4,18 @@
  * Copyright (C) Sapura Secured Technologies, 2013-2025. All Rights Reserved.
  *
  * @file
- * @version $Id: Resources.cpp 1905 2025-02-21 02:55:53Z rosnin $
+ * @version $Id: Resources.cpp 1908 2025-03-05 00:54:00Z rosnin $
  * @author Mazdiana Makmor
  * @author Nurfaizatul Ain Othman
  */
 #include <QHeaderView>
 #include <QLineEdit>
+#include <QMap>
 #include <QMenu>
 #include <QMessageBox>
+#include <QPushButton>
+#include <QRegularExpression>
+#include <QStringList>
 #include <QWidgetAction>
 #include <assert.h>
 
@@ -164,18 +168,28 @@ QWidget(parent), ui(new Ui::Resources), mLogger(logger), mDgnaMembersModel(0)
                 }
                 md->show();
             });
-    //context menu to clear mGrpAttTbl
     connect(ui->grpAttButton, &QPushButton::customContextMenuRequested, this,
             [this](const QPoint &pos)
             {
-                if (QApplication::keyboardModifiers() != Qt::ControlModifier)
-                    return; //accept only Ctrl-right-click
                 QMenu menu(this);
-                menu.addAction(QtUtils::getActionIcon(
-                                                    CmnTypes::ACTIONTYPE_CLEAR),
-                               tr("Clear Data"));
-                if (menu.exec(ui->grpAttButton->mapToGlobal(pos)) != 0)
+                auto *refAct = QtUtils::addMenuAction(menu,
+                                                  CmnTypes::ACTIONTYPE_REFRESH);
+                //clrAct only on Ctrl-right-click
+                auto *clrAct = (QApplication::keyboardModifiers() ==
+                                Qt::ControlModifier)?
+                               QtUtils::addMenuAction(
+                                              menu, CmnTypes::ACTIONTYPE_CLEAR):
+                               0;
+                auto *act = menu.exec(ui->grpAttButton->mapToGlobal(pos));
+                if (act == refAct)
+                {
+                    refreshGrpAtt();
+                }
+                else if (act != 0 && act == clrAct)
+                {
+                    mGrpAttMap.clear();
                     mGrpAttTbl->setRowCount(0);
+                }
             });
     connect(ui->tabWidget, &QTabWidget::currentChanged, this,
             [this]
@@ -398,6 +412,7 @@ void Resources::loadData(const QString &username)
         if (sameUser)
             phonebookUpdate();
     }
+    refreshGrpAtt();
     emit sendData(-1);
 }
 
@@ -644,19 +659,38 @@ void Resources::showGrpAttachedMembers(int gssi, QWidget *parent)
 
 void Resources::addGrpAttachData(bool detach, int issi, const set<int> &gssis)
 {
+    QString a((detach)? tr("Detach"): ""); //remains unchanged if detach=true
     QString i(QString::number(issi));
     QString t(QtUtils::getTimestamp());
     mGrpAttTbl->setSortingEnabled(false);
     for (auto g : gssis)
     {
+        if (!detach && SubsData::isGrpAttachedMember(issi, g))
+        {
+            if (mGrpAttMap.count(g) != 0 && mGrpAttMap[g].count(issi) != 0)
+            {
+                LOGGER_DEBUG(mLogger, LOGPREFIX << "addGrpAttachData: "
+                             "Skipping attach " << issi << "=>" << g);
+                continue; //issi already shown as attached to g
+            }
+            mGrpAttMap[g].insert(issi);
+            a = tr("Attach");
+        }
+        else
+        {
+            if (mGrpAttMap.count(g) == 0 || mGrpAttMap[g].erase(issi) == 0)
+            {
+                LOGGER_DEBUG(mLogger, LOGPREFIX << "addGrpAttachData: "
+                             "Skipping detach " << issi << "<=" << g);
+                continue; //issi not shown as attached to g
+            }
+            if (!detach)
+                a = tr("Detach"); //else already correct string
+        }
         mGrpAttTbl->insertRow(0);
         mGrpAttTbl->setItem(0, 0, new QTableWidgetItem(QString::number(g)));
         mGrpAttTbl->setItem(0, 1, new QTableWidgetItem(i));
-        mGrpAttTbl->setItem(0, 2,
-                            new QTableWidgetItem(
-                                (!detach &&
-                                 SubsData::isGrpAttachedMember(issi, g))?
-                                    tr("Attach"): tr("Detach")));
+        mGrpAttTbl->setItem(0, 2, new QTableWidgetItem(a));
         mGrpAttTbl->setItem(0, 3, new QTableWidgetItem(t));
     }
     mGrpAttTbl->setSortingEnabled(true);
@@ -665,6 +699,71 @@ void Resources::addGrpAttachData(bool detach, int issi, const set<int> &gssis)
 void Resources::showEvent(QShowEvent *)
 {
     ui->searchCombo->setFocus();
+}
+
+void Resources::refreshGrpAtt()
+{
+    QString g; //GSSI
+    QString t(QtUtils::getTimestamp());
+    auto tmpMap(mGrpAttMap); //init just to be able to use 'auto'
+    SubsData::getGrpAttachedMembers(tmpMap);
+    mGrpAttTbl->setSortingEnabled(false);
+    if (!mGrpAttMap.empty())
+    {
+        //check each mGrpAttMap entry - if not in tmpMap, the ISSI has detached,
+        //so add 'detach' action to table, and remove the entry
+        auto mit = mGrpAttMap.begin();
+        auto it = mit->second.begin(); //ISSI
+        while (mit != mGrpAttMap.end())
+        {
+            g = QString::number(mit->first);
+            it = mit->second.begin();
+            while (it != mit->second.end())
+            {
+                if (!tmpMap.empty() && tmpMap.count(mit->first) != 0 &&
+                    tmpMap[mit->first].count(*it) != 0)
+                {
+                    ++it;
+                    continue;
+                }
+                mGrpAttMap[mit->first].insert(*it);
+                mGrpAttTbl->insertRow(0);
+                mGrpAttTbl->setItem(0, 0, new QTableWidgetItem(g));
+                mGrpAttTbl->setItem(0, 1,
+                                    new QTableWidgetItem(QString::number(*it)));
+                mGrpAttTbl->setItem(0, 2, new QTableWidgetItem(tr("Detach")));
+                mGrpAttTbl->setItem(0, 3, new QTableWidgetItem(t));
+                it = mit->second.erase(it);
+            }
+            if (mit->second.empty())
+                mit = mGrpAttMap.erase(mit);
+            else
+                ++mit;
+        }
+    } //if (!mGrpAttMap.empty())
+    if (!tmpMap.empty())
+    {
+        //check each tmpMap entry - if not in mGrpAttMap, add 'attach' action to
+        //table, and add entry to mGrpAttMap
+        for (auto &it : tmpMap)
+        {
+            g = QString::number(it.first);
+            for (int i : it.second)
+            {
+                if (mGrpAttMap.count(it.first) != 0 &&
+                    mGrpAttMap[it.first].count(i) != 0)
+                    continue; //already shown as attached - skip
+                mGrpAttMap[it.first].insert(i);
+                mGrpAttTbl->insertRow(0);
+                mGrpAttTbl->setItem(0, 0, new QTableWidgetItem(g));
+                mGrpAttTbl->setItem(0, 1,
+                                    new QTableWidgetItem(QString::number(i)));
+                mGrpAttTbl->setItem(0, 2, new QTableWidgetItem(tr("Attach")));
+                mGrpAttTbl->setItem(0, 3, new QTableWidgetItem(t));
+            }
+        }
+    } //if (!tmpMap.empty())
+    mGrpAttTbl->setSortingEnabled(true);
 }
 
 inline bool Resources::hasActiveState(int type) const

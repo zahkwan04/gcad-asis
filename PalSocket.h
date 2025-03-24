@@ -12,9 +12,9 @@
  *     2. At application exit, call PalSocket::finalize() for proper socket
  *        shutdown.
  *
- * Copyright (C) Sapura Secured Technologies, 2013-2023. All Rights Reserved.
+ * Copyright (C) Sapura Secured Technologies, 2013-2025. All Rights Reserved.
  *
- * @version $Id: PalSocket.h 1765 2023-10-09 02:58:23Z zulzaidi $
+ * @version $Id: PalSocket.h 1909 2025-03-06 08:06:00Z hazim.rujhan $
  * @author Mohd Rozaimi
  */
 #ifndef PAL_SOCKET_H
@@ -55,9 +55,10 @@ namespace PalSocket
 
     inline void setOpt(SocketT sock)
     {
-        char on = '1';
-        setsockopt(sock, SOL_SOCKET, SO_REUSEADDR, &on, sizeof(on));
-        setsockopt(sock, SOL_SOCKET, SO_KEEPALIVE, &on, sizeof(on));
+        int val = 1000;
+        setsockopt(sock, SOL_SOCKET, SO_REUSEADDR, (char *) &val, sizeof(val));
+        setsockopt(sock, SOL_SOCKET, SO_KEEPALIVE, (char *) &val, sizeof(val));
+        setsockopt(sock, SOL_SOCKET, SO_SNDTIMEO, (char *) &val, sizeof(val));
     }
 
     inline int setNonblocking(SocketT sock)
@@ -171,6 +172,7 @@ namespace PalSocket
 #include <arpa/inet.h>  //INET_ADDRSTRLEN, sockaddr_in, htons, inet_ntop/pton
 #include <sys/poll.h>
 #include <sys/socket.h>
+#include <sys/time.h>   //struct timeval
 
 #define INVALID_SOCKET -1
 
@@ -198,6 +200,10 @@ namespace PalSocket
         int on = 1;
         setsockopt(sock, SOL_SOCKET, SO_REUSEADDR, &on, sizeof(on));
         setsockopt(sock, SOL_SOCKET, SO_KEEPALIVE, &on, sizeof(on));
+        struct timeval tv;
+        tv.tv_sec = 1;
+        tv.tv_usec = 0;
+        setsockopt(sock, SOL_SOCKET, SO_SNDTIMEO, &tv, sizeof(tv));
     }
 
     inline int setNonblocking(SocketT sock)

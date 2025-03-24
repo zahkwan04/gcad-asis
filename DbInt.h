@@ -4,7 +4,7 @@
  * Copyright (C) Sapura Secured Technologies, 2013-2025. All Rights Reserved.
  *
  * @file
- * @version $Id: DbInt.h 1896 2025-01-07 06:49:29Z rosnin $
+ * @version $Id: DbInt.h 1909 2025-03-06 08:06:00Z hazim.rujhan $
  * @author Muhd Hashim Wahab
  */
 #ifndef DBINT_H
@@ -340,9 +340,10 @@ public:
      * Gets the object validity. If invalid, tries to restore and returns the
      * resulting status.
      *
+     * @param[in] chkOnly true to skip restore.
      * @return true if valid.
      */
-    bool isValid();
+    bool isValid(bool chkOnly = false);
 
     /**
      * Runs a query with no parameter.
@@ -1293,13 +1294,15 @@ private:
     DbInt &operator=(const DbInt &);
 
     /**
-     * Connects to database.
+     * Checks current database connection status, and connects if necessary.
      *
      * @param[in] forceReconnect true to force reconnect if already connected.
      *                           Otherwise returns success in that case.
+     * @param[in] chkOnly        true to only check status without actually
+     *                           connecting. Ignored if forceReconnect is true.
      * @return true if successful.
      */
-    bool connect(bool forceReconnect);
+    bool connect(bool forceReconnect, bool chkOnly = false);
 
     /**
      * Gets all rows.

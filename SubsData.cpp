@@ -4,7 +4,7 @@
  * Copyright (C) Sapura Secured Technologies, 2013-2025. All Rights Reserved.
  *
  * @file
- * @version $Id: SubsData.cpp 1905 2025-02-21 02:55:53Z rosnin $
+ * @version $Id: SubsData.cpp 1908 2025-03-05 00:54:00Z rosnin $
  * @author Zahari Hadzir
  */
 #include <assert.h>
@@ -2523,6 +2523,21 @@ string SubsData::getGrpMembers(int gssi)
     oss << "Group " << gssi << " - members(" << ssis.size() << "): "
         << Utils::toStringWithRange(ssis);
     return oss.str();
+}
+
+bool SubsData::getGrpAttachedMembers(Int2IdsMapT &data)
+{
+    if (!isReady())
+        return false;
+    Locker lock(&sDataLock);
+    data = sData[SUBS_GSSI_ATTACH_LIST];
+#ifndef SERVERAPP
+    for (const auto &it : sData[SUBS_GSSI_ATTACH_LIST_UNC])
+    {
+        data[it.first].insert(it.second.begin(), it.second.end());
+    }
+#endif
+    return !data.empty();
 }
 
 bool SubsData::getGrpAttachedMembers(int gssi, IdSetT &issis, bool unc)

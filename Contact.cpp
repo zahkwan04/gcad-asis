@@ -1,10 +1,10 @@
 /**
  * UI Quick Contact implementation.
  *
- * Copyright (C) Sapura Secured Technologies, 2021-2024. All Rights Reserved.
+ * Copyright (C) Sapura Secured Technologies, 2021-2025. All Rights Reserved.
  *
  * @file
- * @version $Id: Contact.cpp 1880 2024-11-15 08:24:57Z hazim.rujhan $
+ * @version $Id: Contact.cpp 1909 2025-03-06 08:06:00Z hazim.rujhan $
  * @author Rosnin
  */
 #include <algorithm>    //std::sort
@@ -451,7 +451,11 @@ void Contact::setSession(ServerSession *session, bool doSave, bool onLogout)
 {
     if (session == 0)
     {
+#ifdef SAVE2CFG
         if (sSession != 0 && doSave)
+#else
+        if (sSession != 0 && doSave && DbInt::instance().isValid(true))
+#endif
             dataSave(1, 0);
         if (onLogout)
         {

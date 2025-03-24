@@ -3,7 +3,7 @@
 # Copyright (C) Sapura Secured Technologies, 2013-2025. All Rights Reserved.
 #
 # @file
-# @version $Id: Phoenix.pro 1898 2025-01-17 00:50:10Z rosnin $
+# @version $Id: Phoenix.pro 1913 2025-03-20 02:09:23Z zulzaidi $
 
 #prevent windows.h from including winsock.h
 DEFINES += WIN32_LEAN_AND_MEAN
@@ -12,10 +12,11 @@ DEFINES += NOMINMAX
 
 DEFINES += SETTINGS_INIFILE
 DEFINES += SIPTCP
-DEFINES += GIS_ROUTING
-DEFINES += DGNA_OF_GRPS
+#DEFINES += GIS_ROUTING
+#DEFINES += DGNA_OF_GRPS
 DEFINES += INCIDENT
 DEFINES += MSG_AES
+#DEFINES += RBTMQ
 
 #PostgreSQL database management system path
 #comment out if not installed
@@ -291,6 +292,13 @@ contains(DEFINES, INCIDENT) {
                VideoEncoder.h
     INCLUDEPATH += ffmpeg
     LIBS += -lavcodec -lavutil -lswscale -llibx264
+}
+
+contains(DEFINES, RBTMQ) {
+    SOURCES += RabbitMqInt.cpp
+    HEADERS += RabbitMqInt.h
+    INCLUDEPATH += rabbitmq
+    LIBS += -lrabbitmq.4
 }
 
 RESOURCES += \
