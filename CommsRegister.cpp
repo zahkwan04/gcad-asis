@@ -1,10 +1,10 @@
 /**
  * UI Communications Register implementation.
  *
- * Copyright (C) Sapura Secured Technologies, 2020-2024. All Rights Reserved.
+ * Copyright (C) Sapura Secured Technologies, 2020-2025. All Rights Reserved.
  *
  * @file
- * @version $Id: CommsRegister.cpp 1885 2024-11-28 08:32:01Z hazim.rujhan $
+ * @version $Id: CommsRegister.cpp 1915 2025-03-21 07:08:45Z rosnin $
  * @author Zulzaidi Atan
  */
 #include <string>
@@ -1007,8 +1007,9 @@ bool CommsRegister::mmsCheckRx(MsgSp *msg, const QString &err)
     //MMS_RPT: download finished (success/failure), path = local/url
     time_t ref = 0;
     msg->getFieldVal(MsgSp::Field::MSG_REF, ref);
-    int cp = msg->getFieldInt((msg->getType() == MsgSp::Type::MMS_RPT)?
-                       MsgSp::Field::CALLED_PARTY: MsgSp::Field::CALLING_PARTY);
+    bool isXfer = (msg->getType() == MsgSp::Type::MMS_TRANSFER);
+    int cp = msg->getFieldInt((isXfer)?
+                       MsgSp::Field::CALLING_PARTY: MsgSp::Field::CALLED_PARTY);
     QTableWidgetItem *itm;
     auto *tw = ui->msgTable;
     tw->setSortingEnabled(false);
@@ -1025,6 +1026,19 @@ bool CommsRegister::mmsCheckRx(MsgSp *msg, const QString &err)
         if (itm == 0 || itm->data(USERROLE_MSGREF).toLongLong() != ref ||
             itm->data(USERROLE_CALLPARTY).toInt() != cp)
             continue;
+        //an MMS may be received more than once with different called parties,
+        //e.g. 1 to dispatcher and 1 to grp, or to multiple monitored grps - so
+        //must match that too
+        itm = tw->item(row, COL_MSG_TO);
+        if ((isXfer &&
+             itm->data(USERROLE_CALLPARTY).toInt() !=
+                 msg->getFieldInt(MsgSp::Field::CALLED_PARTY)) ||
+            (!isXfer && msg->hasField(MsgSp::Field::GSSI) &&
+             itm->data(USERROLE_CALLPARTY).toInt() !=
+                 msg->getFieldInt(MsgSp::Field::GSSI)) ||
+            (!isXfer && !msg->hasField(MsgSp::Field::GSSI) &&
+             itm->data(USERROLE_CPTYPE).toInt() != CmnTypes::IDTYPE_DISPATCHER))
+            continue;
         bool ok = msg->isResultSuccessful() && err.isEmpty();
         QString fp(QString::fromStdString(
                                  msg->getFieldString(MsgSp::Field::FILE_PATH)));
@@ -1033,7 +1047,7 @@ bool CommsRegister::mmsCheckRx(MsgSp *msg, const QString &err)
                  msg->getFieldInt(MsgSp::Field::MSG_ID);
         auto &dt(mMmsMap[ui->msgTable->item(row, COL_MSG_MESSAGE)
                                      ->data(USERROLE_MMSKEY).toInt()][id]);
-        if (msg->getType() == MsgSp::Type::MMS_TRANSFER)
+        if (isXfer)
         {
             //new attachment
             qint64 sz = 0;

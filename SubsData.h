@@ -4,7 +4,7 @@
  * Copyright (C) Sapura Secured Technologies, 2013-2025. All Rights Reserved.
  *
  * @file
- * @version $Id: SubsData.h 1905 2025-02-21 02:55:53Z rosnin $
+ * @version $Id: SubsData.h 1908 2025-03-05 00:54:00Z rosnin $
  * @author Zahari Hadzir
  */
 #ifndef SUBSDATA_H
@@ -1042,6 +1042,15 @@ public:
      * @return The comma-separated member SSIs.
      */
     static std::string getGrpMembers(int gssi);
+
+    /**
+     * Gets attached members of all groups, including unconfirmed ones.
+     *
+     * @param[out] data Attached member ISSIs of each group. Existing content is
+     *                  overwritten.
+     * @return true if data not empty.
+     */
+    static bool getGrpAttachedMembers(Int2IdsMapT &data);
 
     /**
      * Gets attached members of a group.

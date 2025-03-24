@@ -1,10 +1,10 @@
 /**
  * Collection of common types and related conversion functions.
  *
- * Copyright (C) Sapura Secured Technologies, 2014-2024. All Rights Reserved.
+ * Copyright (C) Sapura Secured Technologies, 2014-2025. All Rights Reserved.
  *
  * @file
- * @version $Id: CmnTypes.h 1816 2024-02-19 06:45:36Z zulzaidi $
+ * @version $Id: CmnTypes.h 1908 2025-03-05 00:54:00Z rosnin $
  * @author Nurulashikhin
  */
 #ifndef CMNTYPES_H
@@ -54,6 +54,7 @@ namespace CmnTypes
         ACTIONTYPE_PTT,
         ACTIONTYPE_PTT_ACTIVE,
         ACTIONTYPE_PTT_PENDING,
+        ACTIONTYPE_REFRESH,
         ACTIONTYPE_RENAME,
         ACTIONTYPE_REPORT,
         ACTIONTYPE_RESOURCES,

@@ -844,12 +844,5 @@ private:
      * @param[in] doStart true to start.
      */
     void setVideoOut(bool doStart);
-
-    /**
-     * Starts or stops outgoing video stream.
-     *
-     * @param[in] doStart true to start.
-     */
-    void setWebRTCOut(bool doStart);
 };
 #endif //CALLWINDOW_H

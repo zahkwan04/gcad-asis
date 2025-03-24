@@ -4,7 +4,7 @@
  * Copyright (C) Sapura Secured Technologies, 2013-2025. All Rights Reserved.
  *
  * @file
- * @version $Id: Resources.h 1905 2025-02-21 02:55:53Z rosnin $
+ * @version $Id: Resources.h 1908 2025-03-05 00:54:00Z rosnin $
  * @author Mazdiana Makmor
  * @author Nurfaizatul Ain Othman
  */
@@ -13,12 +13,11 @@
 
 #include <map>
 #include <set>
-#include <QMap>
-#include <QMouseEvent>
-#include <QPushButton>
-#include <QRegularExpression>
-#include <QStringList>
-#include <QStringListModel>
+#include <QList>
+#include <QModelIndexList>
+#include <QPoint>
+#include <QStandardItem>
+#include <QString>
 #include <QTableWidget>
 
 #include "DraggableListView.h"
@@ -148,11 +147,20 @@ private:
 
     //search result for each ResourceData::TYPE_*
     std::map<int, ResourceData::ListModel *> mSearchResultMap;
+    //grp attachments as in mGrpAttTbl, GSSI=>ISSIs
+    std::map<int, std::set<int>>             mGrpAttMap;
 
     QString                  mUsername;
     QTableWidget            *mGrpAttTbl;        //grp attachments history
     ResourceData::ListModel *mDgnaMembersModel; //potential DGNA members
     QList<ResourceButton *>  mPhonebookButtons;
+
+    /**
+     * Refreshes the group attachments history from SubsData. Only adds changes,
+     * i.e. current attachments that are not in the history, and attachments in
+     * history that are no longer present.
+     */
+    void refreshGrpAtt();
 
     /**
      * Checks whether the given resource type has an Active state.

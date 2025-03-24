@@ -5,7 +5,7 @@
  Copyright (C) Sapura Secured Technologies, 2013-2025. All Rights Reserved.
 
  @file
- @version $Id: Resources.ui 1905 2025-02-21 02:55:53Z rosnin $
+ @version $Id: Resources.ui 1908 2025-03-05 00:54:00Z rosnin $
 -->
 <ui version="4.0">
  <class>Resources</class>
@@ -337,6 +337,19 @@
           </widget>
          </item>
          <item>
+          <spacer name="vewSpacer2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
           <widget class="QPushButton" name="grpAttButton">
            <property name="minimumSize">
             <size>
@@ -365,19 +378,6 @@
             <string>Group Attach History</string>
            </property>
           </widget>
-         </item>
-         <item>
-          <spacer name="vewSpacer2">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
          </item>
         </layout>
        </widget>

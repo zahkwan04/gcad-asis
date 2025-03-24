@@ -5,7 +5,7 @@
  Copyright (C) Sapura Secured Technologies, 2019-2025. All Rights Reserved.
 
  @file
- @version $Id: Scad_ms.ts 1905 2025-02-21 02:55:53Z rosnin $
+ @version $Id: Scad_ms.ts 1915 2025-03-21 07:08:45Z rosnin $
 -->
 <!DOCTYPE TS>
 <TS version="2.1" language="ms_MY" sourcelanguage="en_US">
@@ -636,50 +636,50 @@ Panjang: %4</translation>
         <translation>Individu PTT</translation>
     </message>
     <message>
-        <location filename="../CommsRegister.cpp" line="1072"/>
+        <location filename="../CommsRegister.cpp" line="1086"/>
         <source>File no longer available</source>
         <translation>Fail tidak lagi wujud</translation>
     </message>
     <message>
-        <location filename="../CommsRegister.cpp" line="1249"/>
+        <location filename="../CommsRegister.cpp" line="1263"/>
         <source>Partial failure</source>
         <translation>Separa gagal</translation>
     </message>
     <message>
-        <location filename="../CommsRegister.cpp" line="1252"/>
-        <location filename="../CommsRegister.cpp" line="1752"/>
+        <location filename="../CommsRegister.cpp" line="1266"/>
+        <location filename="../CommsRegister.cpp" line="1766"/>
         <source>Sent</source>
         <translation>Dihantar</translation>
     </message>
     <message>
-        <location filename="../CommsRegister.cpp" line="1280"/>
+        <location filename="../CommsRegister.cpp" line="1294"/>
         <source>Attachments</source>
         <translation>Lampiran</translation>
     </message>
     <message>
-        <location filename="../CommsRegister.cpp" line="1497"/>
+        <location filename="../CommsRegister.cpp" line="1511"/>
         <source>Save File</source>
         <translation>Simpan Fail</translation>
     </message>
     <message>
-        <location filename="../CommsRegister.cpp" line="1511"/>
+        <location filename="../CommsRegister.cpp" line="1525"/>
         <source>Select Folder</source>
         <translation>Pilih Folder</translation>
     </message>
     <message>
-        <location filename="../CommsRegister.cpp" line="1582"/>
+        <location filename="../CommsRegister.cpp" line="1596"/>
         <source>Failed to save:</source>
         <translation>Gagal disimpan:</translation>
     </message>
     <message>
-        <location filename="../CommsRegister.cpp" line="1587"/>
+        <location filename="../CommsRegister.cpp" line="1601"/>
         <source>Save Error</source>
         <translation>Masalah Simpanan</translation>
     </message>
     <message>
         <location filename="../CommsRegister.cpp" line="916"/>
-        <location filename="../CommsRegister.cpp" line="1242"/>
-        <location filename="../CommsRegister.cpp" line="1767"/>
+        <location filename="../CommsRegister.cpp" line="1256"/>
+        <location filename="../CommsRegister.cpp" line="1781"/>
         <source>Failed</source>
         <translation>Gagal</translation>
     </message>
@@ -738,24 +738,24 @@ Panjang: %4</translation>
         <translation>Kontak Pantas</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="685"/>
-        <location filename="../Contact.cpp" line="2185"/>
+        <location filename="../Contact.cpp" line="689"/>
+        <location filename="../Contact.cpp" line="2189"/>
         <source>Contact Error</source>
         <translation>Masalah Kontak</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="686"/>
+        <location filename="../Contact.cpp" line="690"/>
         <source>Failed to load user contacts because of database link error.</source>
         <translation>Gagal muatkan kontak kerana masalah hubungan pangkalan data.</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="824"/>
-        <location filename="../Contact.cpp" line="856"/>
+        <location filename="../Contact.cpp" line="828"/>
+        <location filename="../Contact.cpp" line="860"/>
         <source>Monitoring Error</source>
         <translation>Masalah Pantauan</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="825"/>
+        <location filename="../Contact.cpp" line="829"/>
         <source>%1: Maximum %2 already monitored.
 Cannot add %3.
 </source>
@@ -763,117 +763,117 @@ Cannot add %3.
 Tidak boleh tambah %3.</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="857"/>
+        <location filename="../Contact.cpp" line="861"/>
         <source>Failed to stop monitoring: </source>
         <translation>Gagal berhenti pantauan: </translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="858"/>
+        <location filename="../Contact.cpp" line="862"/>
         <source>Failed to start monitoring: </source>
         <translation>Gagal mulakan pantauan untuk: </translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="1149"/>
+        <location filename="../Contact.cpp" line="1153"/>
         <source>%1 selected</source>
         <translation>%1 dipilih</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="1334"/>
+        <location filename="../Contact.cpp" line="1338"/>
         <source>Locate on map</source>
         <translation>Pamer di peta</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="1344"/>
+        <location filename="../Contact.cpp" line="1348"/>
         <source>Map Window not yet loaded.</source>
         <translation>Peta belum dibuka.</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="1350"/>
+        <location filename="../Contact.cpp" line="1354"/>
         <source>Copy name</source>
         <translation>Salin nama</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="1359"/>
+        <location filename="../Contact.cpp" line="1363"/>
         <source>Delete Contact</source>
         <translation>Padam</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="1360"/>
+        <location filename="../Contact.cpp" line="1364"/>
         <source>Are you sure to delete %1?</source>
         <translation>Pasti untuk padam %1?</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="1541"/>
+        <location filename="../Contact.cpp" line="1545"/>
         <source>Notes: (max %1 characters)</source>
         <translation>Nota: (maks %1 aksara)</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="1550"/>
+        <location filename="../Contact.cpp" line="1554"/>
         <source>Notes Error</source>
         <translation>Masalah Nota</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="1551"/>
+        <location filename="../Contact.cpp" line="1555"/>
         <source>Text length %1 exceeds maximum %2</source>
         <translation>Panjang teks %1 melebihi had %2</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="1623"/>
+        <location filename="../Contact.cpp" line="1627"/>
         <source>New Tab</source>
         <translation>Tab Baru</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="1623"/>
+        <location filename="../Contact.cpp" line="1627"/>
         <source>Rename Tab</source>
         <translation>Tukar Nama Tab</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="1624"/>
+        <location filename="../Contact.cpp" line="1628"/>
         <source>Name:</source>
         <translation>Nama:</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="1650"/>
+        <location filename="../Contact.cpp" line="1654"/>
         <source>Name must not contain space or &apos;%1&apos;.</source>
         <translation>Nama tidak boleh mengandungi aksara kosong (space) atau &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="1655"/>
+        <location filename="../Contact.cpp" line="1659"/>
         <source>Name must not contain space.</source>
         <translation>Nama tidak boleh mengandungi aksara kosong (space).</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="1665"/>
+        <location filename="../Contact.cpp" line="1669"/>
         <source>&apos;%1&apos; already exists.</source>
         <translation>&apos;%1&apos; sudah wujud.</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="1672"/>
+        <location filename="../Contact.cpp" line="1676"/>
         <source>Name Error</source>
         <translation>Masalah Nama</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="1779"/>
+        <location filename="../Contact.cpp" line="1783"/>
         <source>Delete Tab</source>
         <translation>Padam Tab</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="1779"/>
+        <location filename="../Contact.cpp" line="1783"/>
         <source>Delete Selection</source>
         <translation>Padam Pilihan</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="1781"/>
+        <location filename="../Contact.cpp" line="1785"/>
         <source>Are you sure to delete &apos;%1&apos;?</source>
         <translation>Pasti untuk padamkan &apos;%1&apos;?</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="1783"/>
+        <location filename="../Contact.cpp" line="1787"/>
         <source>Are you sure to delete &apos;%1&apos; and its content?</source>
         <translation>Pasti untuk padamkan &apos;%1&apos; dan kandungannya?</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="1785"/>
+        <location filename="../Contact.cpp" line="1789"/>
         <source>Are you sure to delete selection in &apos;%1&apos;?</source>
         <translation>Pasti untuk padamkan pilihan dalam &apos;%1&apos;?</translation>
     </message>
@@ -888,37 +888,37 @@ Tidak boleh tambah %3.</translation>
         <translation>Hentikan pantauan</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="1841"/>
+        <location filename="../Contact.cpp" line="1845"/>
         <source>Move to tab</source>
         <translation>Pindah ke tab</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="2102"/>
+        <location filename="../Contact.cpp" line="2106"/>
         <source>Failed to save &apos;%1&apos; to database because of link error.</source>
         <translation>Gagal simpan &apos;%1&apos; ke pangkalan data kerana masalah hubungan.</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="2109"/>
+        <location filename="../Contact.cpp" line="2113"/>
         <source>Failed to save tab &apos;%1&apos; to database because of link error.</source>
         <translation>Gagal simpan tab &apos;%1&apos; ke pangkalan data kerana masalah hubungan.</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="2129"/>
+        <location filename="../Contact.cpp" line="2133"/>
         <source>Failed to delete &apos;%1&apos; from database because of link error.</source>
         <translation>Gagal padam &apos;%1&apos; dari pangkalan data kerana masalah hubungan.</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="2137"/>
+        <location filename="../Contact.cpp" line="2141"/>
         <source>Failed to delete tab &apos;%1&apos; from database because of link error.</source>
         <translation>Gagal padam tab &apos;%1&apos; dari pangkalan data kerana masalah hubungan.</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="2158"/>
+        <location filename="../Contact.cpp" line="2162"/>
         <source>Failed to update &apos;%1&apos; notes to database because of link error.</source>
         <translation>Gagal kemaskini nota untuk &apos;%1&apos; ke pangkalan data kerana masalah hubungan.</translation>
     </message>
     <message>
-        <location filename="../Contact.cpp" line="2177"/>
+        <location filename="../Contact.cpp" line="2181"/>
         <source>Failed to rename tab &apos;%1&apos; to &apos;%2&apos; in database because of link error.</source>
         <translation>Gagal tukar nama tab &apos;%1&apos; kepada &apos;%2&apos; di pangkalan data kerana masalah hubungan.</translation>
     </message>
@@ -5316,7 +5316,7 @@ Kemaskini sekarang?</translation>
     </message>
     <message>
         <location filename="../QtTableUtils.cpp" line="56"/>
-        <location filename="../QtUtils.cpp" line="421"/>
+        <location filename="../QtUtils.cpp" line="425"/>
         <source>Select all</source>
         <translation>Pilih semua</translation>
     </message>
@@ -5415,7 +5415,7 @@ Kemaskini sekarang?</translation>
     <message>
         <location filename="../QtTableUtils.cpp" line="179"/>
         <location filename="../QtTableUtils.cpp" line="381"/>
-        <location filename="../QtUtils.cpp" line="155"/>
+        <location filename="../QtUtils.cpp" line="154"/>
         <source>Incoming</source>
         <translation>Masuk</translation>
     </message>
@@ -5426,19 +5426,19 @@ Kemaskini sekarang?</translation>
     </message>
     <message>
         <location filename="../QtTableUtils.cpp" line="183"/>
-        <location filename="../QtUtils.cpp" line="157"/>
+        <location filename="../QtUtils.cpp" line="156"/>
         <source>Missed</source>
         <translation>Tidak dijawab</translation>
     </message>
     <message>
         <location filename="../QtTableUtils.cpp" line="186"/>
-        <location filename="../QtUtils.cpp" line="161"/>
+        <location filename="../QtUtils.cpp" line="160"/>
         <source>Outgoing</source>
         <translation>Keluar</translation>
     </message>
     <message>
         <location filename="../QtTableUtils.cpp" line="187"/>
-        <location filename="../QtUtils.cpp" line="159"/>
+        <location filename="../QtUtils.cpp" line="158"/>
         <source>Monitored</source>
         <translation>Pantauan</translation>
     </message>
@@ -5569,7 +5569,7 @@ Terkini</translation>
     </message>
     <message>
         <location filename="../QtTableUtils.cpp" line="427"/>
-        <location filename="../QtUtils.cpp" line="385"/>
+        <location filename="../QtUtils.cpp" line="386"/>
         <source>Message</source>
         <translation>Mesej</translation>
     </message>
@@ -5651,170 +5651,175 @@ Terkini</translation>
     </message>
     <message>
         <location filename="../QtTableUtils.cpp" line="812"/>
-        <location filename="../QtUtils.cpp" line="163"/>
+        <location filename="../QtUtils.cpp" line="162"/>
         <source>MMS</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="328"/>
+        <location filename="../QtUtils.cpp" line="329"/>
         <source>Add</source>
         <translation>Tambah</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="331"/>
+        <location filename="../QtUtils.cpp" line="332"/>
         <source>Call</source>
         <translation>Panggil</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="334"/>
+        <location filename="../QtUtils.cpp" line="335"/>
         <source>Clear content</source>
         <translation>Padam semua</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="337"/>
+        <location filename="../QtUtils.cpp" line="338"/>
         <source>Clear Unconfirmed Group Attachments</source>
         <translation>Padam Ahli Kumpulan Tidak Pasti</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="340"/>
+        <location filename="../QtUtils.cpp" line="341"/>
         <source>Add to Quick Contacts</source>
         <translation>Tambah ke Kontak Pantas</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="343"/>
+        <location filename="../QtUtils.cpp" line="344"/>
         <source>Show in Quick Contacts</source>
         <translation>Papar di Kontak Pantas</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="346"/>
+        <location filename="../QtUtils.cpp" line="347"/>
         <source>Copy text</source>
         <translation>Salin teks</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="349"/>
+        <location filename="../QtUtils.cpp" line="350"/>
         <source>Copy path</source>
         <translation>Salin laluan</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="352"/>
+        <location filename="../QtUtils.cpp" line="353"/>
         <source>Delete</source>
         <translation>Padam</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="355"/>
+        <location filename="../QtUtils.cpp" line="356"/>
         <source>Delete selection</source>
         <translation>Padam pilihan</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="358"/>
+        <location filename="../QtUtils.cpp" line="359"/>
         <source>DGNA assignment</source>
         <translation>Tetapan DGNA</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="361"/>
+        <location filename="../QtUtils.cpp" line="362"/>
         <source>Dissolve</source>
         <translation>Bubar</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="364"/>
+        <location filename="../QtUtils.cpp" line="365"/>
         <source>Edit</source>
         <translation>Sunting</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="367"/>
+        <location filename="../QtUtils.cpp" line="368"/>
         <source>Group member attachments</source>
         <translation>Ahli aktif kumpulan</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="372"/>
+        <location filename="../QtUtils.cpp" line="373"/>
         <source>Locate on map</source>
         <translation>Pamer di peta</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="375"/>
+        <location filename="../QtUtils.cpp" line="376"/>
         <source>Retry download</source>
         <translation>Muatturun semula</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="379"/>
+        <location filename="../QtUtils.cpp" line="380"/>
         <source>Monitor</source>
         <translation>Pantau</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="382"/>
+        <location filename="../QtUtils.cpp" line="383"/>
         <source>Stop monitoring</source>
         <translation>Hentikan pantauan</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="388"/>
+        <location filename="../QtUtils.cpp" line="389"/>
         <source>Notes</source>
         <translation>Nota</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="391"/>
+        <location filename="../QtUtils.cpp" line="392"/>
         <source>Add to Phonebook</source>
         <translation>Tambah ke Phonebook</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="394"/>
+        <location filename="../QtUtils.cpp" line="395"/>
         <source>Delete from Phonebook</source>
         <translation>Padam dari Phonebook</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="397"/>
+        <location filename="../QtUtils.cpp" line="398"/>
         <source>Excel</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="400"/>
+        <location filename="../QtUtils.cpp" line="401"/>
         <source>PDF</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="403"/>
+        <location filename="../QtUtils.cpp" line="404"/>
         <source>Preview</source>
         <translation>Previu</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="406"/>
+        <location filename="../QtUtils.cpp" line="407"/>
+        <source>Refresh</source>
+        <translation>Kemaskini</translation>
+    </message>
+    <message>
+        <location filename="../QtUtils.cpp" line="410"/>
         <source>Rename</source>
         <translation>Tukar Nama</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="409"/>
+        <location filename="../QtUtils.cpp" line="413"/>
         <source>Select</source>
         <translation>Pilih</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="412"/>
+        <location filename="../QtUtils.cpp" line="416"/>
         <source>Save</source>
         <translation>Simpan</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="415"/>
+        <location filename="../QtUtils.cpp" line="419"/>
         <source>Save all</source>
         <translation>Simpan semua</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="424"/>
+        <location filename="../QtUtils.cpp" line="428"/>
         <source>Clear selection</source>
         <translation>Kosongkan pilihan</translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="427"/>
+        <location filename="../QtUtils.cpp" line="431"/>
         <source>Sort</source>
         <translation>Susun</translation>
     </message>
     <message>
         <location filename="../QtTableUtils.cpp" line="804"/>
-        <location filename="../QtUtils.cpp" line="165"/>
-        <location filename="../QtUtils.cpp" line="418"/>
+        <location filename="../QtUtils.cpp" line="164"/>
+        <location filename="../QtUtils.cpp" line="422"/>
         <source>SDS</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../QtUtils.cpp" line="167"/>
-        <location filename="../QtUtils.cpp" line="430"/>
+        <location filename="../QtUtils.cpp" line="166"/>
+        <location filename="../QtUtils.cpp" line="434"/>
         <source>Status Message</source>
         <translation>Mesej Status</translation>
     </message>
@@ -6221,18 +6226,18 @@ Sila ubah parameter carian untuk hadkan kepada %2.</translation>
         <translation>Papar Semua</translation>
     </message>
     <message>
-        <location filename="../Resources.ui" line="362"/>
+        <location filename="../Resources.ui" line="375"/>
         <source>During this session only</source>
         <translation>Untuk sesi ini sahaja</translation>
     </message>
     <message>
-        <location filename="../Resources.ui" line="365"/>
-        <location filename="../Resources.cpp" line="159"/>
+        <location filename="../Resources.ui" line="378"/>
+        <location filename="../Resources.cpp" line="163"/>
         <source>Group Attach History</source>
-        <translation>Senarai Aktiviti Keluar/Masuk Ahli Kumpulan</translation>
+        <translation>Rekod Ahli Kumpulan</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="310"/>
+        <location filename="../Resources.cpp" line="324"/>
         <source>Clear Unconfirmed Group Attachments</source>
         <translation>Padam Ahli Kumpulan Tidak Pasti</translation>
     </message>
@@ -6242,106 +6247,104 @@ Sila ubah parameter carian untuk hadkan kepada %2.</translation>
         <translation>Hasil Carian untuk:</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="391"/>
+        <location filename="../Resources.cpp" line="405"/>
         <source>Phonebook Error</source>
         <translation>Masalah Phonebook</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="392"/>
+        <location filename="../Resources.cpp" line="406"/>
         <source>Failed to load user phonebook because of database link error.</source>
         <translation>Gagal muatkan phonebook kerana masalah hubungan pangkalan data.</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="320"/>
+        <location filename="../Resources.cpp" line="334"/>
         <source>Clear Phonebook Content</source>
         <translation>Padam Semua</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="321"/>
+        <location filename="../Resources.cpp" line="335"/>
         <source>Are you sure to delete all Phonebook entries?</source>
         <translation>Pasti untuk kosongkan Phonebook?</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="85"/>
+        <location filename="../Resources.cpp" line="89"/>
         <source>Search Error</source>
         <translation>Carian Gagal</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="86"/>
+        <location filename="../Resources.cpp" line="90"/>
         <source>Invalid search string.</source>
         <translation>Teks carian tidak sah.</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="630"/>
+        <location filename="../Resources.cpp" line="645"/>
         <source>
 Attached members:</source>
         <translation>
 Ahli aktif (&apos;attached&apos;):</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="311"/>
+        <location filename="../Resources.cpp" line="325"/>
         <source>Are you sure to proceed?</source>
         <translation>Pasti untuk teruskan?</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="146"/>
+        <location filename="../Resources.cpp" line="150"/>
         <source>Action</source>
         <translation>Aktiviti</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="146"/>
+        <location filename="../Resources.cpp" line="150"/>
         <source>Time</source>
         <translation>Waktu</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="176"/>
-        <source>Clear Data</source>
-        <translation>Kosongkan Data</translation>
-    </message>
-    <message>
-        <location filename="../Resources.cpp" line="628"/>
+        <location filename="../Resources.cpp" line="643"/>
         <source>
 No attached members.</source>
         <translation>
 Tiada ahli aktif.</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="637"/>
+        <location filename="../Resources.cpp" line="652"/>
         <source>Unconfirmed:</source>
         <translation>Tidak pasti:</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="640"/>
+        <location filename="../Resources.cpp" line="655"/>
         <source>Group Attachments</source>
         <translation>Ahli Aktif Kumpulan (&apos;Attachments&apos;)</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="659"/>
+        <location filename="../Resources.cpp" line="677"/>
+        <location filename="../Resources.cpp" line="761"/>
         <source>Attach</source>
         <translation>Masuk</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="659"/>
+        <location filename="../Resources.cpp" line="662"/>
+        <location filename="../Resources.cpp" line="688"/>
+        <location filename="../Resources.cpp" line="734"/>
         <source>Detach</source>
         <translation>Keluar</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="1133"/>
+        <location filename="../Resources.cpp" line="1232"/>
         <source>Call %1</source>
         <translation>Panggil %1</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="1160"/>
+        <location filename="../Resources.cpp" line="1259"/>
         <source>Last online </source>
         <translation>Terakhir di talian </translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="1234"/>
+        <location filename="../Resources.cpp" line="1333"/>
         <source>Delete Phonebook Entry</source>
         <translation>Padam Kandungan Phonebook</translation>
     </message>
     <message>
-        <location filename="../Resources.cpp" line="1235"/>
+        <location filename="../Resources.cpp" line="1334"/>
         <source>Are you sure to delete %1?</source>
         <translation>Pasti untuk padam %1?</translation>
     </message>

@@ -1,10 +1,10 @@
 /**
  * Qt-specific utility functions implementation.
  *
- * Copyright (C) Sapura Secured Technologies, 2015-2024. All Rights Reserved.
+ * Copyright (C) Sapura Secured Technologies, 2015-2025. All Rights Reserved.
  *
  * @file
- * @version $Id: QtUtils.cpp 1816 2024-02-19 06:45:36Z zulzaidi $
+ * @version $Id: QtUtils.cpp 1908 2025-03-05 00:54:00Z rosnin $
  * @author Mohd Rozaimi
  * @author Mohd Rashid
  */
@@ -19,7 +19,6 @@
 #include <QUrl>
 
 #include "CmnTypes.h"
-#include "Style.h"
 #include "QtUtils.h"
 
 using std::map;
@@ -250,6 +249,8 @@ const QString QtUtils::getActionIconSrc(int type)
             return ":/Images/images/icon_ptt2.png";
         case CmnTypes::ACTIONTYPE_PTT_PENDING:
             return ":/Images/images/icon_ptt3.png";
+        case CmnTypes::ACTIONTYPE_REFRESH:
+            return ":/Images/images/icon_reload.png";
         case CmnTypes::ACTIONTYPE_RENAME:
             return ":/Images/images/icon_rename.png";
         case CmnTypes::ACTIONTYPE_REPORT:
@@ -401,6 +402,9 @@ QAction *QtUtils::addMenuAction(QMenu &menu, int type, const QString &txt)
                 break;
             case CmnTypes::ACTIONTYPE_PRINT_PRV:
                 s = QObject::tr("Preview");
+                break;
+            case CmnTypes::ACTIONTYPE_REFRESH:
+                s = QObject::tr("Refresh");
                 break;
             case CmnTypes::ACTIONTYPE_RENAME:
                 s = QObject::tr("Rename");
