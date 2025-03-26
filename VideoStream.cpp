@@ -10,6 +10,8 @@
 #include <assert.h>
 
 #include "VideoStream.h"
+#include <QtConcurrent/QtConcurrent>
+
 
 using namespace std;
 
@@ -64,6 +66,8 @@ mObj(cbObj), mStatCbFn(statCbFn)
                  << rmtPort);
 #ifdef FFMPEG
     mDec = new VideoDecoder(cbObj, decCbFn);
+
+    streamer.startStreaming();
 #endif
     mRtp = new RtpSession(RtpSession::TYPE_VIDEO, lclPort, rmtPort, sLogger,
                           this, rtpRcvCb, rtpStatCb);
@@ -82,6 +86,7 @@ VideoStream::~VideoStream()
         delete mRtp;
     }
 #ifdef FFMPEG
+    streamer.stopStreaming();
     delete mDec;
 #endif
 }
@@ -146,6 +151,7 @@ void VideoStream::stop()
 void VideoStream::rtpRcvCb(void *obj, RtpSession *rtp, char *data, int len)
 {
     static_cast<VideoStream *>(obj)->rtpReceived(rtp, data, len);
+
 }
 
 void VideoStream::rtpStatCb(void *obj, RtpSession *, int kbps)
@@ -162,8 +168,41 @@ void VideoStream::rtpReceived(RtpSession *rtp, char *data, int len)
 {
 #ifdef FFMPEG
     mDec->decode(data, len);
+    qDebug() << "data" << data;
+    // Simulated video frame (dummy YUV420p frame)
+//    QByteArray sampleFrame(1920 * 1080 * 3 / 2, 127);
+//    streamer.sendFrameData(sampleFrame);
+//    QThread::msleep(33);  // Simulating 30 FPS
+
+//    while (true)
+//    {
+//        streamer.sendFrameData(sampleFrame);
+//        QThread::msleep(33);  // Simulating 30 FPS
+//    }
+
 #endif
 }
+
+//void VideoStream::rtpReceived(RtpSession *rtp, char *data, int len)
+//{
+//#ifdef FFMPEG
+//    // Run decoding in a separate thread
+//    QtConcurrent::run([this, data, len]() {
+//        mDec->decode(data, len);
+//    });
+
+//    // Run video streaming loop in another thread
+//    QtConcurrent::run([this]() {
+//        QByteArray sampleFrame(1920 * 1080 * 3 / 2, 127);
+
+//        while (true)
+//        {
+//            streamer.sendFrameData(sampleFrame);
+//            QThread::msleep(33);  // Simulating 30 FPS
+//        }
+//    });
+//#endif
+//}
 
 void VideoStream::rtpStat(int kbps)
 {

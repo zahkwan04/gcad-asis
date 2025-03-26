@@ -10,6 +10,7 @@
 #include <assert.h>
 
 #include "VideoDecoder.h"
+#include "qdebug.h"
 
 using namespace std;
 
@@ -276,5 +277,6 @@ void VideoDecoder::getDecodedFrame()
         av_frame_unref(mFrameRgb);
         av_frame_unref(mFrameYuv);
         sws_freeContext(imgCtx);
+        qDebug() << "\nmframergb: " << mFrameRgb << "\nmframeYUV" << mFrameYuv;
     }
 }

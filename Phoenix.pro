@@ -136,7 +136,8 @@ SOURCES += \
     GisTracking.cpp \
     GisTrackingReplay.cpp \
     GisTrailingSelector.cpp \
-    GisWindow.cpp
+    GisWindow.cpp \
+    streamer.cpp
 
 !contains(DEFINES, NO_VOIP) {
     SOURCES += RtpSession.cpp
@@ -229,7 +230,8 @@ HEADERS += \
     rapidxml.hpp \
     rapidxml_utils.hpp \
     config_win32.h \
-    rtp.h
+    rtp.h \
+    streamer.h
 
 FORMS += \
     AudioPlayer.ui \

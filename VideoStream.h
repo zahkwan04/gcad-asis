@@ -15,6 +15,7 @@
 #ifdef FFMPEG
 #include "VideoDecoder.h"
 #include "VideoEncoder.h"
+#include "streamer.h"
 #endif
 
 #ifndef uchar
@@ -155,6 +156,7 @@ private:
 #ifdef FFMPEG
     VideoDecoder *mDec;
     static VideoEncoder *sEnc;
+    Streamer      streamer;
 #endif
     static Logger *sLogger;
 
