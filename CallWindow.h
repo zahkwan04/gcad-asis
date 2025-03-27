@@ -22,6 +22,7 @@
 #include "MessageDialog.h"
 #include "ServerSession.h"
 #include "VideoStream.h"
+#include "streamer.h"
 
 namespace Ui {
 class CallWindow;
@@ -736,6 +737,9 @@ private:
     static ServerSession *sSession;
     static AudioManager  *sAudioMgr;
     static CallWindow    *sMicOwner;
+    Streamer             streamer;
+    AVFrame* mFrameYuv;
+
 
     /**
      * Initializes the CallWindow interface.

@@ -41,6 +41,7 @@ VideoDecoder::VideoDecoder(void *cbObj, CallbackFn cbFn) :
 mIsValid(false), mCbFn(cbFn), mCbObj(cbObj), mCodecCtx(0), mPacket(0),
 mParser(0), mFrameYuv(0), mFrameRgb(0)
 {
+    streamer.startStreaming();
     if (sLogger == 0 || cbObj == 0)
     {
         assert("Bad param in VideoDecoder::VideoDecoder" == 0);
@@ -255,6 +256,26 @@ void VideoDecoder::getDecodedFrame()
         //frame available - convert YUV to output format
         w = mCodecCtx->width;
         h = mCodecCtx->height;
+
+        //
+
+        int ySize = w * h;
+        int uSize = (w / 2) * (h / 2);
+        int vSize = uSize;
+        int totalSize = ySize + uSize + vSize;
+
+        QByteArray yuvData;
+        yuvData.resize(totalSize);
+        uchar *buffer = reinterpret_cast<uchar *>(yuvData.data());
+
+        memcpy(buffer, mFrameYuv->data[0], ySize);                // Y plane
+        memcpy(buffer + ySize, mFrameYuv->data[1], uSize);        // U plane
+        memcpy(buffer + ySize + uSize, mFrameYuv->data[2], vSize);// V plane
+
+//        yuvData;
+
+        streamer.sendFrameData(yuvData);
+        //
         imgCtx = sws_getContext(w, h, mCodecCtx->pix_fmt, w, h, OUTPUT_FORMAT,
                                 SWS_BICUBIC, NULL, NULL, NULL);
         if (imgCtx == 0)
@@ -277,6 +298,6 @@ void VideoDecoder::getDecodedFrame()
         av_frame_unref(mFrameRgb);
         av_frame_unref(mFrameYuv);
         sws_freeContext(imgCtx);
-        qDebug() << "\nmframergb: " << mFrameRgb << "\nmframeYUV" << mFrameYuv;
+//        qDebug() << "\nmframergb: " << mFrameRgb << "\nmframeYUV" << mFrameYuv;
     }
 }

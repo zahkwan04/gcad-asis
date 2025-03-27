@@ -21,6 +21,7 @@
 #include "VideoDevice.h"
 #include "ui_CallWindow.h"
 #include "CallWindow.h"
+#include <libswscale/swscale.h>  // For RGB to YUV conversion
 
 using namespace std;
 
@@ -85,6 +86,7 @@ mVideoStream(0)
     init();
     QPixmap pixmap(QtUtils::getRscIconSrc(CmnTypes::IDTYPE_GROUP));
     ui->txPartyLabel->hide();
+//    streamer.startStreaming();
     switch (type)
     {
         case CmnTypes::CALLTYPE_BROADCAST_IN:
@@ -385,6 +387,7 @@ void CallWindow::doShow()
     raise();
     activateWindow();
 }
+
 
 void CallWindow::callSetup(int           audPort,
                            int           vidPort,
@@ -1405,13 +1408,58 @@ void CallWindow::onAudioStat(int kbps)
                                             .append(" kbps"));
 }
 
+QByteArray convertRGBtoYUV420p(uchar *rgbData, int width, int height, int bytesPerLine)
+{
+    QByteArray yuvData(width * height * 3 / 2, 0); // YUV420p buffer
+
+    SwsContext *swsCtx = sws_getContext(
+        width, height, AV_PIX_FMT_RGB24,   // Input format (RGB888)
+        width, height, AV_PIX_FMT_YUV420P, // Output format (YUV420p)
+        SWS_BICUBIC, nullptr, nullptr, nullptr);
+
+    if (!swsCtx) {
+        qDebug() << "Failed to create SwsContext for RGB to YUV conversion!";
+        return yuvData;
+    }
+
+    uint8_t *srcSlice[1] = { rgbData };
+    int srcStride[1] = { bytesPerLine };
+
+    uint8_t *dstSlice[3] = {
+        reinterpret_cast<uint8_t *>(yuvData.data()),                      // Y Plane
+        reinterpret_cast<uint8_t *>(yuvData.data() + width * height),     // U Plane
+        reinterpret_cast<uint8_t *>(yuvData.data() + width * height * 5 / 4) // V Plane
+    };
+    int dstStride[3] = { width, width / 2, width / 2 };
+
+    sws_scale(swsCtx, srcSlice, srcStride, 0, height, dstSlice, dstStride);
+    sws_freeContext(swsCtx);
+
+    return yuvData;
+}
+
 void CallWindow::onVideoReceived(uchar *data,
                                  int    width,
                                  int    height,
                                  int    bytesPerLine)
 {
+
     emit drawFrame(QPixmap::fromImage(QImage(data, width, height, bytesPerLine,
                                              QImage::Format_RGB888)));
+
+    //TODO: Edit here and try send these data to mediamtx
+    //implementation
+    // Convert RGB888 to YUV420p
+//    QByteArray yuvFrame = convertRGBtoYUV420p(data, width, height, bytesPerLine);
+
+    // Send the YUV420p frame to the named pipe
+//    streamer.sendFrameData(yuvFrame);
+
+    // Optionally, still emit the frame for local display
+//    emit drawFrame(QPixmap::fromImage(QImage(data, width, height, bytesPerLine, QImage::Format_RGB888)));
+
+    //use yuvframe directly
+
 }
 
 void CallWindow::onVideoStat(int kbps)

@@ -67,7 +67,7 @@ mObj(cbObj), mStatCbFn(statCbFn)
 #ifdef FFMPEG
     mDec = new VideoDecoder(cbObj, decCbFn);
 
-    streamer.startStreaming();
+//    streamer.startStreaming();
 #endif
     mRtp = new RtpSession(RtpSession::TYPE_VIDEO, lclPort, rmtPort, sLogger,
                           this, rtpRcvCb, rtpStatCb);
@@ -168,9 +168,9 @@ void VideoStream::rtpReceived(RtpSession *rtp, char *data, int len)
 {
 #ifdef FFMPEG
     mDec->decode(data, len);
-    qDebug() << "data" << data;
+//    qDebug() << "data" << data;
     // Simulated video frame (dummy YUV420p frame)
-//    QByteArray sampleFrame(1920 * 1080 * 3 / 2, 127);
+//    QByteArray sampleFrame(640 * 480 * 3 / 2, 127);
 //    streamer.sendFrameData(sampleFrame);
 //    QThread::msleep(33);  // Simulating 30 FPS
 

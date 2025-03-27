@@ -96,7 +96,7 @@ void Streamer::startStreaming()
     QStringList args = {
         "-f", "rawvideo",
         "-pix_fmt", "yuv420p",
-        "-s", "1920x1080",  // Set resolution
+        "-s", "640x480",  // Set resolution
         "-r", "30",         // Set frame rate
         "-i", pipePath,     // Input from Windows named pipe
         "-c:v", "libx264",
@@ -105,6 +105,7 @@ void Streamer::startStreaming()
         "-f", "rtsp",
         "rtsp://localhost:8554/mystream"
     };
+
 
     ffmpegProcess.start(ffmpegPath, args);
 

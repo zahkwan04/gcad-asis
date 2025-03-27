@@ -11,6 +11,7 @@
 #define VIDEODECODER_H
 
 #include "Logger.h"
+#include "streamer.h"
 
 extern "C"
 {
@@ -81,7 +82,7 @@ private:
     AVCodecParserContext *mParser;
     AVFrame              *mFrameYuv;
     AVFrame              *mFrameRgb;
-
+    Streamer              streamer;
 #ifndef MOBILE
     static Logger *sLogger;
 #endif
