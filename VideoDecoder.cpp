@@ -109,6 +109,7 @@ VideoDecoder::~VideoDecoder()
     av_packet_free(&mPacket);
     av_frame_free(&mFrameRgb);
     av_frame_free(&mFrameYuv);
+    streamer.stopStreaming();
 }
 
 void VideoDecoder::decode(char *data, int len)
@@ -235,98 +236,305 @@ int VideoDecoder::unpacketize(char *data, int len)
     return bufLen;
 }
 
+//void VideoDecoder::getDecodedFrame()
+//{
+//    SwsContext *imgCtx;
+//    int w;
+//    int h;
+//    int ret = avcodec_send_packet(mCodecCtx, mPacket);
+//    while (ret >= 0)
+//    {
+//        ret = avcodec_receive_frame(mCodecCtx, mFrameYuv);
+//        if (ret == AVERROR(EAGAIN) || ret == AVERROR_EOF)
+//            break;
+//        if (ret < 0)
+//        {
+//            LOGGER_ERROR(sLogger, LOGPREFIX
+//                         << "getDecodedFrame: avcodec_receive_frame failure "
+//                         << ret);
+//            break;
+//        }
+//        //frame available - convert YUV to output format
+//        w = mCodecCtx->width;
+//        h = mCodecCtx->height;
+
+//        /////////////////////////
+
+//        // 1. Create a SwsContext to convert from YUVJ420P to YUV420P
+//        SwsContext *imgCtx = sws_getContext(
+//            w, h, AV_PIX_FMT_YUVJ420P,  // Input format (full-range YUV)
+//            w, h, AV_PIX_FMT_YUV420P,   // Output format (limited-range YUV)
+//            SWS_BICUBIC, NULL, NULL, NULL
+//            );
+
+//        if (!imgCtx) {
+//            LOGGER_ERROR(sLogger, "Failed to create swsContext for YUV420P conversion.");
+////            return QByteArray();
+//        }
+
+//        // 2. Allocate the output frame for YUV420P
+//        AVFrame *frameYUV420P = av_frame_alloc();
+//        av_image_alloc(frameYUV420P->data, frameYUV420P->linesize,
+//                       w, h, AV_PIX_FMT_YUV420P, 32);
+
+//        // 3. Convert YUVJ420P -> YUV420P
+//        sws_scale(imgCtx, mFrameYuv->data, mFrameYuv->linesize, 0, h,
+//                  frameYUV420P->data, frameYUV420P->linesize);
+
+//        // 4. Extract YUV420P data into QByteArray
+//        int ySize = w * h;
+//        int uSize = (w / 2) * (h / 2);
+//        int vSize = uSize;
+//        int totalSize = ySize + uSize + vSize;
+
+//        QByteArray yuvData;
+//        yuvData.resize(totalSize);
+//        uchar *buffer = reinterpret_cast<uchar *>(yuvData.data());
+
+//        memcpy(buffer, frameYUV420P->data[0], ySize);                // Y plane
+//        memcpy(buffer + ySize, frameYUV420P->data[1], uSize);        // U plane
+//        memcpy(buffer + ySize + uSize, frameYUV420P->data[2], vSize);// V plane
+
+//        // 5. Free resources
+//        sws_freeContext(imgCtx);
+//        av_freep(frameYUV420P->data);
+//        av_frame_unref(frameYUV420P);
+//        av_frame_free(&frameYUV420P);
+
+////        return yuvData;  // Now contains YUV420P (limited range)
+//        LOGGER_ERROR(sLogger, "Pix format before conversion " << mCodecCtx->pix_fmt);
+//        LOGGER_ERROR(sLogger, "Pix format after conversion " << mFrameYuv->format);
+
+//        // After conversion
+////        LOGGER_INFO(sLogger, "Input format: " << av_get_pix_fmt_name((AVPixelFormat)mFrameYuv->format));
+//        LOGGER_INFO(sLogger, "Output format: " << AV_PIX_FMT_YUV420P);
+//        LOGGER_INFO(sLogger, "Frame dimensions: " << w << "x" << h);
+
+//        streamer.sendFrameData(yuvData);
+
+
+//        //////////////////////
+
+//        imgCtx = sws_getContext(w, h, mCodecCtx->pix_fmt, w, h, OUTPUT_FORMAT,
+//                                SWS_BICUBIC, NULL, NULL, NULL);
+//        if (imgCtx == 0)
+//        {
+//            av_frame_unref(mFrameYuv);
+//            LOGGER_ERROR(sLogger, LOGPREFIX
+//                         << "getDecodedFrame: sws_getContext failure.");
+//            return;
+//        }
+//        av_image_alloc(mFrameRgb->data, mFrameRgb->linesize, w, h,
+//                       OUTPUT_FORMAT, 32);
+//        sws_scale(imgCtx, mFrameYuv->data, mFrameYuv->linesize, 0, h,
+//                  mFrameRgb->data, mFrameRgb->linesize);
+//#ifdef MOBILE
+//        mCbFn(mFrameRgb->data[0], w, h, mFrameRgb->linesize[0]);
+//#else
+//        mCbFn(mCbObj, mFrameRgb->data[0], w, h, mFrameRgb->linesize[0]);
+//#endif
+//        av_freep(mFrameRgb->data);
+//        av_frame_unref(mFrameRgb);
+//        av_frame_unref(mFrameYuv);
+//        sws_freeContext(imgCtx);
+////        qDebug() << "\nmframergb: " << mFrameRgb << "\nmframeYUV" << mFrameYuv;
+//    }
+//}
+
+//void VideoDecoder::getDecodedFrame()
+//{
+//    SwsContext *imgCtx;
+//    int w, h;
+//    QByteArray yuv420pData; // Store YUV420P data for later use
+
+//    int ret = avcodec_send_packet(mCodecCtx, mPacket);
+//    while (ret >= 0)
+//    {
+//            ret = avcodec_receive_frame(mCodecCtx, mFrameYuv);
+//            if (ret == AVERROR(EAGAIN) || ret == AVERROR_EOF)
+//                break;
+//            if (ret < 0)
+//            {
+//                LOGGER_ERROR(sLogger, LOGPREFIX
+//                                          << "getDecodedFrame: avcodec_receive_frame failure "
+//                                          << ret);
+//                break;
+//            }
+
+//            // Get frame dimensions
+//            w = mCodecCtx->width;
+//            h = mCodecCtx->height;
+
+//            // Convert YUVJ420P (12) to YUV420P (0)
+//            SwsContext *yuvCtx = sws_getContext(w, h, AV_PIX_FMT_YUVJ420P, // Input format
+//                                                w, h, AV_PIX_FMT_YUV420P,  // Output format
+//                                                SWS_BICUBIC, NULL, NULL, NULL);
+//            if (!yuvCtx)
+//            {
+//                av_frame_unref(mFrameYuv);
+//                LOGGER_ERROR(sLogger, LOGPREFIX
+//                                          << "getDecodedFrame: sws_getContext failure for YUV conversion.");
+//                return;
+//            }
+
+//            // Allocate YUV420P frame
+//            AVFrame *frameYUV420P = av_frame_alloc();
+//            frameYUV420P->format = AV_PIX_FMT_YUV420P;
+//            frameYUV420P->width = w;
+//            frameYUV420P->height = h;
+//            av_image_alloc(frameYUV420P->data, frameYUV420P->linesize, w, h,
+//                           AV_PIX_FMT_YUV420P, 32);
+
+//            // Convert YUVJ420P -> YUV420P
+//            sws_scale(yuvCtx, mFrameYuv->data, mFrameYuv->linesize, 0, h,
+//                      frameYUV420P->data, frameYUV420P->linesize);
+
+//            // Store YUV420P data into QByteArray
+//            int ySize = w * h;
+//            int uvSize = ySize / 4;
+//            yuv420pData.append(reinterpret_cast<const char *>(frameYUV420P->data[0]), ySize);  // Y plane
+//            yuv420pData.append(reinterpret_cast<const char *>(frameYUV420P->data[1]), uvSize); // U plane
+//            yuv420pData.append(reinterpret_cast<const char *>(frameYUV420P->data[2]), uvSize); // V plane
+
+//            streamer.sendFrameData(yuv420pData);
+
+//            // Free YUV conversion resources
+//            av_freep(&frameYUV420P->data[0]);
+//            av_frame_free(&frameYUV420P);
+//            sws_freeContext(yuvCtx);
+
+//            // Continue with the original RGB conversion
+//            imgCtx = sws_getContext(w, h, mCodecCtx->pix_fmt, w, h, OUTPUT_FORMAT,
+//                                    SWS_BICUBIC, NULL, NULL, NULL);
+//            if (!imgCtx)
+//            {
+//                av_frame_unref(mFrameYuv);
+//                LOGGER_ERROR(sLogger, LOGPREFIX
+//                                          << "getDecodedFrame: sws_getContext failure for RGB conversion.");
+//                return;
+//            }
+
+//            av_image_alloc(mFrameRgb->data, mFrameRgb->linesize, w, h,
+//                           OUTPUT_FORMAT, 32);
+//            sws_scale(imgCtx, mFrameYuv->data, mFrameYuv->linesize, 0, h,
+//                      mFrameRgb->data, mFrameRgb->linesize);
+
+//#ifdef MOBILE
+//            mCbFn(mFrameRgb->data[0], w, h, mFrameRgb->linesize[0]);
+//#else
+//            mCbFn(mCbObj, mFrameRgb->data[0], w, h, mFrameRgb->linesize[0]);
+//#endif
+
+//            av_freep(mFrameRgb->data);
+//            av_frame_unref(mFrameRgb);
+//            av_frame_unref(mFrameYuv);
+//            sws_freeContext(imgCtx);
+//    }
+
+//    // The variable `yuv420pData` now contains the YUV420P frame in QByteArray format.
+//    // You can use `yuv420pData` later as needed.
+//}
+
 void VideoDecoder::getDecodedFrame()
 {
     SwsContext *imgCtx;
-    int w;
-    int h;
+    int w, h;
+    QByteArray yuv420pData; // Store YUV420P data for later use
+
     int ret = avcodec_send_packet(mCodecCtx, mPacket);
     while (ret >= 0)
     {
-        ret = avcodec_receive_frame(mCodecCtx, mFrameYuv);
-        if (ret == AVERROR(EAGAIN) || ret == AVERROR_EOF)
-            break;
-        if (ret < 0)
-        {
-            LOGGER_ERROR(sLogger, LOGPREFIX
-                         << "getDecodedFrame: avcodec_receive_frame failure "
-                         << ret);
-            break;
-        }
-        //frame available - convert YUV to output format
-        w = mCodecCtx->width;
-        h = mCodecCtx->height;
+            ret = avcodec_receive_frame(mCodecCtx, mFrameYuv);
+            if (ret == AVERROR(EAGAIN) || ret == AVERROR_EOF)
+                break;
+            if (ret < 0)
+            {
+                LOGGER_ERROR(sLogger, LOGPREFIX
+                                          << "getDecodedFrame: avcodec_receive_frame failure "
+                                          << ret);
+                break;
+            }
 
-        //
+            // Get frame dimensions
+            w = mCodecCtx->width;
+            h = mCodecCtx->height;
 
-        // 1. Create a SwsContext to convert from YUVJ420P to YUV420P
-        SwsContext *imgCtx = sws_getContext(
-            w, h, AV_PIX_FMT_YUVJ420P,  // Input format (full-range YUV)
-            w, h, AV_PIX_FMT_YUV420P,   // Output format (limited-range YUV)
-            SWS_BICUBIC, NULL, NULL, NULL
-            );
+            // Check original format
+            AVPixelFormat originalFormat = mCodecCtx->pix_fmt;
+            LOGGER_INFO(sLogger, LOGPREFIX
+                                     << "Original pixel format: " << av_get_pix_fmt_name(originalFormat));
 
-        if (!imgCtx) {
-            LOGGER_ERROR(sLogger, "Failed to create swsContext for YUV420P conversion.");
-//            return QByteArray();
-        }
+            // Convert YUVJ420P to YUV420P if needed
+            if (originalFormat == AV_PIX_FMT_YUVJ420P)
+            {
+                SwsContext *yuvCtx = sws_getContext(w, h, AV_PIX_FMT_YUVJ420P, // Input format
+                                                    w, h, AV_PIX_FMT_YUV420P,  // Output format
+                                                    SWS_BICUBIC, NULL, NULL, NULL);
+                if (!yuvCtx)
+                {
+                    av_frame_unref(mFrameYuv);
+                    LOGGER_ERROR(sLogger, LOGPREFIX
+                                              << "getDecodedFrame: sws_getContext failure for YUV conversion.");
+                    return;
+                }
 
-        // 2. Allocate the output frame for YUV420P
-        AVFrame *frameYUV420P = av_frame_alloc();
-        av_image_alloc(frameYUV420P->data, frameYUV420P->linesize,
-                       w, h, AV_PIX_FMT_YUV420P, 32);
+                // Allocate YUV420P frame
+                AVFrame *frameYUV420P = av_frame_alloc();
+                frameYUV420P->format = AV_PIX_FMT_YUV420P;
+                frameYUV420P->width = w;
+                frameYUV420P->height = h;
+                av_image_alloc(frameYUV420P->data, frameYUV420P->linesize, w, h,
+                               AV_PIX_FMT_YUV420P, 32);
 
-        // 3. Convert YUVJ420P -> YUV420P
-        sws_scale(imgCtx, mFrameYuv->data, mFrameYuv->linesize, 0, h,
-                  frameYUV420P->data, frameYUV420P->linesize);
+                // Convert YUVJ420P -> YUV420P
+                sws_scale(yuvCtx, mFrameYuv->data, mFrameYuv->linesize, 0, h,
+                          frameYUV420P->data, frameYUV420P->linesize);
 
-        // 4. Extract YUV420P data into QByteArray
-        int ySize = w * h;
-        int uSize = (w / 2) * (h / 2);
-        int vSize = uSize;
-        int totalSize = ySize + uSize + vSize;
+                // Verify converted format
+                LOGGER_INFO(sLogger, LOGPREFIX
+                                         << "Converted pixel format: " << av_get_pix_fmt_name(static_cast<AVPixelFormat>(frameYUV420P->format)));
 
-        QByteArray yuvData;
-        yuvData.resize(totalSize);
-        uchar *buffer = reinterpret_cast<uchar *>(yuvData.data());
+                // Store YUV420P data into QByteArray
+                int ySize = w * h;
+                int uvSize = ySize / 4;
+                yuv420pData.append(reinterpret_cast<const char *>(frameYUV420P->data[0]), ySize);  // Y plane
+                yuv420pData.append(reinterpret_cast<const char *>(frameYUV420P->data[1]), uvSize); // U plane
+                yuv420pData.append(reinterpret_cast<const char *>(frameYUV420P->data[2]), uvSize); // V plane
 
-        memcpy(buffer, frameYUV420P->data[0], ySize);                // Y plane
-        memcpy(buffer + ySize, frameYUV420P->data[1], uSize);        // U plane
-        memcpy(buffer + ySize + uSize, frameYUV420P->data[2], vSize);// V plane
+                streamer.sendFrameData(yuv420pData);
 
-        // 5. Free resources
-        sws_freeContext(imgCtx);
-        av_freep(frameYUV420P->data);
-        av_frame_unref(frameYUV420P);
-        av_frame_free(&frameYUV420P);
+                // Free YUV conversion resources
+                av_freep(&frameYUV420P->data[0]);
+                av_frame_free(&frameYUV420P);
+                sws_freeContext(yuvCtx);
+            }
 
-//        return yuvData;  // Now contains YUV420P (limited range)
-        LOGGER_ERROR(sLogger, "Expected " << mCodecCtx->pix_fmt);
+            // Continue with the original RGB conversion
+            imgCtx = sws_getContext(w, h, mCodecCtx->pix_fmt, w, h, OUTPUT_FORMAT,
+                                    SWS_BICUBIC, NULL, NULL, NULL);
+            if (!imgCtx)
+            {
+                av_frame_unref(mFrameYuv);
+                LOGGER_ERROR(sLogger, LOGPREFIX
+                                          << "getDecodedFrame: sws_getContext failure for RGB conversion.");
+                return;
+            }
 
-        streamer.sendFrameData(yuvData);
-        //
-        imgCtx = sws_getContext(w, h, mCodecCtx->pix_fmt, w, h, OUTPUT_FORMAT,
-                                SWS_BICUBIC, NULL, NULL, NULL);
-        if (imgCtx == 0)
-        {
-            av_frame_unref(mFrameYuv);
-            LOGGER_ERROR(sLogger, LOGPREFIX
-                         << "getDecodedFrame: sws_getContext failure.");
-            return;
-        }
-        av_image_alloc(mFrameRgb->data, mFrameRgb->linesize, w, h,
-                       OUTPUT_FORMAT, 32);
-        sws_scale(imgCtx, mFrameYuv->data, mFrameYuv->linesize, 0, h,
-                  mFrameRgb->data, mFrameRgb->linesize);
+            av_image_alloc(mFrameRgb->data, mFrameRgb->linesize, w, h,
+                           OUTPUT_FORMAT, 32);
+            sws_scale(imgCtx, mFrameYuv->data, mFrameYuv->linesize, 0, h,
+                      mFrameRgb->data, mFrameRgb->linesize);
+
 #ifdef MOBILE
-        mCbFn(mFrameRgb->data[0], w, h, mFrameRgb->linesize[0]);
+            mCbFn(mFrameRgb->data[0], w, h, mFrameRgb->linesize[0]);
 #else
-        mCbFn(mCbObj, mFrameRgb->data[0], w, h, mFrameRgb->linesize[0]);
+            mCbFn(mCbObj, mFrameRgb->data[0], w, h, mFrameRgb->linesize[0]);
 #endif
-        av_freep(mFrameRgb->data);
-        av_frame_unref(mFrameRgb);
-        av_frame_unref(mFrameYuv);
-        sws_freeContext(imgCtx);
-//        qDebug() << "\nmframergb: " << mFrameRgb << "\nmframeYUV" << mFrameYuv;
+
+            av_freep(mFrameRgb->data);
+            av_frame_unref(mFrameRgb);
+            av_frame_unref(mFrameYuv);
+            sws_freeContext(imgCtx);
     }
 }
+

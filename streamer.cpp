@@ -79,8 +79,8 @@ void Streamer::startStreaming()
         PIPE_ACCESS_DUPLEX,               // Read/Write pipe
         PIPE_TYPE_BYTE | PIPE_WAIT,       // Byte stream mode, waits for connections
         1,                                // Max instances
-        1920 * 1080 * 3 / 2,              // Output buffer size
-        1920 * 1080 * 3 / 2,              // Input buffer size
+        640 * 480 * 3 / 2,              // Output buffer size
+        640 * 480 * 3 / 2,              // Input buffer size
         0,                                // Default timeout
         nullptr                           // Security attributes
         );
@@ -91,11 +91,11 @@ void Streamer::startStreaming()
         return;
     }
 
-    // Start FFmpeg process
+//    // Start FFmpeg process
     QString ffmpegPath = "C:/ffmpeg-7.1.1/bin/ffmpeg.exe";
     QStringList args = {
         "-f", "rawvideo",
-        "-pix_fmt", "yuvj420p",
+        "-pix_fmt", "yuv420p",
         "-s", "640x480",  // Set resolution
         "-r", "30",         // Set frame rate
         "-i", pipePath,     // Input from Windows named pipe
@@ -105,6 +105,7 @@ void Streamer::startStreaming()
         "-f", "rtsp",
         "rtsp://localhost:8554/mystream"
     };
+
 
 
     ffmpegProcess.start(ffmpegPath, args);
@@ -133,24 +134,6 @@ void Streamer::startStreaming()
 
     qDebug() << "Named pipe connected, ready to receive data.";
 }
-
-//void Streamer::stopStreaming()
-//{
-//    if (ffmpegProcess.state() == QProcess::Running)
-//    {
-//        ffmpegProcess.terminate();
-//        if (!ffmpegProcess.waitForFinished(3000))
-//            ffmpegProcess.kill();
-//        qDebug() << "Streaming stopped.";
-//    }
-
-//    // Close named pipe
-//    if (hNamedPipe != INVALID_HANDLE_VALUE)
-//    {
-//        CloseHandle(hNamedPipe);
-//        hNamedPipe = INVALID_HANDLE_VALUE;
-//    }
-//}
 
 void Streamer::stopStreaming()
 {
@@ -185,6 +168,11 @@ void Streamer::stopStreaming()
 
 void Streamer::sendFrameData(const QByteArray &frameData)
 {
+    if (frameData.size() != (640 * 480 * 3 / 2)) {
+        qDebug() << "Error: Invalid frame size! Expected:" << (640 * 480 * 3 / 2) << "but got:" << frameData.size();
+        return;
+    }
+
     if (hNamedPipe == INVALID_HANDLE_VALUE)
     {
         qDebug() << "Pipe not available!";
@@ -202,4 +190,7 @@ void Streamer::sendFrameData(const QByteArray &frameData)
     {
         qDebug() << "Frame written to pipe: " << bytesWritten << " bytes";
     }
+
+    FlushFileBuffers(hNamedPipe);
+
 }
