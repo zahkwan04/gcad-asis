@@ -30030,7 +30030,9 @@ debug\streamer.obj: streamer.cpp streamer.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qset.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcontiguouscache.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsharedpointer.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QThread \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qthread.h
 
 debug\RtpSession.obj: RtpSession.cpp VoipSessionBase.h \
 		Logger.h \

@@ -53,6 +53,7 @@ class Streamer : public QObject
     Q_OBJECT
 public:
     explicit Streamer(QObject *parent = nullptr);
+     ~Streamer();
     void startStreaming();
     void stopStreaming();
     void sendFrameData(const QByteArray &frameData);
