@@ -259,6 +259,28 @@ void VideoDecoder::getDecodedFrame()
 
         //
 
+        // 1. Create a SwsContext to convert from YUVJ420P to YUV420P
+        SwsContext *imgCtx = sws_getContext(
+            w, h, AV_PIX_FMT_YUVJ420P,  // Input format (full-range YUV)
+            w, h, AV_PIX_FMT_YUV420P,   // Output format (limited-range YUV)
+            SWS_BICUBIC, NULL, NULL, NULL
+            );
+
+        if (!imgCtx) {
+            LOGGER_ERROR(sLogger, "Failed to create swsContext for YUV420P conversion.");
+//            return QByteArray();
+        }
+
+        // 2. Allocate the output frame for YUV420P
+        AVFrame *frameYUV420P = av_frame_alloc();
+        av_image_alloc(frameYUV420P->data, frameYUV420P->linesize,
+                       w, h, AV_PIX_FMT_YUV420P, 32);
+
+        // 3. Convert YUVJ420P -> YUV420P
+        sws_scale(imgCtx, mFrameYuv->data, mFrameYuv->linesize, 0, h,
+                  frameYUV420P->data, frameYUV420P->linesize);
+
+        // 4. Extract YUV420P data into QByteArray
         int ySize = w * h;
         int uSize = (w / 2) * (h / 2);
         int vSize = uSize;
@@ -268,11 +290,18 @@ void VideoDecoder::getDecodedFrame()
         yuvData.resize(totalSize);
         uchar *buffer = reinterpret_cast<uchar *>(yuvData.data());
 
-        memcpy(buffer, mFrameYuv->data[0], ySize);                // Y plane
-        memcpy(buffer + ySize, mFrameYuv->data[1], uSize);        // U plane
-        memcpy(buffer + ySize + uSize, mFrameYuv->data[2], vSize);// V plane
+        memcpy(buffer, frameYUV420P->data[0], ySize);                // Y plane
+        memcpy(buffer + ySize, frameYUV420P->data[1], uSize);        // U plane
+        memcpy(buffer + ySize + uSize, frameYUV420P->data[2], vSize);// V plane
 
-//        yuvData;
+        // 5. Free resources
+        sws_freeContext(imgCtx);
+        av_freep(frameYUV420P->data);
+        av_frame_unref(frameYUV420P);
+        av_frame_free(&frameYUV420P);
+
+//        return yuvData;  // Now contains YUV420P (limited range)
+        LOGGER_ERROR(sLogger, "Expected " << mCodecCtx->pix_fmt);
 
         streamer.sendFrameData(yuvData);
         //

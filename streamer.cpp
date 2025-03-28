@@ -95,7 +95,7 @@ void Streamer::startStreaming()
     QString ffmpegPath = "C:/ffmpeg-7.1.1/bin/ffmpeg.exe";
     QStringList args = {
         "-f", "rawvideo",
-        "-pix_fmt", "yuv420p",
+        "-pix_fmt", "yuvj420p",
         "-s", "640x480",  // Set resolution
         "-r", "30",         // Set frame rate
         "-i", pipePath,     // Input from Windows named pipe
