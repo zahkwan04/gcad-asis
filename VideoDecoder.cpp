@@ -41,13 +41,15 @@ VideoDecoder::VideoDecoder(void *cbObj, CallbackFn cbFn) :
 mIsValid(false), mCbFn(cbFn), mCbObj(cbObj), mCodecCtx(0), mPacket(0),
 mParser(0), mFrameYuv(0), mFrameRgb(0)
 {
-    streamer.startStreaming();
+
     if (sLogger == 0 || cbObj == 0)
     {
         assert("Bad param in VideoDecoder::VideoDecoder" == 0);
         return;
     }
 #endif //MOBILE
+    streamer = new Streamer();  // Ensure Streamer is initialized
+    streamer->startStreaming();
     const AVCodec *codec = avcodec_find_decoder(AV_CODEC_ID_H264);
     if (codec == 0)
     {
@@ -103,17 +105,28 @@ mParser(0), mFrameYuv(0), mFrameRgb(0)
 
 VideoDecoder::~VideoDecoder()
 {
+    if (streamer)
+    {
+        streamer->stopStreaming();
+        delete streamer;
+    }
     avcodec_free_context(&mCodecCtx);
     if (mParser != 0)
         av_parser_close(mParser);
     av_packet_free(&mPacket);
     av_frame_free(&mFrameRgb);
     av_frame_free(&mFrameYuv);
-    streamer.stopStreaming();
 }
 
 void VideoDecoder::decode(char *data, int len)
 {
+    // No need to create a new Streamer instance every time
+    if (!streamer)
+    {
+        streamer = new Streamer();
+        streamer->startStreaming();
+    }
+
     if (!mIsValid || data == 0 || len <= 0)
         return;
     int bufLen = unpacketize(data, len);
@@ -501,7 +514,7 @@ void VideoDecoder::getDecodedFrame()
                 yuv420pData.append(reinterpret_cast<const char *>(frameYUV420P->data[1]), uvSize); // U plane
                 yuv420pData.append(reinterpret_cast<const char *>(frameYUV420P->data[2]), uvSize); // V plane
 
-                streamer.sendFrameData(yuv420pData);
+                streamer->sendFrameData(yuv420pData);
 
                 // Free YUV conversion resources
                 av_freep(&frameYUV420P->data[0]);

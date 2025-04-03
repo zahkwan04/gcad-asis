@@ -15,7 +15,6 @@
 #ifdef FFMPEG
 #include "VideoDecoder.h"
 #include "VideoEncoder.h"
-#include "streamer.h"
 #endif
 
 #ifndef uchar
@@ -72,6 +71,7 @@ public:
                 void              *cbObj,
                 DecCbFn            decCbFn,
                 StatCbFn           statCbFn);
+
 #endif //MOBILE
 
     ~VideoStream();
@@ -153,10 +153,11 @@ private:
     RtpSession *mRtp;
     void       *mObj;       //callback function owner
     StatCbFn    mStatCbFn;  //stream statistics callback function
+//    Streamer   *streamer;
 #ifdef FFMPEG
     VideoDecoder *mDec;
     static VideoEncoder *sEnc;
-    Streamer      streamer;
+
 #endif
     static Logger *sLogger;
 

@@ -81,12 +81,11 @@ mDuration(-1), mPriority(sPriorityDefault), mLocalAudRtpPort(0),
 mRemoteAudRtpPort(0), mRemoteVidRtpPort(0),mOwner(false), mDuplex(false),
 mE2ee(isE2ee), mFirstPtt(true), mTxGranted(false), mCalledDomain(calledDomain),
 mCalledPartyName(ResourceData::getDspTxt(calledParty, calledType)), mRingTone(0),
-mVideoStream(0)
+    mVideoStream(0)
 {
     init();
     QPixmap pixmap(QtUtils::getRscIconSrc(CmnTypes::IDTYPE_GROUP));
     ui->txPartyLabel->hide();
-//    streamer.startStreaming();
     switch (type)
     {
         case CmnTypes::CALLTYPE_BROADCAST_IN:
@@ -334,7 +333,7 @@ mCalledParty(0), mCallingParty(callingParty), mDuration(-1),
 mPriority(MsgSp::Value::CALL_PRIORITY_LOWEST), mLocalAudRtpPort(0),
 mRemoteAudRtpPort(0), mRemoteVidRtpPort(0), mOwner(false), mDuplex(true),
 mE2ee(false), mFirstPtt(true), mTxGranted(true), mCalledPartyName(sUserName),
-mRingTone(0), mVideoStream(0)
+    mRingTone(0), mVideoStream(0)
 {
     switch (callingPartyType)
     {

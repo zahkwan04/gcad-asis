@@ -67,7 +67,6 @@ mObj(cbObj), mStatCbFn(statCbFn)
 #ifdef FFMPEG
     mDec = new VideoDecoder(cbObj, decCbFn);
 
-//    streamer.startStreaming();
 #endif
     mRtp = new RtpSession(RtpSession::TYPE_VIDEO, lclPort, rmtPort, sLogger,
                           this, rtpRcvCb, rtpStatCb);
@@ -86,7 +85,6 @@ VideoStream::~VideoStream()
         delete mRtp;
     }
 #ifdef FFMPEG
-    streamer.stopStreaming();
     delete mDec;
 #endif
 }

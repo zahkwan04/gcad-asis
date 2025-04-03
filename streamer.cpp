@@ -163,6 +163,7 @@ void Streamer::stopStreaming()
     }
 
     // 3. Disconnect Qt signals to prevent automatic restart
+    FlushFileBuffers(hNamedPipe);
     disconnect(&ffmpegProcess, nullptr, this, nullptr);
 }
 
