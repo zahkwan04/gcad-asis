@@ -53,14 +53,23 @@ class Streamer : public QObject
     Q_OBJECT
 public:
     explicit Streamer(QObject *parent = nullptr);
-    void startStreaming();
-    void stopStreaming();
-    void sendFrameData(const QByteArray &frameData);
+    ~Streamer();
+//    void startStreaming();
+//    void stopStreaming();
+//    void sendFrameData(const QByteArray &frameData);
 
 private:
     QProcess ffmpegProcess;
     QString pipePath = R"(\\.\pipe\video_pipe)";
     HANDLE hNamedPipe;
+
+public slots:
+    void startStreaming();  // Function to start streaming in a new thread
+    void stopStreaming();
+    void sendFrameData(const QByteArray &frameData);
+
+signals:
+    void streamingFinished();  // Signal when streaming stops
 };
 
 #endif // STREAMER_H

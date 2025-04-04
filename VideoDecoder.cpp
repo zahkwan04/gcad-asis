@@ -8,6 +8,8 @@
  * @author Zulzaidi Atan
  */
 #include <assert.h>
+#include <QApplication>
+#include <QObject>
 
 #include "VideoDecoder.h"
 #include "qdebug.h"
@@ -48,8 +50,23 @@ mParser(0), mFrameYuv(0), mFrameRgb(0)
         return;
     }
 #endif //MOBILE
-    streamer = new Streamer();  // Ensure Streamer is initialized
-    streamer->startStreaming();
+
+    qDebug() << "Current Thread: " << QThread::currentThread();
+    qDebug() << "Main Thread: " << QApplication::instance()->thread();
+
+    // Create a new thread for Streamer
+    QThread *streamerThread = new QThread();
+    streamer = new Streamer();  // Create Streamer object
+    streamer->moveToThread(streamerThread);  // Move Streamer to its own thread
+
+    QObject::connect(streamerThread, &QThread::started, streamer, &Streamer::startStreaming);
+    QObject::connect(streamer, &Streamer::streamingFinished, streamerThread, &QThread::quit);
+    QObject::connect(streamer, &Streamer::streamingFinished, streamer, &Streamer::deleteLater);
+    QObject::connect(streamerThread, &QThread::finished, streamerThread, &QThread::deleteLater);
+
+    streamerThread->start();  // Start the Streamer thread
+
+    streamerThread->start();  // Start the Streamer thread
     const AVCodec *codec = avcodec_find_decoder(AV_CODEC_ID_H264);
     if (codec == 0)
     {

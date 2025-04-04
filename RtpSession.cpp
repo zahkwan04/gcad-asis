@@ -10,6 +10,8 @@
  * @author Zulzaidi Atan
  */
 #include <assert.h>
+#include <QDebug>
+#include <QApplication>
 
 #include "VoipSessionBase.h"
 #include "RtpSession.h"

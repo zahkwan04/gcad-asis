@@ -55,17 +55,33 @@
 //}
 
 #include "streamer.h"
+#include <QApplication>
+#include <QThread>
+
+//Streamer::Streamer(QObject *parent) : QObject(parent), hNamedPipe(INVALID_HANDLE_VALUE)
+//{
+//    // Restart FFmpeg when process exits
+//    qDebug() << "Current Thread streamer: " << QThread::currentThread();
+//    qDebug() << "Main Thread streamer: " << QApplication::instance()->thread();
+//    connect(&ffmpegProcess,
+//            QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
+//            this, &Streamer::startStreaming);
+//}
 
 Streamer::Streamer(QObject *parent) : QObject(parent), hNamedPipe(INVALID_HANDLE_VALUE)
 {
-    // Restart FFmpeg when process exits
-    connect(&ffmpegProcess,
-            QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
-            this, &Streamer::startStreaming);
+    qDebug() << "Streamer created in thread: " << QThread::currentThread();
+}
+
+Streamer::~Streamer()
+{
+    qDebug() << "Streamer destroyed in thread: " << QThread::currentThread();
+    stopStreaming();
 }
 
 void Streamer::startStreaming()
 {
+    qDebug() << "Streaming started in thread: " << QThread::currentThread();
     // Close existing pipe if open
     if (hNamedPipe != INVALID_HANDLE_VALUE)
     {
@@ -133,6 +149,7 @@ void Streamer::startStreaming()
     }
 
     qDebug() << "Named pipe connected, ready to receive data.";
+
 }
 
 void Streamer::stopStreaming()
@@ -165,6 +182,7 @@ void Streamer::stopStreaming()
     // 3. Disconnect Qt signals to prevent automatic restart
     FlushFileBuffers(hNamedPipe);
     disconnect(&ffmpegProcess, nullptr, this, nullptr);
+    emit streamingFinished();  // Emit when done
 }
 
 void Streamer::sendFrameData(const QByteArray &frameData)
