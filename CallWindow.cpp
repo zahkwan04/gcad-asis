@@ -1241,6 +1241,9 @@ void CallWindow::disableInAudio()
 
 void CallWindow::startCall()
 {
+    qDebug() << "Current Thread CallWindow startcall: " << QThread::currentThread();
+    qDebug() << "Main Thread CallWindow startcall: " << QApplication::instance()->thread();
+
     if (ui->callButton->isHidden())
         doPtt(true);
     else

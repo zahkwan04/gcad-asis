@@ -1,9 +1,12 @@
 #include "RtspStreamer.h"
 #include <QThread>
+#include <QApplication>
 
 
 RtspStreamer::RtspStreamer(QObject *parent) : QObject(parent), hNamedPipe(INVALID_HANDLE_VALUE)
 {
+    qDebug() << "Current Thread RtspStreamer: " << QThread::currentThread();
+    qDebug() << "Main Thread RtspStreamer: " << QApplication::instance()->thread();
     connect(&ffmpegProcess,
             QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
             this,

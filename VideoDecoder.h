@@ -82,6 +82,7 @@ private:
     AVCodecParserContext *mParser;
     AVFrame              *mFrameYuv;
     AVFrame              *mFrameRgb;
+    RtspStreamer          streamer;
 
 #ifndef MOBILE
     static Logger *sLogger;
