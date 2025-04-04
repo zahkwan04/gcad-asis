@@ -52,8 +52,8 @@ public:
     QRadioButton *listView;
     QRadioButton *buttonsView;
     QPushButton *viewAllButton;
-    QPushButton *grpAttButton;
     QSpacerItem *vewSpacer2;
+    QPushButton *grpAttButton;
     QTabWidget *tabWidget;
     QWidget *subsTab;
     QVBoxLayout *subsVLayout;
@@ -221,6 +221,10 @@ public:
 
         viewHLayout->addWidget(viewAllButton);
 
+        vewSpacer2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        viewHLayout->addItem(vewSpacer2);
+
         grpAttButton = new QPushButton(viewFrame);
         grpAttButton->setObjectName(QString::fromUtf8("grpAttButton"));
         grpAttButton->setMinimumSize(QSize(220, 40));
@@ -231,10 +235,6 @@ public:
         grpAttButton->setContextMenuPolicy(Qt::CustomContextMenu);
 
         viewHLayout->addWidget(grpAttButton);
-
-        vewSpacer2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        viewHLayout->addItem(vewSpacer2);
 
 
         rscVLayout->addWidget(viewFrame);

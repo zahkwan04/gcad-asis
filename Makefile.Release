@@ -15595,36 +15595,8 @@ release\AudioPlayer.obj: AudioPlayer.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMap \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		ui_AudioPlayer.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGridLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHeaderView \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qheaderview.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSlider \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTableView \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtableview.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
 		AudioPlayer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\QMediaPlayer \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qmediaplayer.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qmediacontent.h \
@@ -15634,6 +15606,7 @@ release\AudioPlayer.obj: AudioPlayer.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qtnetwork-config.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSharedDataPointer \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QUrl \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qmediaenumdebug.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmetaobject.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qaudio.h \
@@ -15641,6 +15614,8 @@ release\AudioPlayer.obj: AudioPlayer.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QMovie \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qmovie.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qimagereader.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qimageiohandler.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qplugin.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qpointer.h \
@@ -15656,7 +15631,12 @@ release\AudioPlayer.obj: AudioPlayer.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017
 		QtTableUtils.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QCheckBox \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qcheckbox.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QPoint \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTableView \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtableview.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTableWidget \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtablewidget.h
 
@@ -15794,75 +15774,56 @@ release\Call.obj: Call.cpp Style.h \
 		VideoEncoder.h \
 		ffmpeg\libavutil\opt.h \
 		ui_Call.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QIcon \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qicon.h \
+		Call.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qwidget.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtguiglobal.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtgui-config.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsize.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmargins.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpixmap.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpaintdevice.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qwindowdefs.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmargins.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpaintdevice.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qrect.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsize.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpalette.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qcolor.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qrgb.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qrgba64.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qimage.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpixelformat.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtransform.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qbrush.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qmatrix.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpolygon.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qregion.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdatastream.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qline.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtransform.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpainterpath.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qcursor.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpalette.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qbrush.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qimage.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpixelformat.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpixmap.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfont.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfontmetrics.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qsizepolicy.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qcursor.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qkeysequence.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qevent.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qurl.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qurlquery.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qvector2d.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtouchdevice.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
-		Call.h \
 		CommsRegister.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfileinfo.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QIcon \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		MessageDialog.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLCDNumber \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlcdnumber.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QTime \
@@ -15876,6 +15837,7 @@ release\Call.obj: Call.cpp Style.h \
 		QtTableUtils.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QCheckBox \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qcheckbox.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
@@ -15991,24 +15953,30 @@ release\CallButton.obj: CallButton.cpp Style.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		ui_CallButton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
+		CallButton.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QMouseEvent \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qevent.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtguiglobal.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtgui-config.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qwindowdefs.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsize.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmargins.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qcursor.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpaintdevice.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qregion.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qrect.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmargins.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsize.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdatastream.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qkeysequence.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qurl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qurlquery.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfile.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfiledevice.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qvector2d.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtouchdevice.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qwidget.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpaintdevice.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpalette.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qcolor.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qrgb.h \
@@ -16016,8 +15984,6 @@ release\CallButton.obj: CallButton.cpp Style.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qbrush.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qmatrix.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpolygon.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qregion.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdatastream.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qline.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtransform.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpainterpath.h \
@@ -16028,29 +15994,7 @@ release\CallButton.obj: CallButton.cpp Style.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfontmetrics.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qsizepolicy.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qkeysequence.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qevent.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qurl.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qurlquery.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfile.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfiledevice.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qvector2d.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtouchdevice.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
-		CallButton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QMouseEvent \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qcursor.h \
 		CallWindow.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
@@ -16102,6 +16046,7 @@ release\CallButton.obj: CallButton.cpp Style.h \
 		MessageDialog.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLCDNumber \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlcdnumber.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
 		ServerSession.h \
@@ -16561,38 +16506,8 @@ release\CallWindow.obj: CallWindow.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_6
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qcameraimageprocessing.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qcameraviewfindersettings.h \
 		ui_CallWindow.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGraphicsView \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgraphicsview.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpainter.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qscrollarea.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgraphicsscene.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGridLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
 		CallWindow.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QKeyEvent \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\QSound \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qsound.h \
@@ -16980,23 +16895,9 @@ release\CommsRegister.obj: CommsRegister.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc
 		StatusCodes.h \
 		Style.h \
 		ui_CommsRegister.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QScrollArea \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qscrollarea.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSplitter \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qsplitter.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		CommsRegister.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		MessageDialog.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLCDNumber \
@@ -17222,18 +17123,6 @@ release\Contact.obj: Contact.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\incl
 		Style.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMap \
 		ui_Contact.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		Contact.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QScrollArea \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qscrollarea.h \
@@ -17242,6 +17131,7 @@ release\Contact.obj: Contact.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\incl
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QTimer \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qtimer.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qbasictimer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		CallWindow.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QKeyEvent \
@@ -17684,36 +17574,8 @@ release\Dgna.obj: Dgna.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\Qt
 		"..\..\..\..\Program Files\PostgreSQL\9.6\include\pthread.h" \
 		"..\..\..\..\Program Files\PostgreSQL\9.6\include\sched.h" \
 		ui_Dgna.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGridLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLineEdit \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlineedit.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
 		Dgna.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSortFilterProxyModel \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsortfilterproxymodel.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstractproxymodel.h \
@@ -18776,40 +18638,8 @@ release\GpsMonitor.obj: GpsMonitor.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_6
 		Style.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMap \
 		ui_GpsMonitor.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGridLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLineEdit \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlineedit.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
 		GpsMonitor.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSortFilterProxyModel \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsortfilterproxymodel.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstractproxymodel.h \
@@ -19180,83 +19010,58 @@ release\Login.obj: Login.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		Version.h \
 		ui_Login.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QIcon \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qicon.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsize.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmargins.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpixmap.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpaintdevice.h \
+		Login.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qevent.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qwindowdefs.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qrect.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qcolor.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qrgb.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qrgba64.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qimage.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpixelformat.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtransform.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qmatrix.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpolygon.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qregion.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qrect.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmargins.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsize.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdatastream.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qline.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpainterpath.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qcursor.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpalette.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qbrush.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfont.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfontinfo.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qsizepolicy.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qkeysequence.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qevent.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qurl.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qurlquery.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfile.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfiledevice.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qvector2d.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtouchdevice.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGridLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLineEdit \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlineedit.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		Login.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qwidget.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpaintdevice.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpalette.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qcolor.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qrgb.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qrgba64.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qbrush.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qmatrix.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpolygon.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qline.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtransform.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpainterpath.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qimage.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpixelformat.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpixmap.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfont.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfontmetrics.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfontinfo.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qsizepolicy.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qcursor.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		SettingsUi.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLineEdit \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlineedit.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSettings \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsettings.h \
 		AudioDevice.h \
@@ -20392,27 +20197,10 @@ release\MainWindow.obj: MainWindow.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_6
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qcameraimageprocessing.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qcameraviewfindersettings.h \
 		ui_MainWindow.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QMainWindow \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qmainwindow.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QScrollArea \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qscrollarea.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSplitter \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qsplitter.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QStatusBar \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
 		MainWindow.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QMainWindow \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qmainwindow.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QMdiSubWindow \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qmdisubwindow.h \
 		AudioManager.h \
@@ -20478,10 +20266,14 @@ release\MainWindow.obj: MainWindow.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_6
 		VideoEncoder.h \
 		ffmpeg\libavutil\opt.h \
 		Contact.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QScrollArea \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qscrollarea.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
 		Resources.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QModelIndexList \
 		ResourceButton.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
 		Dgna.h \
 		GisWindow.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuickWidgets\qquickwidget.h \
@@ -20537,6 +20329,7 @@ release\MainWindow.obj: MainWindow.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_6
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuick\QQuickView \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuick\qquickview.h \
 		GisBookmarks.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
 		GisCanvas.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGraphicsView \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgraphicsview.h \
@@ -20844,29 +20637,7 @@ release\MessageDialog.obj: MessageDialog.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QTimer \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qtimer.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qbasictimer.h \
-		ui_MessageDialog.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSplitter \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qsplitter.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout
+		ui_MessageDialog.h
 
 release\Mms.obj: Mms.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfileinfo.h \
@@ -22011,38 +21782,10 @@ release\Report.obj: Report.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\includ
 		StatusCodes.h \
 		Style.h \
 		ui_Report.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDateEdit \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdatetimeedit.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcalendar.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGridLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHeaderView \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qheaderview.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QScrollArea \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qscrollarea.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTimeEdit \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		Report.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QCompleter \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qcompleter.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		DateTimeDelegate.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QStyledItemDelegate \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qstyleditemdelegate.h \
@@ -22606,25 +22349,7 @@ release\Resources.obj: Resources.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qcombobox.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDateTime \
 		Style.h \
-		ui_Resources.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout
+		ui_Resources.h
 
 release\ResourceSelector.obj: ResourceSelector.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
@@ -22739,49 +22464,6 @@ release\ResourceSelector.obj: ResourceSelector.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		ui_ResourceSelector.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QIcon \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qicon.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QButtonGroup \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qbuttongroup.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGridLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGroupBox \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgroupbox.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLineEdit \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlineedit.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QScrollArea \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qscrollarea.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		ResourceSelector.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QCompleter \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qcompleter.h \
@@ -22789,15 +22471,19 @@ release\ResourceSelector.obj: ResourceSelector.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QList \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QStringListModel \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringlistmodel.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		ResourceData.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QListView \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlistview.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractitemview.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qitemselectionmodel.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractitemdelegate.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qstyleoption.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractspinbox.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qvalidator.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qicon.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qslider.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractslider.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qstyle.h \
@@ -22973,37 +22659,9 @@ release\RscCollector.obj: RscCollector.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc20
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		Utils.h \
 		ui_RscCollector.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		RscCollector.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGridLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLineEdit \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlineedit.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		RscCollector.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSortFilterProxyModel \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsortfilterproxymodel.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstractproxymodel.h \
@@ -23214,40 +22872,8 @@ release\Sds.obj: Sds.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCo
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMap \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		ui_Sds.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHeaderView \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qheaderview.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QListWidget \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlistwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSplitter \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qsplitter.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTableWidget \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		Sds.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		CommsRegister.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFileInfo \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
@@ -23272,12 +22898,14 @@ release\Sds.obj: Sds.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCo
 		QtTableUtils.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QCheckBox \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qcheckbox.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QPoint \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QStandardItemModel \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qstandarditemmodel.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTableView \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTableWidget \
 		DbInt.h \
 		"..\..\..\..\Program Files\PostgreSQL\9.6\include\libpq-fe.h" \
 		"..\..\..\..\Program Files\PostgreSQL\9.6\include\postgres_ext.h" \
@@ -23687,40 +23315,6 @@ release\SettingsUi.obj: SettingsUi.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_6
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qcameraviewfindersettings.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
 		ui_SettingsUi.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QIcon \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QCheckBox \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qcheckbox.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QComboBox \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qcombobox.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGridLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QProgressBar \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qprogressbar.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QStackedWidget \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qstackedwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		SettingsUi.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QCloseEvent \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSettings \
@@ -23873,9 +23467,10 @@ release\Style.obj: Style.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\
 release\Updater.obj: Updater.cpp Md5Digest.h \
 		MD5.h \
 		ui_Updater.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qvariant.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qatomic.h \
+		Version.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstring.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qchar.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qglobal.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qconfig.h \
@@ -23887,29 +23482,41 @@ release\Updater.obj: Updater.cpp Md5Digest.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsysinfo.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qlogging.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qflags.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qglobalstatic.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmutex.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qnumeric.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qversiontagging.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qatomic.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qbasicatomic.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qatomic_bootstrap.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qgenericatomic.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qatomic_cxx11.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qatomic_msvc.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qglobalstatic.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmutex.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qnumeric.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qversiontagging.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qbytearray.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qrefcount.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qnamespace.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qarraydata.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qlist.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qalgorithms.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qiterator.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qhashfunctions.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstring.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qchar.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringliteral.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringalgorithms.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringview.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringbuilder.h \
+		Updater.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtguiglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtgui-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qwidget.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qwindowdefs.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobjectdefs.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobject.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qlist.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qalgorithms.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qiterator.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qhashfunctions.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qpair.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qvector.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcontainertools_impl.h \
@@ -23918,43 +23525,16 @@ release\Updater.obj: Updater.cpp Md5Digest.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringlist.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qregexp.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringmatcher.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreevent.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qscopedpointer.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmetatype.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qvarlengtharray.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcontainerfwd.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobjectdefs.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmap.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdebug.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qhash.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qtextstream.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qiodevice.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobject.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreevent.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qscopedpointer.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobject_impl.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qlocale.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qshareddata.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qset.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcontiguouscache.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsharedpointer.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtguiglobal.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtgui-config.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qwindowdefs.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsize.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmargins.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qcursor.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qwidget.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpaintdevice.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qrect.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsize.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpalette.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qcolor.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qrgb.h \
@@ -23964,47 +23544,37 @@ release\Updater.obj: Updater.cpp Md5Digest.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpolygon.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qregion.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdatastream.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qiodevice.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qline.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtransform.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpainterpath.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qimage.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpixelformat.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpixmap.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsharedpointer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qshareddata.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qhash.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfont.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfontmetrics.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfontinfo.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qsizepolicy.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qcursor.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qkeysequence.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qevent.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qvariant.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmap.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdebug.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qtextstream.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qlocale.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qset.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcontiguouscache.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qurl.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qurlquery.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfile.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfiledevice.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qvector2d.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtouchdevice.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGridLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QProgressBar \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qprogressbar.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qicon.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		Version.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString \
-		Updater.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDir \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdir.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfileinfo.h \
@@ -24018,6 +23588,7 @@ release\Updater.obj: Updater.cpp Md5Digest.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkrequest.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSharedDataPointer \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QUrl \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVector \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslConfiguration \
@@ -24418,31 +23989,10 @@ release\GisBookmarks.obj: GisBookmarks.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc20
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		Utils.h \
 		ui_GisBookmarks.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
 		GisBookmarks.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QStandardItemModel \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qstandarditemmodel.h \
 		GisCanvas.h \
@@ -24502,6 +24052,7 @@ release\GisBookmarks.obj: GisBookmarks.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc20
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkrequest.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSharedDataPointer \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QUrl \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVector \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslConfiguration \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslconfiguration.h \
@@ -24526,6 +24077,7 @@ release\GisBookmarks.obj: GisBookmarks.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc20
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QtCoreDepends \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstractanimation.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstracteventdispatcher.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstractnativeeventfilter.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstractproxymodel.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstractstate.h \
@@ -24549,6 +24101,7 @@ release\GisBookmarks.obj: GisBookmarks.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc20
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcollator.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcommandlineoption.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcommandlineparser.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qconcatenatetablesproxymodel.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdeadlinetimer.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qelapsedtimer.h \
@@ -25639,28 +25192,10 @@ release\GisDgnaList.obj: GisDgnaList.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qcombobox.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QIcon \
 		ui_GisDgnaList.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		GisDgnaList.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		Dgna.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSortFilterProxyModel \
 		DraggableListView.h \
@@ -25799,7 +25334,10 @@ release\GisDgnaList.obj: GisDgnaList.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017
 		Resources.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QModelIndexList \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTableWidget \
-		ResourceButton.h
+		ResourceButton.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h
 
 release\GisHistory.obj: GisHistory.cpp GisHistory.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
@@ -26581,32 +26119,11 @@ release\GisLayerList.obj: GisLayerList.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc20
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QTime \
 		Props.h \
 		ui_GisLayerList.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QIcon \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHeaderView \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qheaderview.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTreeView \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtreeview.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
 		GisLayerList.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h
 
 release\GisLegend.obj: GisLegend.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtXml\QDomDocument \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtXml\qdom.h \
@@ -27005,30 +26522,7 @@ release\GisLegend.obj: GisLegend.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDate \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QTime \
 		Props.h \
-		ui_GisLegend.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QIcon \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHeaderView \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qheaderview.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTreeView \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtreeview.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout
+		ui_GisLegend.h
 
 release\GisMapOverview.obj: GisMapOverview.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuickWidgets\qquickwidget.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qwidget.h \
@@ -27184,42 +26678,21 @@ release\GisMapOverview.obj: GisMapOverview.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\ms
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		ui_GisMapOverview.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QIcon \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QScrollArea \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qscrollarea.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		GisMapOverview.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
 		GisCanvas.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGraphicsView \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgraphicsview.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpainter.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qscrollarea.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgraphicsscene.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuickWidgets\QQuickWidget \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		DbInt.h \
 		"..\..\..\..\Program Files\PostgreSQL\9.6\include\libpq-fe.h" \
 		"..\..\..\..\Program Files\PostgreSQL\9.6\include\postgres_ext.h" \
@@ -27247,6 +26720,7 @@ release\GisMapOverview.obj: GisMapOverview.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\ms
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkrequest.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSharedDataPointer \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QUrl \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVector \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslConfiguration \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslconfiguration.h \
@@ -27272,6 +26746,7 @@ release\GisMapOverview.obj: GisMapOverview.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\ms
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QtCoreDepends \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstractanimation.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstracteventdispatcher.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstractitemmodel.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstractnativeeventfilter.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstractproxymodel.h \
@@ -27297,6 +26772,7 @@ release\GisMapOverview.obj: GisMapOverview.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\ms
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcollator.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcommandlineoption.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcommandlineparser.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qconcatenatetablesproxymodel.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdeadlinetimer.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qelapsedtimer.h \
@@ -27598,34 +27074,9 @@ release\GisMenuTerminal.obj: GisMenuTerminal.cpp ResourceData.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMap \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString \
 		ui_GisMenuTerminal.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		GisMenuTerminal.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFormLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qformlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGridLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		GisMenuTerminal.h \
 		Props.h
 
 release\GisMenuUserPoi.obj: GisMenuUserPoi.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QIcon \
@@ -27768,60 +27219,11 @@ release\GisMenuUserPoi.obj: GisMenuUserPoi.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\ms
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMap \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		ui_GisMenuUserPoi.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QCheckBox \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qcheckbox.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QComboBox \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qcombobox.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractitemdelegate.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qstyleoption.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractspinbox.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qvalidator.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qregularexpression.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qslider.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractslider.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qstyle.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtabbar.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtabwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qrubberband.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstractitemmodel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFormLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qformlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLineEdit \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlineedit.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
 		GisMenuUserPoi.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QStringListModel \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringlistmodel.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstractitemmodel.h \
 		Props.h \
 		Utils.h
 
@@ -28690,39 +28092,10 @@ release\GisRouting.obj: GisRouting.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_6
 		GisPoint.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QPointF \
 		ui_GisRouting.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QIcon \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QColumnView \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qcolumnview.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGridLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHeaderView \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qheaderview.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLineEdit \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlineedit.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTableWidget \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
 		GisRouting.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h
 
 release\GisTracking.obj: GisTracking.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDate \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdatetime.h \
@@ -29139,33 +28512,6 @@ release\GisTracking.obj: GisTracking.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSet \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QStringListModel \
 		ui_GisTracking.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QIcon \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QComboBox \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qcombobox.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDateEdit \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdatetimeedit.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGridLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTimeEdit \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
 		GisTracking.h \
 		GisTrackingReplay.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QTimer
@@ -29563,29 +28909,7 @@ release\GisTrackingReplay.obj: GisTrackingReplay.cpp ..\..\..\..\Qt\Qt5.14.2\5.1
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDate \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QTime \
 		Props.h \
-		ui_GisTrackingReplay.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QIcon \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QComboBox \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qcombobox.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGridLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSlider \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem
+		ui_GisTrackingReplay.h
 
 release\GisTrailingSelector.obj: GisTrailingSelector.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
@@ -29748,36 +29072,8 @@ release\GisTrailingSelector.obj: GisTrailingSelector.cpp ..\..\..\..\Qt\Qt5.14.2
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMap \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString \
 		ui_GisTrailingSelector.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGridLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLineEdit \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlineedit.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
 		GisTrailingSelector.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSortFilterProxyModel \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsortfilterproxymodel.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstractproxymodel.h \
@@ -29792,6 +29088,8 @@ release\GisTrailingSelector.obj: GisTrailingSelector.cpp ..\..\..\..\Qt\Qt5.14.2
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGraphicsView \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgraphicsview.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpainter.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpen.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qscrollarea.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgraphicsscene.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
@@ -29850,6 +29148,7 @@ release\GisTrailingSelector.obj: GisTrailingSelector.cpp ..\..\..\..\Qt\Qt5.14.2
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkrequest.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSharedDataPointer \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QUrl \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVector \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslConfiguration \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qsslconfiguration.h \
@@ -29875,6 +29174,7 @@ release\GisTrailingSelector.obj: GisTrailingSelector.cpp ..\..\..\..\Qt\Qt5.14.2
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QtCoreDepends \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstractanimation.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstracteventdispatcher.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstractnativeeventfilter.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstractstate.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstracttransition.h \
@@ -29897,6 +29197,7 @@ release\GisTrailingSelector.obj: GisTrailingSelector.cpp ..\..\..\..\Qt\Qt5.14.2
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcollator.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcommandlineoption.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcommandlineparser.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qconcatenatetablesproxymodel.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdeadlinetimer.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qelapsedtimer.h \
@@ -30399,30 +29700,6 @@ release\GisWindow.obj: GisWindow.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QPoint \
 		Settings.h \
 		ui_GisWindow.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QMainWindow \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qmainwindow.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QScrollArea \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qscrollarea.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSlider \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSplitter \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qsplitter.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
 		GisWindow.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuickWidgets\qquickwidget.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuick\qquickwindow.h \
@@ -30468,6 +29745,8 @@ release\GisWindow.obj: GisWindow.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpen.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QMainWindow \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qmainwindow.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuick\QQuickItem \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuick\qquickitem.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQml\qqmlcomponent.h \
@@ -30552,10 +29831,13 @@ release\GisWindow.obj: GisWindow.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\
 		VoipSessionBase.h \
 		UdpSocket.h \
 		GisBookmarks.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
 		GisCanvas.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGraphicsView \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgraphicsview.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpainter.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qscrollarea.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgraphicsscene.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuickWidgets\QQuickWidget \
 		IncidentData.h \
@@ -30566,6 +29848,8 @@ release\GisWindow.obj: GisWindow.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QModelIndexList \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTableWidget \
 		ResourceButton.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
 		GisHistory.h \
 		GisLayerList.h \
 		GisLegend.h \
@@ -30877,36 +30161,17 @@ release\ActiveIncidents.obj: ActiveIncidents.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		ui_ActiveIncidents.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QIcon \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QScrollArea \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qscrollarea.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		ActiveIncidents.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QList \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		FlowLayout.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLayout \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QStyle \
 		IncidentButton.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QMouseEvent \
@@ -31341,46 +30606,6 @@ release\Incident.obj: Incident.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\in
 		Props.h \
 		Style.h \
 		ui_Incident.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDateEdit \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdatetimeedit.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcalendar.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFormLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qformlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGridLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHeaderView \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qheaderview.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLineEdit \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlineedit.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpen.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QRadioButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qradiobutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSplitter \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qsplitter.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTextEdit \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtextedit.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextdocument.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTimeEdit \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
 		Incident.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QModelIndex \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSortFilterProxyModel \
@@ -31388,6 +30613,11 @@ release\Incident.obj: Incident.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\in
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstractproxymodel.h \
 		ActiveIncidents.h \
 		FlowLayout.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLayout \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QStyle \
 		AudioPlayer.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\QMediaPlayer \
@@ -31405,6 +30635,8 @@ release\Incident.obj: Incident.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\in
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QMovie \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qmovie.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qimagereader.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qimageiohandler.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qplugin.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qpointer.h \
@@ -31450,6 +30682,12 @@ release\Incident.obj: Incident.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\in
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQml\qqmllist.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQml\qqmldebug.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuickWidgets\qtquickwidgetsglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLineEdit \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlineedit.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextcursor.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpen.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QMainWindow \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qmainwindow.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuick\QQuickItem \
@@ -31462,6 +30700,7 @@ release\Incident.obj: Incident.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\in
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuick\qquickview.h \
 		Dgna.h \
 		GisBookmarks.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QSpacerItem \
 		GisCanvas.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QGraphicsView \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgraphicsview.h \
@@ -31502,6 +30741,7 @@ release\Incident.obj: Incident.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\in
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qbuffer.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qbytearraymatcher.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcache.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcalendar.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcborarray.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcborvalue.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcborcommon.h \
@@ -31769,27 +31009,10 @@ release\IncidentButton.obj: IncidentButton.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\ms
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		Utils.h \
 		ui_IncidentButton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QFrame \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLabel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlabel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QVBoxLayout \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		IncidentButton.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QMouseEvent \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QPixmap \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidget \
 		IncidentData.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDate \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \

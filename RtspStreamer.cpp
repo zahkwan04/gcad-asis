@@ -1,19 +1,13 @@
 #include "RtspStreamer.h"
 #include <QThread>
 
-//Streamer::Streamer(QObject *parent) : QObject(parent), hNamedPipe(INVALID_HANDLE_VALUE)
-//{
-//    // Restart FFmpeg when process exits
-//    connect(&ffmpegProcess,
-//            QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
-//            this, &Streamer::startStreaming);
-//}
+
 RtspStreamer::RtspStreamer(QObject *parent) : QObject(parent), hNamedPipe(INVALID_HANDLE_VALUE)
 {
-    // Restart FFmpeg when process exits, but only if needed
     connect(&ffmpegProcess,
             QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
-            this, [this](int exitCode, QProcess::ExitStatus exitStatus) {
+            this,
+            [this](int exitCode, QProcess::ExitStatus exitStatus) {
                 if (exitStatus == QProcess::CrashExit) {
                     qDebug() << "FFmpeg crashed! Restarting stream...";
                     startStreaming();
@@ -26,80 +20,8 @@ RtspStreamer::RtspStreamer(QObject *parent) : QObject(parent), hNamedPipe(INVALI
 RtspStreamer::~RtspStreamer()
 {
     qDebug() << "Destroying Streamer...";
-    stopStreaming();  // Ensure cleanup before destruction
+    stopStreaming();
 }
-
-
-//void Streamer::startStreaming()
-//{
-//    // Close existing pipe if open
-//    if (hNamedPipe != INVALID_HANDLE_VALUE)
-//    {
-//        CloseHandle(hNamedPipe);
-//        hNamedPipe = INVALID_HANDLE_VALUE;
-//    }
-
-//    // Create Windows Named Pipe
-//    hNamedPipe = CreateNamedPipe(
-//        pipePath.toStdWString().c_str(),  // Pipe name
-//        PIPE_ACCESS_DUPLEX,               // Read/Write pipe
-//        PIPE_TYPE_BYTE | PIPE_WAIT,       // Byte stream mode, waits for connections
-//        1,                                // Max instances
-//        640 * 480 * 3 / 2,              // Output buffer size
-//        640 * 480 * 3 / 2,              // Input buffer size
-//        0,                                // Default timeout
-//        nullptr                           // Security attributes
-//        );
-
-//    if (hNamedPipe == INVALID_HANDLE_VALUE)
-//    {
-//        qDebug() << "Failed to create named pipe!";
-//        return;
-//    }
-
-////    // Start FFmpeg process
-//    QString ffmpegPath = "C:/ffmpeg-7.1.1/bin/ffmpeg.exe";
-//    QStringList args = {
-//        "-f", "rawvideo",
-//        "-pix_fmt", "yuv420p",
-//        "-s", "640x480",  // Set resolution
-//        "-r", "30",         // Set frame rate
-//        "-i", pipePath,     // Input from Windows named pipe
-//        "-c:v", "libx264",
-//        "-preset", "ultrafast",
-//        "-tune", "zerolatency",
-//        "-f", "rtsp",
-//        "rtsp://localhost:8554/mystream"
-//    };
-
-
-
-//    ffmpegProcess.start(ffmpegPath, args);
-
-//    if (!ffmpegProcess.waitForStarted())
-//    {
-//        qDebug() << "Failed to start FFmpeg process!";
-//        return;
-//    }
-//    else
-//    {
-//        qDebug() << "Streaming started.";
-//    }
-
-//    // Wait for FFmpeg to connect
-//    if (!ConnectNamedPipe(hNamedPipe, nullptr))
-//    {
-//        if (GetLastError() != ERROR_PIPE_CONNECTED)
-//        {
-//            qDebug() << "Failed to connect named pipe!";
-//            CloseHandle(hNamedPipe);
-//            hNamedPipe = INVALID_HANDLE_VALUE;
-//            return;
-//        }
-//    }
-
-//    qDebug() << "Named pipe connected, ready to receive data.";
-//}
 
 void RtspStreamer::startStreaming()
 {
@@ -108,9 +30,7 @@ void RtspStreamer::startStreaming()
         return;
     }
 
-    if (hNamedPipe != INVALID_HANDLE_VALUE)
-    {
-        qDebug() << "Closing existing named pipe...";
+    if (hNamedPipe != INVALID_HANDLE_VALUE) {
         CloseHandle(hNamedPipe);
         hNamedPipe = INVALID_HANDLE_VALUE;
     }
@@ -127,8 +47,7 @@ void RtspStreamer::startStreaming()
         nullptr
         );
 
-    if (hNamedPipe == INVALID_HANDLE_VALUE)
-    {
+    if (hNamedPipe == INVALID_HANDLE_VALUE) {
         qDebug() << "Failed to create named pipe!";
         return;
     }
@@ -158,10 +77,8 @@ void RtspStreamer::startStreaming()
 
     qDebug() << "Streaming started.";
 
-    if (!ConnectNamedPipe(hNamedPipe, nullptr))
-    {
-        if (GetLastError() != ERROR_PIPE_CONNECTED)
-        {
+    if (!ConnectNamedPipe(hNamedPipe, nullptr)) {
+        if (GetLastError() != ERROR_PIPE_CONNECTED) {
             qDebug() << "Failed to connect named pipe!";
             CloseHandle(hNamedPipe);
             hNamedPipe = INVALID_HANDLE_VALUE;
@@ -172,86 +89,26 @@ void RtspStreamer::startStreaming()
     qDebug() << "Named pipe connected, ready to receive data.";
 }
 
-
-//void Streamer::stopStreaming()
-//{
-//    // 1. Stop the FFmpeg process
-//    if (ffmpegProcess.state() == QProcess::Running)
-//    {
-//        ffmpegProcess.terminate();
-
-//        // Ensure process stops properly
-//        if (!ffmpegProcess.waitForFinished(5000)) // Wait up to 5s
-//        {
-//            qDebug() << "FFmpeg did not terminate, forcing kill!";
-//            ffmpegProcess.kill();
-//            ffmpegProcess.waitForFinished(); // Ensure it's fully dead
-//        }
-//        qDebug() << "Streaming stopped.";
-//    }
-
-//    // 2. Close and clean up the named pipe
-//    if (hNamedPipe != INVALID_HANDLE_VALUE)
-//    {
-//        FlushFileBuffers(hNamedPipe);  // Ensure any remaining data is written
-//        DisconnectNamedPipe(hNamedPipe); // Forcefully disconnect any client
-//        CloseHandle(hNamedPipe);
-//        hNamedPipe = INVALID_HANDLE_VALUE;
-//        qDebug() << "Named pipe closed.";
-//    }
-
-//    // 3. Disconnect Qt signals to prevent automatic restart
-//    disconnect(&ffmpegProcess, nullptr, this, nullptr);
-//}
-
-//void Streamer::stopStreaming()
-//{
-//    qDebug() << "Stopping streaming...";
-
-//    // Prevent automatic restart before stopping
-//    disconnect(&ffmpegProcess, nullptr, this, nullptr);
-
-//    if (ffmpegProcess.state() == QProcess::Running)
-//    {
-//        qDebug() << "Terminating FFmpeg...";
-//        ffmpegProcess.terminate();
-
-//        if (!ffmpegProcess.waitForFinished(5000))  // Wait up to 5s
-//        {
-//            qDebug() << "FFmpeg did not terminate, forcing kill!";
-//            ffmpegProcess.kill();
-//            ffmpegProcess.waitForFinished();
-//        }
-//    }
-
-//    if (hNamedPipe != INVALID_HANDLE_VALUE)
-//    {
-//        FlushFileBuffers(hNamedPipe);
-//        DisconnectNamedPipe(hNamedPipe);
-//        CloseHandle(hNamedPipe);
-//        hNamedPipe = INVALID_HANDLE_VALUE;
-//        qDebug() << "Named pipe closed.";
-//    }
-
-//    qDebug() << "Streaming stopped.";
-//}
-
 void RtspStreamer::stopStreaming()
 {
-    if (QThread::currentThread() != this->thread())
-    {
+    if (QThread::currentThread() != this->thread()) {
         qDebug() << "stopStreaming called from a different thread, redirecting to main thread.";
         QMetaObject::invokeMethod(this, "stopStreaming", Qt::QueuedConnection);
         return;
     }
 
-    // 1. Stop the FFmpeg process safely
-    if (ffmpegProcess.state() == QProcess::Running)
-    {
+    qDebug() << "Stopping streaming...";
+
+    // Prevent automatic restart before stopping
+    disconnect(&ffmpegProcess,
+               QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
+               this,
+               nullptr);
+
+    if (ffmpegProcess.state() == QProcess::Running) {
         ffmpegProcess.terminate();
 
-        if (!ffmpegProcess.waitForFinished(5000)) // Wait up to 5s
-        {
+        if (!ffmpegProcess.waitForFinished(5000)) {
             qDebug() << "FFmpeg did not terminate, forcing kill!";
             ffmpegProcess.kill();
             ffmpegProcess.waitForFinished();
@@ -259,9 +116,7 @@ void RtspStreamer::stopStreaming()
         qDebug() << "Streaming stopped.";
     }
 
-    // 2. Close the named pipe safely
-    if (hNamedPipe != INVALID_HANDLE_VALUE)
-    {
+    if (hNamedPipe != INVALID_HANDLE_VALUE) {
         FlushFileBuffers(hNamedPipe);
         DisconnectNamedPipe(hNamedPipe);
         CloseHandle(hNamedPipe);
@@ -269,9 +124,7 @@ void RtspStreamer::stopStreaming()
         qDebug() << "Named pipe closed.";
     }
 
-    // 3. Disconnect Qt signals to prevent restart
-    disconnect(&ffmpegProcess, nullptr, this, nullptr);
-    FlushFileBuffers(hNamedPipe);
+    emit streamingStopped();
 }
 
 void RtspStreamer::sendFrameData(const QByteArray &frameData)
@@ -281,8 +134,7 @@ void RtspStreamer::sendFrameData(const QByteArray &frameData)
         return;
     }
 
-    if (hNamedPipe == INVALID_HANDLE_VALUE)
-    {
+    if (hNamedPipe == INVALID_HANDLE_VALUE) {
         qDebug() << "Pipe not available!";
         return;
     }
@@ -290,15 +142,11 @@ void RtspStreamer::sendFrameData(const QByteArray &frameData)
     DWORD bytesWritten;
     BOOL result = WriteFile(hNamedPipe, frameData.constData(), frameData.size(), &bytesWritten, nullptr);
 
-    if (!result || bytesWritten != (DWORD)frameData.size())
-    {
+    if (!result || bytesWritten != (DWORD)frameData.size()) {
         qDebug() << "Failed to write data to named pipe!";
-    }
-    else
-    {
+    } else {
         qDebug() << "Frame written to pipe: " << bytesWritten << " bytes";
     }
 
     FlushFileBuffers(hNamedPipe);
-
 }
