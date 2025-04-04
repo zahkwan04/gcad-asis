@@ -36,7 +36,7 @@ public:
      *
      * This function initializes FFmpeg and the named pipe for streaming.
      */
-    void startStreaming();
+    bool startStreaming();
 
     /**
      * @brief Stops the RTSP streaming process.

@@ -97,13 +97,25 @@ mParser(0), mFrameYuv(0), mFrameRgb(0)
         return;
     }
     mRtspStreamer = new RtspStreamer();
-    mRtspStreamer->startStreaming();
+    if (!mRtspStreamer) {
+        LOGGER_ERROR(sLogger, LOGPREFIX << "VideoDecoder: Failed to create RtspStreamer");
+        return;
+    }
+
+    if (!mRtspStreamer->startStreaming()) {
+        LOGGER_ERROR(sLogger, LOGPREFIX << "VideoDecoder: Failed to start streaming");
+        return;
+    }
     mIsValid = true;
 }
 
 VideoDecoder::~VideoDecoder()
 {
-    mRtspStreamer->stopStreaming();
+    if (mRtspStreamer) {
+        mRtspStreamer->stopStreaming();
+        delete mRtspStreamer;  // Add this line to properly delete the object
+        mRtspStreamer = nullptr;
+    }
     avcodec_free_context(&mCodecCtx);
     if (mParser != 0)
         av_parser_close(mParser);
