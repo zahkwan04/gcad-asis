@@ -11,6 +11,7 @@
 #define VIDEODECODER_H
 
 #include "Logger.h"
+#include "RtspStreamer.h"
 
 extern "C"
 {
@@ -99,5 +100,14 @@ private:
      * Gets a decoded frame and calls callback function if frame is available.
      */
     void getDecodedFrame();
+
+    /**
+     * @brief Creates a QByteArray containing YUV data from an AVFrame
+     * @param[in] frame  The source AVFrame containing YUV data.
+     * @param[in] width  The width of the frame in pixels.
+     * @param[in] height The height of the frame in pixels.
+     * @return QByteArray containing packed YUV data with planes arranged consecutively.
+     */
+    QByteArray createYuvQByteArray(const AVFrame* frame, int width, int height);
 };
 #endif //VIDEODECODER_H
