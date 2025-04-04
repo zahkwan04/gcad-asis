@@ -8,7 +8,6 @@
  * @author Zulzaidi Atan
  */
 #include <assert.h>
-#include <QApplication>
 
 #include "VideoDecoder.h"
 
@@ -39,7 +38,7 @@ Logger *VideoDecoder::sLogger(0);
 
 VideoDecoder::VideoDecoder(void *cbObj, CallbackFn cbFn) :
 mIsValid(false), mCbFn(cbFn), mCbObj(cbObj), mCodecCtx(0), mPacket(0),
-mParser(0), mFrameYuv(0), mFrameRgb(0), streamer(nullptr)
+mParser(0), mFrameYuv(0), mFrameRgb(0)
 {
     if (sLogger == 0 || cbObj == 0)
     {
@@ -97,19 +96,14 @@ mParser(0), mFrameYuv(0), mFrameRgb(0), streamer(nullptr)
                      << "VideoDecoder: av_frame_alloc failure.");
         return;
     }
+    mRtspStreamer = new RtspStreamer();
+    mRtspStreamer->startStreaming();
     mIsValid = true;
-    // Start RTSP streaming when VideoDecoder is initialized
-    streamer.startStreaming();
-
-    qDebug() << "Current Thread Videodecoder: " << QThread::currentThread();
-    qDebug() << "Main Thread Videodecoder: " << QApplication::instance()->thread();
 }
 
 VideoDecoder::~VideoDecoder()
 {
-    // Stop the RTSP stream
-    streamer.stopStreaming();
-
+    mRtspStreamer->stopStreaming();
     avcodec_free_context(&mCodecCtx);
     if (mParser != 0)
         av_parser_close(mParser);
@@ -268,8 +262,9 @@ void VideoDecoder::getDecodedFrame()
             // Extract YUV data and create QByteArray
             QByteArray yuvData = createYuvQByteArray(mFrameYuv, w, h);
 
-            // Send YUV data to RTSP streamer
-            streamer.sendFrameData(yuvData);
+            // You can now use yuvData for streaming or other purposes
+            // For example: streamer.sendFrameData(yuvData);
+            mRtspStreamer->sendFrameData(yuvData);
 
             // Continue with RGB conversion if needed
             imgCtx = sws_getContext(w, h, mCodecCtx->pix_fmt, w, h, OUTPUT_FORMAT,
