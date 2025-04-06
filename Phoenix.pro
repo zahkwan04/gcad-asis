@@ -73,6 +73,7 @@ SOURCES += \
     MsgSp.cpp \
     Props.cpp \
     ResourceData.cpp \
+    RtspStreamer.cpp \
     ServerSession.cpp \
     Socket.cpp \
     StatusCodes.cpp \
@@ -162,6 +163,7 @@ HEADERS += \
     Props.h \
     ResourceData.h \
     RtpSession.h \
+    RtspStreamer.h \
     ServerSession.h \
     Socket.h \
     StatusCodes.h \

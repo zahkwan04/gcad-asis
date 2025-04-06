@@ -96,11 +96,14 @@ mParser(0), mFrameYuv(0), mFrameRgb(0)
                      << "VideoDecoder: av_frame_alloc failure.");
         return;
     }
+    mRtspStreamer = new RtspStreamer();
+    mRtspStreamer->startStreaming();
     mIsValid = true;
 }
 
 VideoDecoder::~VideoDecoder()
 {
+    mRtspStreamer->stopStreaming();
     avcodec_free_context(&mCodecCtx);
     if (mParser != 0)
         av_parser_close(mParser);
@@ -241,40 +244,119 @@ void VideoDecoder::getDecodedFrame()
     int ret = avcodec_send_packet(mCodecCtx, mPacket);
     while (ret >= 0)
     {
-        ret = avcodec_receive_frame(mCodecCtx, mFrameYuv);
-        if (ret == AVERROR(EAGAIN) || ret == AVERROR_EOF)
-            break;
-        if (ret < 0)
-        {
-            LOGGER_ERROR(sLogger, LOGPREFIX
-                         << "getDecodedFrame: avcodec_receive_frame failure "
-                         << ret);
-            break;
-        }
-        //frame available - convert YUV to output format
-        w = mCodecCtx->width;
-        h = mCodecCtx->height;
-        imgCtx = sws_getContext(w, h, mCodecCtx->pix_fmt, w, h, OUTPUT_FORMAT,
-                                SWS_BICUBIC, NULL, NULL, NULL);
-        if (imgCtx == 0)
-        {
-            av_frame_unref(mFrameYuv);
-            LOGGER_ERROR(sLogger, LOGPREFIX
-                         << "getDecodedFrame: sws_getContext failure.");
-            return;
-        }
-        av_image_alloc(mFrameRgb->data, mFrameRgb->linesize, w, h,
-                       OUTPUT_FORMAT, 32);
-        sws_scale(imgCtx, mFrameYuv->data, mFrameYuv->linesize, 0, h,
-                  mFrameRgb->data, mFrameRgb->linesize);
+            ret = avcodec_receive_frame(mCodecCtx, mFrameYuv);
+            if (ret == AVERROR(EAGAIN) || ret == AVERROR_EOF)
+                break;
+            if (ret < 0)
+            {
+                LOGGER_ERROR(sLogger, LOGPREFIX
+                                          << "getDecodedFrame: avcodec_receive_frame failure "
+                                          << ret);
+                break;
+            }
+
+            // Frame available - get dimensions
+            w = mCodecCtx->width;
+            h = mCodecCtx->height;
+
+            // Extract YUV data and create QByteArray
+            QByteArray yuvData = createYuvQByteArray(mFrameYuv, w, h);
+
+            // You can now use yuvData for streaming or other purposes
+            // For example: streamer.sendFrameData(yuvData);
+            mRtspStreamer->sendFrameData(yuvData);
+
+            // Continue with RGB conversion if needed
+            imgCtx = sws_getContext(w, h, mCodecCtx->pix_fmt, w, h, OUTPUT_FORMAT,
+                                    SWS_BICUBIC, NULL, NULL, NULL);
+            if (imgCtx == 0)
+            {
+                av_frame_unref(mFrameYuv);
+                LOGGER_ERROR(sLogger, LOGPREFIX
+                                          << "getDecodedFrame: sws_getContext failure.");
+                return;
+            }
+            av_image_alloc(mFrameRgb->data, mFrameRgb->linesize, w, h,
+                           OUTPUT_FORMAT, 32);
+            sws_scale(imgCtx, mFrameYuv->data, mFrameYuv->linesize, 0, h,
+                      mFrameRgb->data, mFrameRgb->linesize);
 #ifdef MOBILE
-        mCbFn(mFrameRgb->data[0], w, h, mFrameRgb->linesize[0]);
+            mCbFn(mFrameRgb->data[0], w, h, mFrameRgb->linesize[0]);
 #else
-        mCbFn(mCbObj, mFrameRgb->data[0], w, h, mFrameRgb->linesize[0]);
+            mCbFn(mCbObj, mFrameRgb->data[0], w, h, mFrameRgb->linesize[0]);
 #endif
-        av_freep(mFrameRgb->data);
-        av_frame_unref(mFrameRgb);
-        av_frame_unref(mFrameYuv);
-        sws_freeContext(imgCtx);
+            av_freep(mFrameRgb->data);
+            av_frame_unref(mFrameRgb);
+            av_frame_unref(mFrameYuv);
+            sws_freeContext(imgCtx);
     }
+}
+
+// Helper function to create QByteArray from YUV frame
+QByteArray VideoDecoder::createYuvQByteArray(const AVFrame* frame, int width, int height)
+{
+    // Calculate the size of each plane based on the pixel format
+    AVPixelFormat format = static_cast<AVPixelFormat>(frame->format);
+    int yStride = frame->linesize[0];
+    int uStride = frame->linesize[1];
+    int vStride = frame->linesize[2];
+
+    int ySize = 0;
+    int uSize = 0;
+    int vSize = 0;
+
+    // Handle different YUV formats
+    if (format == AV_PIX_FMT_YUV420P || format == AV_PIX_FMT_YUVJ420P) {
+            // For 4:2:0 formats
+            ySize = yStride * height;
+            uSize = uStride * (height / 2);
+            vSize = vStride * (height / 2);
+    } else if (format == AV_PIX_FMT_YUV422P) {
+            // For 4:2:2 formats
+            ySize = yStride * height;
+            uSize = uStride * height;
+            vSize = vStride * height;
+    } else if (format == AV_PIX_FMT_YUV444P) {
+            // For 4:4:4 formats
+            ySize = yStride * height;
+            uSize = uStride * height;
+            vSize = vStride * height;
+    } else {
+            // For other formats, you might need different calculations
+            // This is a fallback that might not be correct for all formats
+            ySize = yStride * height;
+            uSize = uStride * height / 2;
+            vSize = vStride * height / 2;
+    }
+
+    // Total size of the YUV data
+    int totalSize = ySize + uSize + vSize;
+
+    // Create QByteArray and resize it to fit all data
+    QByteArray yuvData;
+    yuvData.resize(totalSize);
+    char* buffer = yuvData.data();
+
+    // Copy Y plane data (considering stride/padding)
+    for (int i = 0; i < height; i++) {
+            memcpy(buffer + i * width, frame->data[0] + i * yStride, width);
+    }
+
+    // Copy U plane data
+    int uHeight = (format == AV_PIX_FMT_YUV420P || format == AV_PIX_FMT_YUVJ420P) ? height / 2 : height;
+    int uWidth = (format == AV_PIX_FMT_YUV420P || format == AV_PIX_FMT_YUVJ420P || format == AV_PIX_FMT_YUV422P) ? width / 2 : width;
+
+    for (int i = 0; i < uHeight; i++) {
+            memcpy(buffer + ySize + i * uWidth, frame->data[1] + i * uStride, uWidth);
+    }
+
+    // Copy V plane data
+    int vHeight = uHeight;  // Usually the same as U
+    int vWidth = uWidth;    // Usually the same as U
+
+    for (int i = 0; i < vHeight; i++) {
+            memcpy(buffer + ySize + uSize + i * vWidth, frame->data[2] + i * vStride, vWidth);
+    }
+
+    return yuvData;
 }

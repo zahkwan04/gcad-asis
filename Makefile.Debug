@@ -13,7 +13,7 @@ EQ            = =
 
 CC            = cl
 CXX           = cl
-DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DWIN32_LEAN_AND_MEAN -DNOMINMAX -DSETTINGS_INIFILE -DSIPTCP -DGIS_ROUTING -DDGNA_OF_GRPS -DINCIDENT -DMSG_AES -DDEBUG -DFFMPEG -DQT_QML_DEBUG -DQT_MULTIMEDIAWIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_QUICKWIDGETS_LIB -DQT_WIDGETS_LIB -DQT_MULTIMEDIA_LIB -DQT_LOCATION_LIB -DQT_POSITIONINGQUICK_LIB -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_POSITIONING_LIB -DQT_XML_LIB -DQT_CORE_LIB
+DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DWIN32_LEAN_AND_MEAN -DNOMINMAX -DSETTINGS_INIFILE -DSIPTCP -DINCIDENT -DMSG_AES -DDEBUG -DFFMPEG -DQT_QML_DEBUG -DQT_MULTIMEDIAWIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_QUICKWIDGETS_LIB -DQT_WIDGETS_LIB -DQT_MULTIMEDIA_LIB -DQT_LOCATION_LIB -DQT_POSITIONINGQUICK_LIB -DQT_QUICK_LIB -DQT_GUI_LIB -DQT_QMLMODELS_LIB -DQT_QML_LIB -DQT_NETWORK_LIB -DQT_POSITIONING_LIB -DQT_XML_LIB -DQT_CORE_LIB
 CFLAGS        = -nologo -Zc:wchar_t -FS -Zc:strictStrings -Zi -MDd -W3 -w44456 -w44457 -w44458 /Fddebug\scad.vc.pdb $(DEFINES)
 CXXFLAGS      = -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -EHsc /Fddebug\scad.vc.pdb $(DEFINES)
 INCPATH       = -I. -I"..\..\..\..\Program Files\PostgreSQL\9.6\include" -Iffmpeg -I..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include -I..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimediaWidgets -I..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtPrintSupport -I..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuickWidgets -I..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets -I..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia -I..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtLocation -I..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtPositioningQuick -I..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuick -I..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui -I..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtANGLE -I..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQmlModels -I..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQml -I..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork -I..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtPositioning -I..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtXml -I..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore -Idebug -I. -I/include -I..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\win32-msvc 
@@ -60,6 +60,7 @@ SOURCES       = CmnTypes.cpp \
 		MsgSp.cpp \
 		Props.cpp \
 		ResourceData.cpp \
+		RtspStreamer.cpp \
 		ServerSession.cpp \
 		Socket.cpp \
 		StatusCodes.cpp \
@@ -132,6 +133,7 @@ SOURCES       = CmnTypes.cpp \
 		IncidentData.cpp \
 		VideoDecoder.cpp \
 		VideoEncoder.cpp debug\qrc_Resources.cpp \
+		debug\moc_RtspStreamer.cpp \
 		debug\moc_AudioDevice.cpp \
 		debug\moc_AudioManager.cpp \
 		debug\moc_AudioPlayer.cpp \
@@ -190,6 +192,7 @@ OBJECTS       = debug\CmnTypes.obj \
 		debug\MsgSp.obj \
 		debug\Props.obj \
 		debug\ResourceData.obj \
+		debug\RtspStreamer.obj \
 		debug\ServerSession.obj \
 		debug\Socket.obj \
 		debug\StatusCodes.obj \
@@ -263,6 +266,7 @@ OBJECTS       = debug\CmnTypes.obj \
 		debug\VideoDecoder.obj \
 		debug\VideoEncoder.obj \
 		debug\qrc_Resources.obj \
+		debug\moc_RtspStreamer.obj \
 		debug\moc_AudioDevice.obj \
 		debug\moc_AudioManager.obj \
 		debug\moc_AudioPlayer.obj \
@@ -331,6 +335,7 @@ DIST          =  CmnTypes.h \
 		Props.h \
 		ResourceData.h \
 		RtpSession.h \
+		RtspStreamer.h \
 		ServerSession.h \
 		Socket.h \
 		StatusCodes.h \
@@ -415,6 +420,7 @@ DIST          =  CmnTypes.h \
 		MsgSp.cpp \
 		Props.cpp \
 		ResourceData.cpp \
+		RtspStreamer.cpp \
 		ServerSession.cpp \
 		Socket.cpp \
 		StatusCodes.cpp \
@@ -543,9 +549,10 @@ all: Makefile.Debug  debug\scad.exe
 
 debug\scad.exe: C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5MultimediaWidgetsd.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5PrintSupportd.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5QuickWidgetsd.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Widgetsd.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Multimediad.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Locationd.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5PositioningQuickd.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Quickd.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Guid.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5QmlModelsd.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Qmld.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Networkd.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Positioningd.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Xmld.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Cored.lib C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\qtmaind.lib ui_AudioPlayer.h ui_Call.h ui_CallButton.h ui_CallWindow.h ui_CommsRegister.h ui_Contact.h ui_Dgna.h ui_GpsMonitor.h ui_Login.h ui_MainWindow.h ui_MessageDialog.h ui_Report.h ui_Resources.h ui_ResourceSelector.h ui_RscCollector.h ui_Sds.h ui_SettingsUi.h ui_Updater.h ui_GisBookmarks.h ui_GisDgnaList.h ui_GisLayerList.h ui_GisLegend.h ui_GisMapOverview.h ui_GisMenuTerminal.h ui_GisMenuUserPoi.h ui_GisRouting.h ui_GisTracking.h ui_GisTrackingReplay.h ui_GisTrailingSelector.h ui_GisWindow.h ui_ActiveIncidents.h ui_Incident.h ui_IncidentButton.h $(OBJECTS) 
 	$(LINKER) $(LFLAGS) /MANIFEST:embed /OUT:$(DESTDIR_TARGET) @<<
-debug\CmnTypes.obj debug\DbInt.obj debug\Logger.obj debug\MD5.obj debug\Md5Digest.obj debug\MmsClient.obj debug\MsgSip.obj debug\MsgSp.obj debug\Props.obj debug\ResourceData.obj debug\ServerSession.obj debug\Socket.obj debug\StatusCodes.obj debug\SubsData.obj debug\TcpSocket.obj debug\UdpSocket.obj debug\Utils.obj debug\VideoStream.obj debug\VoipSessionClient.obj debug\VoipSessionBase.obj debug\AudioDevice.obj debug\AudioManager.obj debug\AudioPlayer.obj debug\Call.obj debug\CallButton.obj debug\CallWindow.obj debug\CommsRegister.obj debug\Contact.obj debug\DateTimeDelegate.obj debug\Dgna.obj debug\Document.obj debug\Draggable.obj debug\DraggableListView.obj debug\DraggableListWidget.obj debug\FlowLayout.obj debug\GpsMonitor.obj debug\InputDialog.obj debug\Login.obj debug\Main.obj debug\MainWindow.obj debug\MessageDialog.obj debug\Mms.obj debug\Poi.obj debug\QtTableUtils.obj debug\QtUtils.obj debug\Report.obj debug\ResourceButton.obj debug\Resources.obj debug\ResourceSelector.obj
-debug\RscCollector.obj debug\Sds.obj debug\Settings.obj debug\SettingsUi.obj debug\Style.obj debug\Updater.obj debug\Version.obj debug\VideoDevice.obj debug\GisLocation.obj debug\GisBookmarks.obj debug\GisCanvas.obj debug\GisDgnaList.obj debug\GisHistory.obj debug\GisLayerList.obj debug\GisLegend.obj debug\GisMapOverview.obj debug\GisMenuTerminal.obj debug\GisMenuUserPoi.obj debug\GisPoint.obj debug\GisQmlInt.obj debug\GisRouting.obj debug\GisTracking.obj debug\GisTrackingReplay.obj debug\GisTrailingSelector.obj debug\GisWindow.obj debug\RtpSession.obj debug\Aes.obj debug\ActiveIncidents.obj debug\Incident.obj debug\IncidentButton.obj debug\IncidentData.obj debug\VideoDecoder.obj debug\VideoEncoder.obj debug\qrc_Resources.obj debug\moc_AudioDevice.obj debug\moc_AudioManager.obj debug\moc_AudioPlayer.obj debug\moc_Call.obj debug\moc_CallButton.obj debug\moc_CallWindow.obj debug\moc_CommsRegister.obj debug\moc_Contact.obj debug\moc_DateTimeDelegate.obj debug\moc_Dgna.obj
-debug\moc_Document.obj debug\moc_DraggableListView.obj debug\moc_DraggableListWidget.obj debug\moc_FlowLayout.obj debug\moc_GpsMonitor.obj debug\moc_InputDialog.obj debug\moc_Login.obj debug\moc_MainWindow.obj debug\moc_MessageDialog.obj debug\moc_Mms.obj debug\moc_QThreadWorker.obj debug\moc_Report.obj debug\moc_ResourceButton.obj debug\moc_Resources.obj debug\moc_ResourceSelector.obj debug\moc_RscCollector.obj debug\moc_Sds.obj debug\moc_SettingsUi.obj debug\moc_Updater.obj debug\moc_VideoDevice.obj debug\moc_GisBookmarks.obj debug\moc_GisCanvas.obj debug\moc_GisDgnaList.obj debug\moc_GisHistory.obj debug\moc_GisLayerList.obj debug\moc_GisLegend.obj debug\moc_GisMapOverview.obj debug\moc_GisMenuTerminal.obj debug\moc_GisMenuUserPoi.obj debug\moc_GisQmlInt.obj debug\moc_GisRouting.obj debug\moc_GisTracking.obj debug\moc_GisTrackingReplay.obj debug\moc_GisTrailingSelector.obj debug\moc_GisWindow.obj debug\moc_ActiveIncidents.obj debug\moc_Incident.obj debug\moc_IncidentButton.obj
+debug\CmnTypes.obj debug\DbInt.obj debug\Logger.obj debug\MD5.obj debug\Md5Digest.obj debug\MmsClient.obj debug\MsgSip.obj debug\MsgSp.obj debug\Props.obj debug\ResourceData.obj debug\RtspStreamer.obj debug\ServerSession.obj debug\Socket.obj debug\StatusCodes.obj debug\SubsData.obj debug\TcpSocket.obj debug\UdpSocket.obj debug\Utils.obj debug\VideoStream.obj debug\VoipSessionClient.obj debug\VoipSessionBase.obj debug\AudioDevice.obj debug\AudioManager.obj debug\AudioPlayer.obj debug\Call.obj debug\CallButton.obj debug\CallWindow.obj debug\CommsRegister.obj debug\Contact.obj debug\DateTimeDelegate.obj debug\Dgna.obj debug\Document.obj debug\Draggable.obj debug\DraggableListView.obj debug\DraggableListWidget.obj debug\FlowLayout.obj debug\GpsMonitor.obj debug\InputDialog.obj debug\Login.obj debug\Main.obj debug\MainWindow.obj debug\MessageDialog.obj debug\Mms.obj debug\Poi.obj debug\QtTableUtils.obj debug\QtUtils.obj debug\Report.obj debug\ResourceButton.obj debug\Resources.obj
+debug\ResourceSelector.obj debug\RscCollector.obj debug\Sds.obj debug\Settings.obj debug\SettingsUi.obj debug\Style.obj debug\Updater.obj debug\Version.obj debug\VideoDevice.obj debug\GisLocation.obj debug\GisBookmarks.obj debug\GisCanvas.obj debug\GisDgnaList.obj debug\GisHistory.obj debug\GisLayerList.obj debug\GisLegend.obj debug\GisMapOverview.obj debug\GisMenuTerminal.obj debug\GisMenuUserPoi.obj debug\GisPoint.obj debug\GisQmlInt.obj debug\GisRouting.obj debug\GisTracking.obj debug\GisTrackingReplay.obj debug\GisTrailingSelector.obj debug\GisWindow.obj debug\RtpSession.obj debug\Aes.obj debug\ActiveIncidents.obj debug\Incident.obj debug\IncidentButton.obj debug\IncidentData.obj debug\VideoDecoder.obj debug\VideoEncoder.obj debug\qrc_Resources.obj debug\moc_RtspStreamer.obj debug\moc_AudioDevice.obj debug\moc_AudioManager.obj debug\moc_AudioPlayer.obj debug\moc_Call.obj debug\moc_CallButton.obj debug\moc_CallWindow.obj debug\moc_CommsRegister.obj debug\moc_Contact.obj
+debug\moc_DateTimeDelegate.obj debug\moc_Dgna.obj debug\moc_Document.obj debug\moc_DraggableListView.obj debug\moc_DraggableListWidget.obj debug\moc_FlowLayout.obj debug\moc_GpsMonitor.obj debug\moc_InputDialog.obj debug\moc_Login.obj debug\moc_MainWindow.obj debug\moc_MessageDialog.obj debug\moc_Mms.obj debug\moc_QThreadWorker.obj debug\moc_Report.obj debug\moc_ResourceButton.obj debug\moc_Resources.obj debug\moc_ResourceSelector.obj debug\moc_RscCollector.obj debug\moc_Sds.obj debug\moc_SettingsUi.obj debug\moc_Updater.obj debug\moc_VideoDevice.obj debug\moc_GisBookmarks.obj debug\moc_GisCanvas.obj debug\moc_GisDgnaList.obj debug\moc_GisHistory.obj debug\moc_GisLayerList.obj debug\moc_GisLegend.obj debug\moc_GisMapOverview.obj debug\moc_GisMenuTerminal.obj debug\moc_GisMenuUserPoi.obj debug\moc_GisQmlInt.obj debug\moc_GisRouting.obj debug\moc_GisTracking.obj debug\moc_GisTrackingReplay.obj debug\moc_GisTrailingSelector.obj debug\moc_GisWindow.obj debug\moc_ActiveIncidents.obj
+debug\moc_Incident.obj debug\moc_IncidentButton.obj
 $(LIBS)
 <<
 
@@ -555,11 +562,11 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) scad.zip $(SOURCES) $(DIST) Phoenix.pro ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\spec_pre.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\common\angle.conf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\common\windows-desktop.conf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\win32\windows_vulkan_sdk.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\common\windows-vulkan.conf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\common\msvc-desktop.conf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\qconfig.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3danimation.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3danimation_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dcore.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dcore_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dextras.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dextras_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dinput.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dinput_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dlogic.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dlogic_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquick.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquick_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickanimation.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickextras.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickextras_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickinput.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickinput_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickrender.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickrender_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickscene2d.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3drender.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3drender_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_accessibility_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_axbase.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_axbase_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_axcontainer.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_axcontainer_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_axserver.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_axserver_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_bluetooth.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_bluetooth_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_bodymovin_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_bootstrap_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_charts.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_charts_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_concurrent.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_concurrent_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_core.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_core_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_datavisualization.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_datavisualization_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_dbus.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_dbus_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_designer.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_designer_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_designercomponents_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_edid_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_egl_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_fb_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_gamepad.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_gamepad_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_gui.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_gui_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_help.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_help_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_location.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_location_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_multimedia.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_multimedia_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_multimediawidgets.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_network.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_network_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_networkauth.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_networkauth_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_nfc.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_nfc_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_opengl.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_opengl_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_openglextensions.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_openglextensions_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_packetprotocol_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_positioning.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_positioning_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_positioningquick.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_positioningquick_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_printsupport.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_printsupport_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_purchasing.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_purchasing_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qml.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qml_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmldebug_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmldevtools_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmlmodels.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmlmodels_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmltest.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmltest_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmlworkerscript.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3d.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3d_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3dassetimport.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3dassetimport_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3drender.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3drender_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3druntimerender.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3druntimerender_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3dutils.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3dutils_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickcontrols2.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickparticles_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickshapes_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quicktemplates2.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickwidgets.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickwidgets_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_remoteobjects.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_remoteobjects_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_repparser.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_repparser_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_script.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_script_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_scripttools.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_scripttools_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_scxml.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_scxml_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_sensors.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_sensors_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_serialbus.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_serialbus_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_serialport.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_serialport_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_sql.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_sql_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_svg.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_svg_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_testlib.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_testlib_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_texttospeech.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_texttospeech_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_theme_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_uiplugin.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_uitools.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_uitools_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_virtualkeyboard.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_virtualkeyboard_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_vulkan_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webchannel.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webchannel_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webengine.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webengine_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webenginecore.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webenginecore_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webenginecoreheaders_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webenginewidgets.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webenginewidgets_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_websockets.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_websockets_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webview.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webview_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_widgets.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_widgets_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_windowsuiautomation_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_winextras.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_winextras_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_xml.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_xml_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_xmlpatterns.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_zlib_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\qt_functions.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\qt_config.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\win32-msvc\qmake.conf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\spec_post.prf .qmake.stash ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\exclusive_builds.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\common\msvc-version.conf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\toolchain.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\default_pre.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\win32\default_pre.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\resolve_config.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\exclusive_builds_post.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\default_post.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\build_pass.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\qml_debug.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\precompile_header.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\warn_on.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\qt.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\resources_functions.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\resources.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\moc.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\win32\opengl.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\uic.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\qmake_use.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\file_copies.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\win32\windows.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\testcase_targets.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\exceptions.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\yacc.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\lex.prf Phoenix.pro Resources.qrc ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5MultimediaWidgetsd.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5PrintSupportd.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5QuickWidgetsd.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Widgetsd.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Multimediad.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Locationd.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5PositioningQuickd.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Quickd.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Guid.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5QmlModelsd.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Qmld.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Networkd.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Positioningd.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Xmld.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Cored.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\qtmaind.prl translations\Scad_ms.ts translations\Scad_ms.ts  Resources.qrc ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\data\dummy.cpp CmnTypes.h DbInt.h Locker.h Logger.h MD5.h Md5Digest.h MmsClient.h MsgSip.h MsgSp.h MsgValueBase.h PalFiles.h PalLock.h PalSem.h PalSocket.h PalThread.h PalTime.h Props.h ResourceData.h RtpSession.h ServerSession.h Socket.h StatusCodes.h SubsData.h TcpSocket.h UdpSocket.h Utils.h VideoStream.h VoipSessionClient.h VoipSessionBase.h AudioDevice.h AudioManager.h AudioPlayer.h Call.h CallButton.h CallWindow.h CommsRegister.h Contact.h DateTimeDelegate.h Dgna.h Document.h Draggable.h DraggableListView.h DraggableListWidget.h FlowLayout.h GpsMonitor.h InputDialog.h Login.h MainWindow.h MessageDialog.h Mms.h Poi.h QThreadWorker.h QtTableUtils.h QtUtils.h Report.h ResourceButton.h Resources.h ResourceSelector.h RscCollector.h Sds.h Settings.h SettingsUi.h Style.h Updater.h Version.h VideoDevice.h GisLocation.h GisBookmarks.h GisCanvas.h GisDgnaList.h GisHistory.h GisLayerList.h GisLegend.h GisMapOverview.h GisMenuTerminal.h GisMenuUserPoi.h GisPoint.h GisQmlInt.h GisRouting.h GisTracking.h GisTrackingReplay.h GisTrailingSelector.h GisWindow.h rapidxml.hpp rapidxml_utils.hpp config_win32.h rtp.h Aes.h ActiveIncidents.h Incident.h IncidentButton.h IncidentData.h VideoDecoder.h VideoEncoder.h  CmnTypes.cpp DbInt.cpp Logger.cpp MD5.c Md5Digest.cpp MmsClient.cpp MsgSip.cpp MsgSp.cpp Props.cpp ResourceData.cpp ServerSession.cpp Socket.cpp StatusCodes.cpp SubsData.cpp TcpSocket.cpp UdpSocket.cpp Utils.cpp VideoStream.cpp VoipSessionClient.cpp VoipSessionBase.cpp AudioDevice.cpp AudioManager.cpp AudioPlayer.cpp Call.cpp CallButton.cpp CallWindow.cpp CommsRegister.cpp Contact.cpp DateTimeDelegate.cpp Dgna.cpp Document.cpp Draggable.cpp DraggableListView.cpp DraggableListWidget.cpp FlowLayout.cpp GpsMonitor.cpp InputDialog.cpp Login.cpp Main.cpp MainWindow.cpp MessageDialog.cpp Mms.cpp Poi.cpp QtTableUtils.cpp QtUtils.cpp Report.cpp ResourceButton.cpp Resources.cpp ResourceSelector.cpp RscCollector.cpp Sds.cpp Settings.cpp SettingsUi.cpp Style.cpp Updater.cpp Version.cpp VideoDevice.cpp GisLocation.cpp GisBookmarks.cpp GisCanvas.cpp GisDgnaList.cpp GisHistory.cpp GisLayerList.cpp GisLegend.cpp GisMapOverview.cpp GisMenuTerminal.cpp GisMenuUserPoi.cpp GisPoint.cpp GisQmlInt.cpp GisRouting.cpp GisTracking.cpp GisTrackingReplay.cpp GisTrailingSelector.cpp GisWindow.cpp RtpSession.cpp Aes.cpp ActiveIncidents.cpp Incident.cpp IncidentButton.cpp IncidentData.cpp VideoDecoder.cpp VideoEncoder.cpp AudioPlayer.ui Call.ui CallButton.ui CallWindow.ui CommsRegister.ui Contact.ui Dgna.ui GpsMonitor.ui Login.ui MainWindow.ui MessageDialog.ui Report.ui Resources.ui ResourceSelector.ui RscCollector.ui Sds.ui SettingsUi.ui Updater.ui GisBookmarks.ui GisDgnaList.ui GisLayerList.ui GisLegend.ui GisMapOverview.ui GisMenuTerminal.ui GisMenuUserPoi.ui GisRouting.ui GisTracking.ui GisTrackingReplay.ui GisTrailingSelector.ui GisWindow.ui ActiveIncidents.ui Incident.ui IncidentButton.ui    
+	$(ZIP) scad.zip $(SOURCES) $(DIST) Phoenix.pro ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\spec_pre.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\common\angle.conf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\common\windows-desktop.conf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\win32\windows_vulkan_sdk.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\common\windows-vulkan.conf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\common\msvc-desktop.conf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\qconfig.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3danimation.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3danimation_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dcore.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dcore_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dextras.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dextras_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dinput.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dinput_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dlogic.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dlogic_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquick.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquick_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickanimation.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickextras.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickextras_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickinput.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickinput_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickrender.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickrender_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickscene2d.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3drender.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_3drender_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_accessibility_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_axbase.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_axbase_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_axcontainer.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_axcontainer_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_axserver.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_axserver_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_bluetooth.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_bluetooth_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_bodymovin_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_bootstrap_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_charts.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_charts_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_concurrent.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_concurrent_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_core.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_core_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_datavisualization.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_datavisualization_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_dbus.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_dbus_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_designer.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_designer_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_designercomponents_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_edid_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_egl_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_fb_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_gamepad.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_gamepad_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_gui.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_gui_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_help.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_help_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_location.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_location_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_multimedia.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_multimedia_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_multimediawidgets.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_network.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_network_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_networkauth.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_networkauth_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_nfc.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_nfc_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_opengl.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_opengl_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_openglextensions.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_openglextensions_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_packetprotocol_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_positioning.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_positioning_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_positioningquick.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_positioningquick_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_printsupport.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_printsupport_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_purchasing.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_purchasing_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qml.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qml_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmldebug_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmldevtools_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmlmodels.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmlmodels_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmltest.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmltest_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmlworkerscript.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3d.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3d_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3dassetimport.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3dassetimport_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3drender.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3drender_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3druntimerender.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3druntimerender_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3dutils.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3dutils_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickcontrols2.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickparticles_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickshapes_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quicktemplates2.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickwidgets.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickwidgets_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_remoteobjects.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_remoteobjects_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_repparser.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_repparser_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_script.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_script_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_scripttools.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_scripttools_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_scxml.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_scxml_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_sensors.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_sensors_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_serialbus.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_serialbus_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_serialport.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_serialport_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_sql.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_sql_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_svg.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_svg_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_testlib.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_testlib_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_texttospeech.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_texttospeech_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_theme_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_uiplugin.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_uitools.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_uitools_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_virtualkeyboard.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_virtualkeyboard_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_vulkan_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webchannel.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webchannel_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webengine.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webengine_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webenginecore.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webenginecore_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webenginecoreheaders_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webenginewidgets.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webenginewidgets_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_websockets.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_websockets_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webview.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_webview_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_widgets.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_widgets_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_windowsuiautomation_support_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_winextras.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_winextras_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_xml.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_xml_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_xmlpatterns.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_zlib_private.pri ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\qt_functions.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\qt_config.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\win32-msvc\qmake.conf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\spec_post.prf .qmake.stash ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\exclusive_builds.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\common\msvc-version.conf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\toolchain.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\default_pre.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\win32\default_pre.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\resolve_config.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\exclusive_builds_post.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\default_post.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\build_pass.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\qml_debug.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\precompile_header.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\warn_on.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\qt.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\resources_functions.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\resources.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\moc.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\win32\opengl.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\uic.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\qmake_use.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\file_copies.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\win32\windows.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\testcase_targets.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\exceptions.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\yacc.prf ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\lex.prf Phoenix.pro Resources.qrc ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5MultimediaWidgetsd.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5PrintSupportd.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5QuickWidgetsd.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Widgetsd.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Multimediad.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Locationd.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5PositioningQuickd.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Quickd.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Guid.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5QmlModelsd.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Qmld.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Networkd.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Positioningd.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Xmld.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\Qt5Cored.prl ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\lib\qtmaind.prl translations\Scad_ms.ts translations\Scad_ms.ts  Resources.qrc ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\data\dummy.cpp CmnTypes.h DbInt.h Locker.h Logger.h MD5.h Md5Digest.h MmsClient.h MsgSip.h MsgSp.h MsgValueBase.h PalFiles.h PalLock.h PalSem.h PalSocket.h PalThread.h PalTime.h Props.h ResourceData.h RtpSession.h RtspStreamer.h ServerSession.h Socket.h StatusCodes.h SubsData.h TcpSocket.h UdpSocket.h Utils.h VideoStream.h VoipSessionClient.h VoipSessionBase.h AudioDevice.h AudioManager.h AudioPlayer.h Call.h CallButton.h CallWindow.h CommsRegister.h Contact.h DateTimeDelegate.h Dgna.h Document.h Draggable.h DraggableListView.h DraggableListWidget.h FlowLayout.h GpsMonitor.h InputDialog.h Login.h MainWindow.h MessageDialog.h Mms.h Poi.h QThreadWorker.h QtTableUtils.h QtUtils.h Report.h ResourceButton.h Resources.h ResourceSelector.h RscCollector.h Sds.h Settings.h SettingsUi.h Style.h Updater.h Version.h VideoDevice.h GisLocation.h GisBookmarks.h GisCanvas.h GisDgnaList.h GisHistory.h GisLayerList.h GisLegend.h GisMapOverview.h GisMenuTerminal.h GisMenuUserPoi.h GisPoint.h GisQmlInt.h GisRouting.h GisTracking.h GisTrackingReplay.h GisTrailingSelector.h GisWindow.h rapidxml.hpp rapidxml_utils.hpp config_win32.h rtp.h Aes.h ActiveIncidents.h Incident.h IncidentButton.h IncidentData.h VideoDecoder.h VideoEncoder.h  CmnTypes.cpp DbInt.cpp Logger.cpp MD5.c Md5Digest.cpp MmsClient.cpp MsgSip.cpp MsgSp.cpp Props.cpp ResourceData.cpp RtspStreamer.cpp ServerSession.cpp Socket.cpp StatusCodes.cpp SubsData.cpp TcpSocket.cpp UdpSocket.cpp Utils.cpp VideoStream.cpp VoipSessionClient.cpp VoipSessionBase.cpp AudioDevice.cpp AudioManager.cpp AudioPlayer.cpp Call.cpp CallButton.cpp CallWindow.cpp CommsRegister.cpp Contact.cpp DateTimeDelegate.cpp Dgna.cpp Document.cpp Draggable.cpp DraggableListView.cpp DraggableListWidget.cpp FlowLayout.cpp GpsMonitor.cpp InputDialog.cpp Login.cpp Main.cpp MainWindow.cpp MessageDialog.cpp Mms.cpp Poi.cpp QtTableUtils.cpp QtUtils.cpp Report.cpp ResourceButton.cpp Resources.cpp ResourceSelector.cpp RscCollector.cpp Sds.cpp Settings.cpp SettingsUi.cpp Style.cpp Updater.cpp Version.cpp VideoDevice.cpp GisLocation.cpp GisBookmarks.cpp GisCanvas.cpp GisDgnaList.cpp GisHistory.cpp GisLayerList.cpp GisLegend.cpp GisMapOverview.cpp GisMenuTerminal.cpp GisMenuUserPoi.cpp GisPoint.cpp GisQmlInt.cpp GisRouting.cpp GisTracking.cpp GisTrackingReplay.cpp GisTrailingSelector.cpp GisWindow.cpp RtpSession.cpp Aes.cpp ActiveIncidents.cpp Incident.cpp IncidentButton.cpp IncidentData.cpp VideoDecoder.cpp VideoEncoder.cpp AudioPlayer.ui Call.ui CallButton.ui CallWindow.ui CommsRegister.ui Contact.ui Dgna.ui GpsMonitor.ui Login.ui MainWindow.ui MessageDialog.ui Report.ui Resources.ui ResourceSelector.ui RscCollector.ui Sds.ui SettingsUi.ui Updater.ui GisBookmarks.ui GisDgnaList.ui GisLayerList.ui GisLegend.ui GisMapOverview.ui GisMenuTerminal.ui GisMenuUserPoi.ui GisRouting.ui GisTracking.ui GisTrackingReplay.ui GisTrailingSelector.ui GisWindow.ui ActiveIncidents.ui Incident.ui IncidentButton.ui    
 
 clean: compiler_clean 
-	-$(DEL_FILE) debug\CmnTypes.obj debug\DbInt.obj debug\Logger.obj debug\MD5.obj debug\Md5Digest.obj debug\MmsClient.obj debug\MsgSip.obj debug\MsgSp.obj debug\Props.obj debug\ResourceData.obj debug\ServerSession.obj debug\Socket.obj debug\StatusCodes.obj debug\SubsData.obj debug\TcpSocket.obj debug\UdpSocket.obj debug\Utils.obj debug\VideoStream.obj debug\VoipSessionClient.obj debug\VoipSessionBase.obj debug\AudioDevice.obj debug\AudioManager.obj debug\AudioPlayer.obj debug\Call.obj debug\CallButton.obj debug\CallWindow.obj debug\CommsRegister.obj debug\Contact.obj debug\DateTimeDelegate.obj debug\Dgna.obj debug\Document.obj debug\Draggable.obj debug\DraggableListView.obj debug\DraggableListWidget.obj debug\FlowLayout.obj debug\GpsMonitor.obj debug\InputDialog.obj debug\Login.obj debug\Main.obj debug\MainWindow.obj debug\MessageDialog.obj debug\Mms.obj debug\Poi.obj debug\QtTableUtils.obj debug\QtUtils.obj debug\Report.obj debug\ResourceButton.obj debug\Resources.obj debug\ResourceSelector.obj debug\RscCollector.obj debug\Sds.obj debug\Settings.obj debug\SettingsUi.obj debug\Style.obj debug\Updater.obj debug\Version.obj debug\VideoDevice.obj debug\GisLocation.obj debug\GisBookmarks.obj debug\GisCanvas.obj debug\GisDgnaList.obj debug\GisHistory.obj debug\GisLayerList.obj debug\GisLegend.obj debug\GisMapOverview.obj debug\GisMenuTerminal.obj debug\GisMenuUserPoi.obj debug\GisPoint.obj debug\GisQmlInt.obj debug\GisRouting.obj debug\GisTracking.obj debug\GisTrackingReplay.obj debug\GisTrailingSelector.obj debug\GisWindow.obj debug\RtpSession.obj debug\Aes.obj debug\ActiveIncidents.obj debug\Incident.obj debug\IncidentButton.obj debug\IncidentData.obj debug\VideoDecoder.obj debug\VideoEncoder.obj debug\qrc_Resources.obj debug\moc_AudioDevice.obj debug\moc_AudioManager.obj debug\moc_AudioPlayer.obj debug\moc_Call.obj debug\moc_CallButton.obj debug\moc_CallWindow.obj debug\moc_CommsRegister.obj debug\moc_Contact.obj debug\moc_DateTimeDelegate.obj debug\moc_Dgna.obj debug\moc_Document.obj debug\moc_DraggableListView.obj
-	-$(DEL_FILE) debug\moc_DraggableListWidget.obj debug\moc_FlowLayout.obj debug\moc_GpsMonitor.obj debug\moc_InputDialog.obj debug\moc_Login.obj debug\moc_MainWindow.obj debug\moc_MessageDialog.obj debug\moc_Mms.obj debug\moc_QThreadWorker.obj debug\moc_Report.obj debug\moc_ResourceButton.obj debug\moc_Resources.obj debug\moc_ResourceSelector.obj debug\moc_RscCollector.obj debug\moc_Sds.obj debug\moc_SettingsUi.obj debug\moc_Updater.obj debug\moc_VideoDevice.obj debug\moc_GisBookmarks.obj debug\moc_GisCanvas.obj debug\moc_GisDgnaList.obj debug\moc_GisHistory.obj debug\moc_GisLayerList.obj debug\moc_GisLegend.obj debug\moc_GisMapOverview.obj debug\moc_GisMenuTerminal.obj debug\moc_GisMenuUserPoi.obj debug\moc_GisQmlInt.obj debug\moc_GisRouting.obj debug\moc_GisTracking.obj debug\moc_GisTrackingReplay.obj debug\moc_GisTrailingSelector.obj debug\moc_GisWindow.obj debug\moc_ActiveIncidents.obj debug\moc_Incident.obj debug\moc_IncidentButton.obj
+	-$(DEL_FILE) debug\CmnTypes.obj debug\DbInt.obj debug\Logger.obj debug\MD5.obj debug\Md5Digest.obj debug\MmsClient.obj debug\MsgSip.obj debug\MsgSp.obj debug\Props.obj debug\ResourceData.obj debug\RtspStreamer.obj debug\ServerSession.obj debug\Socket.obj debug\StatusCodes.obj debug\SubsData.obj debug\TcpSocket.obj debug\UdpSocket.obj debug\Utils.obj debug\VideoStream.obj debug\VoipSessionClient.obj debug\VoipSessionBase.obj debug\AudioDevice.obj debug\AudioManager.obj debug\AudioPlayer.obj debug\Call.obj debug\CallButton.obj debug\CallWindow.obj debug\CommsRegister.obj debug\Contact.obj debug\DateTimeDelegate.obj debug\Dgna.obj debug\Document.obj debug\Draggable.obj debug\DraggableListView.obj debug\DraggableListWidget.obj debug\FlowLayout.obj debug\GpsMonitor.obj debug\InputDialog.obj debug\Login.obj debug\Main.obj debug\MainWindow.obj debug\MessageDialog.obj debug\Mms.obj debug\Poi.obj debug\QtTableUtils.obj debug\QtUtils.obj debug\Report.obj debug\ResourceButton.obj debug\Resources.obj debug\ResourceSelector.obj debug\RscCollector.obj debug\Sds.obj debug\Settings.obj debug\SettingsUi.obj debug\Style.obj debug\Updater.obj debug\Version.obj debug\VideoDevice.obj debug\GisLocation.obj debug\GisBookmarks.obj debug\GisCanvas.obj debug\GisDgnaList.obj debug\GisHistory.obj debug\GisLayerList.obj debug\GisLegend.obj debug\GisMapOverview.obj debug\GisMenuTerminal.obj debug\GisMenuUserPoi.obj debug\GisPoint.obj debug\GisQmlInt.obj debug\GisRouting.obj debug\GisTracking.obj debug\GisTrackingReplay.obj debug\GisTrailingSelector.obj debug\GisWindow.obj debug\RtpSession.obj debug\Aes.obj debug\ActiveIncidents.obj debug\Incident.obj debug\IncidentButton.obj debug\IncidentData.obj debug\VideoDecoder.obj debug\VideoEncoder.obj debug\qrc_Resources.obj debug\moc_RtspStreamer.obj debug\moc_AudioDevice.obj debug\moc_AudioManager.obj debug\moc_AudioPlayer.obj debug\moc_Call.obj debug\moc_CallButton.obj debug\moc_CallWindow.obj debug\moc_CommsRegister.obj debug\moc_Contact.obj debug\moc_DateTimeDelegate.obj debug\moc_Dgna.obj
+	-$(DEL_FILE) debug\moc_Document.obj debug\moc_DraggableListView.obj debug\moc_DraggableListWidget.obj debug\moc_FlowLayout.obj debug\moc_GpsMonitor.obj debug\moc_InputDialog.obj debug\moc_Login.obj debug\moc_MainWindow.obj debug\moc_MessageDialog.obj debug\moc_Mms.obj debug\moc_QThreadWorker.obj debug\moc_Report.obj debug\moc_ResourceButton.obj debug\moc_Resources.obj debug\moc_ResourceSelector.obj debug\moc_RscCollector.obj debug\moc_Sds.obj debug\moc_SettingsUi.obj debug\moc_Updater.obj debug\moc_VideoDevice.obj debug\moc_GisBookmarks.obj debug\moc_GisCanvas.obj debug\moc_GisDgnaList.obj debug\moc_GisHistory.obj debug\moc_GisLayerList.obj debug\moc_GisLegend.obj debug\moc_GisMapOverview.obj debug\moc_GisMenuTerminal.obj debug\moc_GisMenuUserPoi.obj debug\moc_GisQmlInt.obj debug\moc_GisRouting.obj debug\moc_GisTracking.obj debug\moc_GisTrackingReplay.obj debug\moc_GisTrailingSelector.obj debug\moc_GisWindow.obj debug\moc_ActiveIncidents.obj debug\moc_Incident.obj debug\moc_IncidentButton.obj
 	-$(DEL_FILE) debug\scad.vc.pdb debug\scad.ilk debug\scad.idb
 
 distclean: clean 
@@ -1167,9 +1174,85 @@ compiler_moc_predefs_clean:
 debug\moc_predefs.h: ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\data\dummy.cpp
 	cl -BxC:\Qt\Qt5.14.2\5.14.2\msvc2017_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\data\dummy.cpp 2>NUL >debug\moc_predefs.h
 
-compiler_moc_header_make_all: debug\moc_AudioDevice.cpp debug\moc_AudioManager.cpp debug\moc_AudioPlayer.cpp debug\moc_Call.cpp debug\moc_CallButton.cpp debug\moc_CallWindow.cpp debug\moc_CommsRegister.cpp debug\moc_Contact.cpp debug\moc_DateTimeDelegate.cpp debug\moc_Dgna.cpp debug\moc_Document.cpp debug\moc_DraggableListView.cpp debug\moc_DraggableListWidget.cpp debug\moc_FlowLayout.cpp debug\moc_GpsMonitor.cpp debug\moc_InputDialog.cpp debug\moc_Login.cpp debug\moc_MainWindow.cpp debug\moc_MessageDialog.cpp debug\moc_Mms.cpp debug\moc_QThreadWorker.cpp debug\moc_Report.cpp debug\moc_ResourceButton.cpp debug\moc_Resources.cpp debug\moc_ResourceSelector.cpp debug\moc_RscCollector.cpp debug\moc_Sds.cpp debug\moc_SettingsUi.cpp debug\moc_Updater.cpp debug\moc_VideoDevice.cpp debug\moc_GisBookmarks.cpp debug\moc_GisCanvas.cpp debug\moc_GisDgnaList.cpp debug\moc_GisHistory.cpp debug\moc_GisLayerList.cpp debug\moc_GisLegend.cpp debug\moc_GisMapOverview.cpp debug\moc_GisMenuTerminal.cpp debug\moc_GisMenuUserPoi.cpp debug\moc_GisQmlInt.cpp debug\moc_GisRouting.cpp debug\moc_GisTracking.cpp debug\moc_GisTrackingReplay.cpp debug\moc_GisTrailingSelector.cpp debug\moc_GisWindow.cpp debug\moc_ActiveIncidents.cpp debug\moc_Incident.cpp debug\moc_IncidentButton.cpp
+compiler_moc_header_make_all: debug\moc_RtspStreamer.cpp debug\moc_AudioDevice.cpp debug\moc_AudioManager.cpp debug\moc_AudioPlayer.cpp debug\moc_Call.cpp debug\moc_CallButton.cpp debug\moc_CallWindow.cpp debug\moc_CommsRegister.cpp debug\moc_Contact.cpp debug\moc_DateTimeDelegate.cpp debug\moc_Dgna.cpp debug\moc_Document.cpp debug\moc_DraggableListView.cpp debug\moc_DraggableListWidget.cpp debug\moc_FlowLayout.cpp debug\moc_GpsMonitor.cpp debug\moc_InputDialog.cpp debug\moc_Login.cpp debug\moc_MainWindow.cpp debug\moc_MessageDialog.cpp debug\moc_Mms.cpp debug\moc_QThreadWorker.cpp debug\moc_Report.cpp debug\moc_ResourceButton.cpp debug\moc_Resources.cpp debug\moc_ResourceSelector.cpp debug\moc_RscCollector.cpp debug\moc_Sds.cpp debug\moc_SettingsUi.cpp debug\moc_Updater.cpp debug\moc_VideoDevice.cpp debug\moc_GisBookmarks.cpp debug\moc_GisCanvas.cpp debug\moc_GisDgnaList.cpp debug\moc_GisHistory.cpp debug\moc_GisLayerList.cpp debug\moc_GisLegend.cpp debug\moc_GisMapOverview.cpp debug\moc_GisMenuTerminal.cpp debug\moc_GisMenuUserPoi.cpp debug\moc_GisQmlInt.cpp debug\moc_GisRouting.cpp debug\moc_GisTracking.cpp debug\moc_GisTrackingReplay.cpp debug\moc_GisTrailingSelector.cpp debug\moc_GisWindow.cpp debug\moc_ActiveIncidents.cpp debug\moc_Incident.cpp debug\moc_IncidentButton.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) debug\moc_AudioDevice.cpp debug\moc_AudioManager.cpp debug\moc_AudioPlayer.cpp debug\moc_Call.cpp debug\moc_CallButton.cpp debug\moc_CallWindow.cpp debug\moc_CommsRegister.cpp debug\moc_Contact.cpp debug\moc_DateTimeDelegate.cpp debug\moc_Dgna.cpp debug\moc_Document.cpp debug\moc_DraggableListView.cpp debug\moc_DraggableListWidget.cpp debug\moc_FlowLayout.cpp debug\moc_GpsMonitor.cpp debug\moc_InputDialog.cpp debug\moc_Login.cpp debug\moc_MainWindow.cpp debug\moc_MessageDialog.cpp debug\moc_Mms.cpp debug\moc_QThreadWorker.cpp debug\moc_Report.cpp debug\moc_ResourceButton.cpp debug\moc_Resources.cpp debug\moc_ResourceSelector.cpp debug\moc_RscCollector.cpp debug\moc_Sds.cpp debug\moc_SettingsUi.cpp debug\moc_Updater.cpp debug\moc_VideoDevice.cpp debug\moc_GisBookmarks.cpp debug\moc_GisCanvas.cpp debug\moc_GisDgnaList.cpp debug\moc_GisHistory.cpp debug\moc_GisLayerList.cpp debug\moc_GisLegend.cpp debug\moc_GisMapOverview.cpp debug\moc_GisMenuTerminal.cpp debug\moc_GisMenuUserPoi.cpp debug\moc_GisQmlInt.cpp debug\moc_GisRouting.cpp debug\moc_GisTracking.cpp debug\moc_GisTrackingReplay.cpp debug\moc_GisTrailingSelector.cpp debug\moc_GisWindow.cpp debug\moc_ActiveIncidents.cpp debug\moc_Incident.cpp debug\moc_IncidentButton.cpp
+	-$(DEL_FILE) debug\moc_RtspStreamer.cpp debug\moc_AudioDevice.cpp debug\moc_AudioManager.cpp debug\moc_AudioPlayer.cpp debug\moc_Call.cpp debug\moc_CallButton.cpp debug\moc_CallWindow.cpp debug\moc_CommsRegister.cpp debug\moc_Contact.cpp debug\moc_DateTimeDelegate.cpp debug\moc_Dgna.cpp debug\moc_Document.cpp debug\moc_DraggableListView.cpp debug\moc_DraggableListWidget.cpp debug\moc_FlowLayout.cpp debug\moc_GpsMonitor.cpp debug\moc_InputDialog.cpp debug\moc_Login.cpp debug\moc_MainWindow.cpp debug\moc_MessageDialog.cpp debug\moc_Mms.cpp debug\moc_QThreadWorker.cpp debug\moc_Report.cpp debug\moc_ResourceButton.cpp debug\moc_Resources.cpp debug\moc_ResourceSelector.cpp debug\moc_RscCollector.cpp debug\moc_Sds.cpp debug\moc_SettingsUi.cpp debug\moc_Updater.cpp debug\moc_VideoDevice.cpp debug\moc_GisBookmarks.cpp debug\moc_GisCanvas.cpp debug\moc_GisDgnaList.cpp debug\moc_GisHistory.cpp debug\moc_GisLayerList.cpp debug\moc_GisLegend.cpp debug\moc_GisMapOverview.cpp debug\moc_GisMenuTerminal.cpp debug\moc_GisMenuUserPoi.cpp debug\moc_GisQmlInt.cpp debug\moc_GisRouting.cpp debug\moc_GisTracking.cpp debug\moc_GisTrackingReplay.cpp debug\moc_GisTrailingSelector.cpp debug\moc_GisWindow.cpp debug\moc_ActiveIncidents.cpp debug\moc_Incident.cpp debug\moc_IncidentButton.cpp
+debug\moc_RtspStreamer.cpp: RtspStreamer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobject.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobjectdefs.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qnamespace.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qconfig.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qtcore-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsystemdetection.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qprocessordetection.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcompilerdetection.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qtypeinfo.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsysinfo.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qlogging.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qflags.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qatomic.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qbasicatomic.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qgenericatomic.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qatomic_cxx11.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qatomic_msvc.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qglobalstatic.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmutex.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qnumeric.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qversiontagging.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstring.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qchar.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qbytearray.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qrefcount.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qarraydata.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringliteral.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringalgorithms.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringview.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringbuilder.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qlist.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qalgorithms.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qiterator.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qhashfunctions.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qpair.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qvector.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcontainertools_impl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qpoint.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qbytearraylist.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringlist.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qregexp.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringmatcher.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreevent.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qscopedpointer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmetatype.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qvarlengtharray.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcontainerfwd.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobject_impl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QProcess \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qprocess.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qiodevice.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qshareddata.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qhash.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFile \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfile.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfiledevice.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDebug \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdebug.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmap.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qtextstream.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qlocale.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qvariant.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qset.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcontiguouscache.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsharedpointer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
+		debug\moc_predefs.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\bin\moc.exe
+	C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Administrator/Documents/scad-biomai-git/debug/moc_predefs.h -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/Administrator/Documents/scad-biomai-git -I"C:/Program Files/PostgreSQL/9.6/include" -IC:/Users/Administrator/Documents/scad-biomai-git/ffmpeg -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtMultimediaWidgets -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtPrintSupport -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuickWidgets -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtWidgets -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtMultimedia -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtLocation -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtPositioningQuick -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuick -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtGui -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtANGLE -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQmlModels -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQml -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtNetwork -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtPositioning -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtXml -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\cppwinrt" RtspStreamer.h -o debug\moc_RtspStreamer.cpp
+
 debug\moc_AudioDevice.cpp: AudioDevice.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\QAudioDeviceInfo \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qaudiodeviceinfo.h \
@@ -2009,6 +2092,12 @@ debug\moc_CallButton.cpp: CallButton.h \
 		UdpSocket.h \
 		VideoStream.h \
 		VideoDecoder.h \
+		RtspStreamer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QProcess \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qprocess.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFile \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		ffmpeg\libavcodec\avcodec.h \
 		ffmpeg\libavutil\samplefmt.h \
 		ffmpeg\libavutil\avutil.h \
@@ -2284,6 +2373,12 @@ debug\moc_CallWindow.cpp: CallWindow.h \
 		UdpSocket.h \
 		VideoStream.h \
 		VideoDecoder.h \
+		RtspStreamer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QProcess \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qprocess.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFile \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		ffmpeg\libavcodec\avcodec.h \
 		ffmpeg\libavutil\samplefmt.h \
 		ffmpeg\libavutil\avutil.h \
@@ -2752,6 +2847,12 @@ debug\moc_Contact.cpp: Contact.h \
 		UdpSocket.h \
 		VideoStream.h \
 		VideoDecoder.h \
+		RtspStreamer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QProcess \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qprocess.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFile \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		ffmpeg\libavcodec\avcodec.h \
 		ffmpeg\libavutil\samplefmt.h \
 		ffmpeg\libavutil\avutil.h \
@@ -2816,19 +2917,15 @@ debug\moc_Contact.cpp: Contact.h \
 		CmnTypes.h \
 		SubsData.h \
 		Resources.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMap \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QRegularExpression \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QStringListModel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringlistmodel.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QModelIndexList \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTableWidget \
 		DraggableListView.h \
 		ResourceButton.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QIcon \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
 		debug\moc_predefs.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\bin\moc.exe
 	C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Administrator/Documents/scad-biomai-git/debug/moc_predefs.h -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/Administrator/Documents/scad-biomai-git -I"C:/Program Files/PostgreSQL/9.6/include" -IC:/Users/Administrator/Documents/scad-biomai-git/ffmpeg -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtMultimediaWidgets -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtPrintSupport -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuickWidgets -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtWidgets -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtMultimedia -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtLocation -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtPositioningQuick -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuick -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtGui -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtANGLE -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQmlModels -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQml -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtNetwork -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtPositioning -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtXml -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\cppwinrt" Contact.h -o debug\moc_Contact.cpp
@@ -4700,6 +4797,9 @@ debug\moc_MainWindow.cpp: MainWindow.h \
 		UdpSocket.h \
 		VideoStream.h \
 		VideoDecoder.h \
+		RtspStreamer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFile \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		ffmpeg\libavcodec\avcodec.h \
 		ffmpeg\libavutil\samplefmt.h \
 		ffmpeg\libavutil\avutil.h \
@@ -4743,8 +4843,7 @@ debug\moc_MainWindow.cpp: MainWindow.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDataStream \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QPixmap \
 		Resources.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMap \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QRegularExpression \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QModelIndexList \
 		DraggableListView.h \
 		ResourceButton.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
@@ -4829,7 +4928,6 @@ debug\moc_MainWindow.cpp: MainWindow.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgraphicsscene.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuickWidgets\QQuickWidget \
 		GisQmlInt.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFile \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkAccessManager \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkaccessmanager.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkrequest.h \
@@ -4990,6 +5088,7 @@ debug\moc_MainWindow.cpp: MainWindow.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtPositioning\qtpositioningversion.h \
 		GisLocation.h \
 		Style.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMap \
 		IncidentData.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDate \
 		Props.h \
@@ -5752,9 +5851,9 @@ debug\moc_ResourceButton.cpp: ResourceButton.h \
 	C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Administrator/Documents/scad-biomai-git/debug/moc_predefs.h -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/Administrator/Documents/scad-biomai-git -I"C:/Program Files/PostgreSQL/9.6/include" -IC:/Users/Administrator/Documents/scad-biomai-git/ffmpeg -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtMultimediaWidgets -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtPrintSupport -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuickWidgets -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtWidgets -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtMultimedia -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtLocation -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtPositioningQuick -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuick -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtGui -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtANGLE -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQmlModels -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQml -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtNetwork -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtPositioning -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtXml -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\cppwinrt" ResourceButton.h -o debug\moc_ResourceButton.cpp
 
 debug\moc_Resources.cpp: Resources.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMap \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmap.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qiterator.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QList \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qlist.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qalgorithms.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qglobal.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qconfig.h \
@@ -5776,8 +5875,7 @@ debug\moc_Resources.cpp: Resources.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmutex.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qnumeric.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qversiontagging.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qlist.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qalgorithms.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qiterator.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qrefcount.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qarraydata.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qhashfunctions.h \
@@ -5797,87 +5895,85 @@ debug\moc_Resources.cpp: Resources.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringlist.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qregexp.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringmatcher.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QModelIndexList \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstractitemmodel.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qvariant.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmetatype.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qvarlengtharray.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcontainerfwd.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobjectdefs.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmap.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdebug.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qhash.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qtextstream.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qiodevice.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobject.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobjectdefs.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreevent.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qscopedpointer.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmetatype.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qvarlengtharray.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcontainerfwd.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobject_impl.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qlocale.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qvariant.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qshareddata.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qset.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcontiguouscache.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsharedpointer.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QMouseEvent \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qevent.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QPoint \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QStandardItem \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qstandarditemmodel.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtguiglobal.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtgui-config.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qwindowdefs.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qregion.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qbrush.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qcolor.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qrgb.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qrgba64.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qmatrix.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpolygon.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qrect.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmargins.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsize.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qregion.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qwindowdefs.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdatastream.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qline.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtransform.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpainterpath.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qimage.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpaintdevice.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpixelformat.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpixmap.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfont.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qicon.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTableWidget \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtablewidget.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtableview.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractitemview.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qwidget.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpalette.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfontmetrics.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfontinfo.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qsizepolicy.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qcursor.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qkeysequence.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qevent.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qurl.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qurlquery.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfile.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfiledevice.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qvector2d.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtouchdevice.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qicon.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpixmap.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpaintdevice.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qcolor.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qrgb.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qrgba64.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qimage.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpixelformat.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtransform.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qmatrix.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpolygon.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qline.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpainterpath.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpalette.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qbrush.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfont.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfontinfo.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qsizepolicy.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qcursor.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QRegularExpression \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qregularexpression.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QStringList \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QStringListModel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringlistmodel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstractitemmodel.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTableWidget \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtablewidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtableview.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractitemview.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qframe.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qitemselectionmodel.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractitemdelegate.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qstyleoption.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractspinbox.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qvalidator.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qregularexpression.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qslider.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractslider.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qstyle.h \
@@ -5887,11 +5983,11 @@ debug\moc_Resources.cpp: Resources.h \
 		DraggableListView.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QListView \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlistview.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QMouseEvent \
 		Draggable.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QByteArray \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDataStream \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QPixmap \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QPoint \
 		Logger.h \
 		PalLock.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMutex \
@@ -5912,10 +6008,10 @@ debug\moc_Resources.cpp: Resources.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QIcon \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
 		ResourceData.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QStandardItem \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qstandarditemmodel.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QStandardItemModel \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTableWidgetItem \
 		CmnTypes.h \
 		SubsData.h \
@@ -8314,15 +8410,13 @@ debug\moc_GisDgnaList.cpp: GisDgnaList.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QTime \
 		Props.h \
 		Resources.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QRegularExpression \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QModelIndexList \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTableWidget \
 		ResourceButton.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QIcon \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
 		debug\moc_predefs.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\bin\moc.exe
 	C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/Administrator/Documents/scad-biomai-git/debug/moc_predefs.h -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/mkspecs/win32-msvc -IC:/Users/Administrator/Documents/scad-biomai-git -I"C:/Program Files/PostgreSQL/9.6/include" -IC:/Users/Administrator/Documents/scad-biomai-git/ffmpeg -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtMultimediaWidgets -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtPrintSupport -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuickWidgets -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtWidgets -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtMultimedia -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtLocation -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtPositioningQuick -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuick -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtGui -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtANGLE -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQmlModels -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQml -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtNetwork -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtPositioning -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtXml -IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\cppwinrt" GisDgnaList.h -o debug\moc_GisDgnaList.cpp
@@ -12575,15 +12669,13 @@ debug\moc_GisWindow.cpp: GisWindow.h \
 		Props.h \
 		GisDgnaList.h \
 		Resources.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QRegularExpression \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QModelIndexList \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTableWidget \
 		ResourceButton.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QIcon \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
 		GisHistory.h \
 		GisLayerList.h \
 		GisLegend.h \
@@ -13292,7 +13384,7 @@ debug\moc_Incident.cpp: Incident.h \
 		Props.h \
 		GisDgnaList.h \
 		Resources.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QRegularExpression \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QModelIndexList \
 		ResourceButton.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
@@ -14138,6 +14230,125 @@ debug\ResourceData.obj: ResourceData.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017
 		MsgSp.h \
 		MsgValueBase.h
 
+debug\RtspStreamer.obj: RtspStreamer.cpp RtspStreamer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobject.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobjectdefs.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qnamespace.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qconfig.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qtcore-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsystemdetection.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qprocessordetection.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcompilerdetection.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qtypeinfo.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsysinfo.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qlogging.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qflags.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qatomic.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qbasicatomic.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qatomic_bootstrap.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qgenericatomic.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qatomic_cxx11.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qatomic_msvc.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qglobalstatic.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmutex.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qnumeric.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qversiontagging.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstring.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qchar.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qbytearray.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qrefcount.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qarraydata.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringliteral.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringalgorithms.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringview.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringbuilder.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qlist.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qalgorithms.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qiterator.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qhashfunctions.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qpair.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qvector.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcontainertools_impl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qpoint.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qbytearraylist.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringlist.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qregexp.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringmatcher.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreevent.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qscopedpointer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmetatype.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qvarlengtharray.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcontainerfwd.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobject_impl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QProcess \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qprocess.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qiodevice.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qshareddata.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qhash.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFile \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfile.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfiledevice.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDebug \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdebug.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmap.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qtextstream.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qlocale.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qvariant.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qset.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcontiguouscache.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsharedpointer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QThread \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qthread.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtguiglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtgui-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qwindowdefs.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsize.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmargins.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qcursor.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qwidget.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpaintdevice.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qrect.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpalette.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qcolor.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qrgb.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qrgba64.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qbrush.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qmatrix.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpolygon.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qregion.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdatastream.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qline.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtransform.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpainterpath.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qimage.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpixelformat.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpixmap.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfont.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfontmetrics.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfontinfo.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qsizepolicy.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qkeysequence.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qevent.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qurl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qurlquery.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qvector2d.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtouchdevice.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h
+
 debug\ServerSession.obj: ServerSession.cpp DbInt.h \
 		"..\..\..\..\Program Files\PostgreSQL\9.6\include\libpq-fe.h" \
 		"..\..\..\..\Program Files\PostgreSQL\9.6\include\postgres_ext.h" \
@@ -14701,6 +14912,26 @@ debug\VideoStream.obj: VideoStream.cpp VideoStream.h \
 		uclconf.h \
 		rtp.h \
 		VideoDecoder.h \
+		RtspStreamer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QProcess \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qprocess.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qiodevice.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qshareddata.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qhash.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFile \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfile.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfiledevice.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDebug \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdebug.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmap.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qtextstream.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qlocale.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qvariant.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qset.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcontiguouscache.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsharedpointer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
 		ffmpeg\libavcodec\avcodec.h \
 		ffmpeg\libavutil\samplefmt.h \
 		ffmpeg\libavutil\avutil.h \
@@ -15545,6 +15776,14 @@ debug\Call.obj: Call.cpp Style.h \
 		uclconf.h \
 		rtp.h \
 		VideoDecoder.h \
+		RtspStreamer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QProcess \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qprocess.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFile \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfile.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfiledevice.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		ffmpeg\libavcodec\avcodec.h \
 		ffmpeg\libavutil\samplefmt.h \
 		ffmpeg\libavutil\avutil.h \
@@ -15617,8 +15856,6 @@ debug\Call.obj: Call.cpp Style.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qevent.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qurl.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qurlquery.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfile.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfiledevice.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qvector2d.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtouchdevice.h \
 		CommsRegister.h \
@@ -15626,7 +15863,6 @@ debug\Call.obj: Call.cpp Style.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfileinfo.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QIcon \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qicon.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
 		MessageDialog.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QDialog \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
@@ -15937,6 +16173,12 @@ debug\CallButton.obj: CallButton.cpp Style.h \
 		UdpSocket.h \
 		VideoStream.h \
 		VideoDecoder.h \
+		RtspStreamer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QProcess \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qprocess.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFile \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		ffmpeg\libavcodec\avcodec.h \
 		ffmpeg\libavutil\samplefmt.h \
 		ffmpeg\libavutil\avutil.h \
@@ -16412,6 +16654,10 @@ debug\CallWindow.obj: CallWindow.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\
 		UdpSocket.h \
 		VideoStream.h \
 		VideoDecoder.h \
+		RtspStreamer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QProcess \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFile \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		ffmpeg\libavcodec\avcodec.h \
 		ffmpeg\libavutil\samplefmt.h \
 		ffmpeg\libavutil\avutil.h \
@@ -17037,6 +17283,12 @@ debug\Contact.obj: Contact.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\includ
 		UdpSocket.h \
 		VideoStream.h \
 		VideoDecoder.h \
+		RtspStreamer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QProcess \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qprocess.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFile \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		ffmpeg\libavcodec\avcodec.h \
 		ffmpeg\libavutil\samplefmt.h \
 		ffmpeg\libavutil\avutil.h \
@@ -17072,9 +17324,7 @@ debug\Contact.obj: Contact.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\includ
 		VideoEncoder.h \
 		ffmpeg\libavutil\opt.h \
 		Resources.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QRegularExpression \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QStringListModel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringlistmodel.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QModelIndexList \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTableWidget \
 		DraggableListView.h
 
@@ -19278,6 +19528,9 @@ debug\Main.obj: Main.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWi
 		UdpSocket.h \
 		VideoStream.h \
 		VideoDecoder.h \
+		RtspStreamer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFile \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		ffmpeg\libavcodec\avcodec.h \
 		ffmpeg\libavutil\samplefmt.h \
 		ffmpeg\libavutil\avutil.h \
@@ -19321,8 +19574,7 @@ debug\Main.obj: Main.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWi
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDataStream \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QPixmap \
 		Resources.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMap \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QRegularExpression \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QModelIndexList \
 		DraggableListView.h \
 		ResourceButton.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
@@ -19405,7 +19657,6 @@ debug\Main.obj: Main.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWi
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgraphicsscene.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuickWidgets\QQuickWidget \
 		GisQmlInt.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFile \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkAccessManager \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkaccessmanager.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkrequest.h \
@@ -19565,6 +19816,7 @@ debug\Main.obj: Main.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWi
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtPositioning\qtpositioningversion.h \
 		GisLocation.h \
 		Style.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMap \
 		IncidentData.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDate \
 		Props.h \
@@ -20022,6 +20274,8 @@ debug\MainWindow.obj: MainWindow.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtMultimedia\qsound.h \
 		VideoStream.h \
 		VideoDecoder.h \
+		RtspStreamer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		ffmpeg\libavcodec\avcodec.h \
 		ffmpeg\libavutil\samplefmt.h \
 		ffmpeg\libavutil\avutil.h \
@@ -20061,7 +20315,7 @@ debug\MainWindow.obj: MainWindow.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qscrollarea.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTabWidget \
 		Resources.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QRegularExpression \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QModelIndexList \
 		ResourceButton.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
@@ -21277,9 +21531,6 @@ debug\QtUtils.obj: QtUtils.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\includ
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qabstractsocket.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QUrl \
 		CmnTypes.h \
-		Style.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMap \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString \
 		QtUtils.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QComboBox \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qcombobox.h \
@@ -21308,7 +21559,8 @@ debug\QtUtils.obj: QtUtils.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\includ
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qactiongroup.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString
 
 debug\Report.obj: Report.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QAbstractItemModel \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qabstractitemmodel.h \
@@ -21911,6 +22163,7 @@ debug\Resources.obj: Resources.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\in
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextformat.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpen.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtextoption.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMap \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QMenu \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qmenu.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qaction.h \
@@ -21918,6 +22171,11 @@ debug\Resources.obj: Resources.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\in
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QMessageBox \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qmessagebox.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdialog.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QRegularExpression \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QWidgetAction \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qwidgetaction.h \
 		CmnTypes.h \
@@ -21977,7 +22235,6 @@ debug\Resources.obj: Resources.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\in
 		MessageDialog.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QLCDNumber \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qlcdnumber.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QStringList \
 		ServerSession.h \
 		MsgSp.h \
 		Utils.h \
@@ -22057,6 +22314,12 @@ debug\Resources.obj: Resources.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\in
 		UdpSocket.h \
 		VideoStream.h \
 		VideoDecoder.h \
+		RtspStreamer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QProcess \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qprocess.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFile \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		ffmpeg\libavcodec\avcodec.h \
 		ffmpeg\libavutil\samplefmt.h \
 		ffmpeg\libavutil\avutil.h \
@@ -22107,13 +22370,8 @@ debug\Resources.obj: Resources.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\in
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtableview.h \
 		SubsData.h \
 		Resources.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMap \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QRegularExpression \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QStringListModel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringlistmodel.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QModelIndexList \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTableWidget \
 		DraggableListView.h \
 		ResourceButton.h \
@@ -22135,7 +22393,6 @@ debug\Resources.obj: Resources.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\in
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QComboBox \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qcombobox.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDateTime \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString \
 		Style.h \
 		ui_Resources.h
 
@@ -25120,14 +25377,12 @@ debug\GisDgnaList.obj: GisDgnaList.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_6
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDate \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QTime \
 		Resources.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QRegularExpression \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QModelIndexList \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTableWidget \
 		ResourceButton.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtoolbutton.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qabstractbutton.h
 
 debug\GisHistory.obj: GisHistory.cpp GisHistory.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
@@ -29635,9 +29890,7 @@ debug\GisWindow.obj: GisWindow.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\in
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QTime \
 		GisDgnaList.h \
 		Resources.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QRegularExpression \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QModelIndexList \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTableWidget \
 		ResourceButton.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QToolButton \
@@ -30258,6 +30511,12 @@ debug\Incident.obj: Incident.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\incl
 		UdpSocket.h \
 		VideoStream.h \
 		VideoDecoder.h \
+		RtspStreamer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QProcess \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qprocess.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFile \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		ffmpeg\libavcodec\avcodec.h \
 		ffmpeg\libavutil\samplefmt.h \
 		ffmpeg\libavutil\avutil.h \
@@ -30318,12 +30577,8 @@ debug\Incident.obj: Incident.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\incl
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtableview.h \
 		SubsData.h \
 		Resources.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMap \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QRegularExpression \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QStringListModel \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringlistmodel.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QModelIndexList \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QTableWidget \
 		DraggableListView.h \
 		ResourceButton.h \
@@ -30334,7 +30589,6 @@ debug\Incident.obj: Incident.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\incl
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QStyledItemDelegate \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qstyleditemdelegate.h \
 		Document.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtPrintSupport\QPrinter \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtPrintSupport\qprinter.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtPrintSupport\qtprintsupportglobal.h \
@@ -30348,13 +30602,13 @@ debug\Incident.obj: Incident.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\incl
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QVariant \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QImage \
 		QXlsx\xlsxglobal.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QString \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSharedPointer \
 		QXlsx\xlsxformat.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QFont \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\QColor \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QExplicitlySharedDataPointer \
 		QXlsx\xlsxworksheet.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMap \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QPointF \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDateTime \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QUrl \
@@ -30376,6 +30630,8 @@ debug\Incident.obj: Incident.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\incl
 		"..\..\..\..\Program Files\PostgreSQL\9.6\include\postgres_ext.h" \
 		"..\..\..\..\Program Files\PostgreSQL\9.6\include\pg_config_ext.h" \
 		QtTableUtils.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QPushButton \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qpushbutton.h \
 		QtUtils.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QComboBox \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qcombobox.h \
@@ -30389,6 +30645,8 @@ debug\Incident.obj: Incident.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\incl
 		ResourceSelector.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QCompleter \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qcompleter.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QStringListModel \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringlistmodel.h \
 		Settings.h \
 		Props.h \
 		Style.h \
@@ -30495,7 +30753,6 @@ debug\Incident.obj: Incident.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\incl
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qgraphicsscene.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtQuickWidgets\QQuickWidget \
 		GisQmlInt.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFile \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QNetworkAccessManager \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\qnetworkaccessmanager.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtNetwork\QSslConfiguration \
@@ -30579,7 +30836,6 @@ debug\Incident.obj: Incident.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\incl
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qparallelanimationgroup.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qpauseanimation.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qpluginloader.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qprocess.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qpropertyanimation.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qvariantanimation.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qqueue.h \
@@ -30989,11 +31245,10 @@ debug\IncidentData.obj: IncidentData.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017
 		QThreadWorker.h \
 		"..\..\..\..\Program Files\PostgreSQL\9.6\include\unistd.h"
 
-debug\VideoDecoder.obj: VideoDecoder.cpp VideoDecoder.h \
-		Logger.h \
-		PalLock.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMutex \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmutex.h \
+debug\VideoDecoder.obj: VideoDecoder.cpp ..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtguiglobal.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qglobal.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qconfig.h \
@@ -31012,32 +31267,25 @@ debug\VideoDecoder.obj: VideoDecoder.cpp VideoDecoder.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qatomic_cxx11.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qatomic_msvc.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qglobalstatic.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmutex.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qnumeric.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qversiontagging.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QReadWriteLock \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qreadwritelock.h \
-		"..\..\..\..\Program Files\PostgreSQL\9.6\include\pthread.h" \
-		"..\..\..\..\Program Files\PostgreSQL\9.6\include\sched.h" \
-		PalSem.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSemaphore \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsemaphore.h \
-		"..\..\..\..\Program Files\PostgreSQL\9.6\include\semaphore.h" \
-		PalThread.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QThread \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qthread.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobject.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobjectdefs.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qnamespace.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtgui-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstring.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qchar.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qbytearray.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qrefcount.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qnamespace.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qarraydata.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringliteral.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringalgorithms.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringview.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qstringbuilder.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobject.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobjectdefs.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qlist.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qalgorithms.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qiterator.h \
@@ -31056,8 +31304,80 @@ debug\VideoDecoder.obj: VideoDecoder.cpp VideoDecoder.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qvarlengtharray.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcontainerfwd.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qobject_impl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qwindowdefs.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsize.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmargins.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qcursor.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qwidget.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpaintdevice.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qrect.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpalette.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qcolor.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qrgb.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qrgba64.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qbrush.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qmatrix.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpolygon.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qregion.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdatastream.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qiodevice.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qline.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtransform.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpainterpath.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qimage.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpixelformat.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpixmap.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsharedpointer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qshareddata.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qhash.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfont.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfontmetrics.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfontinfo.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qsizepolicy.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qkeysequence.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qevent.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qvariant.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmap.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdebug.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qtextstream.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qlocale.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qset.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcontiguouscache.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qurl.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qurlquery.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfile.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qfiledevice.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qvector2d.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtouchdevice.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h \
+		VideoDecoder.h \
+		Logger.h \
+		PalLock.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QMutex \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QReadWriteLock \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qreadwritelock.h \
+		"..\..\..\..\Program Files\PostgreSQL\9.6\include\pthread.h" \
+		"..\..\..\..\Program Files\PostgreSQL\9.6\include\sched.h" \
+		PalSem.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QSemaphore \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsemaphore.h \
+		"..\..\..\..\Program Files\PostgreSQL\9.6\include\semaphore.h" \
+		PalThread.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QThread \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qthread.h \
 		QThreadWorker.h \
 		"..\..\..\..\Program Files\PostgreSQL\9.6\include\unistd.h" \
+		RtspStreamer.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QObject \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QProcess \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qprocess.h \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QFile \
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QDebug \
 		ffmpeg\libavcodec\avcodec.h \
 		ffmpeg\libavutil\samplefmt.h \
 		ffmpeg\libavutil\avutil.h \
@@ -31194,6 +31514,8 @@ debug\VideoEncoder.obj: VideoEncoder.cpp Locker.h \
 		ffmpeg\libavutil\opt.h
 
 debug\qrc_Resources.obj: debug\qrc_Resources.cpp 
+
+debug\moc_RtspStreamer.obj: debug\moc_RtspStreamer.cpp 
 
 debug\moc_AudioDevice.obj: debug\moc_AudioDevice.cpp 
 
