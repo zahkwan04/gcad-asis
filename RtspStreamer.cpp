@@ -1,7 +1,9 @@
 #include "RtspStreamer.h"
 #include <QThread>
 
-
+/**
+ * Constructor: Initializes the FFmpeg process handler and sets up a crash recovery mechanism.
+ */
 RtspStreamer::RtspStreamer(QObject *parent) : QObject(parent), hNamedPipe(INVALID_HANDLE_VALUE)
 {
     connect(&ffmpegProcess,
@@ -17,12 +19,18 @@ RtspStreamer::RtspStreamer(QObject *parent) : QObject(parent), hNamedPipe(INVALI
             });
 }
 
+/**
+ * Destructor: Cleans up by stopping the stream and closing the pipe.
+ */
 RtspStreamer::~RtspStreamer()
 {
     qDebug() << "Destroying Streamer...";
     stopStreaming();
 }
 
+/**
+ * Starts FFmpeg and sets up a Windows named pipe to receive raw video frames.
+ */
 void RtspStreamer::startStreaming()
 {
     if (ffmpegProcess.state() == QProcess::Running) {
@@ -30,19 +38,20 @@ void RtspStreamer::startStreaming()
         return;
     }
 
+    // Ensure previous pipe is cleaned up
     if (hNamedPipe != INVALID_HANDLE_VALUE) {
         CloseHandle(hNamedPipe);
         hNamedPipe = INVALID_HANDLE_VALUE;
     }
 
-    // Create Windows Named Pipe
+    // Create a new named pipe for raw video input
     hNamedPipe = CreateNamedPipe(
         pipePath.toStdWString().c_str(),
         PIPE_ACCESS_DUPLEX,
         PIPE_TYPE_BYTE | PIPE_WAIT,
         1,
-        640 * 480 * 3 / 2,
-        640 * 480 * 3 / 2,
+        640 * 480 * 3 / 2,  // Output buffer size (YUV420p)
+        640 * 480 * 3 / 2,  // Input buffer size (YUV420p)
         0,
         nullptr
         );
@@ -54,6 +63,7 @@ void RtspStreamer::startStreaming()
 
     qDebug() << "Named pipe created, starting FFmpeg...";
 
+    // Configure and start FFmpeg process to read from pipe and stream via RTSP
     QString ffmpegPath = "C:/ffmpeg-7.1.1/bin/ffmpeg.exe";
     QStringList args = {
         "-f", "rawvideo",
@@ -77,6 +87,7 @@ void RtspStreamer::startStreaming()
 
     qDebug() << "Streaming started.";
 
+    // Wait for connection from writer (client)
     if (!ConnectNamedPipe(hNamedPipe, nullptr)) {
         if (GetLastError() != ERROR_PIPE_CONNECTED) {
             qDebug() << "Failed to connect named pipe!";
@@ -89,8 +100,12 @@ void RtspStreamer::startStreaming()
     qDebug() << "Named pipe connected, ready to receive data.";
 }
 
+/**
+ * Stops the FFmpeg process and safely closes the named pipe.
+ */
 void RtspStreamer::stopStreaming()
 {
+    // Ensure the method runs in the correct thread
     if (QThread::currentThread() != this->thread()) {
         qDebug() << "stopStreaming called from a different thread, redirecting to main thread.";
         QMetaObject::invokeMethod(this, "stopStreaming", Qt::QueuedConnection);
@@ -99,12 +114,13 @@ void RtspStreamer::stopStreaming()
 
     qDebug() << "Stopping streaming...";
 
-    // Prevent automatic restart before stopping
+    // Disconnect the restart-on-crash logic
     disconnect(&ffmpegProcess,
                QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
                this,
                nullptr);
 
+    // Terminate FFmpeg gracefully, or forcefully if needed
     if (ffmpegProcess.state() == QProcess::Running) {
         ffmpegProcess.terminate();
 
@@ -116,6 +132,7 @@ void RtspStreamer::stopStreaming()
         qDebug() << "Streaming stopped.";
     }
 
+    // Clean up named pipe
     if (hNamedPipe != INVALID_HANDLE_VALUE) {
         FlushFileBuffers(hNamedPipe);
         DisconnectNamedPipe(hNamedPipe);
@@ -127,6 +144,10 @@ void RtspStreamer::stopStreaming()
     emit streamingStopped();
 }
 
+/**
+ * Writes a raw YUV420p video frame to the pipe.
+ * Frame size is validated to be 460800 bytes (640x480 YUV420p).
+ */
 void RtspStreamer::sendFrameData(const QByteArray &frameData)
 {
     if (frameData.size() != (640 * 480 * 3 / 2)) {
@@ -139,6 +160,7 @@ void RtspStreamer::sendFrameData(const QByteArray &frameData)
         return;
     }
 
+    // Write data to the pipe
     DWORD bytesWritten;
     BOOL result = WriteFile(hNamedPipe, frameData.constData(), frameData.size(), &bytesWritten, nullptr);
 
