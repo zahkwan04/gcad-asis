@@ -96,16 +96,35 @@ mParser(0), mFrameYuv(0), mFrameRgb(0)
                      << "VideoDecoder: av_frame_alloc failure.");
         return;
     }
-    mRtspStreamer = new RtspStreamer();
+    // Create the RtspStreamer with this VideoDecoder as the callback object
+    mRtspStreamer = new RtspStreamer(this, StreamStatusCallback);
     mRtspStreamer->startStreaming();
     mIsValid = true;
 }
 
+// Define the callback function
+void VideoDecoder::StreamStatusCallback(void* obj, bool isRunning)
+{
+    VideoDecoder* decoder = static_cast<VideoDecoder*>(obj);
+    if (decoder) {
+        // Handle streaming status changes if needed
+        LOGGER_DEBUG(sLogger, LOGPREFIX
+                                  << "RtspStreamer status changed: "
+                                  << (isRunning ? "running" : "stopped"));
+    }
+}
+
 VideoDecoder::~VideoDecoder()
 {
-    mRtspStreamer->stopStreaming();
-    delete mRtspStreamer;
-    mRtspStreamer = nullptr;
+#ifdef FFMPEG
+    // Stop streaming before deleting
+    if (mRtspStreamer) {
+        mRtspStreamer->stopStreaming();
+        delete mRtspStreamer;
+        mRtspStreamer = nullptr;
+    }
+#endif
+
     avcodec_free_context(&mCodecCtx);
     if (mParser != 0)
         av_parser_close(mParser);
@@ -264,9 +283,10 @@ void VideoDecoder::getDecodedFrame()
             // Extract YUV data and create QByteArray
             QByteArray yuvData = createYuvQByteArray(mFrameYuv, w, h);
 
-            // You can now use yuvData for streaming or other purposes
-            // For example: streamer.sendFrameData(yuvData);
-            mRtspStreamer->sendFrameData(yuvData);
+            // Send YUV data to the mediamtx
+            if (mRtspStreamer) {
+                mRtspStreamer->sendFrameData(yuvData);
+            }
 
             // Continue with RGB conversion if needed
             imgCtx = sws_getContext(w, h, mCodecCtx->pix_fmt, w, h, OUTPUT_FORMAT,

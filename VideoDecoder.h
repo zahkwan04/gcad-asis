@@ -9,39 +9,36 @@
  */
 #ifndef VIDEODECODER_H
 #define VIDEODECODER_H
-
 #include "Logger.h"
 #include "RtspStreamer.h"
-
 extern "C"
 {
 #include "libavcodec/avcodec.h"
 #include "libavutil/imgutils.h"
 #include "libswscale/swscale.h"
 }
-
 #ifndef uchar
 typedef unsigned char uchar;
 #endif
+
+// Forward declaration
+class RtspStreamer;
 
 class VideoDecoder
 {
 public:
 #ifdef MOBILE
-    //callback signature for decoded frame
+        //callback signature for decoded frame
     typedef void (*CallbackFn)(uchar *data, int w, int h, int bpl);
-
     /**
      * Constructor.
      *
      * @param[in] cbFn Callback function for passing decoded frame.
      */
     VideoDecoder(CallbackFn cbFn);
-
 #else
-    //callback signature for decoded frame
+        //callback signature for decoded frame
     typedef void (*CallbackFn)(void *obj, uchar *data, int w, int h, int bpl);
-
     /**
      * Constructor.
      *
@@ -50,11 +47,8 @@ public:
      */
     VideoDecoder(void *cbObj, CallbackFn cbFn);
 #endif //MOBILE
-
     ~VideoDecoder();
-
     bool isValid() { return mIsValid; }
-
     /**
      * Decodes H264 RTP payload.
      *
@@ -62,17 +56,14 @@ public:
      * @param[in] len  The payload length in bytes.
      */
     void decode(char *data, int len);
-
 #ifndef MOBILE
     static void setLogger(Logger *logger) { sLogger = logger; }
 #endif
-
 private:
     //based on MTU 1500 bytes, this should be enough because actual RTP payload
     //size would be way less, and the remaining could be used for Network
     //Abstraction Layer (NAL) header
     static const int MAX_BUFFER_LEN = 1500;
-
     bool                  mIsValid;
     uchar                 mBuffer[MAX_BUFFER_LEN];
     CallbackFn            mCbFn;      //callback function
@@ -83,9 +74,16 @@ private:
     AVFrame              *mFrameYuv;
     AVFrame              *mFrameRgb;
     RtspStreamer         *mRtspStreamer;
-
 #ifndef MOBILE
     static Logger *sLogger;
+
+    /**
+     * Static callback function for RtspStreamer status updates.
+     *
+     * @param[in] obj Object that owns the callback function (this VideoDecoder).
+     * @param[in] isRunning Flag indicating whether streaming is running.
+     */
+    static void StreamStatusCallback(void* obj, bool isRunning);
 #endif
 
     /**

@@ -1,11 +1,11 @@
 #ifndef RTSPSTREAMER_H
 #define RTSPSTREAMER_H
 
-#include <QObject>
 #include <QProcess>
 #include <QFile>
 #include <QDebug>
 #include <windows.h>
+#include <mutex>
 
 /**
  * @class RtspStreamer
@@ -15,16 +15,22 @@
  * It initializes, starts, and stops the streaming process while also
  * providing an interface to send video frame data via a named pipe.
  */
-class RtspStreamer : public QObject
+class RtspStreamer
 {
-    Q_OBJECT
-
 public:
     /**
-     * @brief Constructs an RtspStreamer instance.
-     * @param[in] parent Optional parent QObject.
+     * @brief Callback function type for streaming status changes.
+     * @param cbObj Callback object pointer.
+     * @param isRunning Boolean indicating whether streaming is running.
      */
-    explicit RtspStreamer(QObject *parent = nullptr);
+    typedef void (*StatusCallbackFn)(void* cbObj, bool isRunning);
+
+    /**
+     * @brief Constructs an RtspStreamer instance.
+     * @param[in] cbObj Optional callback object pointer.
+     * @param[in] cbFn Optional status callback function.
+     */
+    explicit RtspStreamer(void* cbObj = nullptr, StatusCallbackFn cbFn = nullptr);
 
     /**
      * @brief Destroys the RtspStreamer instance and releases resources.
@@ -52,15 +58,22 @@ public:
     void sendFrameData(const QByteArray &frameData);
 
 private:
+    /**
+     * @brief Handles the FFmpeg process finished event.
+     * @param exitCode Process exit code.
+     * @param exitStatus Process exit status.
+     */
+    void handleProcessFinished(int exitCode, QProcess::ExitStatus exitStatus);
+
     QProcess ffmpegProcess;   ///< Process handling FFmpeg execution.
-    HANDLE hNamedPipe = INVALID_HANDLE_VALUE; ///< Handle for the named pipe.
+    HANDLE hNamedPipe;        ///< Handle for the named pipe.
     const QString pipePath = R"(\\.\pipe\my_pipe)"; ///< Named pipe path.
 
-signals:
-    /**
-     * @brief Emitted when the streaming process stops.
-     */
-    void streamingStopped();
+    // Callback mechanism
+    void* mCbObj;             ///< Callback object pointer.
+    StatusCallbackFn mCbFn;   ///< Status callback function.
+    std::mutex mMutex;
+    bool mIsDestroying = false;
 };
 
 #endif // RTSPSTREAMER_H

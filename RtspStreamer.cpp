@@ -2,21 +2,17 @@
 #include <QThread>
 
 /**
- * Constructor: Initializes the FFmpeg process handler and sets up a crash recovery mechanism.
+ * Constructor: Initializes the FFmpeg process handler.
  */
-RtspStreamer::RtspStreamer(QObject *parent) : QObject(parent), hNamedPipe(INVALID_HANDLE_VALUE)
+RtspStreamer::RtspStreamer(void* cbObj, StatusCallbackFn cbFn)
+    : hNamedPipe(INVALID_HANDLE_VALUE), mCbObj(cbObj), mCbFn(cbFn)
 {
-    connect(&ffmpegProcess,
-            QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
-            this,
-            [this](int exitCode, QProcess::ExitStatus exitStatus) {
-                if (exitStatus == QProcess::CrashExit) {
-                    qDebug() << "FFmpeg crashed! Restarting stream...";
-                    startStreaming();
-                } else {
-                    qDebug() << "FFmpeg exited normally.";
-                }
-            });
+    // Set up finished handler
+    QObject::connect(&ffmpegProcess,
+                     QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
+                     [this](int exitCode, QProcess::ExitStatus exitStatus) {
+                         handleProcessFinished(exitCode, exitStatus);
+                     });
 }
 
 /**
@@ -26,6 +22,25 @@ RtspStreamer::~RtspStreamer()
 {
     qDebug() << "Destroying Streamer...";
     stopStreaming();
+
+}
+
+/**
+ * Handles the FFmpeg process finished event.
+ */
+void RtspStreamer::handleProcessFinished(int exitCode, QProcess::ExitStatus exitStatus)
+{
+    if (exitStatus == QProcess::CrashExit) {
+        qDebug() << "FFmpeg crashed! Restarting stream...";
+        startStreaming();
+    } else {
+        qDebug() << "FFmpeg exited normally.";
+
+        // Notify via callback if available
+        if (mCbFn != nullptr) {
+            mCbFn(mCbObj, false);
+        }
+    }
 }
 
 /**
@@ -87,6 +102,11 @@ void RtspStreamer::startStreaming()
 
     qDebug() << "Streaming started.";
 
+    // Notify via callback if available
+    if (mCbFn != nullptr) {
+        mCbFn(mCbObj, true);
+    }
+
     // Wait for connection from writer (client)
     if (!ConnectNamedPipe(hNamedPipe, nullptr)) {
         if (GetLastError() != ERROR_PIPE_CONNECTED) {
@@ -105,20 +125,7 @@ void RtspStreamer::startStreaming()
  */
 void RtspStreamer::stopStreaming()
 {
-    // Ensure the method runs in the correct thread
-    if (QThread::currentThread() != this->thread()) {
-        qDebug() << "stopStreaming called from a different thread, redirecting to main thread.";
-        QMetaObject::invokeMethod(this, "stopStreaming", Qt::QueuedConnection);
-        return;
-    }
-
     qDebug() << "Stopping streaming...";
-
-    // Disconnect the restart-on-crash logic
-    disconnect(&ffmpegProcess,
-               QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
-               this,
-               nullptr);
 
     // Terminate FFmpeg gracefully, or forcefully if needed
     if (ffmpegProcess.state() == QProcess::Running) {
@@ -141,7 +148,10 @@ void RtspStreamer::stopStreaming()
         qDebug() << "Named pipe closed.";
     }
 
-    emit streamingStopped();
+    // Notify via callback if available
+    if (mCbFn != nullptr) {
+        mCbFn(mCbObj, false);
+    }
 }
 
 /**
