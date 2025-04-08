@@ -104,6 +104,8 @@ mParser(0), mFrameYuv(0), mFrameRgb(0)
 VideoDecoder::~VideoDecoder()
 {
     mRtspStreamer->stopStreaming();
+    delete mRtspStreamer;
+    mRtspStreamer = nullptr;
     avcodec_free_context(&mCodecCtx);
     if (mParser != 0)
         av_parser_close(mParser);
