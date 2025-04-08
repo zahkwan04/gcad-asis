@@ -14303,51 +14303,7 @@ debug\RtspStreamer.obj: RtspStreamer.cpp RtspStreamer.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsharedpointer.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
 		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\QThread \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qthread.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\QApplication \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtguiglobal.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtgui-config.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qcoreapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qeventloop.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qwindowdefs.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qwindowdefs_win.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qsize.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qmargins.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qcursor.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qwidget.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpaintdevice.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qrect.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpalette.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qcolor.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qrgb.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qrgba64.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qbrush.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qmatrix.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpolygon.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qregion.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qdatastream.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qline.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtransform.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpainterpath.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qimage.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpixelformat.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qpixmap.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfont.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfontmetrics.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qfontinfo.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtWidgets\qsizepolicy.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qkeysequence.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qevent.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qurl.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qurlquery.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qvector2d.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qtouchdevice.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtGui\qinputmethod.h
+		..\..\..\..\Qt\Qt5.14.2\5.14.2\msvc2017_64\include\QtCore\qthread.h
 
 debug\ServerSession.obj: ServerSession.cpp DbInt.h \
 		"..\..\..\..\Program Files\PostgreSQL\9.6\include\libpq-fe.h" \

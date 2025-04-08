@@ -8,6 +8,7 @@
  * @author Zulzaidi Atan
  */
 #include <assert.h>
+#include <QApplication>
 
 #include "VideoDecoder.h"
 
@@ -97,6 +98,7 @@ mParser(0), mFrameYuv(0), mFrameRgb(0)
         return;
     }
     mRtspStreamer = new RtspStreamer();
+    mRtspStreamer->moveToThread(QApplication::instance()->thread());
     mRtspStreamer->startStreaming();
     mIsValid = true;
 }
@@ -104,6 +106,8 @@ mParser(0), mFrameYuv(0), mFrameRgb(0)
 VideoDecoder::~VideoDecoder()
 {
     mRtspStreamer->stopStreaming();
+//    delete mRtspStreamer;
+    mRtspStreamer->deleteLater();
     avcodec_free_context(&mCodecCtx);
     if (mParser != 0)
         av_parser_close(mParser);
